@@ -3,27 +3,19 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-/* ── Marker-Icons ── */
+/* ── Marker-Icons (Signature-Illustrationen) ── */
 const depotIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
+  iconUrl: "/inline-kuerbis.jpg",
+  iconSize: [36, 36],
+  iconAnchor: [18, 36],
+  popupAnchor: [0, -34],
 });
 
 const hofIcon = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
+  iconUrl: "/inline-hof.jpg",
+  iconSize: [36, 36],
+  iconAnchor: [18, 36],
+  popupAnchor: [0, -34],
 });
 
 /* ── Standort-Daten ── */
@@ -119,10 +111,10 @@ export function LieferungKalender() {
 
           <div className="flex gap-6 text-sm text-gray-600">
             <span className="flex items-center gap-2">
-              <span className="inline-block w-3 h-3 rounded-full bg-green-600" /> Depots
+              <img src="/inline-kuerbis.jpg" alt="Kürbis" className="w-6 h-6" /> Depots
             </span>
             <span className="flex items-center gap-2">
-              <span className="inline-block w-3 h-3 rounded-full bg-orange-500" /> Höfe
+              <img src="/inline-hof.jpg" alt="Hof" className="w-6 h-6" /> Höfe
             </span>
           </div>
         </div>
