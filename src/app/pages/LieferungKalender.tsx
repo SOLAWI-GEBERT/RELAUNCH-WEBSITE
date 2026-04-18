@@ -182,12 +182,15 @@ export function LieferungKalender() {
             <div id="depot-hinweise" className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-4 text-foreground flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
-                Depot-Hinweise
+                Abholung & Depot-Regeln
               </h3>
-              <p className="text-gray-700">
-                Bitte beachte die individuellen Regeln und Öffnungszeiten deines Depots.
-                Weitere Informationen erhältst du direkt von deinen Depotbetreuer*innen.
-              </p>
+              <ul className="text-gray-700 space-y-2">
+                <li>• Du bist für die Abholung deines Ernteanteils verantwortlich.</li>
+                <li>• Nicht geschafft? Organisier eine Vertretung.</li>
+                <li>• Bitte beachte die Öffnungszeiten und Fristen deines Depots.</li>
+                <li>• Nicht abgeholtes Gemüse geht an Foodsharing.</li>
+                <li>• 1–2 Mal im Jahr wirst du für das Aufräumen und Reinigen des Depots eingeteilt (ca. 20 Min).</li>
+              </ul>
             </div>
           </div>
         </div>

@@ -16,18 +16,6 @@ const ernteanteile = [
   { hof: "Kirschgarten", produkt: "Bio-Beeren", zyklus: "wöchentlich", phase: "Jul\u2013Sept", gesamt: "38\u202F\u20AC" },
 ];
 
-const depots = [
-  { name: "Depot Stadtpark", adresse: "Berliner Platz 20, Nürnberg", warteliste: false },
-  { name: "Depot St. Peter", adresse: "Findelwiesenstr. 25, Nürnberg", warteliste: false },
-  { name: "Depot Die Wiese", adresse: "Wiesenstraße 19, Nürnberg", warteliste: false },
-  { name: "Depot Johannis", adresse: "Julienstr. 8, Nürnberg", warteliste: false },
-  { name: "Depot Gostenhof", adresse: "Reitackerstr. 18, Nürnberg", warteliste: true },
-  { name: "Depot Altenfurt", adresse: "Schornbaumstraße 12, Nürnberg", warteliste: false },
-  { name: "Depot AKi", adresse: "Grünewaldstr. 24, Nürnberg", hinweis: "Zugang via Uhlandstr.", warteliste: false },
-  { name: "Depot Tataa", adresse: "Marktplatz 4, Fürth", warteliste: false },
-  { name: "Depot Spiegelfabrik", adresse: "Dr.-Mack-Str. 42, Fürth", warteliste: true },
-];
-
 export function Mitmachen() {
   return (
     <div className="bg-white">
@@ -222,77 +210,65 @@ export function Mitmachen() {
         </div>
       </section>
 
-      {/* Depots */}
+      {/* Depot wählen */}
       <section id="depots" className="py-20 bg-solawi-orange">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-4xl mb-4 text-foreground">
-              Unsere Depot-Standorte
+              Wähle dein Depot
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Du bist für die Abholung deines Ernteanteils verantwortlich. Nicht geschafft?
-              Organisier eine Vertretung. Nicht abgeholtes Gemüse geht an Foodsharing.
+              Bei der Anmeldung gibst du an, in welchem Depot du deine Ernte
+              abholen möchtest. Adressen, Öffnungszeiten und die Karte findest
+              du unter Lieferung & Kalender.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {depots.map((depot) => (
-              <div key={depot.name} className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex items-start gap-3 mb-2">
-                  <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="text-lg text-foreground mb-1">{depot.name}</h3>
-                    <p className="text-sm text-gray-600">{depot.adresse}</p>
-                    {depot.hinweis && (
-                      <p className="text-sm text-gray-500 italic">{depot.hinweis}</p>
-                    )}
-                  </div>
-                </div>
-                {depot.warteliste && (
-                  <span className="inline-block mt-2 bg-amber-500 text-white px-3 py-1 rounded-full text-sm">
-                    Warteliste
-                  </span>
-                )}
-              </div>
-            ))}
+          <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="bg-white p-5 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-foreground mb-2">Nürnberg</h3>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Stadtpark</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot St. Peter</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Die Wiese</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Johannis</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Gostenhof <span className="text-amber-600 text-xs">(Warteliste)</span></li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot AKi</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Altenfurt</li>
+              </ul>
+            </div>
+            <div className="bg-white p-5 rounded-lg shadow-sm">
+              <h3 className="font-semibold text-foreground mb-2">Fürth</h3>
+              <ul className="space-y-1 text-sm text-gray-700">
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Tataa</li>
+                <li className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary flex-shrink-0" /> Depot Spiegelfabrik <span className="text-amber-600 text-xs">(Warteliste)</span></li>
+              </ul>
 
-            {/* Eigenes Depot */}
-            <div className="bg-primary/10 p-6 rounded-lg shadow-md border-2 border-primary">
-              <div className="flex items-start gap-3 mb-4">
-                <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Eigenes Depot eröffnen</h3>
-                  <p className="text-sm text-gray-700">
-                    Du möchtest ein neues Depot in deiner Nachbarschaft eröffnen?
-                    Melde dich bei uns — wir helfen dir bei den ersten Schritten.
-                  </p>
-                </div>
+              <div className="mt-6 pt-4 border-t border-gray-200">
+                <h3 className="font-semibold text-foreground mb-2">Eigenes Depot?</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  Melde dich bei uns — wir helfen dir bei den ersten Schritten.
+                </p>
+                <a
+                  href="mailto:Team.Koordination@stadt-land-beides.de"
+                  className="inline-flex items-center gap-2 text-primary hover:underline text-sm font-semibold"
+                >
+                  <Mail className="w-4 h-4" />
+                  Kontakt aufnehmen
+                </a>
               </div>
-              <a
-                href="mailto:Team.Koordination@stadt-land-beides.de"
-                className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-4 py-2 rounded transition-colors text-sm"
-              >
-                <Mail className="w-4 h-4" />
-                Kontakt aufnehmen
-              </a>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Depotstandorte — Karte */}
-      <section id="depotstandorte" className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xl text-gray-700 mb-6">
-            Alle Depots findest du auch auf unserer interaktiven Karte.
-          </p>
-          <Link
-            to="/lieferung-kalender#karte"
-            className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors font-accent"
-          >
-            Zur Depot-Karte
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div id="depotstandorte" className="text-center">
+            <Link
+              to="/lieferung-kalender#karte"
+              className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors font-accent"
+            >
+              Adressen, Zeiten & Karte
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -454,40 +430,87 @@ export function Mitmachen() {
       {/* Vereinsarbeit */}
       <section id="vereinsarbeit" className="py-20 bg-solawi-mauve">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Unser Verein
-          </h2>
+          <h2 className="text-4xl mb-8 text-foreground">Unser Verein</h2>
 
-          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
-            <h3 className="text-xl mb-4 text-foreground">
-              Förderverein "Solidarische Landwirtschaft Stadt, Land, Beides e.V."
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Gegründet 2016. Der Verein organisiert Transport, Öffentlichkeitsarbeit und den
-              Betrieb der Depots. Er ist nicht gewinnorientiert — Überschüsse werden im
-              Folgejahr kompensiert.
-            </p>
-            <p className="text-gray-700 mb-4">
-              <strong>Vorstand:</strong> Sebastian Lades &middot; <strong>Kassenwart:</strong> Andreas Gebert
+          <div className="prose prose-lg max-w-none text-gray-700 mb-8">
+            <p>
+              Der Förderverein „Solidarische Landwirtschaft Stadt, Land, Beides
+              e.V." wurde 2016 gegründet und kümmert sich um die Infrastruktur
+              zwischen Landwirten und Ernteteilern: Transport,
+              Öffentlichkeitsarbeit und das Betreiben der Depots. Der Verein
+              arbeitet nicht gewinnorientiert — Überschüsse werden im Folgejahr
+              kompensiert.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg mb-3 text-foreground">Vereinsmitgliedschaft</h3>
-              <p className="text-gray-700">
-                Optional — ab 1&#8239;€/Monat. Die Vereinsmitgliedschaft ist <strong>keine Pflicht</strong> für
-                Ernteteiler, aber eine schöne Möglichkeit, den Verein zusätzlich zu unterstützen.
-              </p>
+          <div className="bg-white/80 p-6 rounded-lg mb-8">
+            <h3 className="text-xl font-semibold mb-4 text-foreground">Vereinsdaten</h3>
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-semibold text-foreground">Vorstand</p>
+                <p className="text-gray-700">Sebastian Lades</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">Kassenwart</p>
+                <p className="text-gray-700">Andreas Gebert</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">Anschrift</p>
+                <p className="text-gray-700">Findelwiesenstr. 25, 90478 Nürnberg</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">E-Mail</p>
+                <p className="text-gray-700">
+                  <a href="mailto:Team.Koordination@stadt-land-beides.de" className="text-primary hover:underline">
+                    Team.Koordination@stadt-land-beides.de
+                  </a>
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">Registergericht</p>
+                <p className="text-gray-700">Nürnberg, VR 202062</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground">USt-IdNr.</p>
+                <p className="text-gray-700">DE419541492</p>
+              </div>
             </div>
+          </div>
 
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg mb-3 text-foreground">Risikobeitrag</h3>
-              <p className="text-gray-700">
-                <strong>1,50&#8239;€/Monat</strong> — Pflicht für alle Ernteteiler. Setzt sich zusammen aus
-                1&#8239;€ Risikoabsicherung und 0,50&#8239;€ Netzwerkbeitrag.
+              <h3 className="text-lg font-semibold mb-3 text-foreground">Ernteteiler</h3>
+              <p className="text-gray-700 text-sm">
+                Kein Vereinsmitglied nötig. Risikobeitrag von
+                <strong> 1,50€/Monat</strong> (1€ Risikoabsicherung + 0,50€
+                Netzwerkbeitrag) ist Pflicht.
               </p>
             </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-3 text-foreground">Vereinsmitglied</h3>
+              <p className="text-gray-700 text-sm">
+                Optional, ab <strong>1€/Monat</strong>. Personen mit Amt müssen
+                Mitglied sein. Du bekommst eine Stimme in der
+                Jahreshauptversammlung.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg font-semibold mb-3 text-foreground">Fördermitglied</h3>
+              <p className="text-gray-700 text-sm">
+                Für Unterstützer ohne Ernteanteil. Beitrag frei wählbar,
+                mindestens <strong>2€/Monat</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              to="/solidarische-landwirtschaft"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-semibold"
+            >
+              Mehr über Solidarische Landwirtschaft erfahren
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

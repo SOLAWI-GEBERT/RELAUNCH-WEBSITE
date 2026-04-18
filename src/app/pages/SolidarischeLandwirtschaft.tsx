@@ -1,5 +1,18 @@
 import { Link } from "react-router";
-import { ArrowRight, Users, Target, Heart, Sprout, Scale, ShieldCheck, Leaf } from "lucide-react";
+import {
+  ArrowRight,
+  Users,
+  Target,
+  Heart,
+  Sprout,
+  Scale,
+  ShieldCheck,
+  Leaf,
+  Globe,
+  TrendingUp,
+  Tractor,
+  MapPin,
+} from "lucide-react";
 
 export function SolidarischeLandwirtschaft() {
   return (
@@ -14,8 +27,8 @@ export function SolidarischeLandwirtschaft() {
                 Solidarische Landwirtschaft
               </h1>
               <p className="text-xl text-foreground/80">
-                Eine Initiative für solidarische Landwirtschaft in der
-                Metropolregion Nürnberg
+                Eine weltweite Idee — lokal gelebt in der Metropolregion
+                Nürnberg
               </p>
             </div>
             <div className="flex justify-center">
@@ -63,7 +76,7 @@ export function SolidarischeLandwirtschaft() {
                 <li>• Planbare Einnahmen statt Marktpreisdruck</li>
                 <li>• Langfristige Finanzierungsgrundlage</li>
                 <li>• Direkte Wertschätzung der Arbeit</li>
-                <li>• Keine Excel-Tabellen und Transportfahrten</li>
+                <li>• Freiheit, so anzubauen, wie es richtig ist</li>
               </ul>
             </div>
 
@@ -148,141 +161,15 @@ export function SolidarischeLandwirtschaft() {
         </div>
       </section>
 
-      {/* Der Verein */}
-      <section id="verein" className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Der Verein: Stadt, Land, Beides e.V.
-          </h2>
-
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p>
-              Der Förderverein „Solidarische Landwirtschaft Stadt, Land, Beides
-              e.V." wurde 2016 gegründet und kümmert sich um die Infrastruktur
-              zwischen Landwirten und Ernteteilern: Transport,
-              Öffentlichkeitsarbeit und das Betreiben der Depots im Stadtgebiet.
-              So können sich die Landwirte auf das konzentrieren, was sie am
-              liebsten machen.
-            </p>
-
-            <div className="bg-solawi-gray p-6 rounded-lg not-prose">
-              <h3 className="text-xl font-semibold mb-4 text-foreground">
-                Vereinsdaten
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="font-semibold text-foreground">Vorstand</p>
-                  <p className="text-gray-700">Sebastian Lades</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Kassenwart</p>
-                  <p className="text-gray-700">Andreas Gebert</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Anschrift</p>
-                  <p className="text-gray-700">
-                    Findelwiesenstr. 25, 90478 Nürnberg
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">E-Mail</p>
-                  <p className="text-gray-700">
-                    <a
-                      href="mailto:Team.Koordination@stadt-land-beides.de"
-                      className="text-primary hover:underline"
-                    >
-                      Team.Koordination@stadt-land-beides.de
-                    </a>
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Registergericht</p>
-                  <p className="text-gray-700">Nürnberg, VR 202062</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">USt-IdNr.</p>
-                  <p className="text-gray-700">DE419541492</p>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              Der Verein arbeitet nicht gewinnorientiert. Etwaige Überschüsse
-              werden im Folgejahr kompensiert. Der Verein besteht aus allen
-              ehrenamtlich Aktiven — Vorstand, Kassenwart und Kassenprüfer
-              agieren alle ohne Aufwandsentschädigung.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mitgliedschaft */}
-      <section id="mitgliedschaft" className="py-20 bg-solawi-salmon-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">Mitgliedschaft</h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground font-semibold">
-                Ernteteiler werden
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Als Ernteteiler wirst du nicht automatisch Vereinsmitglied. Du
-                wählst deine Ernteanteile, zahlst den monatlichen Beitrag und
-                holst deine Ernte im Depot ab. Für jeden Ernteteiler fällt ein
-                Risikobeitrag von 1,50€/Monat an (1€ Risikoabsicherung + 0,50€
-                Netzwerkbeitrag).
-              </p>
-              <Link
-                to="/mitmachen#ernteteile"
-                className="text-primary hover:underline font-semibold inline-flex items-center gap-1"
-              >
-                Ernteanteile ansehen <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground font-semibold">
-                Vereinsmitglied werden
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Eine Mitgliedschaft im Verein ist wünschenswert, aber nicht
-                Pflicht. Der Mitgliedsbeitrag beträgt mindestens 1€/Monat.
-                Personen, die ein Amt bekleiden, müssen Mitglied sein. Die
-                Satzung findest du auf unserer Homepage.
-              </p>
-              <Link
-                to="/kontakt-anmeldung#anmeldung"
-                className="text-primary hover:underline font-semibold inline-flex items-center gap-1"
-              >
-                Zur Anmeldung <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
-              <h3 className="text-xl mb-3 text-foreground font-semibold">
-                Fördermitglied werden
-              </h3>
-              <p className="text-gray-700">
-                Für Teilnehmer ohne Ernteanteil gibt es die Fördermitgliedschaft
-                — der Beitrag ist frei wählbar (mindestens 2€/Monat). So kannst
-                du die Idee der solidarischen Landwirtschaft unterstützen, auch
-                ohne selbst Ernteteiler zu sein.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Unsere Höfe */}
-      <section id="hoefe" className="py-20 bg-solawi-mauve">
+      <section id="hoefe" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">Unsere Partnerhöfe</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             <Link
               to="/hoefe-und-ernteanteile#hederer"
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              className="bg-solawi-salmon-light p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
                 demeter
@@ -298,7 +185,7 @@ export function SolidarischeLandwirtschaft() {
 
             <Link
               to="/hoefe-und-ernteanteile#tristans"
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              className="bg-solawi-green p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-green-700 px-2 py-0.5 rounded">
                 Bioland
@@ -314,7 +201,7 @@ export function SolidarischeLandwirtschaft() {
 
             <Link
               to="/hoefe-und-ernteanteile#walz"
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              className="bg-solawi-mauve p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
                 demeter
@@ -330,7 +217,7 @@ export function SolidarischeLandwirtschaft() {
 
             <Link
               to="/hoefe-und-ernteanteile#kirschgarten"
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+              className="bg-solawi-orange p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-emerald-600 px-2 py-0.5 rounded">
                 EU-Bio
@@ -340,19 +227,118 @@ export function SolidarischeLandwirtschaft() {
               </h3>
               <p className="text-gray-600 text-sm">
                 Bio-Beeren bei Igensdorf. Vom Verein gepachtet, extensiv
-                bewirtschaftet, ein Beitrag zur Biodiversität.
+                bewirtschaftet.
               </p>
             </Link>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-8 text-center">
-            <Link
-              to="/hoefe-und-ernteanteile"
-              className="inline-flex items-center gap-2 text-primary hover:text-foreground font-semibold transition-colors"
-            >
-              Alle Höfe und Ernteanteile im Detail
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+      {/* SoLaWi weltweit — Fun Facts */}
+      <section id="weltweit" className="py-20 bg-solawi-salmon-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-4 text-foreground">
+            SoLaWi weltweit
+          </h2>
+          <p className="text-xl text-gray-600 mb-12">
+            Die Idee ist nicht neu — und sie wächst überall.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <Globe className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                Ursprung in Japan
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Die Idee entstand in den 1960er Jahren in Japan als „Teikei"
+                (提携 — Partnerschaft). Japanische Hausfrauen schlossen sich
+                zusammen, weil sie wissen wollten, was in ihrem Essen steckt.
+                Heute gibt es in Japan über 1.000 Teikei-Gruppen.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <TrendingUp className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                CSA in Nordamerika
+              </h3>
+              <p className="text-gray-700 text-sm">
+                In den USA und Kanada heißt es „Community Supported Agriculture"
+                (CSA). Die erste US-Farm startete 1986 in Massachusetts. Heute
+                gibt es über 7.000 CSA-Farmen in Nordamerika — von Kleinstädten
+                bis New York City.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <Tractor className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                AMAP in Frankreich
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Die französische Variante „AMAP" (Association pour le maintien
+                d'une agriculture paysanne) startete 2001 in der Provence. Heute
+                versorgen über 2.000 AMAP-Gruppen mehr als 300.000 Familien mit
+                lokalen Lebensmitteln.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <MapPin className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                SoLaWi in Deutschland
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Die erste deutsche SoLaWi entstand 1988 auf dem Buschberghof bei
+                Hamburg. Seit 2011 gibt es das Netzwerk Solidarische
+                Landwirtschaft e.V. — inzwischen sind über 400 SoLaWi-Betriebe
+                in Deutschland aktiv und versorgen mehr als 100.000 Menschen.
+              </p>
+            </div>
+          </div>
+
+          {/* Fun Facts */}
+          <h3 className="text-2xl font-semibold mb-6 text-foreground">
+            Fun Facts
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">60+</p>
+              <p className="text-sm text-gray-600">
+                Länder mit SoLaWi-Initiativen — von Kuba bis Südkorea
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">1965</p>
+              <p className="text-sm text-gray-600">
+                Start der ersten Teikei-Gruppe in Japan
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">400+</p>
+              <p className="text-sm text-gray-600">
+                SoLaWi-Betriebe in Deutschland
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">30 %</p>
+              <p className="text-sm text-gray-600">
+                weniger Lebensmittelverschwendung bei SoLaWi vs. Supermarkt
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">0 km</p>
+              <p className="text-sm text-gray-600">
+                Umweg über Großmarkt — vom Acker direkt ins Depot
+              </p>
+            </div>
+            <div className="bg-white p-5 rounded-lg text-center">
+              <p className="text-3xl font-bold text-primary mb-1">100 %</p>
+              <p className="text-sm text-gray-600">
+                der Ernte wird verwertet — auch die krumme Gurke
+              </p>
+            </div>
           </div>
         </div>
       </section>

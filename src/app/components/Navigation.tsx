@@ -65,23 +65,23 @@ export function Navigation() {
       title: "Mitmachen",
       path: "/mitmachen",
       subItems: [
-        { title: "Mitmachen: Überblick", path: "/mitmachen#ueberblick" },
+        { title: "So wirst du Mitglied", path: "/mitmachen#ueberblick" },
         {
-          title: "Ernteanteil wählen & Beitrag",
+          title: "Ernteanteile & Kosten",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Ernteteile Zahl/frei", path: "/mitmachen#ernteteile" },
-            { title: "Teilnahme: Laufzeit / Wechsel / Kündigung", path: "/mitmachen#teilnahme" },
+            { title: "Ernteanteile & Kosten", path: "/mitmachen#ernteteile" },
+            { title: "Teilnahmebedingungen", path: "/mitmachen#teilnahme" },
           ]
         },
         {
-          title: "So läuft die Abholung",
+          title: "Dein Depot",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Depots: Regeln & Ablauf", path: "/mitmachen#depots" },
-            { title: "Depotstandorte", path: "/mitmachen#depotstandorte" },
+            { title: "Wähle dein Depot", path: "/mitmachen#depots" },
+            { title: "Adressen, Zeiten & Karte", path: "/lieferung-kalender#karte" },
           ]
         },
         {
@@ -90,17 +90,8 @@ export function Navigation() {
           isCategory: true,
           subItems: [
             { title: "Mitarbeit & Engagement", path: "/mitmachen#mitarbeit-engagement" },
-            { title: "Rollen: Hofbetreuer / Depotbetreuer / Fahrer", path: "/mitmachen#rollen" },
-            { title: "Vereinsarbeit", path: "/mitmachen#vereinsarbeit" },
-          ]
-        },
-        {
-          title: "Depot eröffnen",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Schritt-für-Schritt", path: "/mitmachen#depot-eroeffnen-anleitung" },
-            { title: 'PDF: "Wie macht man ein Depot?"', path: "/mitmachen#depot-pdf" },
+            { title: "Ehrenamtliche Rollen", path: "/mitmachen#rollen" },
+            { title: "Unser Verein", path: "/mitmachen#vereinsarbeit" },
           ]
         },
       ],
