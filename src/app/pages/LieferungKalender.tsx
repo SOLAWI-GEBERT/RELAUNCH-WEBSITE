@@ -214,8 +214,8 @@ export function LieferungKalender() {
             </div>
           </div>
 
-          {/* Veranstaltungsarten */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Termine & Aktionen */}
+          <div className="grid md:grid-cols-3 gap-6">
             <div id="veranstaltungen" className="bg-solawi-mauve p-6 rounded-lg">
               <Calendar className="w-8 h-8 text-primary mb-3" />
               <h3 className="text-lg font-semibold mb-2">Veranstaltungen</h3>
@@ -224,19 +224,11 @@ export function LieferungKalender() {
               </p>
             </div>
 
-            <div id="mitmachaktionen" className="bg-solawi-mauve p-6 rounded-lg">
-              <Clock className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Mitmachaktionen</h3>
-              <p className="text-sm text-gray-600">
-                Gemeinsame Aktionen auf den Höfen
-              </p>
-            </div>
-
             <div id="hofaktionen" className="bg-solawi-mauve p-6 rounded-lg">
               <Truck className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Hofaktionen</h3>
+              <h3 className="text-lg font-semibold mb-2">Hof- & Mitmachaktionen</h3>
               <p className="text-sm text-gray-600">
-                Besondere Aktivitäten auf unseren Partnerhöfen
+                Gemeinsame Aktionen und Arbeitseinsätze auf unseren Partnerhöfen
               </p>
             </div>
 

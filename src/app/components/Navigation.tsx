@@ -32,6 +32,7 @@ export function Navigation() {
         { title: "Was bekomme ich?", path: "/#was-bekomme-ich" },
         { title: "Kosten & Beitragsmodell", path: "/#kosten-beitragsmodell" },
         { title: "Depot finden", path: "/#depot-finden" },
+        { title: "Häufige Fragen", path: "/#faq" },
         { title: "Aktuelles diese Woche", path: "/#aktuelles" },
       ],
     },
@@ -39,36 +40,36 @@ export function Navigation() {
       title: "Höfe & Ernteanteil",
       path: "/hoefe-und-ernteanteile",
       subItems: [
-        { 
-          title: "Unsere Höfe", 
-          path: "#", 
+        {
+          title: "Unsere Höfe",
+          path: "#",
           isCategory: true,
           subItems: [
-            { 
-              title: "Gärtner-Hof Heribert Hederer", 
+            {
+              title: "Demeterhof Hederer (Sommergemüse & Obst)",
               path: "/hoefe-und-ernteanteile#hederer",
               subItems: [
                 { title: "Sommergemüse", path: "/hoefe-und-ernteanteile#hederer-sommer" },
-                { title: "Obst", path: "/hoefe-und-ernteanteile#hederer-obst" },
+                { title: "Obst & Säfte", path: "/hoefe-und-ernteanteile#hederer-obst" },
               ]
             },
-            { 
-              title: "Tristans Biohof", 
+            {
+              title: "Biohof Tristan (Wintergemüse)",
               path: "/hoefe-und-ernteanteile#tristans",
               subItems: [
                 { title: "Wintergemüse", path: "/hoefe-und-ernteanteile#tristans-winter" },
               ]
             },
-            { 
-              title: "Biohof Walz", 
+            {
+              title: "Demeterhof Walz (Fleisch, Eier & Ur-Getreide)",
               path: "/hoefe-und-ernteanteile#walz",
               subItems: [
                 { title: "More Huhn..", path: "/hoefe-und-ernteanteile#walz-huhn" },
                 { title: "More Getreide", path: "/hoefe-und-ernteanteile#walz-getreide" },
               ]
             },
-            { 
-              title: "Kirschgarten", 
+            {
+              title: "Kirschgarten (Bio-Beeren)",
               path: "/hoefe-und-ernteanteile#kirschgarten",
               subItems: [
                 { title: "Beeren", path: "/hoefe-und-ernteanteile#kirschgarten-beeren" },
@@ -76,9 +77,9 @@ export function Navigation() {
             },
           ]
         },
-        { 
-          title: "Hofkooperationen", 
-          path: "#", 
+        {
+          title: "Hofkooperationen",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Gallini Fellici", path: "/hoefe-und-ernteanteile#gallini-fellici" },
@@ -91,38 +92,37 @@ export function Navigation() {
       path: "/mitmachen",
       subItems: [
         { title: "Mitmachen: Überblick", path: "/mitmachen#ueberblick" },
-        { 
-          title: "Ernteanteil wählen & Beitrag", 
-          path: "#", 
+        {
+          title: "Ernteanteil wählen & Beitrag",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Ernteteile Zahl/frei", path: "/mitmachen#ernteteile" },
             { title: "Teilnahme: Laufzeit / Wechsel / Kündigung", path: "/mitmachen#teilnahme" },
           ]
         },
-        { 
-          title: "So läuft die Abholung", 
-          path: "#", 
+        {
+          title: "So läuft die Abholung",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Depots: Regeln & Ablauf", path: "/mitmachen#depots" },
             { title: "Depotstandorte", path: "/mitmachen#depotstandorte" },
           ]
         },
-        { 
-          title: "Engagement & Mitarbeit", 
-          path: "#", 
+        {
+          title: "Engagement & Mitarbeit",
+          path: "#",
           isCategory: true,
           subItems: [
-            { title: "Mitmachaktionen", path: "/mitmachen#mitmachaktionen" },
             { title: "Mitarbeit & Engagement", path: "/mitmachen#mitarbeit-engagement" },
             { title: "Rollen: Hofbetreuer / Depotbetreuer / Fahrer", path: "/mitmachen#rollen" },
             { title: "Vereinsarbeit", path: "/mitmachen#vereinsarbeit" },
           ]
         },
-        { 
-          title: "Depot eröffnen", 
-          path: "#", 
+        {
+          title: "Depot eröffnen",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Schritt-für-Schritt", path: "/mitmachen#depot-eroeffnen-anleitung" },
@@ -135,9 +135,9 @@ export function Navigation() {
       title: "Lieferung & Kalender",
       path: "/lieferung-kalender",
       subItems: [
-        { 
-          title: "Lieferung & Abholung", 
-          path: "#", 
+        {
+          title: "Lieferung & Abholung",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Wann wird geliefert?", path: "/lieferung-kalender#wann" },
@@ -146,27 +146,27 @@ export function Navigation() {
             { title: "Depot-Hinweise", path: "/lieferung-kalender#depot-hinweise" },
           ]
         },
-        { 
-          title: "Kalender", 
-          path: "#", 
+        { title: "Höfe & Depots (Karte)", path: "/lieferung-kalender#karte" },
+        { title: "Depot-Öffnungszeiten", path: "/lieferung-kalender#depots" },
+        {
+          title: "Termine & Aktionen",
+          path: "#",
           isCategory: true,
           subItems: [
             { title: "Veranstaltungen", path: "/lieferung-kalender#veranstaltungen" },
-            { title: "Mitmachaktionen", path: "/lieferung-kalender#mitmachaktionen" },
-            { title: "Hofaktionen", path: "/lieferung-kalender#hofaktionen" },
+            { title: "Termine: Hof- & Mitmachaktionen", path: "/lieferung-kalender#hofaktionen" },
             { title: "Anlieferungstermine", path: "/lieferung-kalender#anlieferung" },
           ]
         },
       ],
     },
     {
-      title: "Kontakt & Anmeldung",
+      title: "Kontakt",
       path: "/kontakt-anmeldung",
       subItems: [
-        { title: "Anmeldung / Teilnahmevereinbarung", path: "/kontakt-anmeldung#anmeldung" },
         { title: "Kontaktformular", path: "/kontakt-anmeldung#kontakt" },
-        { title: "Ansprechpersonen", path: "/kontakt-anmeldung#ansprechpersonen" },
-        { title: "FAQ", path: "/kontakt-anmeldung#faq" },
+        { title: "Ansprechpartner", path: "/kontakt-anmeldung#ansprechpartner" },
+        { title: "Fragen für Ernteteiler", path: "/kontakt-anmeldung#faq" },
       ],
     },
   ];
@@ -276,7 +276,7 @@ export function Navigation() {
               to="/kontakt-anmeldung#anmeldung"
               className="ml-4 bg-cta hover:bg-cta-hover text-white px-5 py-2 font-accent transition-colors text-sm"
             >
-              Anmelden
+              Ernteteiler werden
             </Link>
           </div>
 
@@ -429,7 +429,7 @@ export function Navigation() {
               onClick={closeMobileMenu}
               className="block w-full bg-cta hover:bg-cta-hover text-white text-center px-6 py-3 transition-colors font-accent"
             >
-              Jetzt anmelden
+              Ernteteiler werden
             </Link>
             <Link
               to="/lieferung-kalender#kalender"

@@ -209,94 +209,11 @@ export function KontaktAnmeldung() {
           <div className="text-center mb-12">
             <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Fragen und Antworten
+              Fragen für Ernteteiler
             </h2>
           </div>
 
           <Accordion type="single" collapsible className="bg-white rounded-lg shadow-sm px-6">
-            <AccordionItem value="was-ist-solawi">
-              <AccordionTrigger className="text-base font-semibold">
-                Was ist Solawi?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                „Möchte ich daraus bestehen?", hat schon ein bekannter Comedian gefragt und
-                trifft damit den Nagel auf den Kopf. Möchte ich aus dem bestehen, was mir da
-                im (Super)Markt angeboten wird? Bei der Solidarischen Landwirtschaft (Solawi)
-                geht es darum, regionale, saisonale und authentische Bio-Lebensmittel
-                anzubauen und zu beziehen. Im Vergleich zum herkömmlichen Einkauf bezahlt man
-                als Verbraucher aber nicht das einzelne Produkt, sondern den Preis, den es
-                kostet, das Lebensmittel herzustellen. Man kann sich als „Städter" direkt mit
-                dem Bauernhof verbinden und gemeinsam den Anbau planen. Hierzu gehört auch,
-                dass das Risiko für die Ernte gemeinsam getragen wird. Damit werden regionale
-                Bio-Höfe erhalten und man kann darüber hinaus aktiv eine nachhaltige
-                Landwirtschaft mitgestalten. Die Solawi Stadt, Land, Beides. sucht
-                Verbraucherinnen und Verbraucher, die als Ernteteiler mit einem der Höfe
-                zusammenkommen. Angesprochen sind Menschen, die keine industrielle Produktion
-                von Lebensmitteln wollen – ohne Chemie, Zusatzstoffe, umweltbelastende
-                Verpackungen, Ausbeutung der Böden oder lange Transportwege. Jede Solawi ist
-                in Nuancen unterschiedlich, jedoch verfolgen alle das gleiche Ziel.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="unterschied-biomarkt">
-              <AccordionTrigger className="text-base font-semibold">
-                Was unterscheidet eine Solawi vom Bio-Markt/Hofladen?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Bei der Solawi baut der Verbraucher eine Verbindung mit dem erzeugenden Hof
-                auf. Ich möchte als Verbraucher genau wissen, wo dieses Lebensmittel, das ich
-                esse, herkommt. Wie wurde es angebaut und mit welchen Stoffen behandelt? Diese
-                Fragen sind für mich essentiell und werden im Bio-Markt nicht vollständig
-                beantwortet. Die gesetzliche Landesangabe ist für mich zu ungenau. Inzwischen
-                kommt es auch immer häufiger vor, dass im Hofladen eines Landwirts das
-                Sortiment aufgestockt wird mit der Begründung, der „Kunde" wolle das so. Wer
-                die Herkunftsländer in der Gemüse- und Obstabteilung von Biomärkten beäugt,
-                und sich fragt, warum die Birne vor mir nun aus Frankreich kommt, ist bei uns
-                genau richtig.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="unterschied-abokiste">
-              <AccordionTrigger className="text-base font-semibold">
-                Was unterscheidet die Solawi von der „Abo-Kiste/Öko-Kiste"?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Bei einer Solawi steht die Verbindung der Ernteteiler mit dem Landwirt im
-                Vordergrund. Es geht darum, dass man nicht nach Belieben bestellt und für
-                einen festen Preis bekommt. Es geht eher um einen nachhaltigen Konsum,
-                wodurch Biodiversität und Fruchtbarkeit der Erde erhalten bleiben.
-                Wirtschaftlich betrachtet haben auch die Lieferanten für die Abo-Kiste keine
-                Gewissheit, dass ihre Produkte abgesetzt werden können. Diesen Bann wollen wir
-                in der Solawi durchbrechen und die gesamte Ernte abnehmen. Hierfür bezahlen
-                wir dem Landwirt seine vollständigen Ausgaben.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="besondere-slb">
-              <AccordionTrigger className="text-base font-semibold">
-                Was ist das Besondere an der Solawi Stadt, Land, Beides.?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Das Besondere bei „Stadt, Land, Beides." ist, dass mehrere Höfe mitmachen und
-                sich die Ernteteiler auf einem oder mehreren Höfen engagieren können. Dadurch
-                steht eine breite Palette an Lebensmitteln zur Auswahl.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="mehrere-landwirte">
-              <AccordionTrigger className="text-base font-semibold">
-                Wieso sind bei Stadt, Land, Beides. mehrere Landwirte dabei?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Als die Solawi in Nürnberg gegründet wurde, haben sich mehrere Landwirte
-                gemeldet. Ziel der ehrenamtlich Aktiven war und ist es, diese Höfe durch
-                Solawi ein festes Standbein zu geben oder – im Idealfall – komplett Solawi zu
-                sein. Diese besondere Situation mit den unterschiedlichen Produkten erlaubt es
-                den Ernteteilern, bei dem einen oder anderen Hof mitzumachen. Das Ziel ist,
-                jedem Landwirt zu 100% Solawi zu verhelfen.
-              </AccordionContent>
-            </AccordionItem>
-
             <AccordionItem value="verein-aufgaben">
               <AccordionTrigger className="text-base font-semibold">
                 Was macht der Solawi-Verein?
