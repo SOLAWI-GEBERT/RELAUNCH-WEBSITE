@@ -29,7 +29,10 @@
       "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*kürbis* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*Kürbis* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*kuerbis*)",
       "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*hof* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*Hof*)",
       "Bash(brew install:*)",
-      "Bash(pip3 install:*)"
+      "Bash(pip3 install:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.png /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.gif)"
     ]
   }
 }

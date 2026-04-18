@@ -1,0 +1,547 @@
+Öffentliches Verfahrensverzeichnis nach § 4e des Bundesdatenschutzgesetzes
+
+
+Datenschutz hat für uns einen hohen Stellenwert – für Dich sicherlich auch.
+
+Mit dieser Datenschutzerklärung geben wir Dir bekannt, welche personenbezogenen Daten verarbeitet werden und welche Rechte Dir zustehen. Der Förderverein Stadt, Land, Beides e.V. ist ein Zusammenschluss aus mehreren Höfen und soll satzungsgemäß sie solidarische Landwirtschaft fördern. Diese ehrenamtliche Arbeit zu leisten ist ohne Einwilligung in die Verwendung Deiner Daten in analoger und digitaler Form nicht möglich. Soweit es uns organisatorisch und technisch möglich ist, geben wir die Kontrolle über die Verwendung Deiner Daten. Wie genau Deine Daten verarbeitet werden, erklären wir Dir in den folgenden Absätzen. Generell bemühen wir uns um ein Minimum der notwendigen Daten.
+
+Diese Datenschutzerklärung dient auch zur Umsetzung unserer Verpflichtungen aus § 13 Telemediengesetz (TMG) sowie Artikel 13 der Verordnung (EU) 2016/679 des europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG (Datenschutz-Grundverordnung, DSGVO).
+
+ 
+1. Verantwortlicher
+
+
+eingetragener Verein: Förderverein der SoLawi Initiative Stadt, Land, Beides e.V.
+
+Vorstand: Monique Schindhelm, 1. Vorstand, Aaron Rüb, 2. Vorstand
+
+zusätzliche Befugte: Kassenwart, Hofkoordinatoren, Autoren der AK-Öffentlichkeitsarbeit
+
+Anschrift: Braillestr. 27, 90425 Nürnberg
+
+Telefon: +49 911 596 79 722
+
+E-Mail: solawi@stadt-land-beides.de
+
+ 
+2. Definitionen
+
+
+Die Datenschutzerklärung verwendet folgende Begriffe im Sinne der Datenschutz-Grundverordnung: 
+
+    „personenbezogene Daten“: alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu einer Online-Kennung oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind;
+
+    „Verarbeitung“ jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung;
+
+    „Verantwortlicher“ die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet;
+
+    „Auftragsverarbeiter“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet;
+
+    „Empfänger“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, denen personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei ihr um einen Dritten handelt oder nicht. Behörden, die im Rahmen eines bestimmten Untersuchungsauftrags nach dem Unionsrecht oder dem Recht der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger; die Verarbeitung dieser Daten durch die genannten Behörden erfolgt im Einklang mit den geltenden Datenschutzvorschriften gemäß den Zwecken der Verarbeitung;
+
+    „Dritter“ eine natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, außer der betroffenen Person, dem Verantwortlichen, dem Auftragsverarbeiter und den Personen, die unter der unmittelbaren Verantwortung des Verantwortlichen oder des Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten;
+
+    „Einwilligung“ der betroffenen Person jede freiwillig für den bestimmten Fall, in informierter Weise und unmissverständlich abgegebene Willensbekundung in Form einer Erklärung oder einer sonstigen eindeutigen bestätigenden Handlung, mit der die betroffene Person zu verstehen gibt, dass Du mit der Verarbeitung der Du betreffenden personenbezogenen Daten einverstanden ist;
+
+    „grenzüberschreitende Verarbeitung“ entweder
+
+        eine Verarbeitung personenbezogener Daten, die im Rahmen der Tätigkeiten von Niederlassungen eines Verantwortlichen oder eines Auftragsverarbeiters in der Union in mehr als einem Mitgliedstaat erfolgt, wenn der Verantwortliche oder Auftragsverarbeiter in mehr als einem Mitgliedstaat niedergelassen ist, oder
+
+        eine Verarbeitung personenbezogener Daten, die im Rahmen der Tätigkeiten einer einzelnen Niederlassung eines Verantwortlichen oder eines Auftragsverarbeiters in der Union erfolgt, die jedoch erhebliche Auswirkungen auf betroffene Personen in mehr als einem Mitgliedstaat hat oder haben kann;
+
+ 
+3. Art, Umfang und Zweck der Verarbeitung, Rechtsgrundlagen
+
+3.1 Folgende Arten von Daten werden von uns verarbeitet:
+
+
+Als Ernteteiler bzw. Mitglied benötigen die betroffenen Höfe und der Förderverein folgende persönliche Daten
+
+     Name
+
+    Adresse
+
+    Telefonnummer
+
+    E-Mail-Adresse
+
+    Vertragsdaten (Vertragstext, Zahlungen)
+
+ 
+
+Bei der Teilnahme am Lastschriftverfahren benötigen wir noch die:
+
+    Kontodaten
+
+ 
+
+Als Nutzer der Webseite:
+
+    Inhalte der von Dir erstellten Beiträge in Form von Videos, Texte, Bildern
+
+    Im Falle des Bezugs von Newslettern Deine Mailadresse
+
+ 
+
+Als Empfänger unseres Newsletter:
+
+    Empfangs- und Lesebestätigung
+
+    Links denen Du auf dem Newsletter gefolgt bist
+
+ 
+
+Erfasst aber nicht elektronisch weiterverarbeitet werden:
+
+    Nutzungsdaten (besuchte Webseiten, Zugriffszeiten, Standort, etc.).
+
+    Kommunikationsdaten (Geräteinformationen, IP-Adressen, etc.).
+
+ 
+
+Die Daten werden in elektronischer und schriftlicher Papierform gespeichert
+
+ 
+3.2 Folgende Kategorien betroffener Personen liegen vor:
+
+    Besucher unserer Webseiten (im Folgenden auch „Nutzer“) sowie andere Interessenten;
+
+    Mitglieder des Vereins
+
+    Ernteteiler
+
+    Hofbetreiber
+
+    weitere Vereinspartner;
+
+ 
+3.3 Die Verarbeitung der Daten erfolgt zu den folgenden Zwecken, und unter Nutzung der nachfolgend genannten Rechtsgrundlagen:
+
+     Dein Name und Deine Mailadresse werden innerhalb des Fördervereins und der darin angeschlossenen Höfe geteilt. Die Weitergabe kann in schriftlicher und elektronischer Form erfolgen.
+
+    Als Ernteteiler ist Dein Name, Deine Mailadresse und die von Dir eingestellte Telefonnummer in einem geschützten Bereich auch für andere Ernteteilern einsehbar. Diese Listen soll den Austausch unter den Ernteteilern fördern und die schnelle Kommunikation bei besonderen Ereignissen erleichtern.
+     Zur Ausführung von vertraglichen Verpflichtungen gegenüber Mitgliedern/Ernteteilern und anderen Vertragspartnern werden Mitgliedsdaten sowie Vertragsdaten verarbeitet. Soweit in Formularen einzugebende Daten als verpflichtend gekennzeichnet sind, sind sie zur Erfüllung des dargestellten Zwecks erforderlich. Die Verarbeitung erfolgt auf Grundlage von Artikel 6 Absatz 1 Buchstaben b und c DSGVO. Eine gleichzeitiger Widerspruch zur Verwendung obiger zur Vertragserfüllung notwendigen personenbezogenen Daten und eine Teilnahme als Ernteteiler bzw. als Mitglied beim Förderverein ist ausgeschlossen.
+
+    Die Höfe, die ehrenamtlichen Koordinatoren und Kassenbeauftragten pflegen Deine vertraglichen Daten und der Kommunikation in digitaler und analoger Form zu organisatorischen Zwecken auf eigenen PC's, Smartphones und Papierablagen.
+
+    Darstellung, Aufrechterhaltung und Verbesserung unserer Webseiten einschließlich aller Funktionen gegenüber Nutzern, Beweiszwecke; dies erfolgt auf Grundlage von Artikel 6 Absatz 1 Buchstabe f DSGVO (Wahrung unserer berechtigten Interessen). Es werden Kommunikations- und Nutzungsdaten verarbeitet, eine Weitergabe der Daten an Dritte erfolgt grundsätzlich nicht, es sei denn, es besteht hierzu eine gesetzliche Verpflichtung (Artikel 6 Absatz 1 Buchstabe c DSGVO).
+
+    Als Ernteteiler bekommst Du automatisch einen Account auf stadt-land-beides.de eingerichtet und Dein Name und Deine Mailadresse ist entsprechend in einer Datenbank gespeichert. Die Datenbank unterstützt die Verwaltung und Organisation der einzelnen Gruppen und stellt eine wichtige Grundlage dar die vertraglichen Vereinbarungen zu erfüllen. Dies erfolgt auf Grundlage Artikel 6 Absatz 1 Buchstabe b DSGVO; darüber hinaus können Kommunikationsdaten zu Beweiszwecken und zum Schutz vor Missbrauch der Funktionen verarbeitet werden, Artikel 6 Absatz 1 Buchstabe f DSGVO. Neben dem Account wird jeder Ernteteiler in den allgemeinen Newsletters eingetragen. So erreichen Dich alle Informationen nur einmal. Anlässlich dieser Erstellung oder Änderung eines Benutzerkontos für unsere Webseiten werden somit Mitglieds-, Vertragsdaten sowie ggf. Inhalte verarbeitet, um die Leistungen im Rahmen der Webseiten für registrierte Nutzer erbringen zu können. Nach Empfang des ersten Newsletter hast Du die Möglichkeit Dich aus dem Newsletterverteiler selbst wieder auszutragen. Ein Austragen aus den internen Mailverteilern erfolgt erst nach Beendigung des Vertragsverhältnisses.
+
+    Bei aktiver Bestellung eines Newsletters auf einem unserer Veranstaltungen oder über das Kontaktformular ist ein aktive Bestätigung von Dir in elektronischer Form notwendig. („Double Opt In“ Verfahren) Ein Austragen aus dem Newsletterverteiler ist jederzeit auf unsere Webseite selbstständig möglich. Mit eingeholter Einwilligung erfolgt die Verarbeitung gemäß Artikel 6 Absatz 1 Buchstabe a sowie Art. 7 DSGVO, im Übrigen zur Wahrung unserer berechtigten Interessen: Artikel 6 Absatz 1 Buchstabe f DSGVO.
+
+    Beim Empfang eines Newsletters können wir den Empfang des Newsletters nachverfolgen und einsehen, welche weiterführenden Links geklickt wurden. Diese statistischen Erhebungen geben uns ein Feedback, wie gut unsere Informationen aufgenommen werden. Eine auf diese Daten abgestimmte Kampagne erfolgt nicht. Weiterhin kann leichter Fehler im System behoben werden, wenn Du als Teilnehmer wichtige Informationen vermisst.
+
+    Eine tiefergehende Analyse Deines Nutzungsverhaltens auf unserer Webseite (besuchten Webseiten, Verweildauer) wird nicht vorgenommen, so ist z.Bsp. Google Analytics standardmässig auf unseren Webseiten deaktiviert. Weitere automatisch anfallende Daten werden zu administrativen Zwecken verwendet und erfolgen auf Grundlage von Artikel 6 Absatz 1 Buchstabe f DSGVO (Wahrung unserer berechtigten Interessen).
+
+    Antworten auf Deine Anfragen über ein Kontaktformular, E-Mail-Korrespondenz mit Dir erfolgt in Deinem Interesse. Die Verarbeitung erfolgt auf Grundlage von Artikel 6 Absatz 1 Buchstabe b DSGVO.
+
+    Du kannst teilweise eigene Inhalte auf der Webseite erstellen. Die wird grundsätzlich nur mit einem vorhandene Account ermöglicht. Die Inhalte sind mit Deinem Namen verknüpft. Teilweise wird Dein Name als Author angezeigt. Es werden IP-Adressen aus Beweisgründen und damit auf Grundlage unserer berechtigten Interessen nach Artikel 6 Absatz 1 Buchstabe f DSGVO gespeichert.
+
+Sofern unserer Verarbeitung weitere Rechtsgrundlagen zugrunde liegen, werden sie unten in den weiteren Ausführungen benannt.
+
+ 
+4. Datenschutz
+
+    Mit Deinen Daten wird verantwortungsbewußt umgegangen und der Zugang Dritter verwehrt. Der Schutz Deiner Daten gegenüber Dritten erfolgt im Privatbereich der beauftragten ehrenamtlichen Koordinatoren mit haushaltsüblichen Schutzmaßnahmen, wie Einbruchschutz und Virenscanner. Maßnahmen darüber hinaus sind nicht vorgesehen. Ein gleichzeitiger Widerspruch zu dieser ehrenamtlichen Organisationsstruktur und eine Teilnahme als Ernteteiler bzw. als Mitglied beim Förderverein ist ausgeschlossen.
+
+    Deine persönlichen Daten auf der Webseite werden grundsätzlich verschlüsselt übertragen und zur Einsicht berechtigte Personen müssen sich mit einem Passwort legitimieren.
+
+    Die Übermittlung Deiner personenbezogenen Vertragsdaten kann von Dir aus in elektronischer Form per Mail oder schriftlich per Brief erfolgen. Die Verantwortung über den Übermittlungsweg verantwortest Du selbst.
+
+    Die verantwortlichen Organisatoren und jeder Einzelne ist angehalten keine Mailverteiler zu erstellen mit allen Adressen im Mailkopf. Ausnahmen sind notwendige Absprachen die untereinander in Kleingruppen vereinbart werden müssen.
+
+    Stellst Du Datenmissbrauch fest, so bitten wir Dich an den Vorstand des Fördervereins zu wenden. Mailadresse: Vorstand@stadt-land-beides.de
+
+    Als Mitglied bzw. Ernteteiler hast Du eine Stimme in der jährlichen Hauptversammlung des Fördervereins. In diesem Rahmen kann ein anderer Umgang mit den gespeicherten Daten beschlossen werden. Weiterhin hast Du als Mitglied des Fördervereins das Recht ein außerordentliche Mitgliederversammlung einzuberufen.
+
+ 5. Empfänger von Daten, Drittländer 
+
+    Die Nutzungsberechtigung Deiner Kontaktdaten ist auf den Personenkreis der Hofkoordinatoren, Landwirte, Autoren der Öffentlichkeitsarbeit und des Wirtschaftskreis des Fördervereins begrenzt. Die Verwendung dieser Daten ist auf die Organisation und Information auf den Rahmen der solidarischen Landwirtschaft beschränkt. Eine Weitergabe an Dritte ist untersagt. 
+
+    Soweit dies zur Lieferung der von Ernteteilern bestellten Produkte erforderlich ist, werden Daten an das von uns mit der Verteilung/Verwaltung beauftragte Depot weitergegeben. 
+
+    Zur Zahlungsabwicklung werden von uns die im Zahlungsverkehr erforderlichen Daten (Name, Kontodaten, E-Mail-Adresse, Beiträgshöhe) ggf. an einen Zahlungsdienstleister und/oder an ein mit der Zahlung beauftragte Kreditinstitut bzw. PayPal weiter. Weitere Kategorien von Empfänger sind Hostinganbieter, Beteiligte am Warenwirtschaft- und Finanzbuchhaltungssystem, externe Anbieter zum Kundenservice und ggf. Hofbetreiber. 
+
+    Die Weitergabe sowie die Offenlegung von Daten gegenüber Empfängern, Auftragsverarbeitern oder Dritten erfolgt ausschließlich im Rahmen der Rechtsgrundlagen (vgl. oben Ziffer 2.4) oder wenn eine weitergehende rechtliche Verpflichtung besteht. Die Gewährung eines Zugriffs auf Daten für Auftragsverarbeiter erfolgte unter strikter Beachtung von Artikel 28 DSGVO. Verarbeitungen der Daten in einem Drittland (außerhalb der Europäischen Union (EU) bzw. Europäischer Wirtschaftsraum (EWR) erfolgen gemäß der Artikel 44 bis 50 DSGVO. Die Verarbeitung erfolgt auf einem Datenschutzniveau, das der DSGVO entspricht, insbesondere durch Garantien der Auftragsverarbeiter, z.B. aufgrund der Absprache zwischen EU und den USA gemäß des US-Datenschutzschilds (im Folgenden auch „Privacy Shield“), oder aufgrund besonderer vertraglicher Verpflichtungen (Standardvertragsklauseln).
+
+     
+
+ 6. Datenlöschung
+
+    Aus der Newsletterliste kannst Du Dich jederzeit selbst austragen. Entweder auf der Webseite oder mit dem dafür vorgesehen Link im Newsletter. Eine vollständige Löschung erfolgt in der Regel bei regelmäßigen Wartungsarbeiten seitens des Administrators. Eine explizite Löschung kann unter der Mailadresse webmaster@stadt-land-beides.de beauftragt werden.
+
+    Eine Löschung von Vertragsdaten erfolgt auf der Grundlage der Art. 17 und 18 DSGVO; gleiches gilt für eine Einschränkung der Verarbeitung und das Sperren von Daten. Die Löschung oder eine eingeschränkte Verarbeitung der Daten erfolgt, wenn und soweit diese zum Erreichen eines angegebenen Zwecks nicht mehr erforderlich sind, es sei denn, eine Löschung ist gesetzlich (z.B. Aufbewahrungspflichten nach Handels- oder Steuerrecht) untersagt oder es ist etwas anderes vereinbart.
+
+    Nach § 257 Handelsgesetzbuch (HGB) und § 147 Absatz 1 der Abgabenordnung (AO) ist jeder Kaufmann insbesondere verpflichtet, Handelsbücher und Aufzeichnungen, Inventare, Eröffnungsbilanzen samt Arbeitsanweisungen, Jahresabschlüsse, sonstigen Organisationsunterlagen sowie Buchungsbelege für zehn Jahre aufzubewahren; für Handels- und Geschäftsbriefe gilt eine Frist von sechs Jahren.
+    Daten die durch das reine Besuchen der Webseite entstehen werden spätestens nach 7 Tagen automatisch gelöscht
+
+ 
+7. Cookies
+
+
+Die Webseite Stadt, Land, Beides verwendet Cookies in einem sehr eingeschränkten Umfang. Cookies sind kleine Dateien, die auf Rechnern der Nutzer mit unterschiedlichen Informationen gespeichert werden. Stadt, Land, Beides verwendet lediglich sogenannte Session-Cookies. Diese dienen dazu den verschlüsselten Bereich der Seite zu überwachen und inaktive Nutzer den Zugriff auf den geschützten Bereich wieder zu entziehen. Weitere Cookies, z.Bsp. Tracking Cookies werden nicht verwendet. Cookies von Drittanbieter, z.Bsp. Google Analytics, sind deaktiviert.
+
+Du kannst verhindern, dass Cookies bei Dir auf dem Rechner gespeichert werden. Dir steht die Möglichkeit offen, in den Einstellungen Deines Browsers die Option auszuwählen, dass Cookies allgemein und bezogen auf bestimmte Seite nicht zugelassen sind. Dort kannst Du auch vorhandene Cookies löschen. Es wird vorsorglich darauf hingewiesen, dass die Funktionen unserer Webseiten bei deaktivierten oder entfernten Cookies eingeschränkt sein können.
+
+ 
+8. Rechte der betroffenen Personen
+
+
+Nach der DSGVO stehen Dir in Bezug auf Deines Daten verschiedene Rechte zu:
+
+     Du können eine Bestätigung darüber verlangen, ob betreffende Daten verarbeitet werden; wenn dies der Fall ist, können Du Auskunft über diese Daten sowie weitere Informationen und eine Kopie der Daten verlangen, Artikel 15 DSGVO.
+
+    Du hast das Recht, unverzüglich die Berichtigung von unrichtigen personenbezogenen und die Vervollständigung unvollständiger personenbezogener Daten zu verlangen (Artikel 16 DSGVO).
+
+    Du kannst verlangen, dass betreffende Daten unverzüglich gelöscht (Artikel 17 DSGVO), bzw. in Bezug auf die Verarbeitung eingeschränkt werden (Artikel 18 DSGVO).
+
+    Du hast unter den Voraussetzungen des Artikels 20 DSGVO das Recht, die von Dir bereitgestellten Daten zu erhalten und diese Daten einem anderen Verantwortlichen ohne Behinderung durch uns zu übermitteln.
+
+    Du kannst gem. Artikel 77 DSGVO eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.
+
+    Erteilte Einwilligungen kannst Du gem. Artikel 7 Absatz 3 DSGVO mit Wirkung für die Zukunft widerrufen und einer künftigen Verarbeitung der sie betreffenden Daten nach Maßgabe des Artikel 21 DSGVO jederzeit widersprechen.
+
+ 
+9. Partnerfirmen bzw. Fremdanbieter
+
+9.1 All-Inkl.com
+
+
+Wir arbeiten zur Aufrechterhaltung, Wiederherstellung und Verbesserung unserer Leistungen mit ALL-INKL.COM - Neue Medien Münnich, Inhaber: René Münnich, Hauptstraße 68 | D-02742 Friedersdorf zusammen. Insbesondere in Bezug auf Speicherplatz, Rechenkapazität, Datenbank, Infrastruktur, Wartungsleistungen und ähnliche Dienste. 
+
+Hierbei kann es zur Verarbeitung von Daten nach Ziffer 3 dieser Datenschutzerklärung kommen; insbesondere zur Erhebung von Serverlogfiles (Serverzugriffe). Die Verarbeitung erfolgt auf der Grundlage eines berechtigten Interesses auf unserer Seite gemäß Artikel 6 Absatz 1 Buchstabe f DSGVO i.V.m. Art. 28 DSGVO. Eine Löschung der Daten erfolgt spätestens sieben Tage nach erfolgter Speicherung; dies gilt nicht, wenn die Aufbewahrung aus Beweisgründen erforderlich ist – die Löschung erfolgt dann, wenn der Beweiszweck weggefallen ist.
+
+Informationen zur Verarbeitung der entsprechenden Daten durch all-inkl.com können Sie in den Datenschutzbestimmungen unter https://all-inkl.com/datenschutzinformationen/ einsehen.
+
+ 
+9.2 Newsletter [*acymail*]
+
+
+Bei Anmeldung zum Newsletter wird Deine E-Mail-Adresse für eigene Werbezwecke (Zusendung von E-Mails) genutzt, bis Du Dich vom Newsletter abmeldest. Die Abmeldung ist jederzeit möglich. Die nachstehende Einwilligung hast Du uns ggf. ausdrücklich erteilt und wir haben die Einwilligung protokolliert. Wir sind verpflichtet, den Inhalt der Einwilligung jederzeit auf Abruf bereitzuhalten. Du können Deines Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.
+
+Die Anmeldung erfolgt im sog. Double-Opt-In-Verfahren. Nach der Anmeldung werden Du per E-Mail gebeten, die Anmeldung zum Newsletter zu bestätigen. Die Anmeldung wird aus Beweiszwecken protokolliert, hierbei werden Daten zur Nutzung (Zeitpunkt Anmeldung und Bestätigung, IP-Adresse) verarbeitet. Die rechtliche Grundlage hierfür ist Deines Einwilligung gemäß Artikel 6 Absatz 1 Buchstabe a, Artikel 7 DSGVO im Zusammenhang mit § 7 UWG; die Protokollierung erfolgt aufgrund gesetzlicher Vorgaben (Artikel 6 Absatz 1 Buchstabe c DSGVO) sowie zur Wahrung unserer berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe f DSGVO).
+
+Der Versand der Newsletter erfolgt mittels einer Newsletterversandplattform des Versanddienstleisters „acymail“. Mehr Informationen zu acymail finden Du hier: https://www.acyba.com/acyba/about-us
+
+Zu diesem Zweck werden Deine E-Mail-Adresse sowie Nutzungs- und Kommunikationsdaten auch von acymail verarbeitet. Der Einsatz des Versanddienstleisters erfolgt unter Berufung auf unsere berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe f DSGVO) sowie eines Auftragsverarbeitungsvertrages (Artikel 28 Absatz 3 Satz 1 DSGVO). Mehr zum Datenschutz des Dienstleisters erfahren Du unter https://www.acyba.com/privacy-policy.html.
+
+Du kannst die Einwilligung zum Empfang des Newsletters jederzeit widerrufen, indem Du den Link „Abmelden“ am Ende des Newsletters anklicken oder eine E-Mail über den Widerruf an uns sendest. E-Mail-Adressen können auch nach Widerruf bis zu drei Jahren auf zur Wahrung unserer berechtigten Interessen gespeichert bleiben, um die Einwilligung für die bis zum Widerruf versandten Newsletter nachweisen zu können.
+
+ 
+9.3 Verwendung der Lexoffice Online-Buchhaltung
+
+
+Wir verwenden zur Verarbeitung und Archivierung unserer Zahlungsvorgänge, im Bezug auf die Mitgliedsbeiträge, den Service von „Lexoffice Online“. Dies geschieht auf Grundlage unserer berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe e DSGVO).
+
+Wir führen keine über die Kontoerfassung hinausgehende Verarbeitung der personenbezogenen Daten durch.
+
+Anbieter dieser Dienstleistung ist die Haufe-Lexware GmbH & Co. KG, ein Unternehmen der Haufe Group SE, Munzinger Straße 9, 79111 Freiburg, Kommanditgesellschaft, Sitz Freiburg Registergericht Freiburg, HRA 4408
+
+Informationen zur Verarbeitung der entsprechenden Daten durch Lexoffice Online können Sie in den Datenschutzbestimmungen der Lexoffice Online auf der Website https://www.lexoffice.de/datenschutz/ einsehen.
+
+ 
+9.4 Verwendung von SV NET Minijob
+
+
+Wir verwenden diesen Anbieter zur Verwaltung unserer geringfügigen Beschäftigten. Dies geschieht auf Grundlage unserer berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe a DSGVO).
+
+Meldungen und Beitragsnachweise können grundsätzlich nur durch elektronische Datenübertragung aus systemgeprüften Programmen oder mittels maschinell erstellter Ausfüllhilfen eingereicht werden. Eine Übermittlung der Daten in Papierform oder auf Datenträger ist daher lediglich auf Antrag in Ausnahmefällen zulässig.
+
+Die Krankenkassen haben als Alternative zu kostenpflichtigen Programmen die Ausfüllhilfe "sv.net" für Arbeitgeber entwickelt. Mit diesem Programm können Du Meldungen und Beitragsnachweise unkompliziert erstellen und online an die Minijob-Zentrale oder andere zuständige Einzugsstellen übermitteln. "sv.net" steht für "Sozialversicherung im Internet" und wird von der Informationstechnischen Servicestelle der gesetzlichen Krankenversicherung GmbH (ITSG) angeboten. Zum Schutz der Informationen werden die Daten während der Übertragung verschlüsselt. Das Programm und die Registrierung bei der ITSG sind für viele Arbeitgeber kostenlos.
+
+Weitere Informationen dazu finden sich auf der Internet-Seite der ITSG unter www.itsg.de/oeffentliche-services.
+
+ 
+9.5 Verwendung von Google Maps
+
+
+Wir verwenden auf dieser Website die Schnittstelle Google Maps API, um Landkarten und/oder StreetView-Rundgänge einzubinden. Dies geschieht auf Grundlage unserer berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe f DSGVO). Anbieter von Google Maps ist die Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA („Google“). Bei der Verwendung von Google Maps werden von Google auch Daten über die Nutzung der Kartenfunktionen durch Besucher erhoben, verarbeitet und genutzt. Dies können IP-Adressen und Standortdaten der Nutzer sein. Du kannst über die Einstellungen Deines Gerätes bestimmen, ob Du Standortdaten übertragen willst; dies geschieht in der Regel nicht ohne Deine Einwilligung. Informationen über die Verarbeitung der Daten durch Google können Sie in den Google-Datenschutzhinweisen unter https://www.google.com/policies/privacy/ finden.
+
+ 
+9.6 Verwendung von OpenStreetMap
+
+Wir verwenden auf dieser Website Daten von OpenStreetMap, um Landkarten einzubinden. Dies geschieht auf Grundlage unserer berechtigten Interessen (Artikel 6 Absatz 1 Buchstabe f DSGVO). Anbieter von OpenStreetMap ist die Open­S­treet­Map Foun­da­ti­on (OS­MF), 132 Ma­ney Hill Road, Sut­ton Cold­field, West Mid­lands, B72 1JU, Uni­ted King­dom. Bei der Nutzung von OpenStreetMap werden Daten über die Nutzung der Kartenfunktionen durch Besucher erhoben, verarbeitet und genutzt. Dies können IP-Adressen und Standortdaten der Nutzer sein. Du kannst über die Einstellungen Deiner Geräte bestimmen, ob Du Standortdaten übertragen willst; dies geschieht in der Regel nicht ohne Deines Einwilligung. Informationen über die Verarbeitung der Daten durch OpenStreetMap können Sie in den OpenStreetMap-Datenschutzseiten unter http://wiki.openstreetmap.org/wiki/Privacy_Policy finden.
+
+ 
+9.7 Google Analytics
+
+
+Google Analytics ist auf unseren Webseiten deaktiviert.
+
+ 
+9.8 Facebook
+
+
+Auf diesen Internetseiten werden Plugins des sozialen Netzwerks facebook.com verwendet, das von der Facebook Inc., 1 Hacker Way, Menlo Park, CA 94025, USA, oder für EU-Bürger Facebook Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, „Facebook"). Facebook ist unter dem Privacy-Shield-Abkommen zertifiziert, https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active.
+
+Wenn Du mit einen solchen Plugin versehene Internetseiten unserer Internetpräsenz aufrufen, wird eine Verbindung zu den Facebook-Servern hergestellt und dabei das Plugin durch Mitteilung an Deinen Browser auf der Internetseite dargestellt. Hierdurch wird an den Facebook- Server übermittelt, welche unserer Internetseiten Du besucht haben. Sind Du dabei als Mitglied bei Facebook eingeloggt, ordnet Facebook diese Information Deinem persönlichen Facebook-Konto zu. Bei der Nutzung der Plugin- Funktion (z.B. Anklicken des „Gefällt mir“ Buttons“, Abgabe eines Kommentars) werden auch diese Information Deinem Facebook- Benutzerkonto zugeordnet, was Du nur durch Ausloggen vor Nutzung des Plugins verhindern können.
+
+Zweck und Umfang der Datenerhebung und die weitere Verarbeitung und Nutzung der Daten durch Facebook sowie die diesbezüglichen Rechte und Einstellungsmöglichkeiten zum Schutz der Privatsphäre der Nutzer , können diese den Datenschutzhinweisen von Facebook entnehmen: https://www.facebook.com/about/privacy/
+
+ 
+9.9 Twitter
+
+
+Wir nutzen auf unseren Webseiten Verknüpfungen zum Dienst Twitter, der von Twitter Inc.,
+
+1355 Market Street, Suite 900, San Francisco, CA 94103, USA („Twitter“), angeboten wird. Twitter ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische Datenschutzrecht einzuhalten (https://www.privacyshield.gov/participant?id=a2zt0000000TORzAAO&amp;status=Active).
+
+Bei Aufruf einer unserer Webseiten, die ein solches Plugin enthält, baut das Endgerät des Nutzers eine Verbindung mit den Servern von Twitter auf. Bei der Verarbeitung der Plugin-Daten können Nutzungsprofile der Nutzer erstellt werden. Auf den exakten Umfang der Daten, die Twitter mit Hilfe dieses Plugins erhebt, haben wir keinen Einfluss. Twitter kann über das Plugin die Information erhalten, welche Seiten ein Nutzer aufgerufen hat oder welchen Mitgliedern der Nutzer folgt. Wenn Du unsere Seiten aufrufen und zugleich bei Twitter eingeloggt sind, kann Twitter den Besuch einem Twitter-Account zuordnen. Weitere Informationen zum Datenschutz bei Twitter können Du erfahren unter https://twitter.com/de/privacy. Datenschutzerklärung: https://twitter.com/de/privacy, unter https://twitter.com/personalization gibt es die Möglichkeit, die Verarbeitung durch Twitter einzuschränken.
+
+    Solawi Zugang
+
+Stadt, Land, Beides.
+Stadt, Land,
+…
+Beides. *
+Stiefel und Stöckelschuhe
+*eine Initiative für solidarische Landwirtschaft in der Metropolregion Nürnberg.
+Das zeichnet die gemeinschaftlich getragene Landwirtschaft aus.
+So funktioniert die solidarische Landwirtschaft in der Metropolregion Nürnberg.
+So kannst Du mitmachen beim Bio-Landbau der Zukunft.
+Mitmachen *
+*Damit dieser gemeinschaftlich getragene Ansatz der solidarischen Landwirtschaft in der Metropolregion Nürnberg etabliert werden kann suchen wir Dich als Ernteteiler*in und Mitgestalter*in.
+Image
+Der Biohof Walz
+
+Amberg Schäflohe – ein kleiner Ort, jedoch mit einem ganz besonderen landwirtschaftlichen Betrieb.
+Einem Demeter Familienbetrieb, der mit so viel Leidenschaft und Herzblut betrieben wird, dass man gar nicht anders kann, als sich hier wohl zu fühlen.
+Hier ist alles noch so, wie es in der Landwirtschaft sein sollte.
+
+ 
+
+Der Demeter Demonstrationsbetrieb von Andreas und Michaela bietet eine art- & wesensgerechte Tierhaltung, von der man in Form von Rindfleisch, Wurst, Gockeln oder Eiern profitieren kann.
+Ihr Steckenpferd ist der Anbau von speziellem Ur-Getreide. Hierbei handelt es sich nicht einfach nur um Weizen oder Dinkel, wie man ihn überall bekommt. Hier wurden aus ein paar Körnern in jahrelanger mühsamer Arbeit alte Getreidesorten gezüchtet und dadurch wiederbelebt.
+Die Teilnahme an der Nürnberger SoLawi Bewegung ermöglicht es uns nun, diese alten Schätze und die vorbildiche Tierhaltung genießen & so erhalten zu können.
+Produkte
+Produkte
+
+    Wurstwaren & Rindfleisch (Weidehaltung, Familienverbund, Natursprung, 100 % Rauhfutter)
+    "More...Huhn" Projekt (Ei, Huhn, Bruderhahn) (Freilandhaltung, brudermordfrei, 100% Bio Fütterung)
+    "More...Bratgockerl" Projekt(Freilandhaltung, Zweinutzungshuhn, 100% Bio Fütterung)
+    Ur-Getreide (Nudeln, Getreidereis, Mehl, Gries, Körner aus unverändertem Saatgut aus der Saatgutbank) Bayerisches Liebesgras (Zwerghirse) (glutenfrei)
+
+Die solidarische Unterstützung des Hofes erfolgt über eine individuelle Hofbeteiligung. Anhand einer Liste, die alle Produkte des Hofes enthält, werden Menge und Produkte nach eigenem Belieben ausgewählt - heraus kommt ein Betrag der die individuelle monatliche Hofbeteiligung des Ernteteilers darstellt. Dieser ist gemäß dem solidarischen Prinzip für ein Jahr bindend, um den Landwirten Planungssicherheit zu geben. Die Liste für Deine Hofbeteiligung am Demeterhof Walz erhälst du von den Hofkoordinatoren. Die Produkte vom Demeterhof Walz bekommen wir auf monatlicher Basis, der Liefertermin wird durch die Hofkoordinatoren bekannt gegeben. Ein Ausprobieren ist durch ein Probepaket jederzeit möglich.
+Spaten
+Komme zum Hof
+
+    Hofbesichtigungen
+    Hof Aktionen
+    SoLawi Arbeitstreffen
+    gemütliches Beisammensein
+
+Wir treffen uns gelegentlich am Walzhof, um gemütlich beisammen zu sein, die SoLawi zu besprechen und uns gegenseitig zu verköstigen Da die Getreidesorten für uns alle neu waren, hat jeder für sich mit Rezepten und Ideen experimentiert. Zu den Treffen bringt jeder etwas mit – egal ob süß oder herzhaft. Das hat natürlich seinen ganz eigenen Reiz – und es werden fleißig Rezepte getauscht. Wir bemühen uns im Jahr ein paar Hofkationen anzubieten. Gemeinsam macht es mehr Spaß und man kann sich besser kennen lernen. Bisher können wir auf einige Aktionen zurück blicken wie: Fremdähren aus dem Getreide entfernen, Kartoffelkäfer jagen, den Zaun für die Rinder im Frühjahr instandsetzen, Weihnachtsbäume fällen etc.
+Der Demeterhof Hederer
+
+Im schönen Mittelfranken, nordwestlich von Nürnberg liegt inmitten von Uffenheim der Gärtnerhof Reginswind.  Seit 2000 bewirtschaftet Heribert Hederer zusammen mit seinen Mitarbeitern den Hof nach Demeter Richtlinien. Insgesamt bauen Sie  auf 1,5 ha und in 4 Folientunnels über Gemüse,Obst und Beeren an.  Das Feingemüse, wie z.B. Tomaten, Gurken und viele Kräuter wachsen beschützt im Folientunnel und finden von dort aus den Weg in die Küche.
+Dabei ist von der Aussaat bis zur Ernte viel Handarbeit angesagt. Mit Fruchtwechsel und Förderung von Nützlingen werden die Kulturen gesund erhalten und produzieren viel Geschmack.
+Produkte
+Produkte
+
+    Salate
+    Mangold/Spinat
+    Mairübchen/Rettiche
+    Rote Rüben
+    Kartoffeln
+    Gurken/Tomaten
+
+Macht Euch doch ein Bild vor Ort.
+Spaten
+Komme zum Hof
+
+    Hofbesichtigungen
+    Hof Aktionen
+    SoLawi Arbeitstreffen
+    gemütliches Beisammensein
+
+Für Hofaktionen ist der Hof auch durch die Nähe zum Bahnhof Uffenheim problemlos mit dem öffentlichen Nahverkehr zu erreichen.
+Höfe
+Hof deiner Wahl
+
+Das Besondere bei Stadt, Land, Beides ist, dass verschiedene Solawi Höfe mitmachen und Du Dich auf einem oder mehreren Höfen engagieren kannst. Insofern steht Dir eine breite Palette an Lebensmitteln zur Auswahl. Den Großteil der Lebensmittel beziehst Du regelmäßig, einen Teil bekommst Du auf Bestellung.
+Depots
+
+Die Ernteteiler*innen sorgen gemeinsam für einen effektiven Transport der Lebensmittel zu den Depots in Nürnberg und in der Region. Hier kannst Du Dir die Ernte von einem oder mehreren Höfen Deiner Wahl abholen.
+Höfe
+Höfe
+Kontakt aufnehmen
+
+Falls Du Interesse hast, bei der solidarischen Landwirtschaft in der Metropolregion Nürnberg mitzumachen, nutze einfach unser Kontaktformular oder melde Dich Mail an der unten angebenen E-Mailadresse.
+Ernteteiler zur Probe
+
+Um auszuprobieren, ob die Solawi-Lebensmittel, die Solawi Gemeinschaft und die Abläufe zu Dir passen, kannst Du Dich für einen Monat begrenzt beteiligen. Wir setzen uns in der letzten Probewoche mit Dir in Verbindung, um Deine Erfahrungen und Deine weitere Beteiligung zu besprechen.
+Höfe
+Höfe
+Anmelden und Mitgestalten
+
+Gemeinsam mit dem Landwirt und den anderen Ernteteilern planst Du, soweit möglich, die Lebensmittel, gemeinsame Aktionen, Arbeitseinsätze und verabredest den jeweiligen Kostenanteil. Entscheidungen werden im Konsens getroffen. Jede*r soll sich unabhängig von den finanziellen Möglichkeiten einbringen können.
+Hier findest Du die Höfe auf dem Land
+
+und die Depots zur Abholung in deiner Umgebung
+
+
+Die Depots werden regelmäßig von unserem Logistik-Team beliefert. Hier kannst Du Dir die Ernte von einem oder mehreren Höfen Deiner Wahl abholen. Die benötigten Adressen schaue bitte in der Karte nach indem Du auf einem der Symbole klickst. Zu den unten aufgeführten Beiträgen plane bitte zusätzlich ca. 10 bis 20% hofabhängige Logistikkosten hinzu. Genauere Informationen dazu findest Du auf unserer Teilnahmevereinbarung im Downloadbereich.
+Hof
+	
+Produkte
+	
+Beitrag
+
+Biohof Walz
+
+Zertifizierung: demeter
+	
+Rindfleisch & Wurstwaren, Eier & Gockel, Ur-Getreide & Linsen
+	
+Individuelle Hofbeteiligung, Beitrag je nach Produktauswahl
+
+Tristans Biohof
+
+Zertifizierung: Bioland
+	
+
+Wintergemüse / Ganzer Anteil
+	
+
+Ernteanteil im wöchentlichen Rhythmus zu je 122,20-€/M.
+
+Tristans Biohof
+
+Zertifizierung: Bioland
+	
+
+Wintergemüse / 14-tägiger Anteil
+	
+
+Ernteanteil im 2-wöchigen Lieferrhythmus zu je 61,10 €/M.
+
+Tristans Biohof
+
+Zertifizierung: Bioland
+	
+
+Wintergemüse / Kleiner Anteil
+	
+
+Ernteanteil im wöchentlichen Rhythmus zu je 85,50 €/M.
+
+Gärtner-Hof Heribert Hederer
+Zertifizierung: demeter
+	
+Sommergemüse
+	
+
+Ernteanteil im wöchentlichen Rhythmus zu je 105,-€/M.
+
+Gärtner-Hof Heribert Hederer
+
+Zertifizierung: demeter
+	
+Obst
+	
+
+Ernteanteil im wechselhaften Lieferrhythmus von Juli bis Dez. zu je 37 €/M.
+		
+Beeren aus dem Solawi-Kirschgarten Zertifizierung: EU-Bio
+	
+Bio..Beeren
+	
+
+Ernteanteil im wöchentlichen Lieferrhythmus von Juli bis Sept. zu je 35 €/M.
+	
+Depots
+	
+Abholzeit
+Depot Stadtpark
+	
+Mittwoch bis Samstag
+Depot St. Peter
+	
+Mittwoch 14 Uhr bis Donnerstag 18 Uhr
+Depot Wiese
+	
+Mittwoch 14 bis 20 Uhr
+Depot Gostenhof
+	
+Mittwoch bis Freitag
+
+Depot AKI
+	
+Mittwoch bis Freitag
+Depot Johannis
+	
+Mittwoch bis Freitag
+
+Depot TATAA, Fürth
+	
+
+Mittwoch 19:30 Uhr bis 20:30 Uhr & auf Nachfrage
+Depot Altenfurt
+	
+Mittwoch 14 bis 20 Uhr
+
+Depot Spiegelfabrik, Fürth
+	
+Mittwoch 17:30 Uhr bis  19:30 Uhr &
+auf Nachfrage
++
+−
+Fragen und Antworten
+Kontakt mit Stadt, Land, Beides. aufnehmen:
+Newsletter-Anmeldung
+Wir schicken ca. einmal pro Monat aktuelle Infos zu Stadt, Land, Beides. Hier kannst Du Dich dazu eintragen.
+Ich stimme den Bedingungen unter Datenschutz zu und erkläre, dass ich diese Informationen gelesen habe.
+Image
+Vorname *
+Nachname *
+Email *
+Thema *
+Nachricht (Mail)
+Ich möchte in folgendem Stadtteil mein Depot:
+keines der aufgezählten Stadtteile
+Stadtpark
+St. Peter
+Steinbühl / Die Wiese
+Gostenhof
+Johannis
+Nordstadt/AKI
+Altenfurt
+Fürth / TATAA
+Fürth / Spiegelfabrik
+Bitte wähle einen oder mehrere Höfe aus:
+Allgemein
+Michlbauer
+Biohof Walz
+Gemüsehof Tristan (Winter)
+Gemüsehof Hederer (Sommer)
+Obst Hederer
+Bio...Beeren
+Spamschutz* Wie heißt die zentrale Stadt der Metropolregion? (Umlaute erlaubt)
+Ich stimme den Bedingungen unter Datenschutz zu und erkläre, dass ich diese Informationen gelesen habe. Die Datenschutz-bestimmungen beziehen sich auf die EU Datenschutzrichtlinie Article 13 der GDPR.
+Direkter
+Ansprechpartner:
+
+Sebastian Lades, Clemens Brachmann
+Ehrenamtliche Vorstände des Vereins "Solidarische Landwirtschaft Stadt, Land, Beides e.V."
+
+Mail: solawi@stadt-land-beides.de
+Hier haben wir für Dich die wichtigsten Dokumente zum Herunterladen:
+
+    Teilnahmevereinbarung Stadt, Land, Beides. - Alle HöfeTeilnahmevereinbarung - Alle Höfe
+    Die Satzung des Solawi-Vereins Satzung des Solawi-Vereins
+
+Das Projekt wird unterstützt von:
+Image
+Image
+Image
+Image
+Image
+Image
+Image
+Image
+Nach Oben
+
+    Solawi
+    Zugang
+

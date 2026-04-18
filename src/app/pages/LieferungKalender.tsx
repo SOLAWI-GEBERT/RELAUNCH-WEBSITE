@@ -209,7 +209,7 @@ export function LieferungKalender() {
             </p>
             <div className="bg-white/60 p-6 rounded-lg">
               <p className="text-gray-700 italic">
-                Der interaktive Kalender wird in Kürze verfügbar sein.
+                Termine erfährst du aktuell über die Hof-Post per E-Mail. Ein gemeinsamer Kalender ist in Planung.
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export function LieferungKalender() {
               <Calendar className="w-8 h-8 text-primary mb-3" />
               <h3 className="text-lg font-semibold mb-2">Veranstaltungen</h3>
               <p className="text-sm text-gray-600">
-                Feste, Märkte und gesellige Zusammenkünfte
+                Termine werden per Hof-Post und Newsletter kommuniziert. Die nächste Jahreshauptversammlung findet im Herbst statt — als Ernteteiler bist du zur Teilnahme eingeladen.
               </p>
             </div>
 
@@ -228,16 +228,55 @@ export function LieferungKalender() {
               <Truck className="w-8 h-8 text-primary mb-3" />
               <h3 className="text-lg font-semibold mb-2">Hof- & Mitmachaktionen</h3>
               <p className="text-sm text-gray-600">
-                Gemeinsame Aktionen und Arbeitseinsätze auf unseren Partnerhöfen
+                In unregelmäßigen Abständen gibt es Hofaktionen: Arbeitseinsätze, gemeinsame Treffen, den Hof und andere Ernteteiler kennenlernen. Die Teilnahme ist freiwillig und wird rechtzeitig angekündigt.
               </p>
             </div>
 
-            <div id="anlieferung" className="bg-solawi-mauve p-6 rounded-lg">
+            <div id="anlieferung" className="bg-solawi-mauve p-6 rounded-lg md:col-span-3">
               <MapPin className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Anlieferungstermine</h3>
-              <p className="text-sm text-gray-600">
-                Übersicht aller Liefertermine
-              </p>
+              <h3 className="text-lg font-semibold mb-2">Lieferrhythmus</h3>
+              <table className="w-full text-sm text-left text-gray-700 mt-4">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="py-2 pr-4 font-semibold">Hof</th>
+                    <th className="py-2 pr-4 font-semibold">Produkt</th>
+                    <th className="py-2 pr-4 font-semibold">Zyklus</th>
+                    <th className="py-2 font-semibold">Phase</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Hederer</td>
+                    <td className="py-2 pr-4">Sommergemüse</td>
+                    <td className="py-2 pr-4">wöchentlich</td>
+                    <td className="py-2">Apr–Sept</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Hederer</td>
+                    <td className="py-2 pr-4">Obst</td>
+                    <td className="py-2 pr-4">nach Bedarf</td>
+                    <td className="py-2">Jul–Dez</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Tristan</td>
+                    <td className="py-2 pr-4">Wintergemüse</td>
+                    <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                    <td className="py-2">Okt–Mrz</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Walz</td>
+                    <td className="py-2 pr-4">Fleisch, Eier, Getreide</td>
+                    <td className="py-2 pr-4">1–2x/Monat</td>
+                    <td className="py-2">ganzjährig</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-4">Kirschgarten</td>
+                    <td className="py-2 pr-4">Bio-Beeren</td>
+                    <td className="py-2 pr-4">wöchentlich</td>
+                    <td className="py-2">Jul–Sept</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
