@@ -195,7 +195,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-1">
+          <div className="hidden lg:flex space-x-1 items-center">
             {navItems.map((item) => (
               <div
                 key={item.path}
@@ -271,6 +271,13 @@ export function Navigation() {
                 )}
               </div>
             ))}
+            {/* Desktop CTA Button */}
+            <Link
+              to="/kontakt-anmeldung#anmeldung"
+              className="ml-4 bg-cta hover:bg-cta-hover text-white px-5 py-2 font-accent transition-colors text-sm"
+            >
+              Anmelden
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -420,7 +427,7 @@ export function Navigation() {
             <Link
               to="/kontakt-anmeldung#anmeldung"
               onClick={closeMobileMenu}
-              className="block w-full bg-primary hover:bg-primary text-white text-center px-6 py-3 rounded-lg transition-colors"
+              className="block w-full bg-cta hover:bg-cta-hover text-white text-center px-6 py-3 transition-colors font-accent"
             >
               Jetzt anmelden
             </Link>

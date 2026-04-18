@@ -39,6 +39,11 @@
   --input-background: #f0f0f0;
   --switch-background: #e5e5e5;
 
+  /* CTA — kräftiges SoLaWi-Pink für Call-to-Actions */
+  --cta: #d10038;
+  --cta-foreground: #ffffff;
+  --cta-hover: #b80030;
+
   /* Kantige Ecken wie im Original */
   --radius: 0rem;
 
@@ -125,6 +130,9 @@
   --color-solawi-orange: var(--solawi-orange);
   --color-solawi-green: var(--solawi-green);
   --color-solawi-mauve: var(--solawi-mauve);
+  --color-cta: var(--cta);
+  --color-cta-foreground: var(--cta-foreground);
+  --color-cta-hover: var(--cta-hover);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -228,5 +236,100 @@
     font-size: var(--text-base);
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
+  }
+
+  /* --- Freche Utilities --- */
+
+  .font-accent {
+    font-family: var(--font-accent);
+  }
+
+  .badge-frech {
+    font-family: var(--font-accent);
+    display: inline-block;
+    background: var(--cta);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    transform: rotate(-2deg);
+  }
+
+  .underline-sketch {
+    text-decoration: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 8'%3E%3Cpath d='M0 6 Q50 0 100 5 Q150 8 200 4' stroke='%23d10038' fill='none' stroke-width='2.5'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 200px 8px;
+    padding-bottom: 6px;
+  }
+
+  /* Wellige Sektionsteiler */
+  .wave-top {
+    position: relative;
+  }
+  .wave-top::before {
+    content: '';
+    position: absolute;
+    top: -29px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: inherit;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30'%3E%3Cpath d='M0 30 Q300 0 600 20 Q900 40 1200 10 L1200 30Z' fill='black'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30'%3E%3Cpath d='M0 30 Q300 0 600 20 Q900 40 1200 10 L1200 30Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+  }
+
+  .wave-bottom {
+    position: relative;
+  }
+  .wave-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: -29px;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: inherit;
+    z-index: 1;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30'%3E%3Cpath d='M0 0 Q300 30 600 10 Q900 -10 1200 20 L1200 0Z' fill='black'/%3E%3C/svg%3E");
+    mask-size: 100% 100%;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30'%3E%3Cpath d='M0 0 Q300 30 600 10 Q900 -10 1200 20 L1200 0Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+  }
+
+  /* Hover-Effekte mit Charakter */
+  .hover-tilt {
+    transition: transform 0.3s ease;
+  }
+  .hover-tilt:hover {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+  }
+  .hover-wiggle:hover {
+    animation: wiggle 0.4s ease-in-out;
+  }
+
+  .hover-underline-pink {
+    position: relative;
+  }
+  .hover-underline-pink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--cta);
+    transition: width 0.3s ease;
+  }
+  .hover-underline-pink:hover::after {
+    width: 100%;
   }
 }

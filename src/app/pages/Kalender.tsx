@@ -93,24 +93,23 @@ export function Kalender() {
 
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="/ablauf-ernteteiler.jpg"
-            alt="Kalender - Ernteteiler"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl mb-4">
-            Kalender
-          </h1>
-          <p className="text-xl">
-            Veranstaltungen, Hofaktionen und Mitmach-Termine
-          </p>
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-mauve py-16 wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Termine</span>
+              <h1 className="text-5xl mb-4 text-foreground">
+                Kalender
+              </h1>
+              <p className="text-xl text-foreground/80">
+                Veranstaltungen, Hofaktionen und Mitmach-Termine
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/ablauf-ernteteiler.jpg" alt="Ernteteiler Uhr" className="h-[250px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -190,7 +189,7 @@ export function Kalender() {
                       </div>
 
                       <div className="mt-4">
-                        <button className="bg-primary hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
+                        <button className="bg-cta hover:bg-cta-hover text-white px-6 py-2 transition-colors font-accent">
                           Anmelden
                         </button>
                       </div>
@@ -302,7 +301,7 @@ export function Kalender() {
             Melde dich für Veranstaltungen an oder werde Mitglied, um an allen Aktionen teilzunehmen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-white hover:bg-primary/80 px-8 py-4 rounded-lg transition-colors">
+            <button className="bg-cta text-white hover:bg-cta-hover px-8 py-4 transition-colors font-accent">
               Newsletter abonnieren
             </button>
             <button className="border-2 border-foreground text-foreground hover:bg-foreground/10 px-8 py-4 rounded-lg transition-colors">

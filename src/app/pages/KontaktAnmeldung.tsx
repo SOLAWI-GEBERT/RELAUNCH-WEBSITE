@@ -3,15 +3,23 @@ import { Mail, Phone, MapPin, User, MessageSquare, HelpCircle } from "lucide-rea
 export function KontaktAnmeldung() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-solawi-blue py-16">
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-blue py-16 wave-bottom relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Kontakt & Anmeldung
-          </h1>
-          <p className="text-xl text-foreground/90 max-w-3xl">
-            Werden Sie Teil unserer Gemeinschaft oder kontaktieren Sie uns bei Fragen
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Schreib uns</span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+                Kontakt & Anmeldung
+              </h1>
+              <p className="text-xl text-foreground/90 max-w-3xl">
+                Werde Teil unserer Gemeinschaft oder kontaktiere uns bei Fragen
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/kontakt.jpg" alt="Hahn am Laptop" className="h-[220px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -81,7 +89,7 @@ export function KontaktAnmeldung() {
           </div>
 
           <div className="text-center">
-            <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors text-lg">
+            <button className="bg-cta text-white px-8 py-4 font-semibold hover:bg-cta-hover transition-colors text-lg font-accent">
               Jetzt anmelden
             </button>
           </div>
@@ -148,7 +156,7 @@ export function KontaktAnmeldung() {
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
+                  className="w-full bg-cta text-white px-6 py-3 font-semibold hover:bg-cta-hover transition-colors font-accent"
                 >
                   Nachricht senden
                 </button>

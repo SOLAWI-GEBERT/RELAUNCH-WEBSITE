@@ -3,15 +3,23 @@ import { Calendar, Truck, AlertCircle, MapPin, Clock } from "lucide-react";
 export function LieferungKalender() {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-solawi-blue py-16">
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-salmon py-16 wave-bottom relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-            Lieferung & Kalender
-          </h1>
-          <p className="text-xl text-foreground/90 max-w-3xl">
-            Alle Informationen zu Lieferungen, Abholungen und kommenden Veranstaltungen
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Abholung & Termine</span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+                Lieferung & Kalender
+              </h1>
+              <p className="text-xl text-foreground/90 max-w-3xl">
+                Alle Informationen zu Lieferungen, Abholungen und kommenden Veranstaltungen
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/ablauf-depot.jpg" alt="Depot in der Stadt" className="h-[220px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -136,7 +144,7 @@ export function LieferungKalender() {
           <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
             Melden Sie sich für unseren Newsletter an, um keine Termine zu verpassen
           </p>
-          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+          <button className="bg-cta text-white px-8 py-3 font-semibold hover:bg-cta-hover transition-colors font-accent">
             Zum Newsletter
           </button>
         </div>

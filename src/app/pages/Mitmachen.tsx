@@ -5,24 +5,23 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 export function Mitmachen() {
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="/ablauf-mitmachen.jpg"
-            alt="Mitmachen - Hände halten Ernte"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl mb-4">
-            Wie kann ich mitmachen?
-          </h1>
-          <p className="text-xl">
-            Werde Teil unserer Gemeinschaft und genieße frische, regionale Lebensmittel
-          </p>
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-green py-16 wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Dabei sein</span>
+              <h1 className="text-5xl mb-4 text-foreground">
+                Wie kann ich mitmachen?
+              </h1>
+              <p className="text-xl text-foreground/80">
+                Werde Teil unserer Gemeinschaft und genieße frische, regionale Lebensmittel
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/ablauf-mitmachen.jpg" alt="Mitmachen" className="h-[280px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -83,7 +82,7 @@ export function Mitmachen() {
           <div className="text-center">
             <Link
               to="/anmeldung"
-              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors font-accent"
             >
               Jetzt anmelden
               <ArrowRight className="w-5 h-5" />
@@ -530,7 +529,7 @@ export function Mitmachen() {
           </p>
           <Link
             to="/anmeldung"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 px-8 py-4 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-cta text-white hover:bg-cta-hover px-8 py-4 transition-colors font-accent"
           >
             Zur Anmeldung
             <ArrowRight className="w-5 h-5" />

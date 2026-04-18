@@ -34,24 +34,23 @@ export function Anmeldung() {
 
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative h-[300px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="/ablauf-kontakt.jpg"
-            alt="Anmeldung - Kontakt"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl mb-4">
-            Anmeldung
-          </h1>
-          <p className="text-xl">
-            Werde Teil unserer Gemeinschaft
-          </p>
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-salmon py-16 wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Jetzt starten</span>
+              <h1 className="text-5xl mb-4 text-foreground">
+                Anmeldung
+              </h1>
+              <p className="text-xl text-foreground/80">
+                Werde Teil unserer Gemeinschaft
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/ablauf-kontakt.jpg" alt="Kontakt" className="h-[250px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -388,7 +387,7 @@ export function Anmeldung() {
             <div className="pt-6">
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg transition-colors text-lg"
+                className="w-full bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors text-lg font-accent"
               >
                 Verbindlich anmelden
               </button>

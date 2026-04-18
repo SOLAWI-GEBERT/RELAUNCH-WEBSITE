@@ -4,24 +4,23 @@ import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 export function HoefeUndErnteanteile() {
   return (
     <div className="bg-white">
-      {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <ImageWithFallback
-            src="/ablauf-hof.jpg"
-            alt="Unsere Höfe - Regionalkarte"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white">
-          <h1 className="text-5xl mb-4">
-            Unsere Höfe & Ernteanteile
-          </h1>
-          <p className="text-xl">
-            Lerne unsere Partner-Höfe und ihre Angebote kennen
-          </p>
+      {/* Hero — Pastell + freie Illustration */}
+      <section className="bg-solawi-blue py-16 wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="badge-frech mb-4 inline-block">Unsere Höfe</span>
+              <h1 className="text-5xl mb-4 text-foreground">
+                Höfe & Ernteanteile
+              </h1>
+              <p className="text-xl text-foreground/80">
+                Lerne unsere Partner-Höfe und ihre Angebote kennen
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <img src="/ablauf-hof.jpg" alt="Regionalkarte" className="h-[280px] object-contain" />
+            </div>
+          </div>
         </div>
       </section>
 
