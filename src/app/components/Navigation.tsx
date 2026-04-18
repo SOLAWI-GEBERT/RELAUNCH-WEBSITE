@@ -205,19 +205,19 @@ export function Navigation() {
               >
                 <Link
                   to={item.path}
-                  className={`px-4 py-2 flex items-center gap-1 transition-all font-semibold ${
+                  className={`px-4 py-6 flex items-center gap-1 transition-all font-semibold ${
                     location.pathname === item.path
                       ? "text-black"
                       : "text-[#767676] hover:text-accent"
                   }`}
                 >
                   {item.title}
-                  {item.subItems && <ChevronDown className="w-4 h-4" />}
+                  {item.subItems && <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.path ? 'rotate-180' : ''}`} />}
                 </Link>
 
-                {/* Dropdown */}
+                {/* Dropdown — pt-0 damit kein Hover-Gap entsteht */}
                 {item.subItems && openDropdown === item.path && (
-                  <div className="absolute left-0 mt-2 w-80 bg-white shadow-2xl py-3 z-50 max-h-[80vh] overflow-y-auto border border-gray-200">
+                  <div className="absolute left-0 top-full w-80 bg-white shadow-2xl py-3 z-50 max-h-[80vh] overflow-y-auto border border-gray-200">
                     {item.subItems.map((subItem) => (
                       <div key={subItem.path}>
                         {subItem.isCategory ? (
