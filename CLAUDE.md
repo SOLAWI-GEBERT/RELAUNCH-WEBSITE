@@ -60,3 +60,16 @@ src/
 - **No backend**: Client-side only, no API calls or database
 - **Figma origin**: Components follow Figma Make export conventions; `ImageWithFallback` handles Unsplash image loading
 - **Form state**: Registration (`Anmeldung.tsx`) uses React `useState`; other forms use `react-hook-form`
+
+## Content-Quelle: SP Page Builder JSON Export
+
+Die Datei `export_origin/Landing_page.json` enthält den Export der alten Joomla-Website (SP Page Builder).
+
+**JSON-Struktur:**
+- Top-level Keys: `template`, `css`, `seo`, `title`, `language`
+- `template` ist ein JSON-String, der in ein Array von **Sections** (Rows) geparst wird (`JSON.parse(data.template)`)
+- Jede Section hat: `id`, `visibility`, `settings` (mit `admin_label`, `background_color`, `id` als Anker), `layout`, `columns`
+- Columns enthalten `addons` (z.B. `text_block`, `accordion`, `image`, etc.)
+- **Accordion-Addons** (`name: "accordion"`) haben `settings.sp_accordion_item[]` mit `title` und `content`
+- Accordion-Inhalte referenzieren `nested_row` per `id` — diese Rows sind als eigenständige Sections im selben Array gespeichert (mit `parent`-Referenz)
+- Text-Inhalte stecken in Addons vom Typ `text_block` → `settings.text` (HTML-String)

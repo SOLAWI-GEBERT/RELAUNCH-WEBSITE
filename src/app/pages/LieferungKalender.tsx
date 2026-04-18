@@ -47,7 +47,7 @@ export function LieferungKalender() {
                 Was wird geliefert?
               </h3>
               <p className="text-gray-700">
-                Je nach Saison erhalten Sie frisches Gemüse, Obst und weitere landwirtschaftliche 
+                Je nach Saison erhältst du frisches Gemüse, Obst und weitere landwirtschaftliche
                 Produkte von unseren Höfen. Der Ernteanteil variiert saisonal.
               </p>
             </div>
@@ -59,7 +59,7 @@ export function LieferungKalender() {
               </h3>
               <p className="text-gray-700">
                 Bei Feiertagen oder besonderen Umständen können sich Liefertermine verschieben. 
-                Wir informieren Sie rechtzeitig über alle Änderungen.
+                Wir informieren dich rechtzeitig über alle Änderungen.
               </p>
             </div>
 
@@ -69,8 +69,8 @@ export function LieferungKalender() {
                 Depot-Hinweise
               </h3>
               <p className="text-gray-700">
-                Bitte beachten Sie die individuellen Regeln und Öffnungszeiten Ihres Depots. 
-                Weitere Informationen erhalten Sie direkt von Ihren Depotbetreuern.
+                Bitte beachte die individuellen Regeln und Öffnungszeiten deines Depots.
+                Weitere Informationen erhältst du direkt von deinen Depotbetreuer*innen.
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export function LieferungKalender() {
           <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
             <h3 className="text-2xl font-semibold mb-6">Kommende Termine</h3>
             <p className="text-gray-600 mb-4">
-              Hier finden Sie alle wichtigen Termine für Veranstaltungen, Mitmachaktionen, 
+              Hier findest du alle wichtigen Termine für Veranstaltungen, Mitmachaktionen,
               Hofaktionen und Anlieferungstermine.
             </p>
             <div className="bg-solawi-mauve p-6 rounded-lg">
@@ -139,10 +139,10 @@ export function LieferungKalender() {
       <section className="bg-solawi-green py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4 text-foreground">
-            Bleiben Sie auf dem Laufenden
+            Bleib auf dem Laufenden
           </h2>
           <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
-            Melden Sie sich für unseren Newsletter an, um keine Termine zu verpassen
+            Melde dich für unseren Newsletter an, um keine Termine zu verpassen
           </p>
           <button className="bg-cta text-white px-8 py-3 font-semibold hover:bg-cta-hover transition-colors font-accent">
             Zum Newsletter

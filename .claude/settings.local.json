@@ -16,7 +16,10 @@
       "Bash(cp /Users/linus/Documents/0_Development/Stadt-Land-Beides/JML3/images/Reimehof/Slider/Gaissenkrautlein_web.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/fotos/reimehof-kaese.jpg)",
       "Bash(cp /Users/linus/Documents/0_Development/Stadt-Land-Beides/JML3/images/Reimehof/Slider/Postkarte-1.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/fotos/reimehof-postkarte.jpg)",
       "Bash(cp /Users/linus/Documents/0_Development/Stadt-Land-Beides/JML3/images/Reimehof/Gallerien/2014_06_14_Aktionstag/120_Reimehof_Aktionstag_2014-06-14.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/fotos/reimehof-aktionstag.jpg)",
-      "WebFetch(domain:www.joomshaper.com)"
+      "WebFetch(domain:www.joomshaper.com)",
+      "Bash(python3:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx --package=typescript tsc --noEmit --pretty)"
     ]
   }
 }
