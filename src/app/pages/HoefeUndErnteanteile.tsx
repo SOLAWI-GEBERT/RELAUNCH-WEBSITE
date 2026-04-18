@@ -88,8 +88,8 @@ export function HoefeUndErnteanteile() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="/features-landwirtschaft.jpg"
-                alt="Reimehof Landwirtschaft"
+                src="/fotos/vollandhof-salaternte.jpg"
+                alt="Salaternte auf dem Feld"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -193,8 +193,8 @@ export function HoefeUndErnteanteile() {
             </div>
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
               <ImageWithFallback
-                src="/features-lebensmittel.jpg"
-                alt="Biohof Walz Lebensmittel"
+                src="/fotos/walz-kaelber.jpg"
+                alt="Kälber im Stall am Biohof Walz"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -208,8 +208,8 @@ export function HoefeUndErnteanteile() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="/features-nachhaltigkeit.jpg"
-                alt="Obst vom Hederer"
+                src="/fotos/lillinghof-obstbau.jpg"
+                alt="Apfelbäume am Lillinghof"
                 className="w-full h-full object-cover"
               />
             </div>

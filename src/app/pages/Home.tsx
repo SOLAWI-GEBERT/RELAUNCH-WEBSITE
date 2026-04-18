@@ -68,8 +68,8 @@ export function Home() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="/decision-funktion.jpg"
-                alt="So funktioniert Solidarische Landwirtschaft"
+                src="/fotos/reimehof-aktionstag.jpg"
+                alt="Gemeinschaftliches Essen beim Aktionstag am Reimehof"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -143,8 +143,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="/features-landwirtschaft.jpg"
-                  alt="Reimehof Landwirtschaft"
+                  src="/fotos/reimehof-ziege.jpg"
+                  alt="Ziege auf dem Reimehof"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -166,8 +166,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="/features-lebensmittel.jpg"
-                  alt="Biohof Walz Lebensmittel"
+                  src="/fotos/walz-weide.jpg"
+                  alt="Kühe auf der Weide am Biohof Walz"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -189,8 +189,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="/decision-auszeichnung.jpg"
-                  alt="Obst vom Hederer"
+                  src="/fotos/lillinghof-obstbau.jpg"
+                  alt="Apfelbäume am Lillinghof"
                   className="w-full h-full object-cover"
                 />
               </div>
