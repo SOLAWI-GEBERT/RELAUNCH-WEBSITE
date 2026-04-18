@@ -22,20 +22,20 @@ const hofIcon = new L.Icon({
 const depots = [
   { name: "Depot St. Peter", lat: 49.443805, lng: 11.0911991, address: "Findelwiesenstr. 25, Nürnberg", hours: "Mittwoch 14 Uhr bis Donnerstag 18 Uhr" },
   { name: "Depot Stadtpark", lat: 49.46355594773305, lng: 11.096376207324228, address: "Gemeindehaus der Reformations-Gedächtniskirche, Berliner Platz 20, 90489 Nürnberg", hours: "Mittwoch bis Samstag" },
-  { name: "Depot Wiese", lat: 49.440983418981595, lng: 11.070236436909584, address: "Wiesenstraße 19, 90443 Nürnberg", hours: "Mittwoch 14 bis 20 Uhr" },
-  { name: "Depot Gostenhof", lat: 49.44709965070575, lng: 11.054054700589662, address: "Reitackerstraße, Nürnberg", hours: "Mittwoch bis Freitag" },
+  { name: "Depot Die Wiese", lat: 49.440983418981595, lng: 11.070236436909584, address: "Wiesenstraße 19, 90443 Nürnberg", hours: "Mittwoch 14 bis 20 Uhr" },
+  { name: "Depot Gostenhof (Warteliste)", lat: 49.44709965070575, lng: 11.054054700589662, address: "Reitackerstr. 18, Nürnberg", hours: "Mittwoch bis Freitag" },
   { name: "Depot Johannis", lat: 49.45964237502998, lng: 11.0549138829412, address: "Julienstr. 8, 90419 Nürnberg", hours: "Mittwoch bis Freitag" },
-  { name: "Depot AKI Nordstadt", lat: 49.468330266824864, lng: 11.075108367888399, address: "Aktivspielplatz AKI, Grunewaldstr. 24a, 90408 Nürnberg", hours: "Mittwoch bis Freitag" },
+  { name: "Depot AKi", lat: 49.468330266824864, lng: 11.075108367888399, address: "Grünewaldstr. 24, Nürnberg (Zugang via Uhlandstr.)", hours: "Mittwoch bis Freitag" },
   { name: "Depot Tataa", lat: 49.47958404841266, lng: 10.986702958418762, address: "Marktplatz 4, Fürth", hours: "Mittwoch 19:30–20:30 Uhr & auf Nachfrage" },
-  { name: "Depot Spiegelfabrik", lat: 49.470097691079886, lng: 11.00517106904846, address: "Zugang via Dr.-Mack-Str. 42, Fürth", hours: "Mittwoch 17:30–19:30 Uhr & auf Nachfrage" },
+  { name: "Depot Spiegelfabrik (Warteliste)", lat: 49.470097691079886, lng: 11.00517106904846, address: "Dr.-Mack-Str. 42, Fürth", hours: "Mittwoch 17:30–19:30 Uhr & auf Nachfrage" },
   { name: "Depot Altenfurt", lat: 49.4068315, lng: 11.1667917, address: "Schornbaumstraße 12, Grundstück der evang. Gemeinde, Altenfurt", hours: "Mittwoch 14 bis 20 Uhr" },
 ];
 
 const hoefe = [
-  { name: "Schallerhof", lat: 49.57848, lng: 10.9432444, address: "Bioland-Hof Familie Schaller, St. Michael 43, 91056 Erlangen-Steudach" },
-  { name: "Biohof Walz", lat: 49.46267898029151, lng: 11.8103789802915, address: "In der Schäflohe 4, 92224 Amberg" },
-  { name: "Gärtnerhof Hederer", lat: 49.54871497973974, lng: 10.238286376189608, address: "Gärtnerhof Reginswind, Uffenheim" },
-  { name: "Reimehof", lat: 49.60449999999999, lng: 11.44095, address: "Wallsdorf 1, 91241 Kirchensittenbach" },
+  { name: "Biohof Tristan", lat: 49.5683, lng: 10.6283, address: "Emskirchen/Gunzendorf (Bioland) — Wintergemüse" },
+  { name: "Demeterhof Heribert Hederer", lat: 49.54871497973974, lng: 10.238286376189608, address: "Uffenheim (demeter) — Sommergemüse & Obst" },
+  { name: "Demeterhof Andreas Walz", lat: 49.46267898029151, lng: 11.8103789802915, address: "In der Schäflohe 4, 92224 Amberg (demeter) — Huhn, Hack, Wurst, Ur-Getreide" },
+  { name: "Bio...Beeren Kirschgarten", lat: 49.6267, lng: 11.2283, address: "Bei Igensdorf (EU-Bio) — Beeren-Vielfalt" },
 ];
 
 export function LieferungKalender() {

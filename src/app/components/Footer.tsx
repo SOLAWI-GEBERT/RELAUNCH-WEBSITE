@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -87,19 +87,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 text-cta flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@stadt-land-beides.de" className="text-foreground/70 hover:text-cta transition-colors">
-                  info@stadt-land-beides.de
+                <a href="mailto:Team.Koordination@stadt-land-beides.de" className="text-foreground/70 hover:text-cta transition-colors">
+                  Team.Koordination@stadt-land-beides.de
                 </a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone className="w-5 h-5 text-cta flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/70">+49 (0) 123 456789</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-cta flex-shrink-0 mt-0.5" />
                 <span className="text-foreground/70">
-                  Musterstraße 123<br />
-                  12345 Musterstadt
+                  Findelwiesenstr. 25<br />
+                  90478 Nürnberg
                 </span>
               </li>
             </ul>

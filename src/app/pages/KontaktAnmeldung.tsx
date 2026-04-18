@@ -125,7 +125,7 @@ export function KontaktAnmeldung() {
                   <input
                     type="text"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="Ihr Name"
+                    placeholder="Dein Name"
                   />
                 </div>
                 <div>
@@ -135,7 +135,7 @@ export function KontaktAnmeldung() {
                   <input
                     type="email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="ihre@email.de"
+                    placeholder="deine@email.de"
                   />
                 </div>
               </div>
@@ -156,7 +156,7 @@ export function KontaktAnmeldung() {
                 <textarea
                   rows={6}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                  placeholder="Ihre Nachricht..."
+                  placeholder="Deine Nachricht..."
                 />
               </div>
               <div>
@@ -184,19 +184,19 @@ export function KontaktAnmeldung() {
 
           <div className="bg-white rounded-lg shadow-sm p-8 text-center">
             <p className="text-lg font-semibold text-gray-900 mb-2">
-              Sebastian Lades, Clemens Brachmann
+              Sebastian Lades (Vorstand), Andreas Gebert (Kassenwart)
             </p>
             <p className="text-gray-700 mb-4">
-              Ehrenamtliche Vorstände des Vereins „Solidarische Landwirtschaft
+              Vorstand und Kassenwart des Vereins „Solidarische Landwirtschaft
               Stadt, Land, Beides e.V."
             </p>
             <div className="flex items-center justify-center gap-3 text-gray-700">
               <Mail className="w-5 h-5 text-primary" />
               <a
-                href="mailto:solawi@stadt-land-beides.de"
+                href="mailto:Team.Koordination@stadt-land-beides.de"
                 className="hover:text-primary transition-colors"
               >
-                solawi@stadt-land-beides.de
+                Team.Koordination@stadt-land-beides.de
               </a>
             </div>
           </div>

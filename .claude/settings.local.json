@@ -28,7 +28,8 @@
       "Bash(node:*)",
       "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*kürbis* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*Kürbis* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*kuerbis*)",
       "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*hof* /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*Hof*)",
-      "Bash(brew install:*)"
+      "Bash(brew install:*)",
+      "Bash(pip3 install:*)"
     ]
   }
 }
