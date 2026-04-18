@@ -4,12 +4,12 @@ export function KontaktAnmeldung() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-solawi-blue py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Kontakt & Anmeldung
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl">
+          <p className="text-xl text-foreground/90 max-w-3xl">
             Werden Sie Teil unserer Gemeinschaft oder kontaktieren Sie uns bei Fragen
           </p>
         </div>
@@ -89,7 +89,7 @@ export function KontaktAnmeldung() {
       </section>
 
       {/* Kontakt Section */}
-      <section id="kontakt" className="py-16 bg-gray-50">
+      <section id="kontakt" className="py-16 bg-solawi-gray">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -212,7 +212,7 @@ export function KontaktAnmeldung() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-16 bg-gray-50">
+      <section id="faq" className="py-16 bg-solawi-salmon-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />

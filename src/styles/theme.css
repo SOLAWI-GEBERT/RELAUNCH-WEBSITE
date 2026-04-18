@@ -20,13 +20,16 @@
   /* SoLaWi Markenfarben aus dem Template */
   --solawi-pink: #d10038; /* CTA-Akzent, Tags, Pagination, Borders */
   --solawi-purple: #8a2b7d; /* Hover-Farbe, Interaktiv */
-  --solawi-blue: #7697b5; /* Button-Primary-Hintergrund */
+  --solawi-blue: #97b0c7; /* Hero/Landwirtschaft-Sektionen */
+  --solawi-blue-button: #7697b5; /* Button-Primary-Hintergrund */
   --solawi-navy: #100056; /* Button Hover-Border */
-  --solawi-blue-light: #9cb1c6;
-  --solawi-salmon: #f3aba2;
-  --solawi-orange: #ffa673;
-  --solawi-green: #c2ddb2;
-  --solawi-mauve: #c7afc7;
+  --solawi-blue-light: #9cb1c6; /* Kontakt-Sektionen */
+  --solawi-gray: #e5e5e5; /* Neutrale Trenn-Sektionen */
+  --solawi-salmon: #f3aba2; /* Nachhaltigkeit-Sektionen */
+  --solawi-salmon-light: #ffa8a1; /* FAQ-Sektionen */
+  --solawi-orange: #ffa673; /* Gemeinschaft/Standort-Sektionen */
+  --solawi-green: #c2ddb2; /* Mitmachen/Anmeldung-Sektionen */
+  --solawi-mauve: #c7afc7; /* Lebensmittel/Produkte-Sektionen */
 
   /* Neutrale Farben */
   --muted: #f0f0f0;
@@ -113,9 +116,12 @@
   --color-solawi-pink: var(--solawi-pink);
   --color-solawi-purple: var(--solawi-purple);
   --color-solawi-blue: var(--solawi-blue);
+  --color-solawi-blue-button: var(--solawi-blue-button);
   --color-solawi-navy: var(--solawi-navy);
   --color-solawi-blue-light: var(--solawi-blue-light);
+  --color-solawi-gray: var(--solawi-gray);
   --color-solawi-salmon: var(--solawi-salmon);
+  --color-solawi-salmon-light: var(--solawi-salmon-light);
   --color-solawi-orange: var(--solawi-orange);
   --color-solawi-green: var(--solawi-green);
   --color-solawi-mauve: var(--solawi-mauve);

@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Über uns */}
           <div>
-            <h3 className="font-semibold text-lg mb-4 text-white">Stadt, Land, Beides</h3>
+            <img src="/SLB.gif" alt="Stadt, Land, Beides." className="h-8 mb-4 brightness-0 invert" />
             <p className="text-[#aaa] text-sm mb-4">
               Solidarische Landwirtschaft für eine nachhaltige und regionale Ernährung.
             </p>

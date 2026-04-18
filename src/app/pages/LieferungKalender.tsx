@@ -4,12 +4,12 @@ export function LieferungKalender() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16">
+      <section className="bg-solawi-blue py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Lieferung & Kalender
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl">
+          <p className="text-xl text-foreground/90 max-w-3xl">
             Alle Informationen zu Lieferungen, Abholungen und kommenden Veranstaltungen
           </p>
         </div>
@@ -24,7 +24,7 @@ export function LieferungKalender() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div id="wann" className="bg-secondary/20 p-6 rounded-lg">
+            <div id="wann" className="bg-solawi-mauve p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 Wann wird geliefert?
               </h3>
@@ -34,7 +34,7 @@ export function LieferungKalender() {
               </p>
             </div>
 
-            <div id="was" className="bg-secondary/20 p-6 rounded-lg">
+            <div id="was" className="bg-solawi-mauve p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 Was wird geliefert?
               </h3>
@@ -44,7 +44,7 @@ export function LieferungKalender() {
               </p>
             </div>
 
-            <div id="aenderungen" className="bg-secondary/20 p-6 rounded-lg">
+            <div id="aenderungen" className="bg-solawi-mauve p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-foreground flex items-center gap-2">
                 <AlertCircle className="w-5 h-5" />
                 Änderungen/Feiertage/Ausfälle
@@ -55,7 +55,7 @@ export function LieferungKalender() {
               </p>
             </div>
 
-            <div id="depot-hinweise" className="bg-secondary/20 p-6 rounded-lg">
+            <div id="depot-hinweise" className="bg-solawi-mauve p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-foreground flex items-center gap-2">
                 <MapPin className="w-5 h-5" />
                 Depot-Hinweise
@@ -70,7 +70,7 @@ export function LieferungKalender() {
       </section>
 
       {/* Kalender Section */}
-      <section id="kalender" className="py-16 bg-gray-50">
+      <section id="kalender" className="py-16 bg-solawi-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
             <Calendar className="w-8 h-8 text-primary" />
@@ -83,7 +83,7 @@ export function LieferungKalender() {
               Hier finden Sie alle wichtigen Termine für Veranstaltungen, Mitmachaktionen, 
               Hofaktionen und Anlieferungstermine.
             </p>
-            <div className="bg-secondary/20 p-6 rounded-lg">
+            <div className="bg-solawi-mauve p-6 rounded-lg">
               <p className="text-gray-700 italic">
                 Der interaktive Kalender wird in Kürze verfügbar sein.
               </p>
@@ -128,15 +128,15 @@ export function LieferungKalender() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-primary text-white py-12">
+      <section className="bg-solawi-green py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4 text-foreground">
             Bleiben Sie auf dem Laufenden
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
             Melden Sie sich für unseren Newsletter an, um keine Termine zu verpassen
           </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-secondary/20 transition-colors">
+          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors">
             Zum Newsletter
           </button>
         </div>

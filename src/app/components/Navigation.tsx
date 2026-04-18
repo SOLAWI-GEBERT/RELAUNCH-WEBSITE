@@ -190,10 +190,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 z-50">
-            <div className="text-2xl font-bold text-foreground">
-              Stadt, Land, Beides
-            </div>
+          <Link to="/" className="flex items-center z-50">
+            <img src="/SLB.gif" alt="Stadt, Land, Beides." className="h-10" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -302,12 +300,12 @@ export function Navigation() {
       >
         <div className="p-6 pt-24">
           {/* Mobile Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             onClick={closeMobileMenu}
-            className="block mb-8 text-xl font-bold text-foreground"
+            className="block mb-8"
           >
-            Stadt, Land, Beides
+            <img src="/SLB.gif" alt="Stadt, Land, Beides." className="h-8" />
           </Link>
 
           {/* Mobile Menu Items */}

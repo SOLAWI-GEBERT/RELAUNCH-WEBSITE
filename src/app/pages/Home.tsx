@@ -9,8 +9,8 @@ export function Home() {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1632741878777-464bc17d0923?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGZhcm0lMjBsYW5kc2NhcGUlMjBydXJhbHxlbnwxfHx8fDE3NzI0NzM4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Landwirtschaft Landschaft"
+            src="/start.png"
+            alt="Stadt, Land, Beides - Stiefel Illustration"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40"></div>
@@ -42,7 +42,7 @@ export function Home() {
       </section>
 
       {/* Was ist Solidarische Landwirtschaft */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -68,8 +68,8 @@ export function Home() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1722810767149-4b153d88402e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwZmFybSUyMHZlZ2V0YWJsZXMlMjBoYXJ2ZXN0fGVufDF8fHx8MTc3MjM5NDMzM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Gemüseernte"
+                src="/decision-funktion.jpg"
+                alt="So funktioniert Solidarische Landwirtschaft"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -128,7 +128,7 @@ export function Home() {
       </section>
 
       {/* Unsere Höfe */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-mauve">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-foreground">
@@ -143,8 +143,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwdmVnZXRhYmxlcyUyMGdhcmRlbiUyMHJvd3N8ZW58MXx8fHwxNzcyNDczODE0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Gemüseanbau"
+                  src="/features-landwirtschaft.jpg"
+                  alt="Reimehof Landwirtschaft"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -166,8 +166,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1568583528604-e3a4cd4445cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHZlZ2V0YWJsZXMlMjBiYXNrZXQlMjBmYXJtZXJzJTIwbWFya2V0fGVufDF8fHx8MTc3MjQ3MzgxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Gemüsekorb"
+                  src="/features-lebensmittel.jpg"
+                  alt="Biohof Walz Lebensmittel"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -189,8 +189,8 @@ export function Home() {
             <div className="bg-white rounded-lg overflow-hidden shadow-lg">
               <div className="h-48 overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1681999735639-da9eafbb385f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBzdXBwb3J0ZWQlMjBhZ3JpY3VsdHVyZSUyMGZpZWxkfGVufDF8fHx8MTc3MjQ3MzgxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Obstanbau"
+                  src="/decision-auszeichnung.jpg"
+                  alt="Obst vom Hederer"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -269,7 +269,7 @@ export function Home() {
       </section>
 
       {/* Aktuelle Veranstaltungen */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-orange">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -361,25 +361,25 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-solawi-green">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl mb-6">
+          <h2 className="text-4xl mb-6 text-foreground">
             Bereit für frische, regionale Lebensmittel?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-8 text-foreground">
             Werde Teil unserer Gemeinschaft und unterstütze nachhaltige Landwirtschaft in deiner Region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/anmeldung"
-              className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 px-8 py-4 rounded-lg transition-colors"
             >
               Jetzt anmelden
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/mitmachen"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-foreground text-foreground hover:bg-white/30 px-8 py-4 rounded-lg transition-colors"
             >
               Mehr Informationen
             </Link>

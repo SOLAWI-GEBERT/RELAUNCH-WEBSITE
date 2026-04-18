@@ -9,8 +9,8 @@ export function Mitmachen() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1709634500517-9ed519597134?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGZhcm1pbmclMjBjb21tdW5pdHklMjBwZW9wbGV8ZW58MXx8fHwxNzcyNDczODEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Gemeinschaft"
+            src="/ablauf-mitmachen.jpg"
+            alt="Mitmachen - Hände halten Ernte"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -93,7 +93,7 @@ export function Mitmachen() {
       </section>
 
       {/* Hofbeteiligungen */}
-      <section id="hofbeteiligungen" className="py-20 bg-secondary/20">
+      <section id="hofbeteiligungen" className="py-20 bg-solawi-mauve">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-12 text-foreground">
             Hofbeteiligungen & Kosten
@@ -257,7 +257,7 @@ export function Mitmachen() {
       </section>
 
       {/* Depots */}
-      <section id="depots" className="py-20 bg-secondary/20">
+      <section id="depots" className="py-20 bg-solawi-orange">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl mb-4 text-foreground">
@@ -460,7 +460,7 @@ export function Mitmachen() {
       </section>
 
       {/* Mitarbeit und Engagement */}
-      <section id="engagement" className="py-20 bg-secondary/20">
+      <section id="engagement" className="py-20 bg-solawi-green">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Mitarbeit & Engagement
@@ -520,17 +520,17 @@ export function Mitmachen() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-solawi-blue text-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Bereit mitzumachen?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-8 text-foreground/80">
             Fülle jetzt das Anmeldeformular aus und werde Teil unserer Gemeinschaft!
           </p>
           <Link
             to="/anmeldung"
-            className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 px-8 py-4 rounded-lg transition-colors"
           >
             Zur Anmeldung
             <ArrowRight className="w-5 h-5" />

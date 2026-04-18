@@ -8,8 +8,8 @@ export function HoefeUndErnteanteile() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1632741878777-464bc17d0923?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGZhcm0lMjBsYW5kc2NhcGUlMjBydXJhbHxlbnwxfHx8fDE3NzI0NzM4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Landwirtschaft"
+            src="/ablauf-hof.jpg"
+            alt="Unsere Höfe - Regionalkarte"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -39,7 +39,7 @@ export function HoefeUndErnteanteile() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-secondary/20 p-8 rounded-lg">
+            <div className="bg-solawi-mauve p-8 rounded-lg">
               <h3 id="sommer" className="text-2xl mb-4 text-foreground">Sommergemüse</h3>
               <p className="text-gray-700 mb-4">
                 Von Mai bis Oktober erhältst du wöchentlich eine vielfältige Auswahl an frischem 
@@ -59,7 +59,7 @@ export function HoefeUndErnteanteile() {
               </div>
             </div>
 
-            <div className="bg-secondary/20 p-8 rounded-lg">
+            <div className="bg-solawi-mauve p-8 rounded-lg">
               <h3 id="winter" className="text-2xl mb-4 text-foreground">Wintergemüse</h3>
               <p className="text-gray-700 mb-4">
                 Von November bis April versorgen wir dich mit robustem Wintergemüse und Lagergemüse. 
@@ -83,13 +83,13 @@ export function HoefeUndErnteanteile() {
       </section>
 
       {/* Reimehof */}
-      <section id="reimehof" className="py-20 bg-secondary/20">
+      <section id="reimehof" className="py-20 bg-solawi-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwdmVnZXRhYmxlcyUyMGdhcmRlbiUyMHJvd3N8ZW58MXx8fHwxNzcyNDczODE0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Reimehof Gemüseanbau"
+                src="/features-landwirtschaft.jpg"
+                alt="Reimehof Landwirtschaft"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -181,7 +181,7 @@ export function HoefeUndErnteanteile() {
                 </div>
               </div>
 
-              <div className="bg-secondary/20 p-6 rounded-lg">
+              <div className="bg-white p-6 rounded-lg">
                 <h3 className="text-xl mb-3 text-foreground">Besonderheiten</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li>• Demeter-zertifiziert</li>
@@ -193,8 +193,8 @@ export function HoefeUndErnteanteile() {
             </div>
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl order-1 md:order-2">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1568583528604-e3a4cd4445cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHZlZ2V0YWJsZXMlMjBiYXNrZXQlMjBmYXJtZXJzJTIwbWFya2V0fGVufDF8fHx8MTc3MjQ3MzgxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Biohof Walz Gemüse"
+                src="/features-lebensmittel.jpg"
+                alt="Biohof Walz Lebensmittel"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -203,13 +203,13 @@ export function HoefeUndErnteanteile() {
       </section>
 
       {/* Obst vom Hederer */}
-      <section id="hederer" className="py-20 bg-secondary/20">
+      <section id="hederer" className="py-20 bg-solawi-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1681999735639-da9eafbb385f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjBzdXBwb3J0ZWQlMjBhZ3JpY3VsdHVyZSUyMGZpZWxkfGVufDF8fHx8MTc3MjQ3MzgxMnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Obstanbau Hederer"
+                src="/features-nachhaltigkeit.jpg"
+                alt="Obst vom Hederer"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -313,7 +313,7 @@ export function HoefeUndErnteanteile() {
       </section>
 
       {/* Weitere Kooperationen */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-gray">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Weitere Hofkooperationen

@@ -14,7 +14,7 @@ export function Anmeldung() {
     return (
       <div className="bg-white min-h-[600px] flex items-center justify-center">
         <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="w-20 h-20 bg-solawi-green rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-12 h-12 text-primary" />
           </div>
           <h1 className="text-4xl mb-6 text-foreground">
@@ -38,8 +38,8 @@ export function Anmeldung() {
       <section className="relative h-[300px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1632741878777-464bc17d0923?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMGZhcm0lMjBsYW5kc2NhcGUlMjBydXJhbHxlbnwxfHx8fDE3NzI0NzM4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Anmeldung"
+            src="/ablauf-kontakt.jpg"
+            alt="Anmeldung - Kontakt"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -56,7 +56,7 @@ export function Anmeldung() {
       </section>
 
       {/* Ansprechpartner */}
-      <section className="py-12 bg-secondary/20">
+      <section className="py-12 bg-solawi-blue-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl mb-4 text-foreground">
@@ -401,7 +401,7 @@ export function Anmeldung() {
       </section>
 
       {/* Weitere Infos */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-salmon-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl mb-8 text-foreground text-center">
             Häufig gestellte Fragen

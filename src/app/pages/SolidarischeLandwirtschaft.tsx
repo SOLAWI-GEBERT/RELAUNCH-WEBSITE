@@ -9,8 +9,8 @@ export function SolidarischeLandwirtschaft() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1709634500517-9ed519597134?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdXN0YWluYWJsZSUyMGZhcm1pbmclMjBjb21tdW5pdHklMjBwZW9wbGV8ZW58MXx8fHwxNzcyNDczODEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Gemeinschaft"
+            src="/features-gemeinschaft.jpg"
+            alt="Solidarische Landwirtschaft Gemeinschaft"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -82,7 +82,7 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Wie machen wir das */}
-      <section id="wie-machen-wir" className="py-20 bg-secondary/20">
+      <section id="wie-machen-wir" className="py-20 bg-solawi-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Wie machen wir das bei Stadt, Land, Beides?
@@ -168,7 +168,7 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Unsere Ziele */}
-      <section id="ziele" className="py-20 bg-secondary/20">
+      <section id="ziele" className="py-20 bg-solawi-salmon">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Unsere Ziele
@@ -249,7 +249,7 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Förderverein */}
-      <section id="foerderverein" className="py-20 bg-secondary/20">
+      <section id="foerderverein" className="py-20 bg-solawi-mauve">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Förderverein
@@ -320,18 +320,18 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-solawi-green text-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Möchtest du Teil unserer Gemeinschaft werden?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Erfahre mehr darüber, wie du mitmachen kannst und werde Teil der Bewegung 
+          <p className="text-xl mb-8 text-foreground/80">
+            Erfahre mehr darüber, wie du mitmachen kannst und werde Teil der Bewegung
             für nachhaltige Landwirtschaft.
           </p>
           <Link
             to="/mitmachen"
-            className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 px-8 py-4 rounded-lg transition-colors"
           >
             Jetzt informieren
             <ArrowRight className="w-5 h-5" />

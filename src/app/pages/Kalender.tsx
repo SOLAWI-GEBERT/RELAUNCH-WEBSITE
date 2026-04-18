@@ -97,8 +97,8 @@ export function Kalender() {
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1722810767149-4b153d88402e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwZmFybSUyMHZlZ2V0YWJsZXMlMjBoYXJ2ZXN0fGVufDF8fHx8MTc3MjM5NDMzM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Veranstaltungen"
+            src="/ablauf-ernteteiler.jpg"
+            alt="Kalender - Ernteteiler"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50"></div>
@@ -115,7 +115,7 @@ export function Kalender() {
       </section>
 
       {/* Filter & Legend */}
-      <section className="py-8 bg-secondary/20">
+      <section className="py-8 bg-solawi-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center">
             {eventTypes.map((type) => (
@@ -204,7 +204,7 @@ export function Kalender() {
       </section>
 
       {/* Anlieferung Info */}
-      <section className="py-20 bg-secondary/20">
+      <section className="py-20 bg-solawi-blue">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground text-center">
             Anlieferung von Ernteteilen
@@ -293,19 +293,19 @@ export function Kalender() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-white">
+      <section className="py-20 bg-solawi-green text-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Möchtest du bei einer Aktion dabei sein?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-8 text-foreground/80">
             Melde dich für Veranstaltungen an oder werde Mitglied, um an allen Aktionen teilzunehmen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors">
+            <button className="bg-primary text-white hover:bg-primary/80 px-8 py-4 rounded-lg transition-colors">
               Newsletter abonnieren
             </button>
-            <button className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-colors">
+            <button className="border-2 border-foreground text-foreground hover:bg-foreground/10 px-8 py-4 rounded-lg transition-colors">
               Mitglied werden
             </button>
           </div>
