@@ -276,7 +276,7 @@ export function Mitmachen() {
       <section id="erwartungen" className="py-20 bg-solawi-blue/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
-            Was erwartet mich?
+            Was erwartet dich?
           </h2>
 
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">

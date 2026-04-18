@@ -66,6 +66,7 @@ export function Navigation() {
       path: "/mitmachen",
       subItems: [
         { title: "So wirst du Mitglied", path: "/mitmachen#ueberblick" },
+        { title: "Was erwartet dich?", path: "/mitmachen#erwartungen" },
         {
           title: "Dein Beitrag",
           path: "#",
