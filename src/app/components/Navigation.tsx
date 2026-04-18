@@ -41,7 +41,7 @@ export function Navigation() {
       path: "/hoefe-und-ernteanteile",
       subItems: [
         {
-          title: "Unsere Höfe",
+          title: "Deine Höfe",
           path: "#",
           isCategory: true,
           subItems: [
@@ -52,7 +52,7 @@ export function Navigation() {
           ]
         },
         {
-          title: "Hofkooperationen",
+          title: "Deine Kooperationen",
           path: "#",
           isCategory: true,
           subItems: [
@@ -67,7 +67,7 @@ export function Navigation() {
       subItems: [
         { title: "So wirst du Mitglied", path: "/mitmachen#ueberblick" },
         {
-          title: "Ernteanteile & Kosten",
+          title: "Dein Beitrag",
           path: "#",
           isCategory: true,
           subItems: [
@@ -85,7 +85,7 @@ export function Navigation() {
           ]
         },
         {
-          title: "Engagement & Mitarbeit",
+          title: "Dein Engagement",
           path: "#",
           isCategory: true,
           subItems: [
@@ -94,44 +94,27 @@ export function Navigation() {
             { title: "Unser Verein", path: "/mitmachen#vereinsarbeit" },
           ]
         },
+        {
+          title: "Deine Gemeinschaft",
+          path: "#",
+          isCategory: true,
+          subItems: [
+            { title: "Termine & Aktionen", path: "/mitmachen#termine" },
+            { title: "Ansprechpartner & Kontakt", path: "/mitmachen#kontakt" },
+          ]
+        },
       ],
     },
     {
-      title: "Lieferung & Kalender",
+      title: "Lieferung",
       path: "/lieferung-kalender",
       subItems: [
-        {
-          title: "Lieferung & Abholung",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Wann wird geliefert?", path: "/lieferung-kalender#wann" },
-            { title: "Was wird geliefert?", path: "/lieferung-kalender#was" },
-            { title: "Änderungen/Feiertage/Ausfälle", path: "/lieferung-kalender#aenderungen" },
-            { title: "Depot-Hinweise", path: "/lieferung-kalender#depot-hinweise" },
-          ]
-        },
         { title: "Höfe & Depots (Karte)", path: "/lieferung-kalender#karte" },
         { title: "Depot-Öffnungszeiten", path: "/lieferung-kalender#depots" },
-        {
-          title: "Termine & Aktionen",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Veranstaltungen", path: "/lieferung-kalender#veranstaltungen" },
-            { title: "Termine: Hof- & Mitmachaktionen", path: "/lieferung-kalender#hofaktionen" },
-            { title: "Anlieferungstermine", path: "/lieferung-kalender#anlieferung" },
-          ]
-        },
-      ],
-    },
-    {
-      title: "Kontakt",
-      path: "/kontakt-anmeldung",
-      subItems: [
+        { title: "Abholung & Depot-Regeln", path: "/lieferung-kalender#depot-hinweise" },
+        { title: "Lieferrhythmus", path: "/lieferung-kalender#anlieferung" },
+        { title: "Fragen für Ernteteiler", path: "/lieferung-kalender#faq" },
         { title: "Kontaktformular", path: "/kontakt-anmeldung#kontakt" },
-        { title: "Ansprechpartner", path: "/kontakt-anmeldung#ansprechpartner" },
-        { title: "Fragen für Ernteteiler", path: "/kontakt-anmeldung#faq" },
       ],
     },
   ];
@@ -198,7 +181,7 @@ export function Navigation() {
                                   <div key={categoryItem.path}>
                                     <Link
                                       to={categoryItem.path}
-                                      className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent font-semibold mx-2 transition-all hover:translate-x-1"
+                                      className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent mx-2 transition-all hover:translate-x-1"
                                     >
                                       {categoryItem.title}
                                     </Link>
@@ -331,7 +314,7 @@ export function Navigation() {
                                       <Link
                                         to={categoryItem.path}
                                         onClick={closeMobileMenu}
-                                        className="flex-1 px-3 py-2 text-sm text-gray-700 hover:bg-secondary/20 hover:text-foreground rounded-md font-medium transition-colors"
+                                        className="flex-1 px-3 py-2 text-sm text-gray-700 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
                                       >
                                         {categoryItem.title}
                                       </Link>

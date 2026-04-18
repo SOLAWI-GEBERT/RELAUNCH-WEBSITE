@@ -386,6 +386,93 @@ export function Mitmachen() {
         </div>
       </section>
 
+      {/* Termine & Aktionen */}
+      <section id="termine" className="py-20 bg-solawi-salmon-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-foreground">Termine & Aktionen</h2>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <Calendar className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                Jahreshauptversammlung
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Findet im Herbst statt — als Ernteteiler bist du zur Teilnahme
+                eingeladen. Dort lernst du unsere Landwirte kennen und planst
+                gemeinsam das neue Jahr. Die Entscheidungen werden im
+                Konsensverfahren getroffen und sind verbindlich.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <Heart className="w-8 h-8 text-primary mb-3" />
+              <h3 className="text-lg font-semibold mb-2 text-foreground">
+                Hof- & Mitmachaktionen
+              </h3>
+              <p className="text-gray-700 text-sm">
+                In unregelmäßigen Abständen gibt es Hofaktionen:
+                Arbeitseinsätze, gemeinsame Treffen, den Hof und andere
+                Ernteteiler kennenlernen. Die Teilnahme ist freiwillig und wird
+                rechtzeitig angekündigt.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-solawi-mauve p-6 rounded-lg text-center">
+            <p className="text-gray-700">
+              Termine erfährst du aktuell über die Hof-Post per E-Mail und
+              unseren Newsletter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ansprechpartner & Kontakt */}
+      <section id="kontakt" className="py-20 bg-solawi-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-foreground">
+            Ansprechpartner & Kontakt
+          </h2>
+
+          <div className="bg-white p-8 rounded-lg shadow-sm mb-8">
+            <p className="text-lg font-semibold text-gray-900 mb-2">
+              Sebastian Lades (Vorstand), Andreas Gebert (Kassenwart)
+            </p>
+            <p className="text-gray-700 mb-4">
+              Vorstand und Kassenwart des Vereins „Solidarische Landwirtschaft
+              Stadt, Land, Beides e.V."
+            </p>
+            <div className="flex items-center gap-3 text-gray-700 mb-6">
+              <Mail className="w-5 h-5 text-primary" />
+              <a
+                href="mailto:Team.Koordination@stadt-land-beides.de"
+                className="hover:text-primary transition-colors"
+              >
+                Team.Koordination@stadt-land-beides.de
+              </a>
+            </div>
+
+            <div className="bg-solawi-green/30 p-5 rounded-lg">
+              <p className="text-gray-700 text-sm leading-relaxed">
+                Das Kontaktformular wird vom Team Koordination gelesen — du
+                kannst uns auch direkt per E-Mail an{" "}
+                <a
+                  href="mailto:Team.Koordination@stadt-land-beides.de"
+                  className="text-primary hover:underline"
+                >
+                  Team.Koordination@stadt-land-beides.de
+                </a>{" "}
+                schreiben. Für besondere Fälle erreichst du uns auch telefonisch
+                unter <strong>+49 911 596 79 722</strong> (Anrufbeantworter).
+                Bitte hab etwas Geduld: Wir arbeiten alle ehrenamtlich und
+                melden uns, sobald es uns möglich ist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Rollen */}
       <section id="rollen" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

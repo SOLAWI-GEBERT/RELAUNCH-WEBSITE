@@ -1,4 +1,10 @@
-import { Calendar, Truck, AlertCircle, MapPin, Clock } from "lucide-react";
+import { Calendar, Truck, AlertCircle, MapPin, Clock, HelpCircle } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/app/components/ui/accordion";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -196,92 +202,149 @@ export function LieferungKalender() {
         </div>
       </section>
 
-      {/* Kalender Section */}
-      <section id="kalender" className="py-16 bg-white">
+      {/* Lieferrhythmus */}
+      <section id="anlieferung" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
             <Calendar className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold text-gray-900">Kalender</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Lieferrhythmus</h2>
           </div>
 
-          <div className="bg-solawi-mauve rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-semibold mb-6">Kommende Termine</h3>
-            <p className="text-gray-600 mb-4">
-              Hier findest du alle wichtigen Termine für Veranstaltungen, Mitmachaktionen,
-              Hofaktionen und Anlieferungstermine.
-            </p>
-            <div className="bg-white/60 p-6 rounded-lg">
-              <p className="text-gray-700 italic">
-                Termine erfährst du aktuell über die Hof-Post per E-Mail. Ein gemeinsamer Kalender ist in Planung.
-              </p>
-            </div>
+          <div className="bg-solawi-mauve rounded-lg p-8">
+            <table className="w-full text-sm text-left text-gray-700">
+              <thead>
+                <tr className="border-b border-gray-300">
+                  <th className="py-2 pr-4 font-semibold">Hof</th>
+                  <th className="py-2 pr-4 font-semibold">Produkt</th>
+                  <th className="py-2 pr-4 font-semibold">Zyklus</th>
+                  <th className="py-2 font-semibold">Phase</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Hederer</td>
+                  <td className="py-2 pr-4">Sommergemüse</td>
+                  <td className="py-2 pr-4">wöchentlich</td>
+                  <td className="py-2">Apr–Sept</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Hederer</td>
+                  <td className="py-2 pr-4">Obst</td>
+                  <td className="py-2 pr-4">nach Bedarf</td>
+                  <td className="py-2">Jul–Dez</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Tristan</td>
+                  <td className="py-2 pr-4">Wintergemüse</td>
+                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                  <td className="py-2">Okt–Mrz</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Walz</td>
+                  <td className="py-2 pr-4">Fleisch, Eier, Getreide</td>
+                  <td className="py-2 pr-4">1–2x/Monat</td>
+                  <td className="py-2">ganzjährig</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4">Kirschgarten</td>
+                  <td className="py-2 pr-4">Bio-Beeren</td>
+                  <td className="py-2 pr-4">wöchentlich</td>
+                  <td className="py-2">Jul–Sept</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ für Ernteteiler */}
+      <section id="faq" className="py-16 bg-solawi-salmon-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Fragen für Ernteteiler
+            </h2>
           </div>
 
-          {/* Termine & Aktionen */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <div id="veranstaltungen" className="bg-solawi-mauve p-6 rounded-lg">
-              <Calendar className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Veranstaltungen</h3>
-              <p className="text-sm text-gray-600">
-                Termine werden per Hof-Post und Newsletter kommuniziert. Die nächste Jahreshauptversammlung findet im Herbst statt — als Ernteteiler bist du zur Teilnahme eingeladen.
-              </p>
-            </div>
+          <Accordion type="single" collapsible className="bg-white rounded-lg shadow-sm px-6">
+            <AccordionItem value="verein-aufgaben">
+              <AccordionTrigger className="text-base font-semibold">
+                Was macht der Solawi-Verein?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Der Förderverein wurde 2016 gegründet und kümmert sich um die Infrastruktur
+                zwischen Landwirten und Ernteteilern. Hierzu gehört hauptsächlich der
+                Transport, die Öffentlichkeitsarbeit und das Betreiben der Vergabestellen im
+                Stadtgebiet. So können sich die Landwirte um das kümmern, was sie am liebsten
+                machen — ganz ohne Excel und Transportfahrten.
+              </AccordionContent>
+            </AccordionItem>
 
-            <div id="hofaktionen" className="bg-solawi-mauve p-6 rounded-lg">
-              <Truck className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Hof- & Mitmachaktionen</h3>
-              <p className="text-sm text-gray-600">
-                In unregelmäßigen Abständen gibt es Hofaktionen: Arbeitseinsätze, gemeinsame Treffen, den Hof und andere Ernteteiler kennenlernen. Die Teilnahme ist freiwillig und wird rechtzeitig angekündigt.
-              </p>
-            </div>
+            <AccordionItem value="verein-wer">
+              <AccordionTrigger className="text-base font-semibold">
+                Wer oder was ist der Solawi-Verein?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Der Verein besteht aus allen ehrenamtlich Aktiven. Satzungsbedingt gibt es
+                zwei gewählte Vorstände, einen Kassenwart und einen Kassenprüfer, welche alle
+                ehrenamtlich und ohne Aufwandsentschädigung agieren. Als Ernteteiler wird man
+                nicht automatisch Vereinsmitglied.
+              </AccordionContent>
+            </AccordionItem>
 
-            <div id="anlieferung" className="bg-solawi-mauve p-6 rounded-lg md:col-span-3">
-              <MapPin className="w-8 h-8 text-primary mb-3" />
-              <h3 className="text-lg font-semibold mb-2">Lieferrhythmus</h3>
-              <table className="w-full text-sm text-left text-gray-700 mt-4">
-                <thead>
-                  <tr className="border-b border-gray-300">
-                    <th className="py-2 pr-4 font-semibold">Hof</th>
-                    <th className="py-2 pr-4 font-semibold">Produkt</th>
-                    <th className="py-2 pr-4 font-semibold">Zyklus</th>
-                    <th className="py-2 font-semibold">Phase</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 pr-4">Hederer</td>
-                    <td className="py-2 pr-4">Sommergemüse</td>
-                    <td className="py-2 pr-4">wöchentlich</td>
-                    <td className="py-2">Apr–Sept</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 pr-4">Hederer</td>
-                    <td className="py-2 pr-4">Obst</td>
-                    <td className="py-2 pr-4">nach Bedarf</td>
-                    <td className="py-2">Jul–Dez</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 pr-4">Tristan</td>
-                    <td className="py-2 pr-4">Wintergemüse</td>
-                    <td className="py-2 pr-4">wöchentl./14-tägig</td>
-                    <td className="py-2">Okt–Mrz</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-2 pr-4">Walz</td>
-                    <td className="py-2 pr-4">Fleisch, Eier, Getreide</td>
-                    <td className="py-2 pr-4">1–2x/Monat</td>
-                    <td className="py-2">ganzjährig</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 pr-4">Kirschgarten</td>
-                    <td className="py-2 pr-4">Bio-Beeren</td>
-                    <td className="py-2 pr-4">wöchentlich</td>
-                    <td className="py-2">Jul–Sept</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+            <AccordionItem value="einbringen">
+              <AccordionTrigger className="text-base font-semibold">
+                Muss ich mich einbringen an einem Hof oder im Verein?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Nein, das ist nicht verpflichtend. Jeder hat sein eigenes Leben und schafft
+                es, sich mehr oder weniger einzubringen. Du kannst die Idee auch unterstützen,
+                indem du Ernteteiler bei Stadt, Land, Beides. bist. Als Abholer in einem
+                unserer Depots wirst du 1–2 Mal im Jahr für das Aufräumen und Reinigen des
+                Depots eingeteilt (ca. 20 Min). Wünschenswert ist natürlich, wenn du dich für
+                die Herkunft deiner Lebensmittel interessierst und den Landwirt auch
+                kennenlernen möchtest.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="kontakt-landwirte">
+              <AccordionTrigger className="text-base font-semibold">
+                Kann ich direkt zu den Landwirten Kontakt aufnehmen?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Selbstverständlich. Alle Höfe sind offen für deinen Besuch und dein
+                Engagement. Sprich einfach die jeweiligen Hofbetreuer an, die ehrenamtlich bei
+                Stadt, Land, Beides. aktiv sind. Eine gute Gelegenheit, einen unserer
+                Landwirte kennenzulernen, ist eine Hof-Aktion, über welche du als Ernteteiler
+                in der Hof-Post informiert wirst.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="ernteteiler-werden">
+              <AccordionTrigger className="text-base font-semibold">
+                Wie kann ich Ernteteiler werden?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Im Download-Bereich unserer Homepage findest du die aktuelle
+                Teilnahmevereinbarung. Bei manchen Landwirten stehen noch freie Ernteanteile
+                zur Verfügung. Kreuze das an, was dir zusagt. Du erhältst anschließend eine
+                Bestätigung, was verfügbar ist.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="aussteigen">
+              <AccordionTrigger className="text-base font-semibold">
+                Wie kann ich wieder aussteigen?
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-700 leading-relaxed">
+                Bei manchen Höfen ist ein Probemonat möglich, bei dem du ausprobieren kannst,
+                ob die Solawi in deinen Alltag passt. Die genauen Umstände sind in der
+                Teilnahmevereinbarung festgelegt. Eine Kündigung ist dann zum Ende des
+                Wirtschaftsjahres und bei besonderen Fällen (z.B. Umzug o.ä.) möglich.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

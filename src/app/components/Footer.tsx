@@ -47,6 +47,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/mitmachen#termine" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Termine & Aktionen
+                </Link>
+              </li>
+              <li>
                 <Link to="/kontakt-anmeldung" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
                   Kontakt
                 </Link>

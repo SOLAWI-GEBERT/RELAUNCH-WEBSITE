@@ -1,10 +1,4 @@
-import { Mail, User, MessageSquare, HelpCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/app/components/ui/accordion";
+import { Mail, User, MessageSquare } from "lucide-react";
 
 export function KontaktAnmeldung() {
   return (
@@ -203,98 +197,6 @@ export function KontaktAnmeldung() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="py-16 bg-solawi-salmon-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Fragen für Ernteteiler
-            </h2>
-          </div>
-
-          <Accordion type="single" collapsible className="bg-white rounded-lg shadow-sm px-6">
-            <AccordionItem value="verein-aufgaben">
-              <AccordionTrigger className="text-base font-semibold">
-                Was macht der Solawi-Verein?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Der Förderverein wurde 2016 gegründet und kümmert sich um die Infrastruktur
-                zwischen Landwirten und Ernteteilern. Hierzu gehört hauptsächlich der
-                Transport, die Öffentlichkeitsarbeit (Homepage, öffentlichkeitswirksame
-                Veranstaltungen, etc.) und das Betreiben der Vergabestellen im Stadtgebiet.
-                Somit können sich die Landwirte um das kümmern, was sie am liebsten machen –
-                ganz ohne Excel und Transportfahrten.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="verein-wer">
-              <AccordionTrigger className="text-base font-semibold">
-                Wer oder was ist der Solawi-Verein?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Der Verein besteht aus allen ehrenamtlich Aktiven. Satzungsbedingt gibt es
-                zwei gewählte Vorstände, einen Kassenwart und einen Kassenprüfer, welche alle
-                ehrenamtlich und ohne Aufwandsentschädigung agieren. Als Ernteteiler wird man
-                nicht automatisch Vereinsmitglied.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="einbringen">
-              <AccordionTrigger className="text-base font-semibold">
-                Muss ich mich einbringen an einem Hof oder im Verein?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Nein, das ist nicht verpflichtend. Jeder hat sein eigenes Leben und schafft
-                es, sich mehr oder weniger einzubringen. Du kannst die Idee auch unterstützen,
-                indem du Ernteteiler bei Stadt, Land, Beides. bist. Als Abholer in einem
-                unserer Depots wirst du 1–2 Mal im Jahr für das Aufräumen und Reinigen des
-                Depots eingeteilt (ca. 20 Min). Es finden immer mal wieder verschiedene
-                Veranstaltungen oder Aktionen statt, die du annehmen kannst. Wünschenswert ist
-                natürlich, wenn du dich für die Herkunft deiner Lebensmittel interessierst und
-                den Landwirt auch kennenlernen möchtest.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="kontakt-landwirte">
-              <AccordionTrigger className="text-base font-semibold">
-                Kann ich direkt zu den Landwirten Kontakt aufnehmen?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Selbstverständlich. Alle Höfe sind offen für deinen Besuch und dein
-                Engagement. Sprich einfach die jeweiligen Hofbetreuer an, die ehrenamtlich bei
-                Stadt, Land, Beides. aktiv sind. Eine gute Gelegenheit, einen unserer
-                Landwirte kennenzulernen, ist eine Hof-Aktion, über welche du als Ernteteiler
-                in der Hof-Post informiert wirst.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="ernteteiler-werden">
-              <AccordionTrigger className="text-base font-semibold">
-                Wie kann ich Ernteteiler werden?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Im Download-Bereich unserer Homepage findest du die aktuelle
-                Teilnahmevereinbarung. Bei manchen Landwirten stehen noch freie Ernteanteile
-                zur Verfügung. Kreuze das an, was dir zusagt. Du erhältst anschließend eine
-                Bestätigung, was verfügbar ist.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="aussteigen">
-              <AccordionTrigger className="text-base font-semibold">
-                Wie kann ich wieder aussteigen?
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-700 leading-relaxed">
-                Bei manchen Höfen ist ein Probemonat möglich, bei dem du ausprobieren kannst,
-                ob die Solawi in deinen Alltag passt. Die genauen Umstände sind in der
-                Teilnahmevereinbarung festgelegt. Eine Kündigung ist dann zum Ende des
-                Wirtschaftsjahres und bei besonderen Fällen (z.B. Umzug o.ä.) möglich.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
     </div>
   );
 }
