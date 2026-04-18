@@ -1,6 +1,32 @@
 import { Link } from "react-router";
-import { ArrowRight, Users, MapPin, Package, Heart, Calendar, FileText } from "lucide-react";
+import { ArrowRight, Users, MapPin, Package, Heart, Calendar, FileText, Mail } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+
+const ernteanteile = [
+  { hof: "Hederer", produkt: "Sommergemüse", zyklus: "wöchentlich", phase: "Apr\u2013Sept", gesamt: "128\u202F\u20AC" },
+  { hof: "Hederer", produkt: "Obst & Säfte", zyklus: "nach Bedarf", phase: "Jul\u2013Dez", gesamt: "39,50\u202F\u20AC" },
+  { hof: "Tristan", produkt: "Wintergemüse (ganz)", zyklus: "wöchentlich", phase: "Okt\u2013Mrz", gesamt: "136,20\u202F\u20AC" },
+  { hof: "Tristan", produkt: "Wintergemüse (halb)", zyklus: "14-tägig", phase: "Okt\u2013Mrz", gesamt: "72,10\u202F\u20AC" },
+  { hof: "Tristan", produkt: "Wintergemüse (klein)", zyklus: "wöchentlich", phase: "Okt\u2013Mrz", gesamt: "99,54\u202F\u20AC" },
+  { hof: "Walz", produkt: "Huhn", zyklus: "2x/Monat", phase: "ganzjährig", gesamt: "17,90\u202F\u20AC" },
+  { hof: "Walz", produkt: "Bratgockerl", zyklus: "1x/4 Mon.", phase: "ganzjährig", gesamt: "9\u202F\u20AC" },
+  { hof: "Walz", produkt: "Hack", zyklus: "1x/Monat", phase: "ganzjährig", gesamt: "11,40\u202F\u20AC" },
+  { hof: "Walz", produkt: "Wurst", zyklus: "1x/Monat", phase: "ganzjährig", gesamt: "17\u202F\u20AC" },
+  { hof: "Walz", produkt: "Ur-Getreide", zyklus: "1x/Monat", phase: "ganzjährig", gesamt: "6,90\u202F\u20AC" },
+  { hof: "Kirschgarten", produkt: "Bio-Beeren", zyklus: "wöchentlich", phase: "Jul\u2013Sept", gesamt: "38\u202F\u20AC" },
+];
+
+const depots = [
+  { name: "Depot Stadtpark", adresse: "Berliner Platz 20, Nürnberg", warteliste: false },
+  { name: "Depot St. Peter", adresse: "Findelwiesenstr. 25, Nürnberg", warteliste: false },
+  { name: "Depot Die Wiese", adresse: "Wiesenstraße 19, Nürnberg", warteliste: false },
+  { name: "Depot Johannis", adresse: "Julienstr. 8, Nürnberg", warteliste: false },
+  { name: "Depot Gostenhof", adresse: "Reitackerstr. 18, Nürnberg", warteliste: true },
+  { name: "Depot Altenfurt", adresse: "Schornbaumstraße 12, Nürnberg", warteliste: false },
+  { name: "Depot AKi", adresse: "Grünewaldstr. 24, Nürnberg", hinweis: "Zugang via Uhlandstr.", warteliste: false },
+  { name: "Depot Tataa", adresse: "Marktplatz 4, Fürth", warteliste: false },
+  { name: "Depot Spiegelfabrik", adresse: "Dr.-Mack-Str. 42, Fürth", warteliste: true },
+];
 
 export function Mitmachen() {
   return (
@@ -26,7 +52,7 @@ export function Mitmachen() {
       </section>
 
       {/* Übersicht */}
-      <section className="py-20">
+      <section id="ueberblick" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-foreground">
@@ -91,165 +117,106 @@ export function Mitmachen() {
         </div>
       </section>
 
-      {/* Hofbeteiligungen */}
-      <section id="hofbeteiligungen" className="py-20 bg-solawi-mauve">
+      {/* Ernteanteile */}
+      <section id="ernteteile" className="py-20 bg-solawi-mauve">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-12 text-foreground">
-            Hofbeteiligungen & Kosten
+          <h2 className="text-4xl mb-4 text-foreground">
+            Ernteanteile & Kosten
           </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl">
+            Stelle dir dein persönliches Paket zusammen — aus den Angeboten unserer Partnerhöfe.
+          </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl mb-2 text-foreground">Sommergemüse</h3>
-                <div className="text-4xl text-primary mb-2">45€</div>
-                <div className="text-gray-600">pro Monat</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Wöchentlich 5-7 kg frisches Gemüse</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Mai bis Oktober (6 Monate)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Vom Reimehof</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-primary">
-              <div className="text-center mb-6">
-                <div className="bg-primary text-white text-sm px-3 py-1 rounded-full inline-block mb-2">
-                  Beliebt
-                </div>
-                <h3 className="text-2xl mb-2 text-foreground">Ganzjahrespaket</h3>
-                <div className="text-4xl text-primary mb-2">75€</div>
-                <div className="text-gray-600">pro Monat</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Sommer- und Wintergemüse</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Ganzjährig frische Ernte</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Reimehof + Biohof Walz</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl mb-2 text-foreground">Wintergemüse</h3>
-                <div className="text-4xl text-primary mb-2">40€</div>
-                <div className="text-gray-600">pro Monat</div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Wöchentlich 5-7 kg Wintergemüse</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">November bis April (6 Monate)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  </div>
-                  <span className="text-gray-700">Vom Biohof Walz</span>
-                </li>
-              </ul>
-            </div>
+          <div className="overflow-x-auto rounded-lg shadow-lg">
+            <table className="w-full bg-white text-left">
+              <thead>
+                <tr className="bg-primary text-white">
+                  <th className="px-4 py-3 font-semibold">Hof</th>
+                  <th className="px-4 py-3 font-semibold">Produkt</th>
+                  <th className="px-4 py-3 font-semibold">Zyklus</th>
+                  <th className="px-4 py-3 font-semibold">Zeitraum</th>
+                  <th className="px-4 py-3 font-semibold text-right">Gesamt/M</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ernteanteile.map((ea, i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-secondary/10"}>
+                    <td className="px-4 py-3 text-gray-800">{ea.hof}</td>
+                    <td className="px-4 py-3 text-gray-800">{ea.produkt}</td>
+                    <td className="px-4 py-3 text-gray-600">{ea.zyklus}</td>
+                    <td className="px-4 py-3 text-gray-600">{ea.phase}</td>
+                    <td className="px-4 py-3 text-gray-800 font-semibold text-right">{ea.gesamt}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
-          <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl mb-4 text-foreground">Zusatzanteile (optional)</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="p-4 bg-secondary/20 rounded-lg">
-                <p className="font-semibold text-foreground mb-1">Obst vom Hederer</p>
-                <p className="text-gray-700">20€ / Monat (Juni - November)</p>
-              </div>
-              <div className="p-4 bg-secondary/20 rounded-lg">
-                <p className="font-semibold text-foreground mb-1">Käse von Kerschbaum</p>
-                <p className="text-gray-700">15€ / Monat</p>
-              </div>
-              <div className="p-4 bg-secondary/20 rounded-lg">
-                <p className="font-semibold text-foreground mb-1">Eier Gallini Fellici</p>
-                <p className="text-gray-700">8€ / Monat (6 Eier/Woche)</p>
-              </div>
-            </div>
+          <div className="mt-8 bg-white p-6 rounded-lg shadow-sm space-y-3">
+            <p className="text-gray-700">
+              Die Gesamtbeträge setzen sich zusammen aus dem Paketpreis für den Hof und dem
+              solidarischen Beitrag für Logistik — kein Gewinnaufschlag. Bei Hederer und Tristan
+              wird der Richtpreis durch eine Bieterrunde bestimmt.
+            </p>
+            <p className="text-gray-700">
+              Für jeden Ernteteiler kommt einmalig ein <strong>Risikobeitrag von 1,50&#8239;€/Monat</strong> dazu.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Ernteteile */}
-      <section id="ernteteile" className="py-20">
+      {/* Teilnahme */}
+      <section id="teilnahme" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Verfügbare Ernteteile
+          <h2 className="text-4xl mb-4 text-foreground">
+            Teilnahmebedingungen
           </h2>
-          
-          <div className="bg-secondary/20 p-8 rounded-lg mb-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl mb-4 text-foreground">Aktuell verfügbar</h3>
-                <div className="space-y-3">
-                  <div className="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span className="text-gray-700">Sommergemüse</span>
-                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm">12 frei</span>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span className="text-gray-700">Wintergemüse</span>
-                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm">8 frei</span>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span className="text-gray-700">Obstanteil</span>
-                    <span className="bg-primary text-white px-3 py-1 rounded-full text-sm">5 frei</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <h3 className="text-xl mb-4 text-foreground">Warteliste</h3>
-                <div className="space-y-3">
-                  <div className="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span className="text-gray-700">Käseanteil</span>
-                    <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-sm">Warteliste</span>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg flex justify-between items-center">
-                    <span className="text-gray-700">Eieranteil</span>
-                    <span className="bg-amber-500 text-white px-3 py-1 rounded-full text-sm">Warteliste</span>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-600 mt-4">
-                  Die Zahlen werden monatlich aktualisiert. Bei Interesse trage dich in die Warteliste ein.
-                </p>
-              </div>
+          <p className="text-xl text-gray-600 mb-10 max-w-3xl">
+            So kann der Hof sicher planen — und du bekommst ein ganzes Jahr lang frische Lebensmittel.
+          </p>
+
+          <div className="space-y-6">
+            <div className="bg-secondary/20 p-6 rounded-lg">
+              <h3 className="text-xl mb-3 text-foreground">Wirtschaftsjahr</h3>
+              <p className="text-gray-700">
+                Das Wirtschaftsjahr läuft vom <strong>01.04. bis 31.03.</strong> (12 Monate).
+                Wintergemüse (Tristan) und Sommergemüse (Hederer) umfassen jeweils 6 Monate.
+              </p>
+            </div>
+
+            <div className="bg-secondary/20 p-6 rounded-lg">
+              <h3 className="text-xl mb-3 text-foreground">Verlängerung & Kündigung</h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                  <span>Automatische Verlängerung, wenn nicht bis <strong>31.12.</strong> gekündigt wird.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                  <span>Kündigung schriftlich per Post oder E-Mail an{" "}
+                    <a href="mailto:Team.Koordination@stadt-land-beides.de" className="text-primary hover:underline">
+                      Team.Koordination@stadt-land-beides.de
+                    </a>
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                  <span>Teilkündigung einzelner Anteile ist möglich.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                  <span>Ausnahme bei schwerwiegenden Gründen (z.B. Umzug).</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-secondary/20 p-6 rounded-lg">
+              <h3 className="text-xl mb-3 text-foreground">Probemonat</h3>
+              <p className="text-gray-700">
+                Du kannst einen Probemonat buchen — Aufpreis <strong>5&#8239;€ Verwaltungsaufwand pro Hof</strong>.
+                Start immer zum 1. eines Monats, bitte 2-3 Wochen Vorlauf einplanen.
+                Der Probemonat verlängert sich nicht automatisch.
+              </p>
             </div>
           </div>
         </div>
@@ -258,146 +225,88 @@ export function Mitmachen() {
       {/* Depots */}
       <section id="depots" className="py-20 bg-solawi-orange">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-4xl mb-4 text-foreground">
               Unsere Depot-Standorte
             </h2>
-            <p className="text-xl text-gray-600">
-              Wähle ein Depot in deiner Nähe für die wöchentliche Abholung
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Du bist für die Abholung deines Ernteanteils verantwortlich. Nicht geschafft?
+              Organisier eine Vertretung. Nicht abgeholtes Gemüse geht an Foodsharing.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Depot Innenstadt</h3>
-                  <p className="text-sm text-gray-600">Hauptstraße 45, 12345 Musterstadt</p>
+            {depots.map((depot) => (
+              <div key={depot.name} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-start gap-3 mb-2">
+                  <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-lg text-foreground mb-1">{depot.name}</h3>
+                    <p className="text-sm text-gray-600">{depot.adresse}</p>
+                    {depot.hinweis && (
+                      <p className="text-sm text-gray-500 italic">{depot.hinweis}</p>
+                    )}
+                  </div>
                 </div>
+                {depot.warteliste && (
+                  <span className="inline-block mt-2 bg-amber-500 text-white px-3 py-1 rounded-full text-sm">
+                    Warteliste
+                  </span>
+                )}
               </div>
-              <p className="text-sm text-gray-700 mb-2">
-                <strong>Abholzeit:</strong> Donnerstag 16-19 Uhr
-              </p>
-              <p className="text-sm text-gray-700">
-                <strong>Kapazität:</strong> 35 Mitglieder (5 Plätze frei)
-              </p>
-            </div>
+            ))}
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Depot Nordstadt</h3>
-                  <p className="text-sm text-gray-600">Grüner Weg 12, 12345 Musterstadt</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-700 mb-2">
-                <strong>Abholzeit:</strong> Freitag 15-18 Uhr
-              </p>
-              <p className="text-sm text-gray-700">
-                <strong>Kapazität:</strong> 25 Mitglieder (10 Plätze frei)
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Depot Südviertel</h3>
-                  <p className="text-sm text-gray-600">Lindenallee 8, 12345 Musterstadt</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-700 mb-2">
-                <strong>Abholzeit:</strong> Mittwoch 17-20 Uhr
-              </p>
-              <p className="text-sm text-gray-700">
-                <strong>Kapazität:</strong> 30 Mitglieder (vollständig belegt)
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Depot Westend</h3>
-                  <p className="text-sm text-gray-600">Parkstraße 23, 12345 Musterstadt</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-700 mb-2">
-                <strong>Abholzeit:</strong> Donnerstag 15-18 Uhr
-              </p>
-              <p className="text-sm text-gray-700">
-                <strong>Kapazität:</strong> 20 Mitglieder (8 Plätze frei)
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start gap-3 mb-4">
-                <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg text-foreground mb-1">Depot Altstadt</h3>
-                  <p className="text-sm text-gray-600">Marktplatz 5, 12345 Musterstadt</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-700 mb-2">
-                <strong>Abholzeit:</strong> Freitag 16-19 Uhr
-              </p>
-              <p className="text-sm text-gray-700">
-                <strong>Kapazität:</strong> 40 Mitglieder (2 Plätze frei)
-              </p>
-            </div>
-
+            {/* Eigenes Depot */}
             <div className="bg-primary/10 p-6 rounded-lg shadow-md border-2 border-primary">
               <div className="flex items-start gap-3 mb-4">
                 <Heart className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-lg text-foreground mb-1">Eigenes Depot gründen</h3>
+                  <h3 className="text-lg text-foreground mb-1">Eigenes Depot eröffnen</h3>
                   <p className="text-sm text-gray-700">
-                    Du findest kein passendes Depot? Gründe dein eigenes!
+                    Du möchtest ein neues Depot in deiner Nachbarschaft eröffnen?
+                    Melde dich bei uns — wir helfen dir bei den ersten Schritten.
                   </p>
                 </div>
               </div>
-              <a href="#" className="text-primary hover:text-foreground inline-flex items-center gap-1">
-                Mehr erfahren
-                <ArrowRight className="w-4 h-4" />
+              <a
+                href="mailto:Team.Koordination@stadt-land-beides.de"
+                className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-4 py-2 rounded transition-colors text-sm"
+              >
+                <Mail className="w-4 h-4" />
+                Kontakt aufnehmen
               </a>
             </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl mb-4 text-foreground flex items-center gap-2">
-              <FileText className="w-6 h-6" />
-              Wie macht man ein Depot?
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Ein Depot zu betreuen ist einfacher als du denkst! Du benötigst nur einen Raum 
-              (z.B. Keller, Garage) und 3-4 Stunden Zeit pro Woche. Wir unterstützen dich beim 
-              Aufbau und bei der Organisation.
-            </p>
-            <a 
-              href="#" 
-              className="inline-flex items-center gap-2 text-primary hover:text-foreground"
-            >
-              <FileText className="w-5 h-5" />
-              Anleitung als PDF herunterladen
-              <ArrowRight className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </section>
 
+      {/* Depotstandorte — Karte */}
+      <section id="depotstandorte" className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xl text-gray-700 mb-6">
+            Alle Depots findest du auch auf unserer interaktiven Karte.
+          </p>
+          <Link
+            to="/lieferung-kalender#karte"
+            className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors font-accent"
+          >
+            Zur Depot-Karte
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+
       {/* Was erwartet mich */}
-      <section id="erwartungen" className="py-20">
+      <section id="erwartungen" className="py-20 bg-solawi-blue/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Was erwartet mich?
           </h2>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Als Mitglied erhältst du jede Woche frisches, saisonales Gemüse und kannst dich 
-              aktiv in die Gemeinschaft einbringen. Hier ein Überblick über deine Rechte und 
+              Als Mitglied erhältst du jede Woche frisches, saisonales Gemüse und kannst dich
+              aktiv in die Gemeinschaft einbringen. Hier ein Überblick über deine Rechte und
               Pflichten:
             </p>
 
@@ -443,7 +352,7 @@ export function Mitmachen() {
                     <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     </div>
-                    <span>Optional: 2-4 Hofaktionen pro Jahr (freiwillig)</span>
+                    <span>Teilnahme an der Jahreshauptversammlung im Herbst</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -459,59 +368,124 @@ export function Mitmachen() {
       </section>
 
       {/* Mitarbeit und Engagement */}
-      <section id="engagement" className="py-20 bg-solawi-green">
+      <section id="mitarbeit-engagement" className="py-20 bg-solawi-green">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Mitarbeit & Engagement
           </h2>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Stadt, Land, Beides lebt von der aktiven Beteiligung seiner Mitglieder. 
+              Stadt, Land, Beides lebt von der aktiven Beteiligung seiner Mitglieder.
               Es gibt viele Möglichkeiten, sich einzubringen:
             </p>
 
             <div className="space-y-6">
               <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl mb-3 text-foreground">Jahreshauptversammlung (JHV)</h3>
+                <p className="text-gray-700">
+                  Die JHV ist ein Pflichttermin im Herbst. Dort lernst du unsere Landwirte kennen,
+                  blickst auf den vergangenen Zeitraum zurück und planst zusammen das neue Jahr.
+                  Die Entscheidungen werden im Konsensverfahren getroffen und sind für alle verbindlich.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl mb-3 text-foreground">Depot-Dienst</h3>
+                <p className="text-gray-700">
+                  1-2x pro Jahr bist du mit dem Aufräumen und Reinigen deines Depots dran —
+                  das dauert ca. 20 Minuten und hält alles sauber und einladend.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="text-xl mb-3 text-foreground">Hofaktionen</h3>
                 <p className="text-gray-700">
-                  3-4 Mal im Jahr finden Mitmach-Aktionen auf den Höfen statt: Pflanzen, Jäten, 
-                  Ernten oder einfach gemeinsam Zeit verbringen. Die Teilnahme ist freiwillig, 
-                  aber sehr bereichernd!
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl mb-3 text-foreground">Depotbetreuung</h3>
-                <p className="text-gray-700">
-                  Jedes Depot braucht 2-3 Betreuer*innen, die die Gemüsekisten auspacken, 
-                  verteilen und den Raum pflegen. Eine tolle Möglichkeit, die Gemeinschaft 
-                  am Depot mitzugestalten.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl mb-3 text-foreground">Fahrdienst</h3>
-                <p className="text-gray-700">
-                  Wir brauchen Menschen mit Führerschein und größerem Auto/Transporter, die 
-                  gelegentlich bei der Gemüseauslieferung helfen können (wird vergütet).
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl mb-3 text-foreground">Vereinsarbeit</h3>
-                <p className="text-gray-700">
-                  Wir suchen immer Menschen, die sich in Arbeitsgruppen engagieren: 
-                  Öffentlichkeitsarbeit, Veranstaltungsorganisation, IT, Finanzen oder Bildung.
+                  Freiwillige Mitmach-Aktionen auf den Höfen: Pflanzen, Jäten, Ernten oder
+                  einfach gemeinsam Zeit verbringen. Die Termine werden rechtzeitig angekündigt.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="bg-primary/10 p-6 rounded-lg border-l-4 border-primary">
-              <p className="text-lg">
-                <strong>Wichtig:</strong> Alle Aufgaben sind freiwillig! Niemand wird zu etwas 
-                verpflichtet. Aber je mehr Menschen sich einbringen, desto lebendiger wird unsere 
-                Gemeinschaft.
+      {/* Rollen */}
+      <section id="rollen" className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-4 text-foreground text-center">
+            Ehrenamtliche Rollen
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+            Unsere Gemeinschaft wird von Ehrenamtlichen getragen. Diese drei Rollen sind besonders wichtig:
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-secondary/20 p-8 rounded-lg shadow-sm text-center">
+              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">Hofbetreuer</h3>
+              <p className="text-gray-700">
+                Ehrenamtlicher Ansprechpartner zwischen Hof und Ernteteilern. Du bist die
+                Brücke und hältst beide Seiten auf dem Laufenden.
+              </p>
+            </div>
+
+            <div className="bg-secondary/20 p-8 rounded-lg shadow-sm text-center">
+              <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">Depotbetreuer</h3>
+              <p className="text-gray-700">
+                Kümmert sich um das Depot vor Ort — sorgt dafür, dass alles ordentlich läuft
+                und die Abholung reibungslos klappt.
+              </p>
+            </div>
+
+            <div className="bg-secondary/20 p-8 rounded-lg shadow-sm text-center">
+              <Package className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">Fahrer</h3>
+              <p className="text-gray-700">
+                Teil des Logistik-Teams: holt die Ernteanteile ab Hof ab und liefert sie
+                in die Depots.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vereinsarbeit */}
+      <section id="vereinsarbeit" className="py-20 bg-solawi-mauve">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-foreground">
+            Unser Verein
+          </h2>
+
+          <div className="bg-white p-8 rounded-lg shadow-md mb-8">
+            <h3 className="text-xl mb-4 text-foreground">
+              Förderverein "Solidarische Landwirtschaft Stadt, Land, Beides e.V."
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Gegründet 2016. Der Verein organisiert Transport, Öffentlichkeitsarbeit und den
+              Betrieb der Depots. Er ist nicht gewinnorientiert — Überschüsse werden im
+              Folgejahr kompensiert.
+            </p>
+            <p className="text-gray-700 mb-4">
+              <strong>Vorstand:</strong> Sebastian Lades &middot; <strong>Kassenwart:</strong> Andreas Gebert
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg mb-3 text-foreground">Vereinsmitgliedschaft</h3>
+              <p className="text-gray-700">
+                Optional — ab 1&#8239;€/Monat. Die Vereinsmitgliedschaft ist <strong>keine Pflicht</strong> für
+                Ernteteiler, aber eine schöne Möglichkeit, den Verein zusätzlich zu unterstützen.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-lg mb-3 text-foreground">Risikobeitrag</h3>
+              <p className="text-gray-700">
+                <strong>1,50&#8239;€/Monat</strong> — Pflicht für alle Ernteteiler. Setzt sich zusammen aus
+                1&#8239;€ Risikoabsicherung und 0,50&#8239;€ Netzwerkbeitrag.
               </p>
             </div>
           </div>
