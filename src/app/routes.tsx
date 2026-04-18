@@ -7,6 +7,8 @@ import { Kalender } from "./pages/Kalender";
 import { Anmeldung } from "./pages/Anmeldung";
 import { LieferungKalender } from "./pages/LieferungKalender";
 import { KontaktAnmeldung } from "./pages/KontaktAnmeldung";
+import { Impressum } from "./pages/Impressum";
+import { Datenschutz } from "./pages/Datenschutz";
 import { Layout } from "./components/Layout";
 
 export const router = createBrowserRouter([
@@ -22,6 +24,8 @@ export const router = createBrowserRouter([
       { path: "anmeldung", Component: Anmeldung },
       { path: "lieferung-kalender", Component: LieferungKalender },
       { path: "kontakt-anmeldung", Component: KontaktAnmeldung },
+      { path: "impressum", Component: Impressum },
+      { path: "datenschutz", Component: Datenschutz },
     ],
   },
 ]);

@@ -42,42 +42,43 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/kalender" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Kalender
+                <Link to="/lieferung-kalender" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Lieferung & Kalender
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt-anmeldung" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Kontakt
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Weitere Links */}
+          {/* Rechtliches & Info */}
           <div>
-            <h3 className="font-accent text-lg mb-4">Weitere Links</h3>
+            <h3 className="font-accent text-lg mb-4">Rechtliches</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Bildergalerie
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Presse und Partner
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Newsletter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                <Link to="/impressum" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                <Link to="/datenschutz" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
                   Datenschutzerklärung
-                </a>
+                </Link>
               </li>
+              <li>
+                <Link to="/kontakt-anmeldung#kontakt" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Kontakt
+                </Link>
+              </li>
+            </ul>
+
+            <h3 className="font-accent text-lg mb-4 mt-6">Verein</h3>
+            <ul className="space-y-1 text-sm text-foreground/60">
+              <li>Registergericht Nürnberg: VR 202062</li>
+              <li>USt-IdNr.: DE419541492</li>
             </ul>
           </div>
 
