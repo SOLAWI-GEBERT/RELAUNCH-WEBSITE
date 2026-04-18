@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, User, MessageSquare, HelpCircle } from "lucide-react";
+import { Mail, User, MessageSquare, HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -172,54 +172,32 @@ export function KontaktAnmeldung() {
         </div>
       </section>
 
-      {/* Ansprechpersonen */}
-      <section id="ansprechpersonen" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Ansprechpartner */}
+      <section id="ansprechpartner" className="py-16 bg-solawi-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <User className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Ansprechpersonen
+              Direkter Ansprechpartner
             </h2>
-            <p className="text-lg text-gray-600">
-              Unser Team steht dir gerne zur Verfügung
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Allgemeine Fragen</h3>
-              <div className="space-y-3 text-gray-700">
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-primary mt-1" />
-                  <span>info@stadt-land-beides.de</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-primary mt-1" />
-                  <span>0123 / 456789</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Koordination</h3>
-              <div className="space-y-3 text-gray-700">
-                <p className="font-medium">Max Mustermann</p>
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-primary mt-1" />
-                  <span>koordination@stadt-land-beides.de</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Depots</h3>
-              <div className="space-y-3 text-gray-700">
-                <p className="font-medium">Anna Schmidt</p>
-                <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-primary mt-1" />
-                  <span>depots@stadt-land-beides.de</span>
-                </div>
-              </div>
+          <div className="bg-white rounded-lg shadow-sm p-8 text-center">
+            <p className="text-lg font-semibold text-gray-900 mb-2">
+              Sebastian Lades, Clemens Brachmann
+            </p>
+            <p className="text-gray-700 mb-4">
+              Ehrenamtliche Vorstände des Vereins „Solidarische Landwirtschaft
+              Stadt, Land, Beides e.V."
+            </p>
+            <div className="flex items-center justify-center gap-3 text-gray-700">
+              <Mail className="w-5 h-5 text-primary" />
+              <a
+                href="mailto:solawi@stadt-land-beides.de"
+                className="hover:text-primary transition-colors"
+              >
+                solawi@stadt-land-beides.de
+              </a>
             </div>
           </div>
         </div>
