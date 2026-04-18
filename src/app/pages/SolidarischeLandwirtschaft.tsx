@@ -1,11 +1,10 @@
 import { Link } from "react-router";
-import { ArrowRight, Users, Target, Heart, Sprout } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { ArrowRight, Users, Target, Heart, Sprout, Scale, ShieldCheck, Leaf } from "lucide-react";
 
 export function SolidarischeLandwirtschaft() {
   return (
     <div className="bg-white">
-      {/* Hero — Pastell + freie Illustration */}
+      {/* Hero */}
       <section className="bg-solawi-orange py-16 wave-bottom relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -15,196 +14,345 @@ export function SolidarischeLandwirtschaft() {
                 Solidarische Landwirtschaft
               </h1>
               <p className="text-xl text-foreground/80">
-                Gemeinsam für eine nachhaltige Zukunft
+                Eine Initiative für solidarische Landwirtschaft in der
+                Metropolregion Nürnberg
               </p>
             </div>
             <div className="flex justify-center">
-              <img src="/features-gemeinschaft.jpg" alt="Gemeinschaft" className="h-[280px] object-contain" />
+              <img
+                src="/features-gemeinschaft.jpg"
+                alt="Gemeinschaft"
+                className="h-[280px] object-contain"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Was ist Solidarische Landwirtschaft */}
+      {/* Was ist SoLaWi */}
       <section id="was-ist" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
             Was ist Solidarische Landwirtschaft?
           </h2>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Solidarische Landwirtschaft (SoLaWi) bedeutet: Eine Gruppe von Menschen trägt die 
-              Kosten eines landwirtschaftlichen Betriebs, wofür sie im Gegenzug dessen Ernteertrag 
-              erhält. Durch den persönlichen Bezug zueinander erfahren sowohl die Erzeuger*innen 
-              als auch die Verbraucher*innen die vielfältigen Vorteile einer nicht-industriellen, 
-              marktunabhängigen Landwirtschaft.
+              Bei der Solidarischen Landwirtschaft (SoLaWi) bezahlst du nicht
+              das einzelne Produkt, sondern einen festen Geldbetrag, mit dem der
+              Hof wirtschaftet. Damit gibst du dem Hof eine verbindliche und
+              langfristige Finanzierungsgrundlage. Im Gegenzug teilst du dir
+              zusammen mit den anderen Ernteteilern die Ernte — und das Risiko
+              wird gemeinsam getragen.
             </p>
-            
+
             <p>
-              Die Mitglieder der Solidarischen Landwirtschaft schaffen und erhalten Arbeitsplätze in 
-              der Landwirtschaft und ermöglichen den Erzeuger*innen ein planbares Einkommen sowie 
-              langfristige Perspektiven für ihre Höfe. Dies fördert Vielfalt in der Produktion und 
-              artgerechte Tierhaltung.
-            </p>
-            
-            <p>
-              Durch die Bildung einer neuen, verantwortungsvollen Gemeinschaft wird die Verbindung 
-              von Menschen zur Landwirtschaft und zur Lebensmittelerzeugung wieder gestärkt.
+              Angesprochen sind Menschen, die keine industrielle Produktion von
+              Lebensmitteln wollen — ohne Chemie, Zusatzstoffe, umweltbelastende
+              Verpackungen, Ausbeutung der Böden oder lange Transportwege.
             </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-2 gap-8">
-            <div className="bg-secondary/20 p-6 rounded-lg">
-              <Sprout className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl mb-3 text-foreground">Für die Landwirt*innen</h3>
+            <div className="bg-solawi-green p-6 rounded-lg">
+              <Sprout className="w-10 h-10 text-cta mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">
+                Für die Landwirte
+              </h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Planbare Einkommen und langfristige Sicherheit</li>
-                <li>• Unabhängigkeit von Marktpreisen</li>
-                <li>• Direkte Wertschätzung ihrer Arbeit</li>
-                <li>• Möglichkeit für vielfältige Produktion</li>
+                <li>• Planbare Einnahmen statt Marktpreisdruck</li>
+                <li>• Langfristige Finanzierungsgrundlage</li>
+                <li>• Direkte Wertschätzung der Arbeit</li>
+                <li>• Keine Excel-Tabellen und Transportfahrten</li>
               </ul>
             </div>
 
-            <div className="bg-secondary/20 p-6 rounded-lg">
-              <Users className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl mb-3 text-foreground">Für die Mitglieder</h3>
+            <div className="bg-solawi-mauve p-6 rounded-lg">
+              <Users className="w-10 h-10 text-cta mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">
+                Für die Ernteteiler
+              </h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Frische, saisonale Bio-Lebensmittel</li>
-                <li>• Transparenz über Anbau und Herkunft</li>
-                <li>• Aktive Mitgestaltung möglich</li>
-                <li>• Teil einer lebendigen Gemeinschaft</li>
+                <li>• Du weißt genau, wo dein Essen herkommt</li>
+                <li>• Kein Gewinnaufschlag, keine Handelsspanne</li>
+                <li>• Teil einer solidarischen Gemeinschaft</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Wie machen wir das */}
-      <section id="wie-machen-wir" className="py-20 bg-solawi-blue">
+      {/* Leitbild */}
+      <section id="leitbild" className="py-20 bg-solawi-blue">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl mb-8 text-foreground">Unser Leitbild</h2>
+
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <p className="text-lg text-gray-700 leading-relaxed italic mb-6">
+              „Die Solawi Initiative Nürnberg ist eine solidarische Gemeinschaft
+              von Erzeugerinnen/Erzeugern und Verbraucherinnen/Verbrauchern, die
+              sich wertschätzen, vertrauen, verstehen, Bedürfnisse wechselseitig
+              abgleichen und Risiken gemeinsam tragen. Jede/r soll sich aktiv
+              einbringen, wohlfühlen, genießen können."
+            </p>
+            <p className="text-gray-600 text-sm">
+              — Leitbild des Vereins, definiert 2014
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <div className="bg-white/80 p-5 rounded-lg">
+              <ShieldCheck className="w-8 h-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground mb-2">
+                EU Bio als Mindeststandard
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Alle unsere Höfe sind mindestens EU-Bio-zertifiziert — die
+                meisten erfüllen die strengeren Demeter- oder
+                Bioland-Richtlinien.
+              </p>
+            </div>
+            <div className="bg-white/80 p-5 rounded-lg">
+              <Scale className="w-8 h-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground mb-2">
+                Faire Preise & Solidarität
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Durch die Bieterrunde bestimmst du mit, was du zahlen kannst. So
+                entsteht ein sozialer Ausgleich — jeder trägt bei, was er kann.
+              </p>
+            </div>
+            <div className="bg-white/80 p-5 rounded-lg">
+              <Leaf className="w-8 h-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground mb-2">
+                Nachhaltigkeit & Biodiversität
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Das Wohl von Menschen, Tieren, Pflanzen und Boden steht im
+                Mittelpunkt — ausgerichtet an den Grundprinzipien der
+                Nachhaltigkeit.
+              </p>
+            </div>
+            <div className="bg-white/80 p-5 rounded-lg">
+              <Target className="w-8 h-8 text-primary mb-3" />
+              <h3 className="font-semibold text-foreground mb-2">
+                Regionale Versorgung
+              </h3>
+              <p className="text-gray-700 text-sm">
+                Großstadt verbindet sich mit Um-Land — das Ziel ist eine autarke
+                Versorgung mit Lebensmitteln durch Solawi-Betriebe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Der Verein */}
+      <section id="verein" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl mb-8 text-foreground">
-            Wie machen wir das bei Stadt, Land, Beides?
+            Der Verein: Stadt, Land, Beides e.V.
           </h2>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Bei Stadt, Land, Beides kooperieren wir mit mehreren regionalen Bio-Höfen. 
-              Unsere Mitglieder können sich für Ernteanteile von verschiedenen Höfen entscheiden 
-              und so ihr individuelles Paket zusammenstellen.
+              Der Förderverein „Solidarische Landwirtschaft Stadt, Land, Beides
+              e.V." wurde 2016 gegründet und kümmert sich um die Infrastruktur
+              zwischen Landwirten und Ernteteilern: Transport,
+              Öffentlichkeitsarbeit und das Betreiben der Depots im Stadtgebiet.
+              So können sich die Landwirte auf das konzentrieren, was sie am
+              liebsten machen.
             </p>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl mb-4 text-foreground">Unsere Partnerhöfe</h3>
-              <div className="space-y-4">
+
+            <div className="bg-solawi-gray p-6 rounded-lg not-prose">
+              <h3 className="text-xl font-semibold mb-4 text-foreground">
+                Vereinsdaten
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Reimehof - Sommergemüse</h4>
-                  <p>Vielfältiges Gemüse während der Sommermonate von Mai bis Oktober</p>
+                  <p className="font-semibold text-foreground">Vorstand</p>
+                  <p className="text-gray-700">Sebastian Lades</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Biohof Walz - Wintergemüse</h4>
-                  <p>Lagergemüse und winterhartes Gemüse von November bis April</p>
+                  <p className="font-semibold text-foreground">Kassenwart</p>
+                  <p className="text-gray-700">Andreas Gebert</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Obst vom Hederer</h4>
-                  <p>Saisonales Obst und Beeren aus biologischem Anbau</p>
+                  <p className="font-semibold text-foreground">Anschrift</p>
+                  <p className="text-gray-700">
+                    Findelwiesenstr. 25, 90478 Nürnberg
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">E-Mail</p>
+                  <p className="text-gray-700">
+                    <a
+                      href="mailto:Team.Koordination@stadt-land-beides.de"
+                      className="text-primary hover:underline"
+                    >
+                      Team.Koordination@stadt-land-beides.de
+                    </a>
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Registergericht</p>
+                  <p className="text-gray-700">Nürnberg, VR 202062</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">USt-IdNr.</p>
+                  <p className="text-gray-700">DE419541492</p>
                 </div>
               </div>
             </div>
 
             <p>
-              Die Ernte wird wöchentlich an verschiedene Depots in der Region geliefert. 
-              Unsere Mitglieder holen dort ihre Anteile ab und können sich bei Hofaktionen 
-              aktiv einbringen.
+              Der Verein arbeitet nicht gewinnorientiert. Etwaige Überschüsse
+              werden im Folgejahr kompensiert. Der Verein besteht aus allen
+              ehrenamtlich Aktiven — Vorstand, Kassenwart und Kassenprüfer
+              agieren alle ohne Aufwandsentschädigung.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Selbstverständnis */}
-      <section id="selbstverstaendnis" className="py-20">
+      {/* Mitgliedschaft */}
+      <section id="mitgliedschaft" className="py-20 bg-solawi-salmon-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Unser Selbstverständnis
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p>
-              Wir verstehen uns als demokratische Gemeinschaft, in der alle Mitglieder gleichberechtigt 
-              sind. Entscheidungen werden gemeinsam getroffen, und jede*r kann sich einbringen.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6 my-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg mb-2 text-foreground">Gemeinschaft</h3>
-                <p className="text-sm">Gemeinsam statt einsam</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg mb-2 text-foreground">Wertschätzung</h3>
-                <p className="text-sm">Für Mensch und Natur</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-primary" />
-                </div>
-                <h3 className="text-lg mb-2 text-foreground">Transparenz</h3>
-                <p className="text-sm">Offene Kommunikation</p>
-              </div>
+          <h2 className="text-4xl mb-8 text-foreground">Mitgliedschaft</h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl mb-3 text-foreground font-semibold">
+                Ernteteiler werden
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Als Ernteteiler wirst du nicht automatisch Vereinsmitglied. Du
+                wählst deine Ernteanteile, zahlst den monatlichen Beitrag und
+                holst deine Ernte im Depot ab. Für jeden Ernteteiler fällt ein
+                Risikobeitrag von 1,50€/Monat an (1€ Risikoabsicherung + 0,50€
+                Netzwerkbeitrag).
+              </p>
+              <Link
+                to="/mitmachen#ernteteile"
+                className="text-primary hover:underline font-semibold inline-flex items-center gap-1"
+              >
+                Ernteanteile ansehen <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
-            
-            <p>
-              Wir setzen uns ein für ökologische Landwirtschaft, faire Preise für Erzeuger*innen 
-              und Zugang zu gesunden Lebensmitteln für alle Menschen – unabhängig vom Einkommen.
-            </p>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl mb-3 text-foreground font-semibold">
+                Vereinsmitglied werden
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Eine Mitgliedschaft im Verein ist wünschenswert, aber nicht
+                Pflicht. Der Mitgliedsbeitrag beträgt mindestens 1€/Monat.
+                Personen, die ein Amt bekleiden, müssen Mitglied sein. Die
+                Satzung findest du auf unserer Homepage.
+              </p>
+              <Link
+                to="/kontakt-anmeldung#anmeldung"
+                className="text-primary hover:underline font-semibold inline-flex items-center gap-1"
+              >
+                Zur Anmeldung <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md md:col-span-2">
+              <h3 className="text-xl mb-3 text-foreground font-semibold">
+                Fördermitglied werden
+              </h3>
+              <p className="text-gray-700">
+                Für Teilnehmer ohne Ernteanteil gibt es die Fördermitgliedschaft
+                — der Beitrag ist frei wählbar (mindestens 2€/Monat). So kannst
+                du die Idee der solidarischen Landwirtschaft unterstützen, auch
+                ohne selbst Ernteteiler zu sein.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Unsere Ziele */}
-      <section id="ziele" className="py-20 bg-solawi-salmon">
+      {/* Unsere Höfe */}
+      <section id="hoefe" className="py-20 bg-solawi-mauve">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Unsere Ziele
-          </h2>
-          
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground">Nachhaltige Landwirtschaft fördern</h3>
-              <p className="text-gray-700">
-                Wir unterstützen ökologische Anbaumethoden, die Böden regenerieren, Artenvielfalt 
-                fördern und das Klima schützen.
-              </p>
-            </div>
+          <h2 className="text-4xl mb-8 text-foreground">Unsere Partnerhöfe</h2>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground">Regionale Kreisläufe stärken</h3>
-              <p className="text-gray-700">
-                Durch kurze Transportwege und lokale Produktion schaffen wir resiliente 
-                Versorgungsstrukturen in unserer Region.
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link
+              to="/hoefe-und-ernteanteile#hederer"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
+                demeter
+              </span>
+              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
+                Demeterhof Hederer
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Sommergemüse & Obst aus Uffenheim. Seit 2001 nach
+                Demeter-Richtlinien bewirtschaftet.
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground">Gemeinschaft aufbauen</h3>
-              <p className="text-gray-700">
-                Wir bringen Menschen zusammen, die Werte wie Nachhaltigkeit, Fairness und 
-                Solidarität teilen.
+            <Link
+              to="/hoefe-und-ernteanteile#tristans"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <span className="text-xs font-semibold text-white bg-green-700 px-2 py-0.5 rounded">
+                Bioland
+              </span>
+              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
+                Biohof Tristan
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Wintergemüse aus Emskirchen. 35 ha bunte Anbaupalette mit
+                Hühnern und Schafen.
               </p>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-foreground">Bewusstsein schaffen</h3>
-              <p className="text-gray-700">
-                Durch Bildungsarbeit und praktisches Erleben vermitteln wir Wissen über 
-                Landwirtschaft und Ernährung.
+            <Link
+              to="/hoefe-und-ernteanteile#walz"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
+                demeter
+              </span>
+              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
+                Demeterhof Walz
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Fleisch, Eier & Ur-Getreide aus Amberg. Kreislaufgedanke und
+                artgerechte Tierhaltung.
               </p>
-            </div>
+            </Link>
+
+            <Link
+              to="/hoefe-und-ernteanteile#kirschgarten"
+              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
+            >
+              <span className="text-xs font-semibold text-white bg-emerald-600 px-2 py-0.5 rounded">
+                EU-Bio
+              </span>
+              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
+                Kirschgarten
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Bio-Beeren bei Igensdorf. Vom Verein gepachtet, extensiv
+                bewirtschaftet, ein Beitrag zur Biodiversität.
+              </p>
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              to="/hoefe-und-ernteanteile"
+              className="inline-flex items-center gap-2 text-primary hover:text-foreground font-semibold transition-colors"
+            >
+              Alle Höfe und Ernteanteile im Detail
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>
@@ -215,105 +363,36 @@ export function SolidarischeLandwirtschaft() {
           <h2 className="text-4xl mb-8 text-foreground">
             Netzwerk Solidarische Landwirtschaft
           </h2>
-          
+
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Wir sind Teil des bundesweiten Netzwerks Solidarische Landwirtschaft e.V., 
-              das die Verbreitung der Solidarischen Landwirtschaft in Deutschland fördert.
+              Wir sind Teil des bundesweiten Netzwerks Solidarische
+              Landwirtschaft e.V. Der Netzwerkbeitrag von 0,50€/Monat pro
+              Ernteteiler fließt in die Verbreitung der solidarischen
+              Landwirtschaft in Deutschland.
             </p>
-            
-            <div className="bg-secondary/20 p-6 rounded-lg">
-              <p className="mb-4">
-                Das Netzwerk bietet:
-              </p>
+
+            <div className="bg-solawi-gray p-6 rounded-lg">
+              <p className="mb-4">Das Netzwerk bietet:</p>
               <ul className="space-y-2">
                 <li>• Austausch und Vernetzung zwischen SoLawis</li>
-                <li>• Beratung für Gründer*innen</li>
+                <li>• Beratung für Gründer</li>
                 <li>• Öffentlichkeitsarbeit und Bildungsangebote</li>
                 <li>• Politische Interessenvertretung</li>
               </ul>
             </div>
-            
+
             <p>
-              Mehr Informationen findest du unter: 
-              <a href="https://www.solidarische-landwirtschaft.org" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="text-primary hover:text-foreground ml-1">
+              Mehr Informationen:{" "}
+              <a
+                href="https://www.solidarische-landwirtschaft.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
                 www.solidarische-landwirtschaft.org
               </a>
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Förderverein */}
-      <section id="foerderverein" className="py-20 bg-solawi-mauve">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Förderverein
-          </h2>
-          
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p>
-              Unser Förderverein unterstützt die Arbeit von Stadt, Land, Beides und ermöglicht 
-              Menschen mit geringerem Einkommen den Zugang zu unseren Ernteanteilen.
-            </p>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl mb-4 text-foreground">Wie kannst du helfen?</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Fördermitgliedschaft</h4>
-                  <p>Werde Fördermitglied und unterstütze uns mit einem regelmäßigen Beitrag</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Spenden</h4>
-                  <p>Einmalige oder regelmäßige Spenden helfen uns, unsere Ziele zu erreichen</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg text-foreground mb-2">Ehrenamtliches Engagement</h4>
-                  <p>Bringe deine Zeit und Fähigkeiten ein, um die Gemeinschaft zu stärken</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interviews */}
-      <section id="interviews" className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-foreground">
-            Interviews & Erfahrungsberichte
-          </h2>
-          
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-              <p className="text-lg italic text-gray-700 mb-4">
-                "Für mich ist die SoLaWi mehr als nur frisches Gemüse. Es ist eine Lebenseinstellung. 
-                Ich weiß genau, wo mein Essen herkommt und kann die Landwirt*innen persönlich 
-                unterstützen."
-              </p>
-              <p className="text-foreground font-semibold">- Maria, Mitglied seit 2020</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-              <p className="text-lg italic text-gray-700 mb-4">
-                "Als Landwirt schätze ich die Planungssicherheit und die direkte Verbindung zu 
-                den Menschen, die meine Produkte essen. Es motiviert mich, jeden Tag mein Bestes 
-                zu geben."
-              </p>
-              <p className="text-foreground font-semibold">- Thomas Reime, Reimehof</p>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
-              <p className="text-lg italic text-gray-700 mb-4">
-                "Meine Kinder lernen durch die Hofbesuche, wo Lebensmittel herkommen und entwickeln 
-                Wertschätzung für die Natur. Das ist unbezahlbar."
-              </p>
-              <p className="text-foreground font-semibold">- Sophie, Mitglied seit 2022</p>
-            </div>
           </div>
         </div>
       </section>
@@ -325,14 +404,14 @@ export function SolidarischeLandwirtschaft() {
             Möchtest du Teil unserer Gemeinschaft werden?
           </h2>
           <p className="text-xl mb-8 text-foreground/80">
-            Erfahre mehr darüber, wie du mitmachen kannst und werde Teil der Bewegung
-            für nachhaltige Landwirtschaft.
+            Werde Ernteteiler und unterstütze nachhaltige Landwirtschaft in
+            deiner Region.
           </p>
           <Link
             to="/mitmachen"
             className="inline-flex items-center justify-center gap-2 bg-cta text-white hover:bg-cta-hover px-8 py-4 transition-colors font-accent"
           >
-            Jetzt informieren
+            Ernteteiler werden
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
