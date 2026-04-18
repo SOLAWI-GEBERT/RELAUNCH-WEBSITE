@@ -29,7 +29,7 @@ export function SolidarischeLandwirtschaft() {
       {/* Was ist Solidarische Landwirtschaft */}
       <section id="was-ist" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Was ist Solidarische Landwirtschaft?
           </h2>
           
@@ -56,9 +56,9 @@ export function SolidarischeLandwirtschaft() {
           </div>
 
           <div className="mt-12 grid md:grid-cols-2 gap-8">
-            <div className="bg-green-50 p-6 rounded-lg">
-              <Sprout className="w-10 h-10 text-green-700 mb-4" />
-              <h3 className="text-xl mb-3 text-green-900">Für die Landwirt*innen</h3>
+            <div className="bg-secondary/20 p-6 rounded-lg">
+              <Sprout className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">Für die Landwirt*innen</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Planbare Einkommen und langfristige Sicherheit</li>
                 <li>• Unabhängigkeit von Marktpreisen</li>
@@ -67,9 +67,9 @@ export function SolidarischeLandwirtschaft() {
               </ul>
             </div>
 
-            <div className="bg-green-50 p-6 rounded-lg">
-              <Users className="w-10 h-10 text-green-700 mb-4" />
-              <h3 className="text-xl mb-3 text-green-900">Für die Mitglieder</h3>
+            <div className="bg-secondary/20 p-6 rounded-lg">
+              <Users className="w-10 h-10 text-primary mb-4" />
+              <h3 className="text-xl mb-3 text-foreground">Für die Mitglieder</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• Frische, saisonale Bio-Lebensmittel</li>
                 <li>• Transparenz über Anbau und Herkunft</li>
@@ -82,9 +82,9 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Wie machen wir das */}
-      <section id="wie-machen-wir" className="py-20 bg-green-50">
+      <section id="wie-machen-wir" className="py-20 bg-secondary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Wie machen wir das bei Stadt, Land, Beides?
           </h2>
           
@@ -96,18 +96,18 @@ export function SolidarischeLandwirtschaft() {
             </p>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl mb-4 text-green-900">Unsere Partnerhöfe</h3>
+              <h3 className="text-2xl mb-4 text-foreground">Unsere Partnerhöfe</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Reimehof - Sommergemüse</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Reimehof - Sommergemüse</h4>
                   <p>Vielfältiges Gemüse während der Sommermonate von Mai bis Oktober</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Biohof Walz - Wintergemüse</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Biohof Walz - Wintergemüse</h4>
                   <p>Lagergemüse und winterhartes Gemüse von November bis April</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Obst vom Hederer</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Obst vom Hederer</h4>
                   <p>Saisonales Obst und Beeren aus biologischem Anbau</p>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export function SolidarischeLandwirtschaft() {
       {/* Selbstverständnis */}
       <section id="selbstverstaendnis" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Unser Selbstverständnis
           </h2>
           
@@ -137,24 +137,24 @@ export function SolidarischeLandwirtschaft() {
             
             <div className="grid md:grid-cols-3 gap-6 my-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-green-700" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg mb-2 text-green-900">Gemeinschaft</h3>
+                <h3 className="text-lg mb-2 text-foreground">Gemeinschaft</h3>
                 <p className="text-sm">Gemeinsam statt einsam</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-8 h-8 text-green-700" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg mb-2 text-green-900">Wertschätzung</h3>
+                <h3 className="text-lg mb-2 text-foreground">Wertschätzung</h3>
                 <p className="text-sm">Für Mensch und Natur</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-green-700" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg mb-2 text-green-900">Transparenz</h3>
+                <h3 className="text-lg mb-2 text-foreground">Transparenz</h3>
                 <p className="text-sm">Offene Kommunikation</p>
               </div>
             </div>
@@ -168,15 +168,15 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Unsere Ziele */}
-      <section id="ziele" className="py-20 bg-green-50">
+      <section id="ziele" className="py-20 bg-secondary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Unsere Ziele
           </h2>
           
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-green-900">Nachhaltige Landwirtschaft fördern</h3>
+              <h3 className="text-xl mb-3 text-foreground">Nachhaltige Landwirtschaft fördern</h3>
               <p className="text-gray-700">
                 Wir unterstützen ökologische Anbaumethoden, die Böden regenerieren, Artenvielfalt 
                 fördern und das Klima schützen.
@@ -184,7 +184,7 @@ export function SolidarischeLandwirtschaft() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-green-900">Regionale Kreisläufe stärken</h3>
+              <h3 className="text-xl mb-3 text-foreground">Regionale Kreisläufe stärken</h3>
               <p className="text-gray-700">
                 Durch kurze Transportwege und lokale Produktion schaffen wir resiliente 
                 Versorgungsstrukturen in unserer Region.
@@ -192,7 +192,7 @@ export function SolidarischeLandwirtschaft() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-green-900">Gemeinschaft aufbauen</h3>
+              <h3 className="text-xl mb-3 text-foreground">Gemeinschaft aufbauen</h3>
               <p className="text-gray-700">
                 Wir bringen Menschen zusammen, die Werte wie Nachhaltigkeit, Fairness und 
                 Solidarität teilen.
@@ -200,7 +200,7 @@ export function SolidarischeLandwirtschaft() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl mb-3 text-green-900">Bewusstsein schaffen</h3>
+              <h3 className="text-xl mb-3 text-foreground">Bewusstsein schaffen</h3>
               <p className="text-gray-700">
                 Durch Bildungsarbeit und praktisches Erleben vermitteln wir Wissen über 
                 Landwirtschaft und Ernährung.
@@ -213,7 +213,7 @@ export function SolidarischeLandwirtschaft() {
       {/* Netzwerk */}
       <section id="netzwerk" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Netzwerk Solidarische Landwirtschaft
           </h2>
           
@@ -223,7 +223,7 @@ export function SolidarischeLandwirtschaft() {
               das die Verbreitung der Solidarischen Landwirtschaft in Deutschland fördert.
             </p>
             
-            <div className="bg-green-50 p-6 rounded-lg">
+            <div className="bg-secondary/20 p-6 rounded-lg">
               <p className="mb-4">
                 Das Netzwerk bietet:
               </p>
@@ -240,7 +240,7 @@ export function SolidarischeLandwirtschaft() {
               <a href="https://www.solidarische-landwirtschaft.org" 
                  target="_blank" 
                  rel="noopener noreferrer"
-                 className="text-green-700 hover:text-green-800 ml-1">
+                 className="text-primary hover:text-foreground ml-1">
                 www.solidarische-landwirtschaft.org
               </a>
             </p>
@@ -249,9 +249,9 @@ export function SolidarischeLandwirtschaft() {
       </section>
 
       {/* Förderverein */}
-      <section id="foerderverein" className="py-20 bg-green-50">
+      <section id="foerderverein" className="py-20 bg-secondary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Förderverein
           </h2>
           
@@ -262,18 +262,18 @@ export function SolidarischeLandwirtschaft() {
             </p>
             
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl mb-4 text-green-900">Wie kannst du helfen?</h3>
+              <h3 className="text-2xl mb-4 text-foreground">Wie kannst du helfen?</h3>
               <div className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Fördermitgliedschaft</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Fördermitgliedschaft</h4>
                   <p>Werde Fördermitglied und unterstütze uns mit einem regelmäßigen Beitrag</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Spenden</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Spenden</h4>
                   <p>Einmalige oder regelmäßige Spenden helfen uns, unsere Ziele zu erreichen</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-green-800 mb-2">Ehrenamtliches Engagement</h4>
+                  <h4 className="font-semibold text-lg text-foreground mb-2">Ehrenamtliches Engagement</h4>
                   <p>Bringe deine Zeit und Fähigkeiten ein, um die Gemeinschaft zu stärken</p>
                 </div>
               </div>
@@ -285,53 +285,53 @@ export function SolidarischeLandwirtschaft() {
       {/* Interviews */}
       <section id="interviews" className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900">
+          <h2 className="text-4xl mb-8 text-foreground">
             Interviews & Erfahrungsberichte
           </h2>
           
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600">
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
               <p className="text-lg italic text-gray-700 mb-4">
                 "Für mich ist die SoLaWi mehr als nur frisches Gemüse. Es ist eine Lebenseinstellung. 
                 Ich weiß genau, wo mein Essen herkommt und kann die Landwirt*innen persönlich 
                 unterstützen."
               </p>
-              <p className="text-green-800 font-semibold">- Maria, Mitglied seit 2020</p>
+              <p className="text-foreground font-semibold">- Maria, Mitglied seit 2020</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600">
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
               <p className="text-lg italic text-gray-700 mb-4">
                 "Als Landwirt schätze ich die Planungssicherheit und die direkte Verbindung zu 
                 den Menschen, die meine Produkte essen. Es motiviert mich, jeden Tag mein Bestes 
                 zu geben."
               </p>
-              <p className="text-green-800 font-semibold">- Thomas Reime, Reimehof</p>
+              <p className="text-foreground font-semibold">- Thomas Reime, Reimehof</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600">
+            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary">
               <p className="text-lg italic text-gray-700 mb-4">
                 "Meine Kinder lernen durch die Hofbesuche, wo Lebensmittel herkommen und entwickeln 
                 Wertschätzung für die Natur. Das ist unbezahlbar."
               </p>
-              <p className="text-green-800 font-semibold">- Sophie, Mitglied seit 2022</p>
+              <p className="text-foreground font-semibold">- Sophie, Mitglied seit 2022</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-green-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Möchtest du Teil unserer Gemeinschaft werden?
           </h2>
-          <p className="text-xl mb-8 text-green-50">
+          <p className="text-xl mb-8 text-white/90">
             Erfahre mehr darüber, wie du mitmachen kannst und werde Teil der Bewegung 
             für nachhaltige Landwirtschaft.
           </p>
           <Link
             to="/mitmachen"
-            className="inline-flex items-center justify-center gap-2 bg-white text-green-700 hover:bg-green-50 px-8 py-4 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors"
           >
             Jetzt informieren
             <ArrowRight className="w-5 h-5" />

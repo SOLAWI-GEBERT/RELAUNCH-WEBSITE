@@ -4,12 +4,12 @@ export function KontaktAnmeldung() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+      <section className="bg-primary text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Kontakt & Anmeldung
           </h1>
-          <p className="text-xl text-green-50 max-w-3xl">
+          <p className="text-xl text-white/90 max-w-3xl">
             Werden Sie Teil unserer Gemeinschaft oder kontaktieren Sie uns bei Fragen
           </p>
         </div>
@@ -28,13 +28,13 @@ export function KontaktAnmeldung() {
             </p>
           </div>
 
-          <div className="bg-green-50 rounded-lg p-8 mb-8">
-            <h3 className="text-2xl font-semibold mb-6 text-green-800">
+          <div className="bg-secondary/20 rounded-lg p-8 mb-8">
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">
               So funktioniert die Anmeldung
             </h3>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
                   1
                 </div>
                 <div>
@@ -45,7 +45,7 @@ export function KontaktAnmeldung() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
                   2
                 </div>
                 <div>
@@ -56,7 +56,7 @@ export function KontaktAnmeldung() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
                   3
                 </div>
                 <div>
@@ -67,7 +67,7 @@ export function KontaktAnmeldung() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-semibold">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
                   4
                 </div>
                 <div>
@@ -81,7 +81,7 @@ export function KontaktAnmeldung() {
           </div>
 
           <div className="text-center">
-            <button className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-lg">
+            <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary transition-colors text-lg">
               Jetzt anmelden
             </button>
           </div>
@@ -92,7 +92,7 @@ export function KontaktAnmeldung() {
       <section id="kontakt" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <MessageSquare className="w-12 h-12 text-green-600 mx-auto mb-4" />
+            <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Kontaktformular
             </h2>
@@ -110,7 +110,7 @@ export function KontaktAnmeldung() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Ihr Name"
                   />
                 </div>
@@ -120,7 +120,7 @@ export function KontaktAnmeldung() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="ihre@email.de"
                   />
                 </div>
@@ -131,7 +131,7 @@ export function KontaktAnmeldung() {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Worum geht es?"
                 />
               </div>
@@ -141,14 +141,14 @@ export function KontaktAnmeldung() {
                 </label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Ihre Nachricht..."
                 />
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                  className="w-full bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition-colors"
                 >
                   Nachricht senden
                 </button>
@@ -162,7 +162,7 @@ export function KontaktAnmeldung() {
       <section id="ansprechpersonen" className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <User className="w-12 h-12 text-green-600 mx-auto mb-4" />
+            <User className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Ansprechpersonen
             </h2>
@@ -176,11 +176,11 @@ export function KontaktAnmeldung() {
               <h3 className="text-xl font-semibold mb-4">Allgemeine Fragen</h3>
               <div className="space-y-3 text-gray-700">
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-green-600 mt-1" />
+                  <Mail className="w-5 h-5 text-primary mt-1" />
                   <span>info@stadt-land-beides.de</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-green-600 mt-1" />
+                  <Phone className="w-5 h-5 text-primary mt-1" />
                   <span>0123 / 456789</span>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export function KontaktAnmeldung() {
               <div className="space-y-3 text-gray-700">
                 <p className="font-medium">Max Mustermann</p>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-green-600 mt-1" />
+                  <Mail className="w-5 h-5 text-primary mt-1" />
                   <span>koordination@stadt-land-beides.de</span>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export function KontaktAnmeldung() {
               <div className="space-y-3 text-gray-700">
                 <p className="font-medium">Anna Schmidt</p>
                 <div className="flex items-start gap-3">
-                  <Mail className="w-5 h-5 text-green-600 mt-1" />
+                  <Mail className="w-5 h-5 text-primary mt-1" />
                   <span>depots@stadt-land-beides.de</span>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export function KontaktAnmeldung() {
       <section id="faq" className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <HelpCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+            <HelpCircle className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Häufig gestellte Fragen (FAQ)
             </h2>

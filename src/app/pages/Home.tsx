@@ -26,14 +26,14 @@ export function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/mitmachen"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg transition-colors"
             >
               Jetzt mitmachen
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/solidarische-landwirtschaft"
-              className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-green-800 px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white/90 hover:bg-white text-foreground px-8 py-4 rounded-lg transition-colors"
             >
               Mehr erfahren
             </Link>
@@ -42,11 +42,11 @@ export function Home() {
       </section>
 
       {/* Was ist Solidarische Landwirtschaft */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl mb-6 text-green-900">
+              <h2 className="text-4xl mb-6 text-foreground">
                 Was ist Solidarische Landwirtschaft?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
@@ -60,7 +60,7 @@ export function Home() {
               </p>
               <Link
                 to="/solidarische-landwirtschaft"
-                className="inline-flex items-center gap-2 text-green-700 hover:text-green-800"
+                className="inline-flex items-center gap-2 text-primary hover:text-foreground"
               >
                 Mehr über SoLaWi erfahren
                 <ArrowRight className="w-5 h-5" />
@@ -81,7 +81,7 @@ export function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4 text-green-900">
+            <h2 className="text-4xl mb-4 text-foreground">
               Warum mitmachen?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -92,10 +92,10 @@ export function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Leaf className="w-7 h-7 text-green-700" />
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <Leaf className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Nachhaltig & Regional</h3>
+              <h3 className="text-xl mb-4 text-foreground">Nachhaltig & Regional</h3>
               <p className="text-gray-600">
                 Frische Lebensmittel direkt vom Hof in deiner Region. 
                 Kurze Transportwege und ökologischer Anbau schonen die Umwelt.
@@ -103,10 +103,10 @@ export function Home() {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-green-700" />
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <Users className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Gemeinschaft</h3>
+              <h3 className="text-xl mb-4 text-foreground">Gemeinschaft</h3>
               <p className="text-gray-600">
                 Werde Teil einer lebendigen Gemeinschaft. Lerne die Landwirt*innen 
                 kennen und gestalte aktiv mit.
@@ -114,10 +114,10 @@ export function Home() {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Heart className="w-7 h-7 text-green-700" />
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                <Heart className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Transparenz</h3>
+              <h3 className="text-xl mb-4 text-foreground">Transparenz</h3>
               <p className="text-gray-600">
                 Volle Transparenz: Du weißt genau, wo dein Essen herkommt und 
                 wie es angebaut wird.
@@ -128,10 +128,10 @@ export function Home() {
       </section>
 
       {/* Unsere Höfe */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4 text-green-900">
+            <h2 className="text-4xl mb-4 text-foreground">
               Unsere Partner-Höfe
             </h2>
             <p className="text-xl text-gray-600">
@@ -149,13 +149,13 @@ export function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl mb-2 text-green-900">Reimehof</h3>
+                <h3 className="text-xl mb-2 text-foreground">Reimehof</h3>
                 <p className="text-gray-600 mb-4">
                   Sommergemüse in Bio-Qualität aus regionalem Anbau
                 </p>
                 <Link
                   to="/hoefe-und-ernteanteile#reimehof"
-                  className="text-green-700 hover:text-green-800 inline-flex items-center gap-1"
+                  className="text-primary hover:text-foreground inline-flex items-center gap-1"
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4" />
@@ -172,13 +172,13 @@ export function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl mb-2 text-green-900">Biohof Walz</h3>
+                <h3 className="text-xl mb-2 text-foreground">Biohof Walz</h3>
                 <p className="text-gray-600 mb-4">
                   Wintergemüse und Lagergemüse für die kalte Jahreszeit
                 </p>
                 <Link
                   to="/hoefe-und-ernteanteile#walz"
-                  className="text-green-700 hover:text-green-800 inline-flex items-center gap-1"
+                  className="text-primary hover:text-foreground inline-flex items-center gap-1"
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4" />
@@ -195,13 +195,13 @@ export function Home() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl mb-2 text-green-900">Obst vom Hederer</h3>
+                <h3 className="text-xl mb-2 text-foreground">Obst vom Hederer</h3>
                 <p className="text-gray-600 mb-4">
                   Frisches Obst aus biologischem Anbau direkt vom Erzeuger
                 </p>
                 <Link
                   to="/hoefe-und-ernteanteile#hederer"
-                  className="text-green-700 hover:text-green-800 inline-flex items-center gap-1"
+                  className="text-primary hover:text-foreground inline-flex items-center gap-1"
                 >
                   Mehr erfahren
                   <ArrowRight className="w-4 h-4" />
@@ -216,7 +216,7 @@ export function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl mb-4 text-green-900">
+            <h2 className="text-4xl mb-4 text-foreground">
               So funktioniert's
             </h2>
             <p className="text-xl text-gray-600">
@@ -226,30 +226,30 @@ export function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+              <div className="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                 1
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Ernteanteil wählen</h3>
+              <h3 className="text-xl mb-4 text-foreground">Ernteanteil wählen</h3>
               <p className="text-gray-600">
                 Wähle deinen Ernteanteil und entscheide, welche Höfe du unterstützen möchtest.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+              <div className="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                 2
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Depot auswählen</h3>
+              <h3 className="text-xl mb-4 text-foreground">Depot auswählen</h3>
               <p className="text-gray-600">
                 Finde ein Depot in deiner Nähe, wo du wöchentlich deine frischen Lebensmittel abholen kannst.
               </p>
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+              <div className="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                 3
               </div>
-              <h3 className="text-xl mb-4 text-green-900">Genießen & mitmachen</h3>
+              <h3 className="text-xl mb-4 text-foreground">Genießen & mitmachen</h3>
               <p className="text-gray-600">
                 Hole deine Ernte ab und werde Teil der Gemeinschaft bei Hofaktionen und Veranstaltungen.
               </p>
@@ -259,7 +259,7 @@ export function Home() {
           <div className="text-center mt-12">
             <Link
               to="/mitmachen"
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg transition-colors"
             >
               Jetzt Mitglied werden
               <ArrowRight className="w-5 h-5" />
@@ -269,11 +269,11 @@ export function Home() {
       </section>
 
       {/* Aktuelle Veranstaltungen */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-4xl mb-4 text-green-900">
+              <h2 className="text-4xl mb-4 text-foreground">
                 Aktuelle Veranstaltungen
               </h2>
               <p className="text-xl text-gray-600">
@@ -282,7 +282,7 @@ export function Home() {
             </div>
             <Link
               to="/kalender"
-              className="hidden md:inline-flex items-center gap-2 text-green-700 hover:text-green-800"
+              className="hidden md:inline-flex items-center gap-2 text-primary hover:text-foreground"
             >
               Alle Termine
               <ArrowRight className="w-5 h-5" />
@@ -292,12 +292,12 @@ export function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-start gap-4">
-                <div className="bg-green-100 rounded-lg p-3 flex-shrink-0">
-                  <Calendar className="w-6 h-6 text-green-700" />
+                <div className="bg-primary/10 rounded-lg p-3 flex-shrink-0">
+                  <Calendar className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm text-gray-500 mb-1">15. März 2026</div>
-                  <h3 className="text-lg mb-2 text-green-900">Hofaktion Reimehof</h3>
+                  <h3 className="text-lg mb-2 text-foreground">Hofaktion Reimehof</h3>
                   <p className="text-gray-600 text-sm mb-3">
                     Gemeinsames Pflanzen und Kennenlernen
                   </p>
@@ -311,12 +311,12 @@ export function Home() {
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-start gap-4">
-                <div className="bg-green-100 rounded-lg p-3 flex-shrink-0">
-                  <Sprout className="w-6 h-6 text-green-700" />
+                <div className="bg-primary/10 rounded-lg p-3 flex-shrink-0">
+                  <Sprout className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm text-gray-500 mb-1">22. März 2026</div>
-                  <h3 className="text-lg mb-2 text-green-900">Info-Veranstaltung</h3>
+                  <h3 className="text-lg mb-2 text-foreground">Info-Veranstaltung</h3>
                   <p className="text-gray-600 text-sm mb-3">
                     Erfahre mehr über Solidarische Landwirtschaft
                   </p>
@@ -330,12 +330,12 @@ export function Home() {
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-start gap-4">
-                <div className="bg-green-100 rounded-lg p-3 flex-shrink-0">
-                  <Calendar className="w-6 h-6 text-green-700" />
+                <div className="bg-primary/10 rounded-lg p-3 flex-shrink-0">
+                  <Calendar className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="text-sm text-gray-500 mb-1">5. April 2026</div>
-                  <h3 className="text-lg mb-2 text-green-900">Ernte-Fest</h3>
+                  <h3 className="text-lg mb-2 text-foreground">Ernte-Fest</h3>
                   <p className="text-gray-600 text-sm mb-3">
                     Gemeinsames Feiern und Ernten
                   </p>
@@ -351,7 +351,7 @@ export function Home() {
           <div className="text-center mt-8 md:hidden">
             <Link
               to="/kalender"
-              className="inline-flex items-center gap-2 text-green-700 hover:text-green-800"
+              className="inline-flex items-center gap-2 text-primary hover:text-foreground"
             >
               Alle Termine
               <ArrowRight className="w-5 h-5" />
@@ -361,18 +361,18 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Bereit für frische, regionale Lebensmittel?
           </h2>
-          <p className="text-xl mb-8 text-green-50">
+          <p className="text-xl mb-8 text-white/90">
             Werde Teil unserer Gemeinschaft und unterstütze nachhaltige Landwirtschaft in deiner Region.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/anmeldung"
-              className="inline-flex items-center justify-center gap-2 bg-white text-green-700 hover:bg-green-50 px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors"
             >
               Jetzt anmelden
               <ArrowRight className="w-5 h-5" />

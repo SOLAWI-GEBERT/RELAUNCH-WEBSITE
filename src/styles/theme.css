@@ -3,64 +3,70 @@
 :root {
   --font-size: 16px;
   --background: #ffffff;
-  --foreground: #2d3436;
+  --foreground: #1b1b1b;
   --card: #ffffff;
-  --card-foreground: #2d3436;
+  --card-foreground: #1b1b1b;
   --popover: #ffffff;
-  --popover-foreground: #2d3436;
-  
-  /* SoLaWi Primärfarben - lebendig und naturnah */
-  --primary: #16a085; /* Frisches Grün */
+  --popover-foreground: #1b1b1b;
+
+  /* SoLaWi Corporate Design — aus Joomla Template preset default.css */
+  --primary: #7697b5; /* Blaugrau — btn-primary Hintergrund */
   --primary-foreground: #ffffff;
-  --secondary: #74b9ff; /* Himmelblau */
-  --secondary-foreground: #2d3436;
-  --accent: #ffeaa7; /* Sonniges Gelb */
-  --accent-foreground: #2d3436;
-  
-  /* SoLaWi Akzentfarben aus dem Branding */
-  --solawi-pink: #d10038;
-  --solawi-purple: #8a2b7d;
-  --solawi-blue: #7697b5;
-  
-  /* Neutrale Farben mit Wärme */
-  --muted: #f5f6fa;
-  --muted-foreground: #636e72;
-  --border: rgba(0, 0, 0, 0.08);
+  --secondary: #f0f0f0; /* Offcanvas/Muted Hintergrund */
+  --secondary-foreground: #1d1f24;
+  --accent: #8a2b7d; /* Lila — Hover/Interaktionsfarbe */
+  --accent-foreground: #ffffff;
+
+  /* SoLaWi Markenfarben aus dem Template */
+  --solawi-pink: #d10038; /* CTA-Akzent, Tags, Pagination, Borders */
+  --solawi-purple: #8a2b7d; /* Hover-Farbe, Interaktiv */
+  --solawi-blue: #7697b5; /* Button-Primary-Hintergrund */
+  --solawi-navy: #100056; /* Button Hover-Border */
+  --solawi-blue-light: #9cb1c6;
+  --solawi-salmon: #f3aba2;
+  --solawi-orange: #ffa673;
+  --solawi-green: #c2ddb2;
+  --solawi-mauve: #c7afc7;
+
+  /* Neutrale Farben */
+  --muted: #f0f0f0;
+  --muted-foreground: #808080;
+  --border: rgba(0, 0, 0, 0.11);
   --input: transparent;
-  --input-background: #f8f9fa;
-  --switch-background: #dfe6e9;
-  
-  /* Rundere, verspieltere Ecken */
-  --radius: 1rem;
-  
-  /* Destructive bleibt wie gehabt */
+  --input-background: #f0f0f0;
+  --switch-background: #e5e5e5;
+
+  /* Kantige Ecken wie im Original */
+  --radius: 0rem;
+
+  /* Destructive — gleich SoLaWi-Pink */
   --destructive: #d10038;
   --destructive-foreground: #ffffff;
-  
-  /* Font Weights - etwas kräftiger für Comic-Look */
+
+  /* Font Weights */
   --font-weight-bold: 700;
-  --font-weight-medium: 600;
+  --font-weight-medium: 500;
   --font-weight-normal: 400;
-  
+
   /* Ring für Focus States */
-  --ring: #16a085;
-  
-  /* Chart Colors - lebendige Gemüsefarben */
-  --chart-1: #16a085; /* Grün wie Salat */
-  --chart-2: #d63031; /* Rot wie Tomaten */
-  --chart-3: #fdcb6e; /* Gelb wie Paprika */
-  --chart-4: #a29bfe; /* Violett wie Aubergine */
-  --chart-5: #fd79a8; /* Pink wie Radieschen */
-  
+  --ring: #7697b5;
+
+  /* Chart Colors */
+  --chart-1: #7697b5; /* Blaugrau */
+  --chart-2: #d10038; /* Pink */
+  --chart-3: #8a2b7d; /* Lila */
+  --chart-4: #c2ddb2; /* Hellgrün */
+  --chart-5: #ffa673; /* Orange */
+
   /* Sidebar */
-  --sidebar: #f8f9fa;
-  --sidebar-foreground: #2d3436;
-  --sidebar-primary: #16a085;
+  --sidebar: #f0f0f0;
+  --sidebar-foreground: #1b1b1b;
+  --sidebar-primary: #7697b5;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #ffffff;
-  --sidebar-accent-foreground: #2d3436;
-  --sidebar-border: #dfe6e9;
-  --sidebar-ring: #16a085;
+  --sidebar-accent-foreground: #1b1b1b;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #7697b5;
 }
 
 .dark {
@@ -101,6 +107,18 @@
 }
 
 @theme inline {
+  --font-heading: "EB Garamond", Georgia, serif;
+  --font-accent: "Cantora One", sans-serif;
+  --font-sans: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --color-solawi-pink: var(--solawi-pink);
+  --color-solawi-purple: var(--solawi-purple);
+  --color-solawi-blue: var(--solawi-blue);
+  --color-solawi-navy: var(--solawi-navy);
+  --color-solawi-blue-light: var(--solawi-blue-light);
+  --color-solawi-salmon: var(--solawi-salmon);
+  --color-solawi-orange: var(--solawi-orange);
+  --color-solawi-green: var(--solawi-green);
+  --color-solawi-mauve: var(--solawi-mauve);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -148,6 +166,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 
   /**
@@ -160,27 +179,31 @@
   }
 
   h1 {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   h3 {
-    font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
   }
 
   h4 {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.3;
   }
 
   label {

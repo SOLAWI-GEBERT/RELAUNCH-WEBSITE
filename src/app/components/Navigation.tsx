@@ -186,12 +186,12 @@ export function Navigation() {
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50 border-b-4 border-green-500">
+    <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 z-50">
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-2xl font-bold text-foreground">
               Stadt, Land, Beides
             </div>
           </Link>
@@ -207,10 +207,10 @@ export function Navigation() {
               >
                 <Link
                   to={item.path}
-                  className={`px-4 py-2 rounded-xl flex items-center gap-1 transition-all font-semibold ${
+                  className={`px-4 py-2 flex items-center gap-1 transition-all font-semibold ${
                     location.pathname === item.path
-                      ? "bg-green-500 text-white shadow-lg transform scale-105"
-                      : "text-gray-700 hover:bg-green-100 hover:scale-105"
+                      ? "text-black"
+                      : "text-[#767676] hover:text-accent"
                   }`}
                 >
                   {item.title}
@@ -219,13 +219,13 @@ export function Navigation() {
 
                 {/* Dropdown */}
                 {item.subItems && openDropdown === item.path && (
-                  <div className="absolute left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl py-3 z-50 max-h-[80vh] overflow-y-auto border-4 border-green-200">
+                  <div className="absolute left-0 mt-2 w-80 bg-white shadow-2xl py-3 z-50 max-h-[80vh] overflow-y-auto border border-gray-200">
                     {item.subItems.map((subItem) => (
                       <div key={subItem.path}>
                         {subItem.isCategory ? (
                           // Category header (not clickable)
                           <div>
-                            <div className="px-4 py-2 text-sm font-bold text-green-700 bg-green-100 rounded-lg mx-2 my-1">
+                            <div className="px-4 py-2 text-sm font-bold text-[#1d1f24] bg-gray-100 mx-2 my-1">
                               {subItem.title}
                             </div>
                             {/* Category items */}
@@ -235,7 +235,7 @@ export function Navigation() {
                                   <div key={categoryItem.path}>
                                     <Link
                                       to={categoryItem.path}
-                                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-800 font-semibold rounded-lg mx-2 transition-all hover:translate-x-1"
+                                      className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent font-semibold mx-2 transition-all hover:translate-x-1"
                                     >
                                       {categoryItem.title}
                                     </Link>
@@ -246,7 +246,7 @@ export function Navigation() {
                                           <Link
                                             key={subSubItem.path}
                                             to={subSubItem.path}
-                                            className="block px-4 py-1.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-800 rounded-lg mx-2 transition-all hover:translate-x-1"
+                                            className="block px-4 py-1.5 text-sm text-gray-600 hover:text-accent mx-2 transition-all hover:translate-x-1"
                                           >
                                             • {subSubItem.title}
                                           </Link>
@@ -262,7 +262,7 @@ export function Navigation() {
                           // Regular menu item
                           <Link
                             to={subItem.path}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-800 rounded-lg mx-2 transition-all hover:translate-x-1"
+                            className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent mx-2 transition-all hover:translate-x-1"
                           >
                             {subItem.title}
                           </Link>
@@ -278,7 +278,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-xl text-gray-700 hover:bg-green-100 z-50 transition-all"
+            className="lg:hidden p-2 text-[#767676] hover:text-accent z-50 transition-all"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -305,7 +305,7 @@ export function Navigation() {
           <Link 
             to="/" 
             onClick={closeMobileMenu}
-            className="block mb-8 text-xl font-bold text-green-700"
+            className="block mb-8 text-xl font-bold text-foreground"
           >
             Stadt, Land, Beides
           </Link>
@@ -320,8 +320,8 @@ export function Navigation() {
                     onClick={closeMobileMenu}
                     className={`flex-1 px-4 py-3 rounded-md transition-colors ${
                       location.pathname === item.path
-                        ? "bg-green-100 text-green-800 font-semibold"
-                        : "text-gray-700 hover:bg-green-50"
+                        ? "bg-primary/10 text-foreground font-semibold"
+                        : "text-gray-700 hover:bg-secondary/20"
                     }`}
                   >
                     {item.title}
@@ -329,7 +329,7 @@ export function Navigation() {
                   {item.subItems && (
                     <button
                       onClick={() => toggleMobileDropdown(item.path)}
-                      className="p-3 text-gray-600 hover:text-green-700"
+                      className="p-3 text-gray-600 hover:text-accent"
                       aria-label="Toggle submenu"
                     >
                       <ChevronRight 
@@ -349,7 +349,7 @@ export function Navigation() {
                         {subItem.isCategory ? (
                           // Category header in mobile (not clickable)
                           <div>
-                            <div className="px-3 py-2 text-sm font-semibold text-green-700 bg-green-50 rounded-md">
+                            <div className="px-3 py-2 text-sm font-semibold text-[#1d1f24] bg-gray-100 rounded-md">
                               {subItem.title}
                             </div>
                             {/* Category items in mobile */}
@@ -361,14 +361,14 @@ export function Navigation() {
                                       <Link
                                         to={categoryItem.path}
                                         onClick={closeMobileMenu}
-                                        className="flex-1 px-3 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-800 rounded-md font-medium transition-colors"
+                                        className="flex-1 px-3 py-2 text-sm text-gray-700 hover:bg-secondary/20 hover:text-foreground rounded-md font-medium transition-colors"
                                       >
                                         {categoryItem.title}
                                       </Link>
                                       {categoryItem.subItems && (
                                         <button
                                           onClick={() => toggleMobileSubDropdown(categoryItem.path)}
-                                          className="p-2 text-gray-500 hover:text-green-700"
+                                          className="p-2 text-gray-500 hover:text-accent"
                                           aria-label="Toggle sub-submenu"
                                         >
                                           <ChevronRight 
@@ -387,7 +387,7 @@ export function Navigation() {
                                             key={subSubItem.path}
                                             to={subSubItem.path}
                                             onClick={closeMobileMenu}
-                                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-green-50 hover:text-green-800 rounded-md transition-colors"
+                                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
                                           >
                                             • {subSubItem.title}
                                           </Link>
@@ -404,7 +404,7 @@ export function Navigation() {
                           <Link
                             to={subItem.path}
                             onClick={closeMobileMenu}
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-green-50 hover:text-green-800 rounded-md transition-colors"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
                           >
                             {subItem.title}
                           </Link>
@@ -422,14 +422,14 @@ export function Navigation() {
             <Link
               to="/kontakt-anmeldung#anmeldung"
               onClick={closeMobileMenu}
-              className="block w-full bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3 rounded-lg transition-colors"
+              className="block w-full bg-primary hover:bg-primary text-white text-center px-6 py-3 rounded-lg transition-colors"
             >
               Jetzt anmelden
             </Link>
             <Link
               to="/lieferung-kalender#kalender"
               onClick={closeMobileMenu}
-              className="block w-full border-2 border-green-600 text-green-700 hover:bg-green-50 text-center px-6 py-3 rounded-lg transition-colors"
+              className="block w-full border-2 border-primary text-primary hover:bg-secondary/20 text-center px-6 py-3 rounded-lg transition-colors"
             >
               Veranstaltungen
             </Link>

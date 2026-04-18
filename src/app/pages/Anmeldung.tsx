@@ -14,10 +14,10 @@ export function Anmeldung() {
     return (
       <div className="bg-white min-h-[600px] flex items-center justify-center">
         <div className="max-w-2xl mx-auto px-4 py-20 text-center">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-12 h-12 text-green-700" />
+          <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-12 h-12 text-primary" />
           </div>
-          <h1 className="text-4xl mb-6 text-green-900">
+          <h1 className="text-4xl mb-6 text-foreground">
             Vielen Dank für deine Anmeldung!
           </h1>
           <p className="text-xl text-gray-700 mb-8">
@@ -56,10 +56,10 @@ export function Anmeldung() {
       </section>
 
       {/* Ansprechpartner */}
-      <section className="py-12 bg-green-50">
+      <section className="py-12 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl mb-4 text-green-900">
+            <h2 className="text-3xl mb-4 text-foreground">
               Deine Ansprechpartner
             </h2>
             <p className="text-gray-600">
@@ -69,15 +69,15 @@ export function Anmeldung() {
 
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="w-8 h-8 text-green-700" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <User className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg mb-2 text-green-900">Anna Müller</h3>
+              <h3 className="text-lg mb-2 text-foreground">Anna Müller</h3>
               <p className="text-sm text-gray-600 mb-3">Mitgliederbetreuung</p>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center justify-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:anna@stadt-land-beides.de" className="hover:text-green-700">
+                  <a href="mailto:anna@stadt-land-beides.de" className="hover:text-primary">
                     anna@stadt-land-beides.de
                   </a>
                 </p>
@@ -89,15 +89,15 @@ export function Anmeldung() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="w-8 h-8 text-green-700" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <User className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg mb-2 text-green-900">Michael Schmidt</h3>
+              <h3 className="text-lg mb-2 text-foreground">Michael Schmidt</h3>
               <p className="text-sm text-gray-600 mb-3">Depotkoordination</p>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center justify-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:michael@stadt-land-beides.de" className="hover:text-green-700">
+                  <a href="mailto:michael@stadt-land-beides.de" className="hover:text-primary">
                     michael@stadt-land-beides.de
                   </a>
                 </p>
@@ -109,15 +109,15 @@ export function Anmeldung() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="w-8 h-8 text-green-700" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <User className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg mb-2 text-green-900">Sarah Weber</h3>
+              <h3 className="text-lg mb-2 text-foreground">Sarah Weber</h3>
               <p className="text-sm text-gray-600 mb-3">Allgemeine Fragen</p>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center justify-center gap-2 text-gray-700">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:info@stadt-land-beides.de" className="hover:text-green-700">
+                  <a href="mailto:info@stadt-land-beides.de" className="hover:text-primary">
                     info@stadt-land-beides.de
                   </a>
                 </p>
@@ -135,7 +135,7 @@ export function Anmeldung() {
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl mb-4 text-green-900">
+            <h2 className="text-4xl mb-4 text-foreground">
               Anmeldeformular
             </h2>
             <p className="text-gray-600">
@@ -146,7 +146,7 @@ export function Anmeldung() {
           <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
             {/* Persönliche Daten */}
             <div className="mb-8">
-              <h3 className="text-2xl mb-6 text-green-900">Persönliche Daten</h3>
+              <h3 className="text-2xl mb-6 text-foreground">Persönliche Daten</h3>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -156,7 +156,7 @@ export function Anmeldung() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Max"
                   />
                 </div>
@@ -168,7 +168,7 @@ export function Anmeldung() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Mustermann"
                   />
                 </div>
@@ -181,7 +181,7 @@ export function Anmeldung() {
                 <input
                   type="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="max@example.com"
                 />
               </div>
@@ -193,7 +193,7 @@ export function Anmeldung() {
                 <input
                   type="tel"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="0123 456789"
                 />
               </div>
@@ -205,7 +205,7 @@ export function Anmeldung() {
                 <input
                   type="text"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   placeholder="Musterstraße 123"
                 />
               </div>
@@ -218,7 +218,7 @@ export function Anmeldung() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="12345"
                   />
                 </div>
@@ -230,7 +230,7 @@ export function Anmeldung() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                     placeholder="Musterstadt"
                   />
                 </div>
@@ -239,10 +239,10 @@ export function Anmeldung() {
 
             {/* Ernteanteil wählen */}
             <div className="mb-8 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl mb-6 text-green-900">Ernteanteil wählen</h3>
+              <h3 className="text-2xl mb-6 text-foreground">Ernteanteil wählen</h3>
               
               <div className="space-y-4">
-                <label className="flex items-start gap-3 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-green-600 hover:bg-green-50 transition-colors">
+                <label className="flex items-start gap-3 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary hover:bg-secondary/20 transition-colors">
                   <input
                     type="radio"
                     name="ernteanteil"
@@ -256,7 +256,7 @@ export function Anmeldung() {
                   </div>
                 </label>
 
-                <label className="flex items-start gap-3 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-green-600 hover:bg-green-50 transition-colors">
+                <label className="flex items-start gap-3 p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary hover:bg-secondary/20 transition-colors">
                   <input
                     type="radio"
                     name="ernteanteil"
@@ -270,7 +270,7 @@ export function Anmeldung() {
                   </div>
                 </label>
 
-                <label className="flex items-start gap-3 p-4 border-2 border-green-600 bg-green-50 rounded-lg cursor-pointer hover:bg-green-100 transition-colors">
+                <label className="flex items-start gap-3 p-4 border-2 border-primary bg-secondary/20 rounded-lg cursor-pointer hover:bg-primary/10 transition-colors">
                   <input
                     type="radio"
                     name="ernteanteil"
@@ -281,7 +281,7 @@ export function Anmeldung() {
                   <div className="flex-1">
                     <p className="font-semibold text-gray-900">
                       Ganzjahrespaket (75€/Monat)
-                      <span className="ml-2 bg-green-600 text-white px-2 py-1 rounded-full text-xs">Empfohlen</span>
+                      <span className="ml-2 bg-primary text-white px-2 py-1 rounded-full text-xs">Empfohlen</span>
                     </p>
                     <p className="text-sm text-gray-600">Sommer- und Wintergemüse - Beide Höfe</p>
                   </div>
@@ -292,15 +292,15 @@ export function Anmeldung() {
                 <h4 className="font-semibold text-gray-900 mb-3">Zusatzanteile (optional)</h4>
                 <div className="space-y-3">
                   <label className="flex items-center gap-3">
-                    <input type="checkbox" className="w-5 h-5 text-green-600" />
+                    <input type="checkbox" className="w-5 h-5 text-primary" />
                     <span className="text-gray-700">Obst vom Hederer (20€/Monat)</span>
                   </label>
                   <label className="flex items-center gap-3">
-                    <input type="checkbox" className="w-5 h-5 text-green-600" />
+                    <input type="checkbox" className="w-5 h-5 text-primary" />
                     <span className="text-gray-700">Käse von Kerschbaum (15€/Monat)</span>
                   </label>
                   <label className="flex items-center gap-3">
-                    <input type="checkbox" className="w-5 h-5 text-green-600" />
+                    <input type="checkbox" className="w-5 h-5 text-primary" />
                     <span className="text-gray-700">Eier Gallini Fellici (8€/Monat)</span>
                   </label>
                 </div>
@@ -309,7 +309,7 @@ export function Anmeldung() {
 
             {/* Depot wählen */}
             <div className="mb-8 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl mb-6 text-green-900">Depot wählen</h3>
+              <h3 className="text-2xl mb-6 text-foreground">Depot wählen</h3>
               
               <div className="mb-4">
                 <label className="block text-sm font-semibold text-gray-900 mb-2">
@@ -317,7 +317,7 @@ export function Anmeldung() {
                 </label>
                 <select
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 >
                   <option value="">Bitte wählen...</option>
                   <option value="innenstadt">Depot Innenstadt - Donnerstag 16-19 Uhr</option>
@@ -331,29 +331,29 @@ export function Anmeldung() {
 
             {/* Nachricht */}
             <div className="mb-8 pt-8 border-t border-gray-200">
-              <h3 className="text-2xl mb-6 text-green-900">Nachricht (optional)</h3>
+              <h3 className="text-2xl mb-6 text-foreground">Nachricht (optional)</h3>
               
               <textarea
                 rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="Hast du Fragen oder Anmerkungen? Schreib uns hier..."
               ></textarea>
             </div>
 
             {/* Teilnahmevereinbarung */}
             <div className="mb-8 pt-8 border-t border-gray-200">
-              <div className="bg-green-50 p-6 rounded-lg mb-6">
+              <div className="bg-secondary/20 p-6 rounded-lg mb-6">
                 <div className="flex items-start gap-3">
-                  <FileText className="w-6 h-6 text-green-700 flex-shrink-0 mt-1" />
+                  <FileText className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-green-900 mb-2">Teilnahmevereinbarung</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Teilnahmevereinbarung</h4>
                     <p className="text-sm text-gray-700 mb-3">
                       Bitte lies die Teilnahmevereinbarung durch und akzeptiere sie, um die 
                       Anmeldung abzuschließen.
                     </p>
                     <a 
                       href="#" 
-                      className="text-green-700 hover:text-green-800 text-sm underline"
+                      className="text-primary hover:text-foreground text-sm underline"
                     >
                       Teilnahmevereinbarung als PDF herunterladen
                     </a>
@@ -365,7 +365,7 @@ export function Anmeldung() {
                 <input 
                   type="checkbox" 
                   required 
-                  className="w-5 h-5 text-green-600 mt-1"
+                  className="w-5 h-5 text-primary mt-1"
                 />
                 <span className="text-gray-700">
                   Ich habe die Teilnahmevereinbarung gelesen und akzeptiere sie. *
@@ -376,7 +376,7 @@ export function Anmeldung() {
                 <input 
                   type="checkbox" 
                   required 
-                  className="w-5 h-5 text-green-600 mt-1"
+                  className="w-5 h-5 text-primary mt-1"
                 />
                 <span className="text-gray-700">
                   Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu. *
@@ -388,7 +388,7 @@ export function Anmeldung() {
             <div className="pt-6">
               <button
                 type="submit"
-                className="w-full bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg transition-colors text-lg"
+                className="w-full bg-primary hover:bg-primary text-white px-8 py-4 rounded-lg transition-colors text-lg"
               >
                 Verbindlich anmelden
               </button>
@@ -401,15 +401,15 @@ export function Anmeldung() {
       </section>
 
       {/* Weitere Infos */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-secondary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl mb-8 text-green-900 text-center">
+          <h2 className="text-3xl mb-8 text-foreground text-center">
             Häufig gestellte Fragen
           </h2>
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg mb-2 text-green-900">Wann kann ich starten?</h3>
+              <h3 className="text-lg mb-2 text-foreground">Wann kann ich starten?</h3>
               <p className="text-gray-700">
                 Der Einstieg ist zum Beginn der jeweiligen Saison möglich. Sommergemüse startet 
                 im Mai, Wintergemüse im November. Bei freien Plätzen ist auch ein Einstieg während 
@@ -418,7 +418,7 @@ export function Anmeldung() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg mb-2 text-green-900">Wie lange bin ich gebunden?</h3>
+              <h3 className="text-lg mb-2 text-foreground">Wie lange bin ich gebunden?</h3>
               <p className="text-gray-700">
                 Die Mitgliedschaft läuft für eine Saison (6 Monate). Eine Kündigung ist mit 4 Wochen 
                 Kündigungsfrist zum Saisonende möglich. Das Ganzjahrespaket verlängert sich automatisch, 
@@ -427,7 +427,7 @@ export function Anmeldung() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg mb-2 text-green-900">Kann ich auch verschenken oder spenden?</h3>
+              <h3 className="text-lg mb-2 text-foreground">Kann ich auch verschenken oder spenden?</h3>
               <p className="text-gray-700">
                 Ja! Wenn du im Urlaub bist oder deine Ernte nicht abholen kannst, darfst du deinen 
                 Anteil gerne an Freunde weitergeben oder für unseren Spendentopf zur Verfügung stellen.

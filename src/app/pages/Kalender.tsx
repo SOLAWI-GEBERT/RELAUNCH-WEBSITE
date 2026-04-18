@@ -79,7 +79,7 @@ export function Kalender() {
 
   const eventTypes = [
     { name: "Alle", color: "bg-gray-600" },
-    { name: "Hofaktion", color: "bg-green-600" },
+    { name: "Hofaktion", color: "bg-primary" },
     { name: "Workshop", color: "bg-blue-600" },
     { name: "Veranstaltung", color: "bg-purple-600" },
     { name: "Info-Veranstaltung", color: "bg-orange-600" },
@@ -115,7 +115,7 @@ export function Kalender() {
       </section>
 
       {/* Filter & Legend */}
-      <section className="py-8 bg-green-50">
+      <section className="py-8 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-3 justify-center">
             {eventTypes.map((type) => (
@@ -140,9 +140,9 @@ export function Kalender() {
                   <div className="flex flex-col md:flex-row md:items-start gap-6">
                     {/* Date Badge */}
                     <div className="flex-shrink-0">
-                      <div className="bg-green-100 rounded-lg p-4 text-center min-w-[100px]">
-                        <Calendar className="w-6 h-6 text-green-700 mx-auto mb-2" />
-                        <div className="text-sm text-green-900 font-semibold">
+                      <div className="bg-primary/10 rounded-lg p-4 text-center min-w-[100px]">
+                        <Calendar className="w-6 h-6 text-primary mx-auto mb-2" />
+                        <div className="text-sm text-foreground font-semibold">
                           {event.date}
                         </div>
                       </div>
@@ -151,7 +151,7 @@ export function Kalender() {
                     {/* Event Details */}
                     <div className="flex-1">
                       <div className="flex flex-wrap items-start gap-3 mb-3">
-                        <h3 className="text-2xl text-green-900 flex-1">
+                        <h3 className="text-2xl text-foreground flex-1">
                           {event.title}
                         </h3>
                         <span className={`${getEventColor(event.type)} text-white px-3 py-1 rounded-full text-sm`}>
@@ -165,7 +165,7 @@ export function Kalender() {
 
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div className="flex items-start gap-2">
-                          <Clock className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
+                          <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-sm font-semibold text-gray-900">Zeit</p>
                             <p className="text-sm text-gray-700">{event.time}</p>
@@ -173,7 +173,7 @@ export function Kalender() {
                         </div>
 
                         <div className="flex items-start gap-2">
-                          <MapPin className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
+                          <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-sm font-semibold text-gray-900">Ort</p>
                             <p className="text-sm text-gray-700">{event.location}</p>
@@ -181,7 +181,7 @@ export function Kalender() {
                         </div>
 
                         <div className="flex items-start gap-2">
-                          <Users className="w-5 h-5 text-green-700 flex-shrink-0 mt-0.5" />
+                          <Users className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                           <div>
                             <p className="text-sm font-semibold text-gray-900">Teilnehmer</p>
                             <p className="text-sm text-gray-700">{event.spots}</p>
@@ -190,7 +190,7 @@ export function Kalender() {
                       </div>
 
                       <div className="mt-4">
-                        <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+                        <button className="bg-primary hover:bg-primary text-white px-6 py-2 rounded-lg transition-colors">
                           Anmelden
                         </button>
                       </div>
@@ -204,35 +204,35 @@ export function Kalender() {
       </section>
 
       {/* Anlieferung Info */}
-      <section className="py-20 bg-green-50">
+      <section className="py-20 bg-secondary/20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl mb-8 text-green-900 text-center">
+          <h2 className="text-4xl mb-8 text-foreground text-center">
             Anlieferung von Ernteteilen
           </h2>
           
           <div className="bg-white p-8 rounded-lg shadow-md">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-2xl mb-4 text-green-900 flex items-center gap-2">
+                <h3 className="text-2xl mb-4 text-foreground flex items-center gap-2">
                   <Sprout className="w-6 h-6" />
                   Sommergemüse (Reimehof)
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-green-700 flex-shrink-0 mt-1" />
+                    <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Saison</p>
                       <p className="text-gray-700">Mai bis Oktober</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-green-700 flex-shrink-0 mt-1" />
+                    <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Liefertag</p>
                       <p className="text-gray-700">Jeden Donnerstag</p>
                     </div>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg mt-4">
+                  <div className="bg-secondary/20 p-4 rounded-lg mt-4">
                     <p className="text-sm text-gray-700">
                       Die genauen Abholzeiten variieren je nach Depot. 
                       In der Regel zwischen 15:00 und 19:00 Uhr.
@@ -242,26 +242,26 @@ export function Kalender() {
               </div>
 
               <div>
-                <h3 className="text-2xl mb-4 text-green-900 flex items-center gap-2">
+                <h3 className="text-2xl mb-4 text-foreground flex items-center gap-2">
                   <Sprout className="w-6 h-6" />
                   Wintergemüse (Biohof Walz)
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
-                    <Calendar className="w-5 h-5 text-green-700 flex-shrink-0 mt-1" />
+                    <Calendar className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Saison</p>
                       <p className="text-gray-700">November bis April</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Clock className="w-5 h-5 text-green-700 flex-shrink-0 mt-1" />
+                    <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <p className="font-semibold text-gray-900">Liefertag</p>
                       <p className="text-gray-700">Jeden Freitag</p>
                     </div>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg mt-4">
+                  <div className="bg-secondary/20 p-4 rounded-lg mt-4">
                     <p className="text-sm text-gray-700">
                       Die genauen Abholzeiten variieren je nach Depot. 
                       In der Regel zwischen 15:00 und 19:00 Uhr.
@@ -272,18 +272,18 @@ export function Kalender() {
             </div>
 
             <div className="mt-8 pt-8 border-t border-gray-200">
-              <h3 className="text-xl mb-4 text-green-900">Wichtige Hinweise</h3>
+              <h3 className="text-xl mb-4 text-foreground">Wichtige Hinweise</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-700 rounded-full flex-shrink-0 mt-2"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
                   <span>Bitte hole deine Ernteanteile regelmäßig ab. Nicht abgeholte Anteile werden am Folgetag verteilt.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-700 rounded-full flex-shrink-0 mt-2"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
                   <span>Bei Urlaub oder Verhinderung kannst du deinen Anteil verschenken oder spenden.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-green-700 rounded-full flex-shrink-0 mt-2"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
                   <span>Die Zusammensetzung variiert je nach Saison und Ernte - das macht es spannend!</span>
                 </li>
               </ul>
@@ -293,16 +293,16 @@ export function Kalender() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-green-700 text-white">
+      <section className="py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl mb-6">
             Möchtest du bei einer Aktion dabei sein?
           </h2>
-          <p className="text-xl mb-8 text-green-50">
+          <p className="text-xl mb-8 text-white/90">
             Melde dich für Veranstaltungen an oder werde Mitglied, um an allen Aktionen teilzunehmen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-700 hover:bg-green-50 px-8 py-4 rounded-lg transition-colors">
+            <button className="bg-white text-primary hover:bg-secondary/20 px-8 py-4 rounded-lg transition-colors">
               Newsletter abonnieren
             </button>
             <button className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg transition-colors">
