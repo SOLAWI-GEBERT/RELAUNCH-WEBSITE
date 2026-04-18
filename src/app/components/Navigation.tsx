@@ -27,13 +27,13 @@ export function Navigation() {
       title: "Start",
       path: "/",
       subItems: [
-        { title: "Kurz erklärt: Solawi in 60 Sekunden", path: "/#solawi-60-sekunden" },
+        { title: "SoLaWi in 60 Sekunden", path: "/#solawi-60-sekunden" },
         { title: "So funktioniert's", path: "/#so-funktionierts" },
         { title: "Was bekomme ich?", path: "/#was-bekomme-ich" },
-        { title: "Kosten & Beitragsmodell", path: "/#kosten-beitragsmodell" },
-        { title: "Depot finden", path: "/#depot-finden" },
+        { title: "Was kostet das?", path: "/#kosten-beitragsmodell" },
+        { title: "Depot in deiner Nähe", path: "/#depot-finden" },
         { title: "Häufige Fragen", path: "/#faq" },
-        { title: "Aktuelles diese Woche", path: "/#aktuelles" },
+        { title: "Aktuelles", path: "/#aktuelles" },
       ],
     },
     {
@@ -45,36 +45,10 @@ export function Navigation() {
           path: "#",
           isCategory: true,
           subItems: [
-            {
-              title: "Demeterhof Hederer (Sommergemüse & Obst)",
-              path: "/hoefe-und-ernteanteile#hederer",
-              subItems: [
-                { title: "Sommergemüse", path: "/hoefe-und-ernteanteile#hederer-sommer" },
-                { title: "Obst & Säfte", path: "/hoefe-und-ernteanteile#hederer-obst" },
-              ]
-            },
-            {
-              title: "Biohof Tristan (Wintergemüse)",
-              path: "/hoefe-und-ernteanteile#tristans",
-              subItems: [
-                { title: "Wintergemüse", path: "/hoefe-und-ernteanteile#tristans-winter" },
-              ]
-            },
-            {
-              title: "Demeterhof Walz (Fleisch, Eier & Ur-Getreide)",
-              path: "/hoefe-und-ernteanteile#walz",
-              subItems: [
-                { title: "More Huhn..", path: "/hoefe-und-ernteanteile#walz-huhn" },
-                { title: "More Getreide", path: "/hoefe-und-ernteanteile#walz-getreide" },
-              ]
-            },
-            {
-              title: "Kirschgarten (Bio-Beeren)",
-              path: "/hoefe-und-ernteanteile#kirschgarten",
-              subItems: [
-                { title: "Beeren", path: "/hoefe-und-ernteanteile#kirschgarten-beeren" },
-              ]
-            },
+            { title: "Demeterhof Hederer (Sommergemüse & Obst)", path: "/hoefe-und-ernteanteile#hederer" },
+            { title: "Biohof Tristan (Wintergemüse)", path: "/hoefe-und-ernteanteile#tristans" },
+            { title: "Demeterhof Walz (Fleisch, Eier & Ur-Getreide)", path: "/hoefe-und-ernteanteile#walz" },
+            { title: "Kirschgarten (Bio-Beeren)", path: "/hoefe-und-ernteanteile#kirschgarten" },
           ]
         },
         {

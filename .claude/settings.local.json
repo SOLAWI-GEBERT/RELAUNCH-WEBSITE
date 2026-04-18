@@ -32,7 +32,8 @@
       "Bash(pip3 install:*)",
       "Bash(git add:*)",
       "Bash(git commit -m ':*)",
-      "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.png /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.gif)"
+      "Bash(ls /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.jpg /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.png /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/public/*.gif)",
+      "Bash(grep -v '^\\\\-\\\\-$')"
     ]
   }
 }
