@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, Calendar, MapPin, Sprout, HelpCircle } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Sprout, HelpCircle, Leaf, Apple, Wheat, Cherry, Egg, Carrot, HandCoins, Users, Truck, Mail } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
 import {
   Accordion,
@@ -48,6 +48,49 @@ export function Home() {
                 className="h-[350px] md:h-[450px] object-contain drop-shadow-xl hover-wiggle"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SoLaWi in 60 Sekunden */}
+      <section id="solawi-60-sekunden" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl mb-4 text-foreground">
+              SoLaWi in <span className="underline-sketch">60 Sekunden</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <ScrollReveal delay={0}>
+              <div className="bg-solawi-salmon p-8 hover-tilt h-full text-center">
+                <HandCoins className="w-12 h-12 text-cta mx-auto mb-6" />
+                <h3 className="text-xl mb-4 text-foreground font-accent">Du bezahlst den Hof, nicht das Produkt</h3>
+                <p className="text-gray-700">
+                  Du finanzierst die Landwirtschaft direkt, nicht einzelne Tomaten.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <div className="bg-solawi-orange p-8 hover-tilt h-full text-center">
+                <Truck className="w-12 h-12 text-cta mx-auto mb-6" />
+                <h3 className="text-xl mb-4 text-foreground font-accent">Saisonal & regional — direkt vom Acker</h3>
+                <p className="text-gray-700">
+                  Bio-Lebensmittel aus der Region, ohne Umwege.
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <div className="bg-solawi-mauve p-8 hover-tilt h-full text-center">
+                <Users className="w-12 h-12 text-cta mx-auto mb-6" />
+                <h3 className="text-xl mb-4 text-foreground font-accent">Gemeinsam tragen wir das Risiko</h3>
+                <p className="text-gray-700">
+                  Gute Ernte = mehr für alle. Schlechte Ernte = weniger, aber fair geteilt.
+                </p>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -144,7 +187,77 @@ export function Home() {
         </div>
       </section>
 
-      {/* Unsere Höfe — echte Fotos + Signature-Icon Overlay */}
+      {/* Was bekomme ich? — Produktkarten */}
+      <section id="was-bekomme-ich" className="py-24 bg-solawi-blue wave-top wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl mb-4 text-foreground">
+              Was <span className="underline-sketch">bekomme</span> ich?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Keine Supermarkt-Einheitskiste — sondern das, was die Natur gerade hergibt.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ScrollReveal delay={0}>
+              <Link to="/hoefe-und-ernteanteile#hederer-sommer" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Carrot className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Sommergemüse</h3>
+                <p className="text-sm text-gray-500 mb-2">Demeterhof Hederer</p>
+                <p className="text-gray-600 text-sm">Tomaten, Zucchini, Paprika und mehr — frisch vom Feld.</p>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.05}>
+              <Link to="/hoefe-und-ernteanteile#tristans-winter" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Leaf className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Wintergemüse</h3>
+                <p className="text-sm text-gray-500 mb-2">Biohof Tristan</p>
+                <p className="text-gray-600 text-sm">Kohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.</p>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <Link to="/hoefe-und-ernteanteile#hederer-obst" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Apple className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Obst & Säfte</h3>
+                <p className="text-sm text-gray-500 mb-2">Demeterhof Hederer</p>
+                <p className="text-gray-600 text-sm">Äpfel, Birnen, Zwetschgen und hausgemachte Säfte.</p>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.15}>
+              <Link to="/hoefe-und-ernteanteile#walz-huhn" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Egg className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Fleisch & Eier</h3>
+                <p className="text-sm text-gray-500 mb-2">Demeterhof Walz</p>
+                <p className="text-gray-600 text-sm">Weiderind, Hähnchen und frische Eier aus artgerechter Haltung.</p>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.2}>
+              <Link to="/hoefe-und-ernteanteile#walz-getreide" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Wheat className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Ur-Getreide</h3>
+                <p className="text-sm text-gray-500 mb-2">Demeterhof Walz</p>
+                <p className="text-gray-600 text-sm">Emmer, Einkorn und Dinkel — alte Sorten, neu entdeckt.</p>
+              </Link>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.25}>
+              <Link to="/hoefe-und-ernteanteile#kirschgarten-beeren" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Cherry className="w-10 h-10 text-cta mb-4" />
+                <h3 className="text-lg mb-1 text-foreground font-accent group-hover:text-cta transition-colors">Bio-Beeren</h3>
+                <p className="text-sm text-gray-500 mb-2">Kirschgarten</p>
+                <p className="text-gray-600 text-sm">Erdbeeren, Himbeeren und Johannisbeeren in EU-Bio-Qualität.</p>
+              </Link>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Unsere Höfe — 4 aktuelle Höfe im 2x2 Grid */}
       <section className="py-24 bg-solawi-mauve wave-top wave-bottom relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -156,20 +269,19 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <ScrollReveal delay={0}>
-              <div className="bg-white overflow-hidden shadow-lg hover-tilt">
-                <div className="h-48 overflow-hidden relative">
-                  <img src="/fotos/reimehof-ziege.jpg" alt="Reimehof" className="w-full h-full object-cover" />
-                  <img src="/inline-hof.jpg" alt="" className="absolute -bottom-3 -right-2 w-14 h-14 rotate-6 drop-shadow-md" />
-                </div>
+              <div className="bg-white overflow-hidden shadow-lg hover-tilt h-full">
                 <div className="p-6">
-                  <h3 className="text-xl mb-2 text-foreground font-accent">Reimehof</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl text-foreground font-accent">Demeterhof Hederer</h3>
+                    <span className="badge-frech text-xs">demeter</span>
+                  </div>
                   <p className="text-gray-600 mb-4">
-                    Sommergemüse in Bio-Qualität aus regionalem Anbau
+                    Sommergemüse & Obst
                   </p>
                   <Link
-                    to="/hoefe-und-ernteanteile#reimehof"
+                    to="/hoefe-und-ernteanteile#hederer"
                     className="text-cta hover:text-cta-hover inline-flex items-center gap-1 font-semibold hover-underline-pink"
                   >
                     Mehr erfahren
@@ -180,15 +292,35 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <div className="bg-white overflow-hidden shadow-lg hover-tilt">
-                <div className="h-48 overflow-hidden relative">
-                  <img src="/fotos/walz-weide.jpg" alt="Biohof Walz" className="w-full h-full object-cover" />
-                  <img src="/inline-kuerbis.jpg" alt="" className="absolute -bottom-3 -right-2 w-14 h-14 -rotate-6 drop-shadow-md" />
-                </div>
+              <div className="bg-white overflow-hidden shadow-lg hover-tilt h-full">
                 <div className="p-6">
-                  <h3 className="text-xl mb-2 text-foreground font-accent">Biohof Walz</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl text-foreground font-accent">Biohof Tristan</h3>
+                    <span className="badge-frech text-xs">Bioland</span>
+                  </div>
                   <p className="text-gray-600 mb-4">
-                    Wintergemüse und Lagergemüse für die kalte Jahreszeit
+                    Wintergemüse
+                  </p>
+                  <Link
+                    to="/hoefe-und-ernteanteile#tristans"
+                    className="text-cta hover:text-cta-hover inline-flex items-center gap-1 font-semibold hover-underline-pink"
+                  >
+                    Mehr erfahren
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.15}>
+              <div className="bg-white overflow-hidden shadow-lg hover-tilt h-full">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl text-foreground font-accent">Demeterhof Walz</h3>
+                    <span className="badge-frech text-xs">demeter</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Fleisch, Eier & Ur-Getreide
                   </p>
                   <Link
                     to="/hoefe-und-ernteanteile#walz"
@@ -202,18 +334,17 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-white overflow-hidden shadow-lg hover-tilt">
-                <div className="h-48 overflow-hidden relative">
-                  <img src="/fotos/lillinghof-obstbau.jpg" alt="Obst vom Hederer" className="w-full h-full object-cover" />
-                  <img src="/depot.png" alt="" className="absolute -bottom-2 -right-1 w-12 h-12 rotate-12 drop-shadow-md" />
-                </div>
+              <div className="bg-white overflow-hidden shadow-lg hover-tilt h-full">
                 <div className="p-6">
-                  <h3 className="text-xl mb-2 text-foreground font-accent">Obst vom Hederer</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl text-foreground font-accent">Kirschgarten</h3>
+                    <span className="badge-frech text-xs">EU-Bio</span>
+                  </div>
                   <p className="text-gray-600 mb-4">
-                    Frisches Obst aus biologischem Anbau direkt vom Erzeuger
+                    Bio-Beeren
                   </p>
                   <Link
-                    to="/hoefe-und-ernteanteile#hederer"
+                    to="/hoefe-und-ernteanteile#kirschgarten"
                     className="text-cta hover:text-cta-hover inline-flex items-center gap-1 font-semibold hover-underline-pink"
                   >
                     Mehr erfahren
@@ -227,7 +358,7 @@ export function Home() {
       </section>
 
       {/* So funktioniert's — Ablauf-Illustrationen statt Nummernkreise */}
-      <section className="py-24 mt-8">
+      <section id="so-funktionierts" className="py-24 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl mb-4 text-foreground">
@@ -293,101 +424,156 @@ export function Home() {
         </div>
       </section>
 
-      {/* Aktuelle Veranstaltungen */}
-      <section className="py-24 bg-solawi-orange wave-top relative z-10">
+      {/* Kosten & Beitragsmodell */}
+      <section id="kosten-beitragsmodell" className="py-24 bg-solawi-salmon wave-top wave-bottom relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h2 className="text-4xl mb-4 text-foreground">
-                Aktuelle Veranstaltungen
-              </h2>
-              <p className="text-xl text-gray-700">
-                Komm vorbei und lerne uns kennen!
-              </p>
-            </div>
-            <Link
-              to="/kalender"
-              className="hidden md:inline-flex items-center gap-2 text-cta hover:text-cta-hover font-accent hover-underline-pink"
-            >
-              Alle Termine
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl mb-4 text-foreground">
+              Was <span className="underline-sketch">kostet</span> das?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Kein Gewinnaufschlag, keine Handelsspanne. Dein Beitrag deckt, was der Hof zum Wirtschaften braucht.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <ScrollReveal delay={0}>
-              <div className="bg-white p-6 shadow-md hover-tilt">
-                <div className="flex items-start gap-4">
-                  <div className="bg-cta/10 p-3 flex-shrink-0">
-                    <Calendar className="w-6 h-6 text-cta" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-gray-500 mb-1">15. März 2026</div>
-                    <h3 className="text-lg mb-2 text-foreground font-accent">Hofaktion Reimehof</h3>
-                    <p className="text-gray-600 text-sm mb-3">
-                      Gemeinsames Pflanzen und Kennenlernen
-                    </p>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <MapPin className="w-4 h-4" />
-                      <span>Reimehof, Musterstadt</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white p-6 shadow-md hover-tilt text-center h-full">
+                <Wheat className="w-8 h-8 text-cta mx-auto mb-3" />
+                <p className="text-3xl font-accent text-foreground mb-1">ab 6,90€</p>
+                <p className="text-sm text-gray-500 mb-2">pro Monat</p>
+                <p className="text-gray-700 font-accent">Ur-Getreide</p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.05}>
+              <div className="bg-white p-6 shadow-md hover-tilt text-center h-full">
+                <Cherry className="w-8 h-8 text-cta mx-auto mb-3" />
+                <p className="text-3xl font-accent text-foreground mb-1">ab 38€</p>
+                <p className="text-sm text-gray-500 mb-2">pro Monat</p>
+                <p className="text-gray-700 font-accent">Bio-Beeren</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <div className="bg-white p-6 shadow-md hover-tilt">
-                <div className="flex items-start gap-4">
-                  <div className="bg-cta/10 p-3 flex-shrink-0">
-                    <Sprout className="w-6 h-6 text-cta" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-gray-500 mb-1">22. März 2026</div>
-                    <h3 className="text-lg mb-2 text-foreground font-accent">Info-Veranstaltung</h3>
-                    <p className="text-gray-600 text-sm mb-3">
-                      Erfahre mehr über Solidarische Landwirtschaft
-                    </p>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <MapPin className="w-4 h-4" />
-                      <span>Online via Zoom</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="bg-white p-6 shadow-md hover-tilt text-center h-full">
+                <Leaf className="w-8 h-8 text-cta mx-auto mb-3" />
+                <p className="text-3xl font-accent text-foreground mb-1">ab 72,10€</p>
+                <p className="text-sm text-gray-500 mb-2">pro Monat</p>
+                <p className="text-gray-700 font-accent">Wintergemüse <span className="text-sm text-gray-500">(halber Anteil)</span></p>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.2}>
-              <div className="bg-white p-6 shadow-md hover-tilt">
-                <div className="flex items-start gap-4">
-                  <div className="bg-cta/10 p-3 flex-shrink-0">
-                    <Calendar className="w-6 h-6 text-cta" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm text-gray-500 mb-1">5. April 2026</div>
-                    <h3 className="text-lg mb-2 text-foreground font-accent">Ernte-Fest</h3>
-                    <p className="text-gray-600 text-sm mb-3">
-                      Gemeinsames Feiern und Ernten
-                    </p>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <MapPin className="w-4 h-4" />
-                      <span>Biohof Walz</span>
-                    </div>
-                  </div>
-                </div>
+            <ScrollReveal delay={0.15}>
+              <div className="bg-white p-6 shadow-md hover-tilt text-center h-full">
+                <Carrot className="w-8 h-8 text-cta mx-auto mb-3" />
+                <p className="text-3xl font-accent text-foreground mb-1">bis 136,20€</p>
+                <p className="text-sm text-gray-500 mb-2">pro Monat</p>
+                <p className="text-gray-700 font-accent">Wintergemüse <span className="text-sm text-gray-500">(ganzer Anteil)</span></p>
               </div>
             </ScrollReveal>
           </div>
 
-          <div className="text-center mt-8 md:hidden">
-            <Link
-              to="/kalender"
-              className="inline-flex items-center gap-2 text-cta hover:text-cta-hover font-accent"
-            >
-              Alle Termine
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          <ScrollReveal>
+            <div className="max-w-2xl mx-auto text-center">
+              <p className="text-lg text-gray-700 mb-8">
+                Bei manchen Höfen bestimmst du bei der Jahreshauptversammlung mit, was du zahlen kannst.
+                So entsteht ein sozialer Ausgleich.
+              </p>
+              <Link
+                to="/mitmachen#ernteteile"
+                className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors text-lg font-accent"
+              >
+                Alle Ernteanteile im Überblick
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Depot finden */}
+      <section id="depot-finden" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl mb-4 text-foreground">
+              Depot in <span className="underline-sketch">deiner Nähe</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Hole deine Ernte wöchentlich an einem unserer Depots ab.
+            </p>
           </div>
+
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-12">
+            <ScrollReveal delay={0}>
+              <div className="bg-solawi-green p-8 hover-tilt">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-cta" />
+                  <h3 className="text-xl text-foreground font-accent">Nürnberg</h3>
+                </div>
+                <ul className="space-y-2 text-gray-700">
+                  <li>St. Peter</li>
+                  <li>Stadtpark</li>
+                  <li>Die Wiese</li>
+                  <li>Johannis</li>
+                  <li>Gostenhof</li>
+                  <li>AKi</li>
+                  <li>Altenfurt</li>
+                </ul>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <div className="bg-solawi-orange p-8 hover-tilt">
+                <div className="flex items-center gap-3 mb-4">
+                  <MapPin className="w-6 h-6 text-cta" />
+                  <h3 className="text-xl text-foreground font-accent">Fürth</h3>
+                </div>
+                <ul className="space-y-2 text-gray-700">
+                  <li>Tataa</li>
+                  <li>Spiegelfabrik</li>
+                </ul>
+              </div>
+            </ScrollReveal>
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center">
+              <Link
+                to="/lieferung-kalender#karte"
+                className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors text-lg font-accent"
+              >
+                Alle Depots auf der Karte
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Aktuelles */}
+      <section id="aktuelles" className="py-24 bg-solawi-orange wave-top relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl mb-4 text-foreground">
+              Aktuelles
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              Termine für Hofaktionen, Mitmachaktionen und Veranstaltungen erfährst du über unseren Newsletter und die Hof-Post per E-Mail.
+            </p>
+          </div>
+
+          <ScrollReveal>
+            <div className="text-center">
+              <Link
+                to="/kontakt-anmeldung"
+                className="inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 transition-colors text-lg font-accent"
+              >
+                <Mail className="w-5 h-5" />
+                Zum Newsletter anmelden
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
