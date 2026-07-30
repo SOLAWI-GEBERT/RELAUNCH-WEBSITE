@@ -3,6 +3,8 @@ import { Home } from "./pages/Home";
 import { SolidarischeLandwirtschaft } from "./pages/SolidarischeLandwirtschaft";
 import { HoefeUndErnteanteile } from "./pages/HoefeUndErnteanteile";
 import { Mitmachen } from "./pages/Mitmachen";
+import { SoFunktionierts } from "./pages/SoFunktionierts";
+import { HaeufigeFragen } from "./pages/HaeufigeFragen";
 import { Kalender } from "./pages/Kalender";
 import { Anmeldung } from "./pages/Anmeldung";
 import { LieferungKalender } from "./pages/LieferungKalender";
@@ -20,6 +22,8 @@ export const router = createBrowserRouter([
       { path: "solidarische-landwirtschaft", Component: SolidarischeLandwirtschaft },
       { path: "hoefe-und-ernteanteile", Component: HoefeUndErnteanteile },
       { path: "mitmachen", Component: Mitmachen },
+      { path: "so-funktionierts", Component: SoFunktionierts },
+      { path: "haeufige-fragen", Component: HaeufigeFragen },
       { path: "kalender", Component: Kalender },
       { path: "anmeldung", Component: Anmeldung },
       { path: "lieferung-kalender", Component: LieferungKalender },

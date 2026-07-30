@@ -10,6 +10,7 @@ import {
   Info,
   Cherry,
   Mail,
+  Euro,
 } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
@@ -23,15 +24,6 @@ function Badge({ children, color = "green" }: { children: React.ReactNode; color
     <span className={`inline-block px-2 py-0.5 text-xs font-semibold ${colors[color]}`}>
       {children}
     </span>
-  );
-}
-
-function PriceRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex justify-between py-1">
-      <span className="text-gray-700">{label}</span>
-      <span className="font-semibold text-foreground">{value}</span>
-    </div>
   );
 }
 
@@ -110,14 +102,9 @@ export function HoefeUndErnteanteile() {
                   <CalendarDays className="w-5 h-5 text-primary" />
                   <span>Einstiegspunkte: 01.04., 01.06., 01.08.</span>
                 </div>
-
-                <div className="bg-white p-4 rounded-lg mt-4">
-                  <PriceRow label="Richtpreis" value="105,00 €/M" />
-                  <PriceRow label="Logistikbeitrag" value="23,00 €/M" />
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <PriceRow label="Gesamt" value="128,00 €/M" />
-                  </div>
-                  <p className="text-sm text-gray-500 mt-2">Bieterrunde</p>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Euro className="w-5 h-5 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung (Bieterrunde)</span>
                 </div>
               </div>
 
@@ -156,14 +143,9 @@ export function HoefeUndErnteanteile() {
                   <CalendarDays className="w-5 h-5 text-primary" />
                   <span>Einstieg: 01.07., 01.10.</span>
                 </div>
-
-                <div className="bg-white p-4 rounded-lg mt-4">
-                  <PriceRow label="Richtpreis" value="37,00 €/M" />
-                  <PriceRow label="Logistikbeitrag" value="2,50 €/M" />
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <PriceRow label="Gesamt" value="39,50 €/M" />
-                  </div>
-                  <p className="text-sm text-gray-500 mt-2">Bieterrunde</p>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Euro className="w-5 h-5 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung (Bieterrunde)</span>
                 </div>
               </div>
 
@@ -242,41 +224,33 @@ export function HoefeUndErnteanteile() {
                   <tr className="border-b-2 border-gray-200">
                     <th className="py-3 pr-4 text-foreground">Variante</th>
                     <th className="py-3 pr-4 text-foreground">Für</th>
-                    <th className="py-3 pr-4 text-foreground">Zyklus</th>
-                    <th className="py-3 pr-4 text-foreground text-right">Richtpreis</th>
-                    <th className="py-3 pr-4 text-foreground text-right">Logistik</th>
-                    <th className="py-3 text-foreground text-right">Gesamt</th>
+                    <th className="py-3 text-foreground">Zyklus</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-700">
                   <tr className="border-b border-gray-100">
                     <td className="py-3 pr-4 font-semibold">Ganzer Anteil</td>
                     <td className="py-3 pr-4">2–4 Pers.</td>
-                    <td className="py-3 pr-4">wöchentlich</td>
-                    <td className="py-3 pr-4 text-right">122,20 €</td>
-                    <td className="py-3 pr-4 text-right">14,00 €</td>
-                    <td className="py-3 text-right font-semibold">136,20 €/M</td>
+                    <td className="py-3">wöchentlich</td>
                   </tr>
                   <tr className="border-b border-gray-100">
                     <td className="py-3 pr-4 font-semibold">Halber Anteil</td>
                     <td className="py-3 pr-4">1–2 Pers.</td>
-                    <td className="py-3 pr-4">14-tägig</td>
-                    <td className="py-3 pr-4 text-right">61,10 €</td>
-                    <td className="py-3 pr-4 text-right">11,00 €</td>
-                    <td className="py-3 text-right font-semibold">72,10 €/M</td>
+                    <td className="py-3">14-tägig</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 font-semibold">Kleiner Anteil</td>
                     <td className="py-3 pr-4">1–2 Pers.</td>
-                    <td className="py-3 pr-4">wöchentlich</td>
-                    <td className="py-3 pr-4 text-right">85,54 €</td>
-                    <td className="py-3 pr-4 text-right">14,00 €</td>
-                    <td className="py-3 text-right font-semibold">99,54 €/M</td>
+                    <td className="py-3">wöchentlich</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
+            <div className="flex items-center gap-2 text-gray-700 mb-2">
+              <Euro className="w-5 h-5 text-primary" />
+              <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
+            </div>
             <p className="text-sm text-gray-600 mb-6">
               Probemonat: jeden Monat zum 1. möglich.
             </p>
@@ -357,18 +331,15 @@ export function HoefeUndErnteanteile() {
                   Bolognese. Wer Eier bezieht, übernimmt ganzheitliche Verantwortung
                   für Henne, Bruder und Ei.
                 </p>
-                <div className="bg-white p-4 rounded-lg">
-                  <PriceRow label="Richtpreis" value="15,00 €/M" />
-                  <PriceRow label="Logistikbeitrag" value="2,90 €/M" />
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <PriceRow label="Gesamt" value="17,90 €/M" />
-                  </div>
-                </div>
               </div>
               <div className="space-y-3 text-gray-700">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-primary" />
                   <span>2x pro Monat, ganzjährig</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Euro className="w-5 h-5 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                 </div>
                 <div className="h-[200px] rounded-lg overflow-hidden shadow-md">
                   <ImageWithFallback
@@ -388,12 +359,9 @@ export function HoefeUndErnteanteile() {
               <h4 className="text-xl mb-3 text-foreground">More..Bratgockerl</h4>
               <div className="space-y-2 text-sm text-gray-700">
                 <p>Freilandhaltung — nicht nach 30 Tagen geschlachtet, sondern artgerecht aufgezogen.</p>
-                <div className="bg-white p-3 rounded-lg mt-3">
-                  <PriceRow label="Richtpreis" value="8,00 €/M" />
-                  <PriceRow label="Logistik" value="1,00 €/M" />
-                  <div className="border-t border-gray-200 mt-1 pt-1">
-                    <PriceRow label="Gesamt" value="9,00 €/M" />
-                  </div>
+                <div className="flex items-center gap-2 mt-3">
+                  <Euro className="w-4 h-4 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                 </div>
                 <p className="text-gray-500">1x alle 4 Monate</p>
               </div>
@@ -407,12 +375,9 @@ export function HoefeUndErnteanteile() {
               </div>
               <div className="space-y-2 text-sm text-gray-700">
                 <p>500g/Monat, Aberdeen Angus. Weidehaltung, Muttertierhaltung, nur Raufutter.</p>
-                <div className="bg-white p-3 rounded-lg mt-3">
-                  <PriceRow label="Richtpreis" value="10,00 €/M" />
-                  <PriceRow label="Logistik" value="1,40 €/M" />
-                  <div className="border-t border-gray-200 mt-1 pt-1">
-                    <PriceRow label="Gesamt" value="11,40 €/M" />
-                  </div>
+                <div className="flex items-center gap-2 mt-3">
+                  <Euro className="w-4 h-4 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                 </div>
               </div>
             </div>
@@ -422,12 +387,9 @@ export function HoefeUndErnteanteile() {
               <h4 className="text-xl mb-3 text-foreground">More..Wurst</h4>
               <div className="space-y-2 text-sm text-gray-700">
                 <p>500g/Monat: Salami, Rinderschinken, Wienerle, Bratwürste, Pfefferbeißer u.v.m.</p>
-                <div className="bg-white p-3 rounded-lg mt-3">
-                  <PriceRow label="Richtpreis" value="15,00 €/M" />
-                  <PriceRow label="Logistik" value="2,00 €/M" />
-                  <div className="border-t border-gray-200 mt-1 pt-1">
-                    <PriceRow label="Gesamt" value="17,00 €/M" />
-                  </div>
+                <div className="flex items-center gap-2 mt-3">
+                  <Euro className="w-4 h-4 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                 </div>
                 <p className="text-gray-500">monatlich</p>
               </div>
@@ -443,13 +405,6 @@ export function HoefeUndErnteanteile() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <div className="bg-white p-4 rounded-lg mb-4">
-                  <PriceRow label="Richtpreis" value="6,00 €/M" />
-                  <PriceRow label="Logistikbeitrag" value="0,90 €/M" />
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <PriceRow label="Gesamt" value="6,90 €/M" />
-                  </div>
-                </div>
                 <div className="space-y-2 text-sm text-gray-700">
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4 text-primary" />
@@ -458,6 +413,10 @@ export function HoefeUndErnteanteile() {
                   <div className="flex items-center gap-2">
                     <Package className="w-4 h-4 text-primary" />
                     <span>1 kg individuell zusammenstellbar</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Euro className="w-4 h-4 text-primary" />
+                    <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                   </div>
                 </div>
               </div>
@@ -543,13 +502,9 @@ export function HoefeUndErnteanteile() {
                   <CalendarDays className="w-5 h-5 text-primary" />
                   <span>Einstieg: 01.07., 01.08., 01.09.</span>
                 </div>
-
-                <div className="bg-solawi-mauve/20 p-4 rounded-lg mt-4">
-                  <PriceRow label="Richtpreis" value="35,00 €/M" />
-                  <PriceRow label="Logistikbeitrag" value="3,00 €/M" />
-                  <div className="border-t border-gray-200 mt-2 pt-2">
-                    <PriceRow label="Gesamt" value="38,00 €/M" />
-                  </div>
+                <div className="flex items-center gap-2 text-gray-700">
+                  <Euro className="w-5 h-5 text-primary" />
+                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
                 </div>
 
                 <div className="mt-4 space-y-1 text-sm text-gray-600">

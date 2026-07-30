@@ -28,12 +28,7 @@ export function Navigation() {
       path: "/",
       subItems: [
         { title: "SoLaWi in 60 Sekunden", path: "/#solawi-60-sekunden" },
-        { title: "So funktioniert's", path: "/#so-funktionierts" },
         { title: "Was bekomme ich?", path: "/#was-bekomme-ich" },
-        { title: "Was kostet das?", path: "/#kosten-beitragsmodell" },
-        { title: "Depot in deiner Nähe", path: "/#depot-finden" },
-        { title: "Häufige Fragen", path: "/#faq" },
-        { title: "Aktuelles", path: "/#aktuelles" },
       ],
     },
     {
@@ -220,13 +215,6 @@ export function Navigation() {
                 )}
               </div>
             ))}
-            {/* Desktop CTA Button */}
-            <Link
-              to="/kontakt-anmeldung#anmeldung"
-              className="ml-4 bg-cta hover:bg-cta-hover text-white px-5 py-2 font-accent transition-colors text-sm"
-            >
-              Ernteteiler werden
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -373,13 +361,6 @@ export function Navigation() {
 
           {/* Mobile CTA */}
           <div className="mt-8 space-y-3">
-            <Link
-              to="/kontakt-anmeldung#anmeldung"
-              onClick={closeMobileMenu}
-              className="block w-full bg-cta hover:bg-cta-hover text-white text-center px-6 py-3 transition-colors font-accent"
-            >
-              Ernteteiler werden
-            </Link>
             <Link
               to="/lieferung-kalender#kalender"
               onClick={closeMobileMenu}
