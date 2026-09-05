@@ -168,7 +168,7 @@ export function SolidarischeLandwirtschaft() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Link
-              to="/hoefe-und-ernteanteile#hederer"
+              to="/ernteanteile/hederer-sommer"
               className="bg-solawi-salmon-light p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
@@ -184,7 +184,7 @@ export function SolidarischeLandwirtschaft() {
             </Link>
 
             <Link
-              to="/hoefe-und-ernteanteile#tristans"
+              to="/ernteanteile/tristans-winter"
               className="bg-solawi-green p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-green-700 px-2 py-0.5 rounded">
@@ -200,7 +200,7 @@ export function SolidarischeLandwirtschaft() {
             </Link>
 
             <Link
-              to="/hoefe-und-ernteanteile#walz"
+              to="/ernteanteile/walz-huhn"
               className="bg-solawi-mauve p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
@@ -216,7 +216,7 @@ export function SolidarischeLandwirtschaft() {
             </Link>
 
             <Link
-              to="/hoefe-und-ernteanteile#kirschgarten"
+              to="/ernteanteile/kirschgarten-beeren"
               className="bg-solawi-orange p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-emerald-600 px-2 py-0.5 rounded">

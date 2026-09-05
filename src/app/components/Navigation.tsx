@@ -32,26 +32,58 @@ export function Navigation() {
       ],
     },
     {
-      title: "Höfe & Ernteanteil",
-      path: "/hoefe-und-ernteanteile",
+      title: "Ernteanteile",
+      path: "/ernteanteile",
       subItems: [
         {
-          title: "Deine Höfe",
+          title: "Gemüse",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Demeterhof Hederer (Sommergemüse & Obst)", path: "/hoefe-und-ernteanteile#hederer" },
-            { title: "Biohof Tristan (Wintergemüse)", path: "/hoefe-und-ernteanteile#tristans" },
-            { title: "Demeterhof Walz (Fleisch, Eier & Ur-Getreide)", path: "/hoefe-und-ernteanteile#walz" },
-            { title: "Kirschgarten (Bio-Beeren)", path: "/hoefe-und-ernteanteile#kirschgarten" },
+            { title: "Sommergemüse (Demeterhof Hederer)", path: "/ernteanteile/hederer-sommer" },
+            { title: "Wintergemüse (Biohof Tristan)", path: "/ernteanteile/tristans-winter" },
           ]
         },
         {
-          title: "Deine Kooperationen",
+          title: "Obst",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Gallini Fellici", path: "/hoefe-und-ernteanteile#gallini-fellici" },
+            { title: "Obst & Säfte (Demeterhof Hederer)", path: "/ernteanteile/hederer-obst" },
+          ]
+        },
+        {
+          title: "Beeren",
+          path: "#",
+          isCategory: true,
+          subItems: [
+            { title: "Bio..Beeren (Kirschgarten)", path: "/ernteanteile/kirschgarten-beeren" },
+          ]
+        },
+        {
+          title: "Getreide",
+          path: "#",
+          isCategory: true,
+          subItems: [
+            { title: "More..Ur-Getreide (Demeterhof Walz)", path: "/ernteanteile/walz-getreide" },
+          ]
+        },
+        {
+          title: "Eier",
+          path: "#",
+          isCategory: true,
+          subItems: [
+            { title: "More..Huhn (Demeterhof Walz)", path: "/ernteanteile/walz-huhn" },
+          ]
+        },
+        {
+          title: "Fleisch",
+          path: "#",
+          isCategory: true,
+          subItems: [
+            { title: "More..Bratgockerl (Demeterhof Walz)", path: "/ernteanteile/walz-bratgockerl" },
+            { title: "More..Hack (Demeterhof Walz)", path: "/ernteanteile/walz-hack" },
+            { title: "More..Wurst (Demeterhof Walz)", path: "/ernteanteile/walz-wurst" },
           ]
         },
       ],
@@ -60,56 +92,35 @@ export function Navigation() {
       title: "Mitmachen",
       path: "/mitmachen",
       subItems: [
-        { title: "So wirst du Mitglied", path: "/mitmachen#ueberblick" },
-        { title: "Was erwartet dich?", path: "/mitmachen#erwartungen" },
         {
-          title: "Dein Beitrag",
+          title: "SoLaWi in Aktion",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Ernteanteile & Kosten", path: "/mitmachen#ernteteile" },
-            { title: "Teilnahmebedingungen", path: "/mitmachen#teilnahme" },
+            { title: "Zukünftige Events", path: "/mitmachen#events" },
+            { title: "Highlights", path: "/mitmachen#highlights" },
+            { title: "Engagement im Verein", path: "/mitmachen#engagement" },
           ]
         },
         {
-          title: "Dein Depot",
+          title: "SoLaWi in der Stadt",
           path: "#",
           isCategory: true,
           subItems: [
-            { title: "Wähle dein Depot", path: "/mitmachen#depots" },
-            { title: "Adressen, Zeiten & Karte", path: "/lieferung-kalender#karte" },
-          ]
-        },
-        {
-          title: "Dein Engagement",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Mitarbeit & Engagement", path: "/mitmachen#mitarbeit-engagement" },
-            { title: "Ehrenamtliche Rollen", path: "/mitmachen#rollen" },
-            { title: "Unser Verein", path: "/mitmachen#vereinsarbeit" },
-          ]
-        },
-        {
-          title: "Deine Gemeinschaft",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Termine & Aktionen", path: "/mitmachen#termine" },
-            { title: "Ansprechpartner & Kontakt", path: "/mitmachen#kontakt" },
+            { title: "Die Depots", path: "/mitmachen#depots" },
+            { title: "Unsere Logistik", path: "/mitmachen#logistik" },
+            { title: "Adressen, Zeiten & Karte", path: "/depots" },
           ]
         },
       ],
     },
     {
-      title: "Lieferung",
-      path: "/lieferung-kalender",
+      title: "Fragen & Antworten",
+      path: "/haeufige-fragen",
       subItems: [
-        { title: "Höfe & Depots (Karte)", path: "/lieferung-kalender#karte" },
-        { title: "Depot-Öffnungszeiten", path: "/lieferung-kalender#depots" },
-        { title: "Abholung & Depot-Regeln", path: "/lieferung-kalender#depot-hinweise" },
-        { title: "Lieferrhythmus", path: "/lieferung-kalender#anlieferung" },
-        { title: "Fragen für Ernteteiler", path: "/lieferung-kalender#faq" },
+        { title: "Grundlagen", path: "/haeufige-fragen#grundlagen" },
+        { title: "Schnelle Fragen", path: "/haeufige-fragen#schnelle-fragen" },
+        { title: "Vereinsgeschichte", path: "/haeufige-fragen#vereinsgeschichte" },
         { title: "Kontaktformular", path: "/kontakt-anmeldung#kontakt" },
       ],
     },
@@ -362,7 +373,7 @@ export function Navigation() {
           {/* Mobile CTA */}
           <div className="mt-8 space-y-3">
             <Link
-              to="/lieferung-kalender#kalender"
+              to="/mitmachen#events"
               onClick={closeMobileMenu}
               className="block w-full border-2 border-primary text-primary hover:bg-secondary/20 text-center px-6 py-3 rounded-lg transition-colors"
             >

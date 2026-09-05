@@ -32,8 +32,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/hoefe-und-ernteanteile" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Höfe & Ernteanteile
+                <Link to="/ernteanteile" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Ernteanteile
                 </Link>
               </li>
               <li>
@@ -42,12 +42,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/lieferung-kalender" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
-                  Lieferung & Kalender
+                <Link to="/depots" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                  Depots
                 </Link>
               </li>
               <li>
-                <Link to="/mitmachen#termine" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
+                <Link to="/mitmachen#events" className="text-foreground/70 hover:text-cta transition-colors hover-underline-pink inline-block">
                   Termine & Aktionen
                 </Link>
               </li>
