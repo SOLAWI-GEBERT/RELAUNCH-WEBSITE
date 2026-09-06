@@ -1,9 +1,15 @@
 # Helix Ultimate — Template-Style (Corporate-Design-Schicht)
 
 Quelle: `export/SLB_init_27-09-2025.json` (Export des Template-Styles der alten Site,
-Template `educon_ii`, ein Helix-Ultimate-Derivat), abgeglichen mit dem installierten
-`templates/shaper_helixultimate` (Helix Ultimate **2.1.2**) und dem Plugin
-`plugins/system/helixultimate` im Joomla4-Testsystem.
+Template `educon_ii`, ein Helix-Ultimate-Derivat).
+
+**Aktives Template im Joomla4-Testsystem ist `educon_ii` (v1.0.2)** — Style-ID 13
+„Educon_ii - Default", `home = 1` (verifiziert in `#__template_styles`; das Live-CSS
+kommt aus `cache/com_templates/templates/educon_ii/`). `shaper_helixultimate` ist
+zwar installiert (Style 12), aber nicht aktiv. Beide nutzen dasselbe Plugin
+`plugins/system/helixultimate` (2.1.2); `educon_ii` bringt eigene `options.xml`
+und SCSS mit — u.a. **`custom_color_1..6` und CSS-Variablen `--link-color`,
+`--link-hover-color`, `--custom-color-1..6`** (siehe unten).
 
 ## Schichtenmodell
 
@@ -70,17 +76,50 @@ Logo als Text „Stadt, Land, Beides." (`logo_type: text`). `layout` (Helix-Layo
 Page Title (`title`) / Main Body (`left` 4 + Component 4 + `right` 4) / `bottom1` / `footer1` —
 alle Positionen existieren in `shaper_helixultimate/templateDetails.xml`.
 
-## Keys, die Helix Ultimate 2.1.2 nicht kennt (werden beim Import ignoriert)
+## Buttons in `educon_ii`: drei Regeln, eine gewinnt
 
-- `custom_color_1` … `custom_color_6` (SoLaWi-Palette `#97B0C7 #7697B5 #8A2B7D #9AB08C #F3ABA2 #FFA673`) — waren `educon_ii`-spezifisch; die Palette steht daher **nicht** als Template-Variable zur Verfügung. Sektions-/Kartenfarben bleiben explizite Hex-Werte in den Recipes (`src/styles/theme.css` ist die Quelle).
-- `presets-data` (Preset-Bibliothek des alten Templates), `hu-webfont-size-field*`.
-- Platzhalter-Reste aus dem JoomShaper-Demo: `copyright` („Your Company"), `contact_*`, Social-Links `#`, `comingsoon_*` — vor dem Livegang im Template ersetzen.
+`educon_ii/scss/presets.scss` erzeugt für `.sppb-btn-primary` zwei Regeln:
+
+| Regel | Spezifität | Hintergrund | Schrift | Hover |
+|---|---|---|---|---|
+| `.btn-primary, .sppb-btn-primary` (Z. 244) | 0,1,0 | `link_color` | – | `link_hover_color` |
+| `body .sppb-btn.sppb-btn-primary` (Z. 871) | 0,2,1 | **`custom_color_1`** | **`text_color`** (grau) | `link_color` |
+
+Die zweite gewinnt — mit `link_color = #d10038` wären Buttons also weiterhin blau
+(`custom_color_1 = #97B0C7`) mit grauer Schrift. Deshalb enthält die Init-Datei im
+Feld **`custom_css`** ein Override mit höherer Spezifität (0,3,1), das die
+Preset-Variablen nutzt und damit automatisch jeder Preset-Änderung folgt:
+
+```css
+body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary{background-color:var(--link-color);border-color:var(--link-color);color:#fff}
+body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:hover, …:focus, …:active{background-color:var(--link-hover-color);border-color:var(--link-hover-color);color:#fff}
+```
+
+`custom_css` wird von `educon_ii/index.php` per `addStyledeclaration()` als
+Inline-`<style>` **nach** dem kompilierten Template-CSS ausgegeben.
+
+## Keys ohne Wirkung / Platzhalter
+
+- `presets-data` (Preset-Bibliothek des alten Templates) wird von der aktuellen
+  Helix-Logik nicht gelesen (nur `preset`), in der Datei aber konsistent gehalten.
+- Platzhalter-Reste aus dem JoomShaper-Demo: `copyright` („Your Company"), `contact_*`,
+  Social-Links `#`, `comingsoon_*` — vor dem Livegang im Template ersetzen.
+- SoLaWi-Palette in `custom_color_1..6` (`#97B0C7 #7697B5 #8A2B7D #9AB08C #F3ABA2 #FFA673`)
+  steht als `--custom-color-N` zur Verfügung; Sektions-/Kartenfarben in den Recipes
+  bleiben trotzdem explizite Hex-Werte (SPPB-Felder akzeptieren keine `var()`).
 
 ## Import in Joomla
 
-System → Templates → Styles → **shaper_helixultimate** → Tab **Advanced** → Gruppe
-**Import & Export** → **Import Settings** → JSON wählen. Danach im selben Tab den
-CSS-Cache leeren (bzw. `cache/com_templates/templates/shaper_helixultimate` löschen).
+System → Templates → Styles → **Educon_ii - Default** (ID 13, der aktive Style — nicht
+`shaper_helixultimate`) → Tab **Advanced** → Gruppe **Import & Export** →
+**Import Settings** → JSON wählen.
+
+**Danach zwingend den kompilierten CSS-Cache leeren**, sonst bleibt das alte
+Farbschema sichtbar (so passiert am 2026-09-06: DB hatte bereits `#d10038`, das
+Live-CSS noch `#97B0C7`): Dateien `*.css` und `*.scss.cache` in
+`cache/com_templates/templates/educon_ii/` löschen — Helix kompiliert beim nächsten
+Seitenaufruf neu (Prüfung: `curl -sk https://joomla4/index.php` und im verlinkten
+`/cache/com_templates/…css` nach `.sppb-btn-primary{…#d10038` suchen).
 
 Technisch (`plugins/system/helixultimate/src/Platform/Request.php::importTemplateStyle`
 → `Platform/Helper.php::updateTemplateStyle`): der Import **ersetzt die komplette

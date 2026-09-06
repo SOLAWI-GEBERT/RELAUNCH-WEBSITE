@@ -54,7 +54,10 @@ Padding/Schatten, Abstände, Entrance-Animationen.
 - Der Body-Hintergrund des aktiven Presets ist **mauve** (`#C7AFC7`): Abschnitte, die im
   Prototyp weiß sind, brauchen `backgroundColor: '#ffffff'`.
 - Vor jedem Import-Test prüfen, dass der Helix-Style im Testsystem importiert ist —
-  sonst sind Fonts/Button-Farben nicht vergleichbar.
+  sonst sind Fonts/Button-Farben nicht vergleichbar. Ziel-Style ist **Educon_ii - Default**
+  (das aktive Template `educon_ii`, Style-ID 13), und nach dem Import muss der
+  kompilierte CSS-Cache geleert werden (`cache/com_templates/templates/educon_ii/`),
+  sonst bleibt das alte Farbschema stehen. Details: `docs/sppb/helix-template.md`.
 - Ein Prototyp-Abschnitt, der auf mehrere SPPB-Sections verteilt wird, bekommt über
   `padding` die doppelten 96px-Abstände herausgenommen (Muster in `pages/home.mjs`:
   `PAD_HEADING` / `PAD_MIDDLE` / `PAD_ROW_GAP` / `PAD_LAST`).

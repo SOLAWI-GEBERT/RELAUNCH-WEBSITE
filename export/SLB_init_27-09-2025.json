@@ -168,7 +168,7 @@
     "before_head": "",
     "after_body": "",
     "before_body": "",
-    "custom_css": "",
+    "custom_css": "\/* SoLaWi: SPPB-Buttons (type primary) folgen dem Preset - educon_ii setzt sonst custom_color_1 als Hintergrund und text_color als Schrift *\/\nbody .sppb-addon-wrapper .sppb-btn.sppb-btn-primary{background-color:var(--link-color);border-color:var(--link-color);color:#fff}\nbody .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:hover,body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:focus,body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:active{background-color:var(--link-hover-color);border-color:var(--link-hover-color);color:#fff}",
     "custom_js": "",
     "compress_css": "1",
     "compress_js": "1",
