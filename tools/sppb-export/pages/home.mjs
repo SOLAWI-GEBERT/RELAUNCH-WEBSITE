@@ -30,9 +30,10 @@ const CARD_PADDING = '32px 32px 32px 32px';
 const PRODUCT_CARD_PADDING = '24px 24px 24px 24px';
 const CARD_SHADOW = '0 4px 6px 0 rgba(0, 0, 0, 0.1)'; // ≈ Tailwind shadow-md
 
-// ScrollReveal im Prototyp: 0,6s, easeOut, Richtung up/left/right, gestaffelte Delays.
-const REVEAL_UP = 'fadeInUp';
-const REVEAL_LEFT = 'fadeInLeft';
+// Animation (SPPB-Editor: Style → Animation) nur auf Bildern und Boxen:
+// 'headShake' (Attention Seeker) entspricht dem frechen hover-wiggle/hover-tilt
+// des Prototyps. Überschriften, Text und Buttons bleiben ohne Animation.
+const SHAKE = 'headShake';
 
 // Wellige Sektionsteiler (wave-top/wave-bottom im Prototyp) als SPPB-Shape-Divider.
 // 'wavy-opacity' = weicher Wellencharakter, Alternative 'rocky-mountain' = comic-artig.
@@ -57,7 +58,7 @@ export function buildPage() {
         {
           span: 5,
           addons: [
-            image({ src: 'images/start.png', alt: 'Stadt, Land, Beides — Gummistiefel trifft Stöckelschuh', alignment: 'center' }),
+            image({ src: 'images/start.png', alt: 'Stadt, Land, Beides — Gummistiefel trifft Stöckelschuh', alignment: 'center', animation: SHAKE }),
           ],
         },
       ],
@@ -92,7 +93,7 @@ export function buildPage() {
               buttonText: 'Mehr über SoLaWi erfahren',
               buttonUrl: '/solidarische-landwirtschaft',
               contentPadding: '0px 0px 0px 48px',
-              animation: 'fadeIn',
+              animation: SHAKE,
             }),
           ],
         },
@@ -116,7 +117,7 @@ export function buildPage() {
               iconName: 'fas fa-hand-holding-dollar',
               backgroundColor: SALMON,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 0,
             }),
           ],
@@ -131,7 +132,7 @@ export function buildPage() {
               iconName: 'fas fa-truck',
               backgroundColor: ORANGE,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 100,
             }),
           ],
@@ -146,7 +147,7 @@ export function buildPage() {
               iconName: 'fas fa-users',
               backgroundColor: MAUVE,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 200,
             }),
           ],
@@ -175,7 +176,7 @@ export function buildPage() {
               imageAlt: 'Frau mit Gemüsewagen auf dem Acker',
               backgroundColor: SALMON,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 0,
             }),
           ],
@@ -191,7 +192,7 @@ export function buildPage() {
               imageAlt: 'Gruppe auf dem Acker',
               backgroundColor: ORANGE,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 100,
             }),
           ],
@@ -207,7 +208,7 @@ export function buildPage() {
               imageAlt: 'Füllhorn mit Gemüse',
               backgroundColor: MAUVE,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 200,
             }),
           ],
@@ -223,7 +224,7 @@ export function buildPage() {
               imageAlt: 'Depot in der Stadt',
               backgroundColor: GREEN,
               padding: CARD_PADDING,
-              animation: REVEAL_UP,
+              animation: SHAKE,
               animationDelay: 300,
             }),
           ],
@@ -272,13 +273,13 @@ export function buildPage() {
       backgroundColor: GREEN,
       alignCenter: true,
       columns: [
-        { span: 4, addons: [image({ src: 'images/features-mitmachen.jpg', alt: 'Bauer zeigt auf dich', alignment: 'center', animation: REVEAL_LEFT })] },
+        { span: 4, addons: [image({ src: 'images/features-mitmachen.jpg', alt: 'Bauer zeigt auf dich', alignment: 'center', animation: SHAKE })] },
         {
           span: 8,
           addons: [
-            heading({ title: 'Bereit für frische, regionale Lebensmittel?', alignment: 'left', animation: REVEAL_UP }),
-            textBlock({ text: '<p>Werde Teil unserer Gemeinschaft und unterstütze nachhaltige Landwirtschaft in deiner Region.</p>', animation: REVEAL_UP }),
-            button({ text: 'Jetzt mitmachen', url: '/so-funktionierts', size: 'xlg', shape: 'square', alignment: 'left', animation: REVEAL_UP }),
+            heading({ title: 'Bereit für frische, regionale Lebensmittel?', alignment: 'left' }),
+            textBlock({ text: '<p>Werde Teil unserer Gemeinschaft und unterstütze nachhaltige Landwirtschaft in deiner Region.</p>' }),
+            button({ text: 'Jetzt mitmachen', url: '/so-funktionierts', size: 'xlg', shape: 'square', alignment: 'left' }),
           ],
         },
       ],
@@ -302,7 +303,7 @@ function productCard({ title, farm, text, iconName, url, delay }) {
     backgroundColor: WHITE,
     padding: PRODUCT_CARD_PADDING,
     boxShadow: CARD_SHADOW,
-    animation: REVEAL_UP,
+    animation: SHAKE,
     animationDelay: delay,
   });
 }

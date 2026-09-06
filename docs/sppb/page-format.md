@@ -95,7 +95,7 @@ Addon bekommt diese Felder automatisch zu seinen eigenen `settings` gemerged
 | `global_user_border` + `global_border_*` | Rahmen |
 | `global_boxshadow` | Schatten, Format `"x y blur spread color"` (std `"0 0 0 0 #FFFFFF"`) |
 | `global_border_radius` | `{xl,lg,md,sm,xs}` |
-| `global_use_animation` (`0\|1`), `global_animation`, `global_animationduration`, `global_animationdelay` | Entrance-Animation beim Scrollen: Name = animate.css-Klasse (`fadeIn`, `fadeInUp`, `fadeInLeft`, `fadeInRight`, `zoomIn`, …), Dauer/Delay als ms-Strings (std `"300"`/`"0"`). Rendering: `layouts/addon/start.php` → `class="sppb-wow <name>"`, `data-sppb-wow-duration/-delay` |
+| `global_use_animation` (`0\|1`), `global_animation`, `global_animationduration`, `global_animationdelay` | Entrance-Animation beim Scrollen: Name = animate.css-Klasse (Entrances wie `fadeInUp`, `zoomIn`; Attention Seekers wie `headShake`, `pulse`, `wobble`, `tada` — Editor-Tab *Style → Animation*), Dauer/Delay als ms-Strings (std `"300"`/`"0"`). Rendering: `layouts/addon/start.php` → `class="sppb-wow <name>"`, `data-sppb-wow-duration/-delay` |
 
 `tools/sppb-export/lib/fields.mjs::globalStyleFields({backgroundColor, padding, boxShadow, animation, animationDelay})`
 bündelt diese Felder für alle Builder.

@@ -58,9 +58,12 @@ Padding/Schatten, Abstände, Entrance-Animationen.
 - Ein Prototyp-Abschnitt, der auf mehrere SPPB-Sections verteilt wird, bekommt über
   `padding` die doppelten 96px-Abstände herausgenommen (Muster in `pages/home.mjs`:
   `PAD_HEADING` / `PAD_MIDDLE` / `PAD_ROW_GAP` / `PAD_LAST`).
-- `ScrollReveal` im Prototyp → `animation: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight'`
-  plus `animationDelay` (ms) am Addon; `hover-tilt`/`hover-wiggle` haben kein
-  SPPB-Äquivalent ohne Custom-CSS und entfallen.
+- Animationen (im Editor unter *Style → Animation*) nur auf **Bildern und Boxen**
+  (`image`, `feature`, `image_content`): `animation: 'headShake'` — der Attention
+  Seeker entspricht dem frechen `hover-wiggle`/`hover-tilt` des Prototyps.
+  Überschriften, Text und Buttons bekommen keine Animation. `animationDelay` (ms)
+  staffelt Karten in einer Reihe (0/100/200 …). `ScrollReveal`-Einblendungen des
+  Prototyps werden nicht nachgebaut.
 - Wellige Sektionsteiler (`wave-top`/`wave-bottom`) → `section({ topShape/bottomShape:
   { name: 'wavy-opacity', color } })` mit `color` = Hintergrund der **angrenzenden**
   Section (oben: vorherige, unten: folgende); bei mehreren SPPB-Sections pro
