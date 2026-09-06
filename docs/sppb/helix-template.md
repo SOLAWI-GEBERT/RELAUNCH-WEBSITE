@@ -105,10 +105,11 @@ Ebenfalls in `custom_css` (Farbe über `--link-color`, folgt dem Preset):
 | Klasse | Prototyp (`src/styles/theme.css`) | Umsetzung im Template | Nutzung im Recipe |
 |---|---|---|---|
 | `.badge-frech` | Pink-Badge, `--font-accent` (Cantora One), −2° gedreht | Cormorant Garamond fett (bereits als h3/h5-Font geladen, kein Google-Request), `transform: rotate(-2deg)` | `textBlock({ text: '<span class="badge-frech">…</span>' })` |
-| `.underline-sketch` | handgezeichnete SVG-Unterstreichung (Hex fest) | `text-decoration: underline wavy var(--link-color)` | `heading({ title: 'Warum <span class="underline-sketch">mitmachen</span>?' })` — `heading` gibt den Titel roh (`nl2br`) aus |
+| `.underline-sketch` | handgezeichnete SVG-Unterstreichung (Hex fest, `background-size: 200px`) | `::after` mit derselben SVG-Welle (eine Periode: `M0 6 Q50 0 100 5 Q150 8 200 4`) als **`mask`**, auf Wortbreite gestreckt (`preserveAspectRatio='none'`, `mask-size: 100% 100%`), Farbe `background-color: var(--link-color)` | `heading({ title: 'Warum <span class="underline-sketch">mitmachen</span>?' })` — `heading` gibt den Titel roh (`nl2br`) aus |
 
-Bewusst nicht 1:1: Cantora One wurde nicht eingebunden (DSGVO/Google Fonts), die
-SVG-Welle durch eine CSS-native wellige Unterstreichung ersetzt.
+Bewusst nicht 1:1: Cantora One wurde nicht eingebunden (DSGVO/Google Fonts).
+`text-decoration: wavy` wurde verworfen — feste kurze Wellenlänge, „zu viele
+Schwünge"; die Mask-Variante zeigt pro Wort genau eine Welle.
 
 ## Keys ohne Wirkung / Platzhalter
 
