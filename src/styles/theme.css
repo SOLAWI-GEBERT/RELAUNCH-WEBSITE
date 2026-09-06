@@ -3,7 +3,8 @@
 :root {
   --font-size: 16px;
   --background: #ffffff;
-  --foreground: #1b1b1b;
+  --foreground: #1b1b1b; /* Überschriften, Logo (Helix logo_text_color) */
+  --text-color: #4a4a4a; /* Fließtext (Helix preset text_color) */
   --card: #ffffff;
   --card-foreground: #1b1b1b;
   --popover: #ffffff;
@@ -33,7 +34,7 @@
 
   /* Neutrale Farben */
   --muted: #f0f0f0;
-  --muted-foreground: #808080;
+  --muted-foreground: #4a4a4a; /* = --text-color; Meta-Zeilen, Fußnoten */
   --border: rgba(0, 0, 0, 0.11);
   --input: transparent;
   --input-background: #f0f0f0;
@@ -115,9 +116,13 @@
 }
 
 @theme inline {
-  --font-heading: "EB Garamond", Georgia, serif;
-  --font-accent: "Cantora One", sans-serif;
-  --font-sans: -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* Schriften exakt wie das Helix-Template (export/SLB_init_27-09-2025.json) */
+  --font-heading: "EB Garamond", Georgia, serif; /* h1, h2, h4, h6, Logo */
+  --font-heading-alt: "Cormorant Garamond", "EB Garamond", Georgia, serif; /* h3, h5 */
+  --font-accent: "Cormorant Garamond", "EB Garamond", Georgia, serif; /* Badges (fett) — ersetzt Cantora One */
+  --font-sans: Roboto, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; /* Body, Buttons */
+  --font-nav: "Roboto Condensed", Roboto, Arial, sans-serif; /* Navigation */
+  --color-text: var(--text-color);
   --color-solawi-pink: var(--solawi-pink);
   --color-solawi-purple: var(--solawi-purple);
   --color-solawi-blue: var(--solawi-blue);
@@ -178,46 +183,72 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-sans);
-  }
-
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
-  */
-
   html {
     font-size: var(--font-size);
   }
 
-  h1 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+  /**
+   * Typografie-Skala = Helix-Template (SLB_init_27-09-2025.json).
+   * Regel: Die Größe kommt aus dem Tag, nicht aus Utilities — so erbt der
+   * SPPB-Export dieselbe Hierarchie aus dem Joomla-Template.
+   *
+   *        xs (<768)  sm (768–1023)  xl (≥1024)   Font                 LH
+   *  body  16 px      16 px          16 px        Roboto               1.4
+   *  h1    52 px      72 px          106 px       EB Garamond          1
+   *  h2    38 px      50 px          64 px        EB Garamond          1
+   *  h3    28 px      34 px          36 px        Cormorant Garamond   1.2
+   *  h4    20 px      24 px          28 px        EB Garamond          1.2
+   *  h5    18 px      22 px          24 px        Cormorant Garamond   1.2
+   *  h6    16 px      20 px          24 px        EB Garamond          1.2
+   */
+
+  body {
+    @apply bg-background;
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h2 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
     font-weight: 500;
-    line-height: 1.2;
+    text-wrap: balance;
   }
 
-  h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+  h1 { font-family: var(--font-heading); font-size: 52px; line-height: 1; }
+  h2 { font-family: var(--font-heading); font-size: 38px; line-height: 1; }
+  h3 { font-family: var(--font-heading-alt); font-size: 28px; line-height: 1.2; font-weight: 600; }
+  h4 { font-family: var(--font-heading); font-size: 20px; line-height: 1.2; }
+  h5 { font-family: var(--font-heading-alt); font-size: 18px; line-height: 1.2; font-weight: 600; }
+  h6 { font-family: var(--font-heading); font-size: 16px; line-height: 1.2; }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 72px; }
+    h2 { font-size: 50px; }
+    h3 { font-size: 34px; }
+    h4 { font-size: 24px; }
+    h5 { font-size: 22px; }
+    h6 { font-size: 20px; }
   }
 
-  h4 {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 1.3;
+  @media (min-width: 1024px) {
+    h1 { font-size: 106px; }
+    h2 { font-size: 64px; }
+    h3 { font-size: 36px; }
+    h4 { font-size: 28px; }
+    h5 { font-size: 24px; }
+    h6 { font-size: 24px; }
+  }
+
+  a {
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+
+  strong, b {
+    font-weight: 700;
   }
 
   label {
@@ -238,35 +269,99 @@
     line-height: 1.5;
   }
 
-  /* --- Freche Utilities --- */
+}
+
+/* --- Textstufen & Bausteine (components-Layer: Utilities gewinnen weiterhin) --- */
+@layer components {
+  /* Lead: Einleitungsabsatz unter Überschriften, Hero-Subline */
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  /* Meta: Hofname, Datum, Fußnote — die einzige erlaubte Stufe unter 16 px */
+  .meta {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
 
   .font-accent {
     font-family: var(--font-accent);
   }
 
+  .font-nav {
+    font-family: var(--font-nav);
+  }
+
+  /* Badge — Cormorant Garamond fett, wie badge-frech im Helix custom_css */
   .badge-frech {
     font-family: var(--font-accent);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    line-height: 1.2;
     display: inline-block;
     background: var(--cta);
     color: white;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
+    padding: 0.3rem 0.8rem;
     transform: rotate(-2deg);
   }
 
-  /* CTA-Button-Grundstil — Größe (Padding/Schriftgröße) bleibt Tailwind-Utility am Aufrufort */
+  /* CTA-Button — entspricht .sppb-btn-primary im Template: Roboto 500, link_color */
   .btn-cta {
-    font-family: var(--font-accent);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    padding: 0.875rem 2rem;
     background: var(--cta);
     color: white;
     transition: background-color 0.2s ease;
   }
   .btn-cta:hover {
     background: var(--cta-hover);
+    color: white;
+  }
+  .btn-cta-lg {
+    font-size: 1.125rem;
+    padding: 1rem 2.5rem;
+  }
+
+  /* Sekundärer Button — Outline in CTA-Farbe */
+  .btn-outline {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: calc(0.875rem - 2px) 2rem;
+    border: 2px solid var(--cta);
+    color: var(--cta);
+    background: transparent;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-outline:hover {
+    background: var(--cta);
+    color: white;
+  }
+
+  /* Textlink mit Pfeil */
+  .link-cta {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cta);
+  }
+  .link-cta:hover {
+    color: var(--cta-hover);
   }
 
   .underline-sketch {

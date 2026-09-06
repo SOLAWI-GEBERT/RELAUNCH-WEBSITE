@@ -143,10 +143,11 @@ export function Navigation() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        {/* Header 96 px, Logo 36 px, Menü Roboto Condensed 22 px — wie Helix header_height/custom_font/navigation_font */}
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
-            <img src="/SLB.gif" alt="Stadt, Land, Beides." className="h-10" />
+            <img src="/SLB.gif" alt="Stadt, Land, Beides." className="h-9" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -160,10 +161,10 @@ export function Navigation() {
               >
                 <Link
                   to={item.path}
-                  className={`px-4 py-6 flex items-center gap-1 transition-all font-semibold ${
+                  className={`font-nav text-[22px] px-4 py-6 flex items-center gap-1 transition-colors ${
                     location.pathname === item.path
                       ? "text-black"
-                      : "text-[#767676] hover:text-accent"
+                      : "text-muted-foreground hover:text-accent"
                   }`}
                 >
                   {item.title}
@@ -178,7 +179,7 @@ export function Navigation() {
                         {subItem.isCategory ? (
                           // Category header (not clickable)
                           <div>
-                            <div className="px-4 py-2 text-sm font-bold text-[#1d1f24] bg-gray-100 mx-2 my-1">
+                            <div className="px-4 py-2 font-nav text-lg font-bold text-foreground bg-secondary mx-2 my-1">
                               {subItem.title}
                             </div>
                             {/* Category items */}
@@ -188,7 +189,7 @@ export function Navigation() {
                                   <div key={categoryItem.path}>
                                     <Link
                                       to={categoryItem.path}
-                                      className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent mx-2 transition-all hover:translate-x-1"
+                                      className="block px-4 py-2 font-nav text-lg text-muted-foreground hover:text-accent mx-2 transition-all hover:translate-x-1"
                                     >
                                       {categoryItem.title}
                                     </Link>
@@ -199,7 +200,7 @@ export function Navigation() {
                                           <Link
                                             key={subSubItem.path}
                                             to={subSubItem.path}
-                                            className="block px-4 py-1.5 text-sm text-gray-600 hover:text-accent mx-2 transition-all hover:translate-x-1"
+                                            className="block px-4 py-1.5 font-nav text-base text-muted-foreground hover:text-accent mx-2 transition-all hover:translate-x-1"
                                           >
                                             • {subSubItem.title}
                                           </Link>
@@ -215,7 +216,7 @@ export function Navigation() {
                           // Regular menu item
                           <Link
                             to={subItem.path}
-                            className="block px-4 py-2 text-sm text-[#1d1f24] hover:text-accent mx-2 transition-all hover:translate-x-1"
+                            className="block px-4 py-2 font-nav text-lg text-muted-foreground hover:text-accent mx-2 transition-all hover:translate-x-1"
                           >
                             {subItem.title}
                           </Link>
@@ -231,7 +232,7 @@ export function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#767676] hover:text-accent z-50 transition-all"
+            className="lg:hidden p-2 text-muted-foreground hover:text-accent z-50 transition-all"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -271,10 +272,10 @@ export function Navigation() {
                   <Link
                     to={item.path}
                     onClick={closeMobileMenu}
-                    className={`flex-1 px-4 py-3 rounded-md transition-colors ${
+                    className={`flex-1 px-4 py-3 font-nav text-lg transition-colors ${
                       location.pathname === item.path
-                        ? "bg-primary/10 text-foreground font-semibold"
-                        : "text-gray-700 hover:bg-secondary/20"
+                        ? "bg-secondary text-foreground"
+                        : "text-muted-foreground hover:bg-secondary"
                     }`}
                   >
                     {item.title}
@@ -282,7 +283,7 @@ export function Navigation() {
                   {item.subItems && (
                     <button
                       onClick={() => toggleMobileDropdown(item.path)}
-                      className="p-3 text-gray-600 hover:text-accent"
+                      className="p-3 text-muted-foreground hover:text-accent"
                       aria-label="Toggle submenu"
                     >
                       <ChevronRight 
@@ -302,7 +303,7 @@ export function Navigation() {
                         {subItem.isCategory ? (
                           // Category header in mobile (not clickable)
                           <div>
-                            <div className="px-3 py-2 text-sm font-semibold text-[#1d1f24] bg-gray-100 rounded-md">
+                            <div className="px-3 py-2 font-nav text-base font-bold text-foreground bg-secondary">
                               {subItem.title}
                             </div>
                             {/* Category items in mobile */}
@@ -314,14 +315,14 @@ export function Navigation() {
                                       <Link
                                         to={categoryItem.path}
                                         onClick={closeMobileMenu}
-                                        className="flex-1 px-3 py-2 text-sm text-gray-700 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
+                                        className="flex-1 px-3 py-2 font-nav text-base text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
                                       >
                                         {categoryItem.title}
                                       </Link>
                                       {categoryItem.subItems && (
                                         <button
                                           onClick={() => toggleMobileSubDropdown(categoryItem.path)}
-                                          className="p-2 text-gray-500 hover:text-accent"
+                                          className="p-2 text-muted-foreground hover:text-accent"
                                           aria-label="Toggle sub-submenu"
                                         >
                                           <ChevronRight 
@@ -340,7 +341,7 @@ export function Navigation() {
                                             key={subSubItem.path}
                                             to={subSubItem.path}
                                             onClick={closeMobileMenu}
-                                            className="block px-3 py-1.5 text-sm text-gray-600 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
+                                            className="block px-3 py-1.5 font-nav text-base text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
                                           >
                                             • {subSubItem.title}
                                           </Link>
@@ -357,7 +358,7 @@ export function Navigation() {
                           <Link
                             to={subItem.path}
                             onClick={closeMobileMenu}
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-secondary/20 hover:text-foreground rounded-md transition-colors"
+                            className="block px-4 py-2 font-nav text-base text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
                           >
                             {subItem.title}
                           </Link>
@@ -375,7 +376,7 @@ export function Navigation() {
             <Link
               to="/mitmachen#events"
               onClick={closeMobileMenu}
-              className="block w-full border-2 border-primary text-primary hover:bg-secondary/20 text-center px-6 py-3 rounded-lg transition-colors"
+              className="btn-outline w-full"
             >
               Veranstaltungen
             </Link>

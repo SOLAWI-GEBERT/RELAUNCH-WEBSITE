@@ -1,5 +1,6 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
-@import '../imports/helix-ultimate-styles.css';
-@import '../imports/helix-styles.css';
+/* Die Legacy-Dateien src/imports/helix*.css werden nicht mehr geladen:
+   sie setzten global body { line-height: 1.3 } und a { color } und
+   überschrieben damit die Skala aus theme.css. Als Referenz bleiben sie im Repo. */
