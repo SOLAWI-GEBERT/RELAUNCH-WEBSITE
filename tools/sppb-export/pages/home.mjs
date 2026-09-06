@@ -35,6 +35,12 @@ const CARD_SHADOW = '0 4px 6px 0 rgba(0, 0, 0, 0.1)'; // ≈ Tailwind shadow-md
 // des Prototyps. Überschriften, Text und Buttons bleiben ohne Animation.
 const SHAKE = 'headShake';
 
+// Freche Akzente aus dem Prototyp. Die Klassen badge-frech und underline-sketch
+// sind im Helix-Style hinterlegt (custom_css in export/SLB_init_*.json) und
+// hängen an --link-color; hier nur das Markup. heading gibt den Titel roh aus.
+const sketch = (word) => `<span class="underline-sketch">${word}</span>`;
+const badge = (text) => `<span class="badge-frech">${text}</span>`;
+
 // Wellige Sektionsteiler (wave-top/wave-bottom im Prototyp) als SPPB-Shape-Divider.
 // 'wavy-opacity' = weicher Wellencharakter, Alternative 'rocky-mountain' = comic-artig.
 // Farbe = Hintergrund der angrenzenden Section, Inhalt wird nach vorn verschoben.
@@ -50,7 +56,8 @@ export function buildPage() {
         {
           span: 7,
           addons: [
-            heading({ title: 'Stadt, Land, Beides.', headingSelector: 'h1', alignment: 'left' }),
+            textBlock({ text: badge('Solidarische Landwirtschaft'), alignment: 'left' }),
+            heading({ title: `Stadt, Land, ${sketch('Beides.')}`, headingSelector: 'h1', alignment: 'left' }),
             textBlock({ text: '<p>Frische Produkte direkt vom Hof. Faire Preise für alle. Gemeinschaft, die schmeckt.</p>' }),
             button({ text: 'Jetzt dabei sein', url: '/so-funktionierts', size: 'lg', shape: 'square', alignment: 'left' }),
           ],
@@ -69,7 +76,7 @@ export function buildPage() {
       backgroundColor: BLUE,
       padding: PAD_HEADING,
       topShape: { name: WAVE_SHAPE, color: GREEN },
-      columns: [{ span: 12, addons: [heading({ title: 'SoLaWi in 60 Sekunden' })] }],
+      columns: [{ span: 12, addons: [heading({ title: `SoLaWi in ${sketch('60 Sekunden')}` })] }],
     }),
 
     // 2b. "Was ist Solidarische Landwirtschaft" — Bild + Text + Button
@@ -159,7 +166,7 @@ export function buildPage() {
     section({
       backgroundColor: WHITE,
       padding: PAD_HEADING,
-      columns: [{ span: 12, addons: [heading({ title: 'Warum mitmachen?' }), textBlock({ text: '<p>Gemeinsam gestalten wir eine nachhaltige Zukunft und genießen frische, regionale Lebensmittel.</p>', alignment: 'center' })] }],
+      columns: [{ span: 12, addons: [heading({ title: `Warum ${sketch('mitmachen')}?` }), textBlock({ text: '<p>Gemeinsam gestalten wir eine nachhaltige Zukunft und genießen frische, regionale Lebensmittel.</p>', alignment: 'center' })] }],
     }),
     section({
       backgroundColor: WHITE,
@@ -242,7 +249,7 @@ export function buildPage() {
         {
           span: 12,
           addons: [
-            heading({ title: 'Was bekomme ich?' }),
+            heading({ title: `Was ${sketch('bekomme')} ich?` }),
             textBlock({ text: '<p>Keine Supermarkt-Einheitskiste — sondern das, was die Natur gerade hergibt.</p>', alignment: 'center' }),
           ],
         },
@@ -277,7 +284,7 @@ export function buildPage() {
         {
           span: 8,
           addons: [
-            heading({ title: 'Bereit für frische, regionale Lebensmittel?', alignment: 'left' }),
+            heading({ title: `Bereit für ${sketch('frische')}, regionale Lebensmittel?`, alignment: 'left' }),
             textBlock({ text: '<p>Werde Teil unserer Gemeinschaft und unterstütze nachhaltige Landwirtschaft in deiner Region.</p>' }),
             button({ text: 'Jetzt mitmachen', url: '/so-funktionierts', size: 'xlg', shape: 'square', alignment: 'left' }),
           ],

@@ -67,6 +67,12 @@ Padding/Schatten, Abstände, Entrance-Animationen.
   Überschriften, Text und Buttons bekommen keine Animation. `animationDelay` (ms)
   staffelt Karten in einer Reihe (0/100/200 …). `ScrollReveal`-Einblendungen des
   Prototyps werden nicht nachgebaut.
+- Freche Akzente `badge-frech` (Hero-Badge) und `underline-sketch` (Wort-Unterstreichung
+  in Überschriften) sind als CSS-Klassen im Helix-Style hinterlegt (`custom_css`).
+  Im Recipe nur das Markup: `textBlock({ text: '<span class="badge-frech">…</span>' })`
+  bzw. `heading({ title: 'Warum <span class="underline-sketch">mitmachen</span>?' })`
+  — Helper `badge()`/`sketch()` in `pages/home.mjs`. Neue Akzent-Klassen gehören in
+  die Init-Datei, nicht in Recipes.
 - Wellige Sektionsteiler (`wave-top`/`wave-bottom`) → `section({ topShape/bottomShape:
   { name: 'wavy-opacity', color } })` mit `color` = Hintergrund der **angrenzenden**
   Section (oben: vorherige, unten: folgende); bei mehreren SPPB-Sections pro

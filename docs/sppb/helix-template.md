@@ -98,6 +98,18 @@ body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:hover, …:focus, …:active
 `custom_css` wird von `educon_ii/index.php` per `addStyledeclaration()` als
 Inline-`<style>` **nach** dem kompilierten Template-CSS ausgegeben.
 
+## Freche Akzente: `badge-frech`, `underline-sketch`
+
+Ebenfalls in `custom_css` (Farbe über `--link-color`, folgt dem Preset):
+
+| Klasse | Prototyp (`src/styles/theme.css`) | Umsetzung im Template | Nutzung im Recipe |
+|---|---|---|---|
+| `.badge-frech` | Pink-Badge, `--font-accent` (Cantora One), −2° gedreht | Cormorant Garamond fett (bereits als h3/h5-Font geladen, kein Google-Request), `transform: rotate(-2deg)` | `textBlock({ text: '<span class="badge-frech">…</span>' })` |
+| `.underline-sketch` | handgezeichnete SVG-Unterstreichung (Hex fest) | `text-decoration: underline wavy var(--link-color)` | `heading({ title: 'Warum <span class="underline-sketch">mitmachen</span>?' })` — `heading` gibt den Titel roh (`nl2br`) aus |
+
+Bewusst nicht 1:1: Cantora One wurde nicht eingebunden (DSGVO/Google Fonts), die
+SVG-Welle durch eine CSS-native wellige Unterstreichung ersetzt.
+
 ## Keys ohne Wirkung / Platzhalter
 
 - `presets-data` (Preset-Bibliothek des alten Templates) wird von der aktuellen
