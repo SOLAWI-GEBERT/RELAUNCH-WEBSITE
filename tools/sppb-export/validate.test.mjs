@@ -59,6 +59,15 @@ test('fehlendes Pflichtfeld eines bekannten Addons wird gemeldet', () => {
   assert.ok(errors.some((e) => e.includes('settings.title')));
 });
 
+test('doppelte ID wird gemeldet', () => {
+  const pageJson = validHeadingSection();
+  const sections = JSON.parse(pageJson.template);
+  sections[0].columns[0].id = sections[0].id; // Column-ID kollidiert mit Section-ID
+  pageJson.template = JSON.stringify(sections);
+  const errors = validatePageJson(pageJson);
+  assert.ok(errors.some((e) => e.includes('Doppelte ID')));
+});
+
 test('kaputtes template-JSON wird gemeldet, ohne dass die Funktion wirft', () => {
   const pageJson = validHeadingSection();
   pageJson.template = '{not valid json';

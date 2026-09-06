@@ -22,8 +22,11 @@ Pro Import-Datei (`export/<page>.json`) um. Hintergrund: `docs/superpowers/specs
    - `docs/sppb/addons/*.md` für die verfügbaren Felder je Addon-Typ
    - vorhandene Builder in `tools/sppb-export/builders/*.mjs` — wenn ein Builder für
      den gebrauchten Addon-Typ fehlt, zuerst nach demselben Muster wie die
-     bestehenden Builder (siehe Task 1–4 des Implementierungsplans) ergänzen,
-     inkl. Test
+     bestehenden Builder (siehe Task 1–4 des Implementierungsplans,
+     `docs/superpowers/plans/2026-09-06-sppb-export-toolset.md`) ergänzen,
+     inkl. Test (Testkommando: `node --test 'tools/sppb-export/**/*.test.mjs'` —
+     Achtung: `node --test tools/sppb-export` mit bloßem Verzeichnis funktioniert
+     unter Node 22 NICHT)
    - Farbsignatur/Illustrationszuordnung, falls in den Projekt-Memories vorhanden
      (`design_signature.md`, `signature_images.md`) — vor Verwendung gegen den
      aktuellen Code verifizieren, Memories können veraltet sein
@@ -58,5 +61,7 @@ Pro Import-Datei (`export/<page>.json`) um. Hintergrund: `docs/superpowers/specs
    hochladen.
 3. Im Frontend die Seite ansehen, mit der TSX-Referenzseite vergleichen: Struktur,
    Texte, Bilder (nach manuellem Upload), Farben, Links.
-4. Abweichungen zurückmelden — Korrektur läuft über den Abschnitt "Fehlerkorrektur"
+4. Button-Styling prüfen (`type: 'custom'` ohne Farbfelder kann ungestylt erscheinen).
+5. Link-Felder prüfen (Buttons, `title_url`, `button_url` korrekt übernommen?).
+6. Abweichungen zurückmelden — Korrektur läuft über den Abschnitt "Fehlerkorrektur"
    oben.

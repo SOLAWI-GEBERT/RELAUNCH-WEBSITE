@@ -18,3 +18,11 @@ test('resetIdCounter setzt die Zählung zurück, ohne Kollisionen mit vorherigen
   assert.equal(typeof before, 'number');
   assert.equal(typeof after, 'number');
 });
+
+test('nextId ist deterministisch: nach resetIdCounter liefert der erste Aufruf immer denselben Wert', () => {
+  resetIdCounter();
+  const first = nextId();
+  resetIdCounter();
+  const firstAgain = nextId();
+  assert.equal(first, firstAgain);
+});

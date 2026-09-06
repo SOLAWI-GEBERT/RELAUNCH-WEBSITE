@@ -1,6 +1,7 @@
 import { writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { resetIdCounter } from './lib/ids.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -10,6 +11,7 @@ export async function generatePageFile(pageName, { pagesDir, outDir } = {}) {
 
   const modulePath = path.join(resolvedPagesDir, `${pageName}.mjs`);
   const { buildPage } = await import(pathToFileURL(modulePath).href);
+  resetIdCounter();
   const pageJson = buildPage();
 
   await mkdir(resolvedOutDir, { recursive: true });

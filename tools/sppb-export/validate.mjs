@@ -42,18 +42,28 @@ export function validatePageJson(pageJson) {
     return errors;
   }
 
+  const seenIds = new Set();
+  function checkId(id) {
+    if (id === undefined) return;
+    if (seenIds.has(id)) errors.push(`Doppelte ID: ${id}`);
+    seenIds.add(id);
+  }
+
   sections.forEach((section, sIdx) => {
     for (const key of ['id', 'visibility', 'settings', 'layout', 'columns']) {
       if (!(key in section)) errors.push(`Section[${sIdx}]: fehlendes Feld "${key}"`);
     }
+    checkId(section.id);
 
     (section.columns ?? []).forEach((column, cIdx) => {
       for (const key of ['id', 'class_name', 'settings', 'addons', 'width']) {
         if (!(key in column)) errors.push(`Section[${sIdx}].Column[${cIdx}]: fehlendes Feld "${key}"`);
       }
+      checkId(column.id);
 
       (column.addons ?? []).forEach((addon, aIdx) => {
         const label = `Section[${sIdx}].Column[${cIdx}].Addon[${aIdx}]`;
+        checkId(addon.id);
 
         if (!addon.name) {
           errors.push(`${label}: fehlender Addon-Name`);

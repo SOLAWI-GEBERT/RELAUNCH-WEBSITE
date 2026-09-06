@@ -187,17 +187,17 @@ export function buildPage() {
     section({
       backgroundColor: BLUE,
       columns: [
-        { span: 4, addons: [feature({ title: 'Sommergemüse', text: 'Biohof Tristan — Tomaten, Zucchini, Paprika und mehr — frisch vom Feld.', iconName: 'fas fa-carrot', titleUrl: '/ernteanteile/hederer-sommer' })] },
-        { span: 4, addons: [feature({ title: 'Wintergemüse', text: 'Biohof Tristan — Kohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.', iconName: 'fas fa-leaf', titleUrl: '/ernteanteile/tristans-winter' })] },
-        { span: 4, addons: [feature({ title: 'Obst & Säfte', text: 'Demeterhof Hederer — Äpfel, Birnen, Zwetschgen und hausgemachte Säfte.', iconName: 'fas fa-apple-whole', titleUrl: '/ernteanteile/hederer-obst' })] },
+        { span: 4, addons: [feature({ title: 'Sommergemüse', text: 'Biohof Tristan — Tomaten, Zucchini, Paprika und mehr — frisch vom Feld.', iconName: 'fas fa-carrot', titleUrl: '/ernteanteile/hederer-sommer', backgroundColor: '#ffffff' })] },
+        { span: 4, addons: [feature({ title: 'Wintergemüse', text: 'Biohof Tristan — Kohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.', iconName: 'fas fa-leaf', titleUrl: '/ernteanteile/tristans-winter', backgroundColor: '#ffffff' })] },
+        { span: 4, addons: [feature({ title: 'Obst & Säfte', text: 'Demeterhof Hederer — Äpfel, Birnen, Zwetschgen und hausgemachte Säfte.', iconName: 'fas fa-apple-whole', titleUrl: '/ernteanteile/hederer-obst', backgroundColor: '#ffffff' })] },
       ],
     }),
     section({
       backgroundColor: BLUE,
       columns: [
-        { span: 4, addons: [feature({ title: 'Fleisch & Eier', text: 'Demeterhof Walz — Weiderind, Hähnchen und frische Eier aus artgerechter Haltung.', iconName: 'fas fa-egg', titleUrl: '/ernteanteile/walz-huhn' })] },
-        { span: 4, addons: [feature({ title: 'Ur-Getreide', text: 'Demeterhof Walz — Emmer, Einkorn und Dinkel — alte Sorten, neu entdeckt.', iconName: 'fas fa-wheat-awn', titleUrl: '/ernteanteile/walz-getreide' })] },
-        { span: 4, addons: [feature({ title: 'Bio-Beeren', text: 'Kirschgarten — Erdbeeren, Himbeeren und Johannisbeeren in EU-Bio-Qualität.', iconName: 'fas fa-seedling', titleUrl: '/ernteanteile/kirschgarten-beeren' })] },
+        { span: 4, addons: [feature({ title: 'Fleisch & Eier', text: 'Demeterhof Walz — Weiderind, Hähnchen und frische Eier aus artgerechter Haltung.', iconName: 'fas fa-egg', titleUrl: '/ernteanteile/walz-huhn', backgroundColor: '#ffffff' })] },
+        { span: 4, addons: [feature({ title: 'Ur-Getreide', text: 'Demeterhof Walz — Emmer, Einkorn und Dinkel — alte Sorten, neu entdeckt.', iconName: 'fas fa-wheat-awn', titleUrl: '/ernteanteile/walz-getreide', backgroundColor: '#ffffff' })] },
+        { span: 4, addons: [feature({ title: 'Bio-Beeren', text: 'Kirschgarten — Erdbeeren, Himbeeren und Johannisbeeren in EU-Bio-Qualität.', iconName: 'fas fa-seedling', titleUrl: '/ernteanteile/kirschgarten-beeren', backgroundColor: '#ffffff' })] },
       ],
     }),
 
