@@ -34,6 +34,11 @@ const CARD_SHADOW = '0 4px 6px 0 rgba(0, 0, 0, 0.1)'; // ≈ Tailwind shadow-md
 const REVEAL_UP = 'fadeInUp';
 const REVEAL_LEFT = 'fadeInLeft';
 
+// Wellige Sektionsteiler (wave-top/wave-bottom im Prototyp) als SPPB-Shape-Divider.
+// 'wavy-opacity' = weicher Wellencharakter, Alternative 'rocky-mountain' = comic-artig.
+// Farbe = Hintergrund der angrenzenden Section, Inhalt wird nach vorn verschoben.
+const WAVE_SHAPE = 'wavy-opacity';
+
 export function buildPage() {
   const sections = [
     // 1. Hero (kein ScrollReveal im Prototyp)
@@ -58,10 +63,11 @@ export function buildPage() {
       ],
     }),
 
-    // 2a. "SoLaWi in 60 Sekunden" — Überschrift
+    // 2a. "SoLaWi in 60 Sekunden" — Überschrift (Welle oben, in Hero-Grün)
     section({
       backgroundColor: BLUE,
       padding: PAD_HEADING,
+      topShape: { name: WAVE_SHAPE, color: GREEN },
       columns: [{ span: 12, addons: [heading({ title: 'SoLaWi in 60 Sekunden' })] }],
     }),
 
@@ -94,9 +100,11 @@ export function buildPage() {
     }),
 
     // 2c. Drei Feature-Karten ("Du bezahlst den Hof...", "Saisonal & regional...", "Gemeinsam tragen wir das Risiko")
+    //     Welle unten, in Weiß des folgenden Abschnitts
     section({
       backgroundColor: BLUE,
       padding: PAD_LAST,
+      bottomShape: { name: WAVE_SHAPE, color: WHITE },
       columns: [
         {
           span: 4,
@@ -224,9 +232,11 @@ export function buildPage() {
     }),
 
     // 4. "Was bekomme ich" — 6 Produktkarten (weiß, Schatten, linksbündig wie im Prototyp)
+    //    Welle oben in Weiß des vorherigen Abschnitts
     section({
       backgroundColor: BLUE,
       padding: PAD_HEADING,
+      topShape: { name: WAVE_SHAPE, color: WHITE },
       columns: [
         {
           span: 12,
@@ -249,6 +259,7 @@ export function buildPage() {
     section({
       backgroundColor: BLUE,
       padding: PAD_LAST,
+      bottomShape: { name: WAVE_SHAPE, color: GREEN }, // Welle unten in CTA-Grün
       columns: [
         { span: 4, addons: [productCard({ title: 'Fleisch & Eier', farm: 'Demeterhof Walz', text: 'Weiderind, Hähnchen und frische Eier aus artgerechter Haltung.', iconName: 'fas fa-egg', url: '/ernteanteile/walz-huhn', delay: 150 })] },
         { span: 4, addons: [productCard({ title: 'Ur-Getreide', farm: 'Demeterhof Walz', text: 'Emmer, Einkorn und Dinkel — alte Sorten, neu entdeckt.', iconName: 'fas fa-wheat-awn', url: '/ernteanteile/walz-getreide', delay: 200 })] },

@@ -61,6 +61,11 @@ Padding/Schatten, Abstände, Entrance-Animationen.
 - `ScrollReveal` im Prototyp → `animation: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight'`
   plus `animationDelay` (ms) am Addon; `hover-tilt`/`hover-wiggle` haben kein
   SPPB-Äquivalent ohne Custom-CSS und entfallen.
+- Wellige Sektionsteiler (`wave-top`/`wave-bottom`) → `section({ topShape/bottomShape:
+  { name: 'wavy-opacity', color } })` mit `color` = Hintergrund der **angrenzenden**
+  Section (oben: vorherige, unten: folgende); bei mehreren SPPB-Sections pro
+  Prototyp-Abschnitt nur auf der ersten (top) bzw. letzten (bottom). Alternative
+  `'rocky-mountain'` für den comic-artigen Stil.
 
 ## Fehlerkorrektur
 

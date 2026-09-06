@@ -50,7 +50,7 @@ Spalten mit 7/12 und 5/12 Breite).
 | `overlay_type` | string | Overlay über dem Hintergrund |
 | `columns_align_center` | bool | Vertikale Zentrierung der Columns |
 | `hidden_xs`/`hidden_sm`/`hidden_md`/`hidden_lg`/`hidden_xl` | bool | Responsive Visibility |
-| `show_top_shape`/`show_bottom_shape` + `shape_*` | | Wellenform-Trenner (Shape Dividers) |
+| `show_top_shape` (`0\|1`), `shape_name`, `shape_color`, `shape_width`, `shape_height`, `shape_flip`, `shape_invert`, `shape_to_front` | | Shape-Divider oben; Bottom-Variante mit Präfix `bottom_` (`show_bottom_shape`, `bottom_shape_name`, …). `shape_name` = SVG-Name aus `assets/shapes/` (z.B. `wavy-opacity`, `rocky-mountain`, `single-wave`, `clouds-flat`); std `#e5e5e5`. `shape_to_front = true` schiebt den Inhalt statt zu überlappen. Builder: `section({ topShape: { name, color, toFront? }, bottomShape: … })` — Farbe = Hintergrund der angrenzenden Section |
 
 ## Column
 

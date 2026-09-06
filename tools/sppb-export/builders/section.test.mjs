@@ -42,3 +42,21 @@ test('section setzt columns_align_center nur mit alignCenter', () => {
   const centered = section({ id: 1, alignCenter: true, columns: [{ span: 12, addons: [] }] });
   assert.equal(centered.settings.columns_align_center, 1);
 });
+
+test('section setzt Top-Shape-Divider mit Farbe der vorherigen Section und to_front', () => {
+  const s = section({ id: 1, topShape: { name: 'wavy-opacity', color: '#c2ddb2' }, columns: [{ span: 12, addons: [] }] });
+  assert.equal(s.settings.show_top_shape, 1);
+  assert.equal(s.settings.shape_name, 'wavy-opacity');
+  assert.equal(s.settings.shape_color, '#c2ddb2');
+  assert.equal(s.settings.shape_to_front, true);
+  assert.equal(s.settings.show_bottom_shape, undefined);
+});
+
+test('section setzt Bottom-Shape-Divider mit bottom_-Präfix', () => {
+  const s = section({ id: 1, bottomShape: { name: 'rocky-mountain', color: '#ffffff', toFront: false }, columns: [{ span: 12, addons: [] }] });
+  assert.equal(s.settings.show_bottom_shape, 1);
+  assert.equal(s.settings.bottom_shape_name, 'rocky-mountain');
+  assert.equal(s.settings.bottom_shape_color, '#ffffff');
+  assert.equal(s.settings.bottom_shape_to_front, false);
+  assert.equal(s.settings.show_top_shape, undefined);
+});
