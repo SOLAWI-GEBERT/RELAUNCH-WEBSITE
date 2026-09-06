@@ -21,3 +21,11 @@ test('heading setzt globale Hintergrundfarbe wenn angegeben', () => {
   assert.equal(addon.settings.global_background_type, 'color');
   assert.equal(addon.settings.global_background_color, '#c2ddb2');
 });
+
+test('heading setzt title_color nur wenn color angegeben ist', () => {
+  const plain = heading({ id: 1, title: 'x' });
+  assert.equal(plain.settings.title_color, undefined);
+
+  const black = heading({ id: 1, title: 'Stadt, Land, <strong>Beides.</strong>', color: '#1b1b1b' });
+  assert.equal(black.settings.title_color, '#1b1b1b');
+});

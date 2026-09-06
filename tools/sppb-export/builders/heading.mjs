@@ -6,6 +6,7 @@ export function heading({
   title,
   headingSelector = 'h2',
   alignment = 'center',
+  color,
   backgroundColor,
   animation,
   animationDelay,
@@ -18,6 +19,9 @@ export function heading({
       title,
       heading_selector: headingSelector,
       alignment: responsive(alignment),
+      // title_color (advancedcolor) akzeptiert laut CSSHelper::parseColor auch
+      // einen reinen Hex-String. Ohne Angabe gilt die Template-Typografie.
+      ...(color ? { title_color: color } : {}),
       ...globalStyleFields({ backgroundColor, animation, animationDelay }),
     },
   };

@@ -73,6 +73,9 @@ Padding/Schatten, Abstände, Entrance-Animationen.
   bzw. `heading({ title: 'Warum <span class="underline-sketch">mitmachen</span>?' })`
   — Helper `badge()`/`sketch()` in `pages/home.mjs`. Neue Akzent-Klassen gehören in
   die Init-Datei, nicht in Recipes.
+- Die Wortbildmarke „Stadt, Land, **Beides.**" (Hero-h1) bekommt **keine** Welle:
+  `heading({ title: 'Stadt, Land, <strong>Beides.</strong>', color: '#1b1b1b' })` —
+  schwarz, „Beides." fett (Konstanten `BRAND_TITLE`/`BRAND_COLOR` in `pages/home.mjs`).
 - Wellige Sektionsteiler (`wave-top`/`wave-bottom`) → `section({ topShape/bottomShape:
   { name: 'wavy-opacity', color } })` mit `color` = Hintergrund der **angrenzenden**
   Section (oben: vorherige, unten: folgende); bei mehreren SPPB-Sections pro

@@ -19,4 +19,4 @@ Quelle: `components/com_sppagebuilder/addons/heading/admin.php`
 
 Plus die globalen Addon-Felder aus `docs/sppb/page-format.md`.
 
-**Von `tools/sppb-export/builders/heading.mjs` gesetzt:** `title`, `heading_selector`, `alignment`, optional `global_background_type`/`global_background_color`.
+**Von `tools/sppb-export/builders/heading.mjs` gesetzt:** `title` (HTML erlaubt — wird roh per `nl2br()` ausgegeben, z.B. `<strong>`, `<span class="underline-sketch">`), `heading_selector`, `alignment`, optional `title_color` (Hex-String; `CSSHelper::parseColor` akzeptiert String oder `{type, color, …}`), optional globale Felder (Hintergrund, Animation).
