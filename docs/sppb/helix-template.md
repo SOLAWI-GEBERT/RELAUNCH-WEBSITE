@@ -39,8 +39,8 @@ Sektionshintergründe, Addon-Padding/-Schatten, Animationen.
 |---|---|
 | `text_color` | `#4A4A4A` |
 | `bg_color` | `#C7AFC7` (Mauve — Body-Hintergrund!) |
-| `link_color` | `#97B0C7` |
-| `link_hover_color` | `#8A2B7D` |
+| `link_color` | `#d10038` — SoLaWi-Pink (`--solawi-pink`/`--cta` im Prototyp); färbt `a`, **`.sppb-btn-primary`**, `.sp-page-title`, Social-Hover. Ursprünglich `#97B0C7`, am 2026-09-06 geändert, damit Buttons dem CD folgen |
+| `link_hover_color` | `#b80030` (`--cta-hover`); ursprünglich `#8A2B7D` |
 | `header_bg_color` | `#FFFFFF` |
 | `logo_text_color` | `#8A2B7D` |
 | `menu_text_color` / `_hover` / `_active` | `#4A4A4A` / `#8A2B7D` / `#000000` |
