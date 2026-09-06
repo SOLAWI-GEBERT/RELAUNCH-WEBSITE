@@ -31,3 +31,18 @@ test('feature verwendet center als Alignment-Default und icon als featureType-De
   assert.equal(addon.settings.alignment.xl, 'center');
   assert.equal(addon.settings.feature_type, 'icon');
 });
+
+test('feature reicht padding, boxShadow und animation an die globalen Felder durch', () => {
+  const addon = feature({
+    title: 'x',
+    text: 'y',
+    padding: '32px 32px 32px 32px',
+    boxShadow: '0 4px 6px 0 rgba(0, 0, 0, 0.1)',
+    animation: 'fadeInUp',
+    animationDelay: 100,
+  });
+  assert.deepEqual(addon.settings.global_padding, { xl: '32px 32px 32px 32px', lg: '', md: '', sm: '', xs: '' });
+  assert.equal(addon.settings.global_boxshadow, '0 4px 6px 0 rgba(0, 0, 0, 0.1)');
+  assert.equal(addon.settings.global_animation, 'fadeInUp');
+  assert.equal(addon.settings.global_animationdelay, '100');
+});

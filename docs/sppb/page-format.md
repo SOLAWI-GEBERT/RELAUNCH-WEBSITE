@@ -93,6 +93,18 @@ Addon bekommt diese Felder automatisch zu seinen eigenen `settings` gemerged
 | `global_text_color` | Textfarbe |
 | `global_padding`/`global_margin` | `{xl,lg,md,sm,xs}` |
 | `global_user_border` + `global_border_*` | Rahmen |
+| `global_boxshadow` | Schatten, Format `"x y blur spread color"` (std `"0 0 0 0 #FFFFFF"`) |
+| `global_border_radius` | `{xl,lg,md,sm,xs}` |
+| `global_use_animation` (`0\|1`), `global_animation`, `global_animationduration`, `global_animationdelay` | Entrance-Animation beim Scrollen: Name = animate.css-Klasse (`fadeIn`, `fadeInUp`, `fadeInLeft`, `fadeInRight`, `zoomIn`, …), Dauer/Delay als ms-Strings (std `"300"`/`"0"`). Rendering: `layouts/addon/start.php` → `class="sppb-wow <name>"`, `data-sppb-wow-duration/-delay` |
+
+`tools/sppb-export/lib/fields.mjs::globalStyleFields({backgroundColor, padding, boxShadow, animation, animationDelay})`
+bündelt diese Felder für alle Builder.
+
+Section-Ebene: `columns_align_center` (`0|1`) zentriert die Columns vertikal
+(Prototyp: `items-center`); `section({ alignCenter: true })`.
+
+Fonts, Link-/Button-/Textfarben kommen **nicht** aus diesen Feldern, sondern aus dem
+Helix-Template-Preset — siehe `docs/sppb/helix-template.md`.
 
 `tools/sppb-export/lib/fields.mjs::globalBackgroundFields(color)` bildet genau
 diesen Mechanismus ab.

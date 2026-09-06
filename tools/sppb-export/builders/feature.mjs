@@ -1,5 +1,5 @@
 import { nextId } from '../lib/ids.mjs';
-import { responsive, linkField, globalBackgroundFields } from '../lib/fields.mjs';
+import { responsive, linkField, globalStyleFields } from '../lib/fields.mjs';
 
 export function feature({
   id,
@@ -13,6 +13,10 @@ export function feature({
   titleUrl,
   alignment = 'center',
   backgroundColor,
+  padding,
+  boxShadow,
+  animation,
+  animationDelay,
 }) {
   const settings = {
     title,
@@ -35,7 +39,7 @@ export function feature({
     settings.title_url = linkField(titleUrl);
   }
 
-  Object.assign(settings, globalBackgroundFields(backgroundColor));
+  Object.assign(settings, globalStyleFields({ backgroundColor, padding, boxShadow, animation, animationDelay }));
 
   return { id: id ?? nextId(), name: 'feature', visibility: true, settings };
 }

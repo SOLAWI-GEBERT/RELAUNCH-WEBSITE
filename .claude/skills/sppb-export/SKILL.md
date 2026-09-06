@@ -41,6 +41,27 @@ Pro Import-Datei (`export/<page>.json`) um. Hintergrund: `docs/superpowers/specs
 8. **Manueller Import-Test** (siehe Abschnitt unten) — Ergebnis abwarten, bevor die
    nächste Seite angegangen wird.
 
+## Schichtenmodell: Helix-Template vs. SPPB-Seite
+
+Das Corporate Design (Farb-Preset für Body/Links/**Buttons**, Fonts h1–h6/Body,
+Header/Footer) liegt im **Helix-Template-Style** und wird einmal importiert
+(`export/SLB_init_*.json`, Weg und Schema in `docs/sppb/helix-template.md`).
+Das Toolset setzt nur, was Helix nicht liefert: Sektions-/Kartenhintergründe,
+Padding/Schatten, Abstände, Entrance-Animationen.
+
+- Buttons immer `type: 'primary'` (Default des Builders) — erbt `link_color`/`link_hover_color`
+  des Presets. Keine hart codierten Button-Farben.
+- Der Body-Hintergrund des aktiven Presets ist **mauve** (`#C7AFC7`): Abschnitte, die im
+  Prototyp weiß sind, brauchen `backgroundColor: '#ffffff'`.
+- Vor jedem Import-Test prüfen, dass der Helix-Style im Testsystem importiert ist —
+  sonst sind Fonts/Button-Farben nicht vergleichbar.
+- Ein Prototyp-Abschnitt, der auf mehrere SPPB-Sections verteilt wird, bekommt über
+  `padding` die doppelten 96px-Abstände herausgenommen (Muster in `pages/home.mjs`:
+  `PAD_HEADING` / `PAD_MIDDLE` / `PAD_ROW_GAP` / `PAD_LAST`).
+- `ScrollReveal` im Prototyp → `animation: 'fadeInUp' | 'fadeInLeft' | 'fadeInRight'`
+  plus `animationDelay` (ms) am Addon; `hover-tilt`/`hover-wiggle` haben kein
+  SPPB-Äquivalent ohne Custom-CSS und entfallen.
+
 ## Fehlerkorrektur
 
 - **Seiteninhalt/-layout falsch** → die betroffene Stelle in

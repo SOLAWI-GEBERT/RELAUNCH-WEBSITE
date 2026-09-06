@@ -29,3 +29,16 @@ test('section leitet layout aus den Column-Spans ab und baut die Columns', () =>
   assert.equal(s.columns[0].addons[0], headingAddon);
   assert.equal(s.columns[1].class_name, 'col-md-5');
 });
+
+test('section akzeptiert padding als CSS-Shorthand-String und macht ihn responsiv', () => {
+  const s = section({ id: 1, padding: '96px 0px 64px 0px', columns: [{ span: 12, addons: [] }] });
+  assert.deepEqual(s.settings.padding, { xl: '96px 0px 64px 0px', lg: '', md: '', sm: '', xs: '' });
+});
+
+test('section setzt columns_align_center nur mit alignCenter', () => {
+  const plain = section({ id: 1, columns: [{ span: 12, addons: [] }] });
+  assert.equal(plain.settings.columns_align_center, undefined);
+
+  const centered = section({ id: 1, alignCenter: true, columns: [{ span: 12, addons: [] }] });
+  assert.equal(centered.settings.columns_align_center, 1);
+});

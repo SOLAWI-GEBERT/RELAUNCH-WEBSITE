@@ -41,3 +41,23 @@ test('imageContent setzt button_text/button_url nur wenn buttonText angegeben is
   const withoutButton = imageContent({ text: 'x', imageSrc: 'y' });
   assert.equal(withoutButton.settings.button_text, undefined);
 });
+
+test('imageContent setzt button_type=primary, damit der Button das Helix-Preset erbt', () => {
+  const addon = imageContent({ text: 'x', imageSrc: 'y', buttonText: 'Mehr', buttonUrl: '/z' });
+  assert.equal(addon.settings.button_type, 'primary');
+});
+
+test('imageContent reicht animation an die globalen Felder durch', () => {
+  const addon = imageContent({ text: 'x', imageSrc: 'y', animation: 'fadeInLeft' });
+  assert.equal(addon.settings.global_use_animation, 1);
+  assert.equal(addon.settings.global_animation, 'fadeInLeft');
+  assert.equal(addon.settings.global_animationduration, '600');
+});
+
+test('imageContent setzt content_padding responsiv, wenn contentPadding angegeben ist', () => {
+  const plain = imageContent({ text: 'x', imageSrc: 'y' });
+  assert.equal(plain.settings.content_padding, undefined);
+
+  const padded = imageContent({ text: 'x', imageSrc: 'y', contentPadding: '0px 0px 0px 50px' });
+  assert.deepEqual(padded.settings.content_padding, { xl: '0px 0px 0px 50px', lg: '', md: '', sm: '', xs: '' });
+});

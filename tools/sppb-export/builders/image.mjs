@@ -1,7 +1,17 @@
 import { nextId } from '../lib/ids.mjs';
-import { responsive, globalBackgroundFields } from '../lib/fields.mjs';
+import { responsive, globalStyleFields } from '../lib/fields.mjs';
 
-export function image({ id, src, alt = 'Image', width = '', height = '', alignment, backgroundColor }) {
+export function image({
+  id,
+  src,
+  alt = 'Image',
+  width = '',
+  height = '',
+  alignment,
+  backgroundColor,
+  animation,
+  animationDelay,
+}) {
   return {
     id: id ?? nextId(),
     name: 'image',
@@ -10,7 +20,7 @@ export function image({ id, src, alt = 'Image', width = '', height = '', alignme
       image: { src, height, width, alt },
       alt_text: alt,
       ...(alignment ? { position: responsive(alignment) } : {}),
-      ...globalBackgroundFields(backgroundColor),
+      ...globalStyleFields({ backgroundColor, animation, animationDelay }),
     },
   };
 }

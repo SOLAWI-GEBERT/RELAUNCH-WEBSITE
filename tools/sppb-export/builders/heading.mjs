@@ -1,7 +1,15 @@
 import { nextId } from '../lib/ids.mjs';
-import { responsive, globalBackgroundFields } from '../lib/fields.mjs';
+import { responsive, globalStyleFields } from '../lib/fields.mjs';
 
-export function heading({ id, title, headingSelector = 'h2', alignment = 'center', backgroundColor }) {
+export function heading({
+  id,
+  title,
+  headingSelector = 'h2',
+  alignment = 'center',
+  backgroundColor,
+  animation,
+  animationDelay,
+}) {
   return {
     id: id ?? nextId(),
     name: 'heading',
@@ -10,7 +18,7 @@ export function heading({ id, title, headingSelector = 'h2', alignment = 'center
       title,
       heading_selector: headingSelector,
       alignment: responsive(alignment),
-      ...globalBackgroundFields(backgroundColor),
+      ...globalStyleFields({ backgroundColor, animation, animationDelay }),
     },
   };
 }
