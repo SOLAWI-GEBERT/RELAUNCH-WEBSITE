@@ -14,15 +14,18 @@ const DEFAULT_MARGIN = '0px 0px 0px 0px';
  * (wave-top/wave-bottom): color = Hintergrund der angrenzenden Section,
  * toFront = true, damit der Inhalt verschoben statt überlappt wird.
  */
+const DEFAULT_SHAPE_HEIGHT = 48; // px; ohne Höhe überlappt die Welle den Inhalt
+
 function shapeFields(position, shape) {
   if (!shape) return {};
-  const { name, color, toFront = true } = shape;
+  const { name, color, toFront = true, height = DEFAULT_SHAPE_HEIGHT } = shape;
   const show = position === 'top' ? 'show_top_shape' : 'show_bottom_shape';
   const prefix = position === 'top' ? 'shape' : 'bottom_shape';
   return {
     [show]: 1,
     [`${prefix}_name`]: name,
     [`${prefix}_color`]: color,
+    [`${prefix}_height`]: responsive(height),
     [`${prefix}_to_front`]: toFront,
   };
 }
@@ -36,7 +39,8 @@ function shapeFields(position, shape) {
  * alignCenter: vertikale Zentrierung der Columns (columns_align_center),
  * entspricht items-center im Prototyp.
  *
- * topShape / bottomShape: { name, color, toFront? } — siehe shapeFields().
+ * topShape / bottomShape: { name, color, toFront?, height? } — siehe shapeFields();
+ * height in px (Default 48).
  */
 export function section({
   id,

@@ -49,7 +49,13 @@ test('section setzt Top-Shape-Divider mit Farbe der vorherigen Section und to_fr
   assert.equal(s.settings.shape_name, 'wavy-opacity');
   assert.equal(s.settings.shape_color, '#c2ddb2');
   assert.equal(s.settings.shape_to_front, true);
+  assert.deepEqual(s.settings.shape_height, { xl: 48, lg: '', md: '', sm: '', xs: '' });
   assert.equal(s.settings.show_bottom_shape, undefined);
+});
+
+test('section übernimmt eine explizite Shape-Höhe', () => {
+  const s = section({ id: 1, bottomShape: { name: 'wavy-opacity', color: '#ffffff', height: 80 }, columns: [{ span: 12, addons: [] }] });
+  assert.equal(s.settings.bottom_shape_height.xl, 80);
 });
 
 test('section setzt Bottom-Shape-Divider mit bottom_-Präfix', () => {
