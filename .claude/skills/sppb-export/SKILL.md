@@ -51,6 +51,8 @@ Padding/Schatten, Abstände, Entrance-Animationen.
 
 - Buttons immer `type: 'primary'` (Default des Builders) — erbt `link_color`/`link_hover_color`
   des Presets. Keine hart codierten Button-Farben.
+- Icons in `feature`-Karten: Größe über `iconSize` (Default 48, Produktkarten 40), Farbe
+  Default `var(--link-color)` — folgt dem Preset; nur bei bewusster Abweichung Hex setzen.
 - Der Body-Hintergrund des aktiven Presets ist **mauve** (`#C7AFC7`): Abschnitte, die im
   Prototyp weiß sind, brauchen `backgroundColor: '#ffffff'`.
 - Vor jedem Import-Test prüfen, dass der Helix-Style im Testsystem importiert ist —

@@ -8,6 +8,10 @@ export function feature({
   text,
   featureType = 'icon',
   iconName,
+  iconSize = 48,
+  // Icon-Farbe folgt dem Helix-Preset: SPPB schreibt den Wert unverändert als
+  // color:… in das Addon-CSS (CSSHelper::parseColor reicht Strings durch).
+  iconColor = 'var(--link-color)',
   imageSrc,
   imageAlt,
   titleUrl,
@@ -28,6 +32,9 @@ export function feature({
 
   if (featureType !== 'image' && iconName) {
     settings.icon_name = iconName;
+    settings.icon_size = responsive(iconSize);
+    settings.icon_color = iconColor;
+    settings.icon_hover_color = iconColor;
   }
 
   if (featureType !== 'icon' && imageSrc) {

@@ -304,6 +304,7 @@ function productCard({ title, farm, text, iconName, url, delay }) {
     title,
     text: `<p><small>${farm}</small></p><p>${text}</p>`,
     iconName,
+    iconSize: 40, // Prototyp: w-10 (die drei SoLaWi-Karten: w-12 = Builder-Default 48)
     titleUrl: url,
     alignment: 'left',
     backgroundColor: WHITE,

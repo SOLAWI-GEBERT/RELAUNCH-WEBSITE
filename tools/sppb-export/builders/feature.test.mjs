@@ -46,3 +46,20 @@ test('feature reicht padding, boxShadow und animation an die globalen Felder dur
   assert.equal(addon.settings.global_animation, 'fadeInUp');
   assert.equal(addon.settings.global_animationdelay, '100');
 });
+
+test('feature mit Icon setzt icon_size (Default 48) und icon_color aus der Preset-Variable', () => {
+  const addon = feature({ title: 'x', text: 'y', iconName: 'fas fa-users' });
+  assert.deepEqual(addon.settings.icon_size, { xl: 48, lg: '', md: '', sm: '', xs: '' });
+  assert.equal(addon.settings.icon_color, 'var(--link-color)');
+  assert.equal(addon.settings.icon_hover_color, 'var(--link-color)');
+});
+
+test('feature übernimmt iconSize/iconColor und setzt bei featureType=image keine Icon-Felder', () => {
+  const small = feature({ title: 'x', text: 'y', iconName: 'fas fa-leaf', iconSize: 40, iconColor: '#d10038' });
+  assert.equal(small.settings.icon_size.xl, 40);
+  assert.equal(small.settings.icon_color, '#d10038');
+
+  const img = feature({ title: 'x', text: 'y', featureType: 'image', imageSrc: 'images/a.jpg' });
+  assert.equal(img.settings.icon_size, undefined);
+  assert.equal(img.settings.icon_color, undefined);
+});
