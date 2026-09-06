@@ -98,6 +98,22 @@ body .sppb-addon-wrapper .sppb-btn.sppb-btn-primary:hover, …:focus, …:active
 `custom_css` wird von `educon_ii/index.php` per `addStyledeclaration()` als
 Inline-`<style>` **nach** dem kompilierten Template-CSS ausgegeben.
 
+## Wortbildmarke im Header
+
+`logo_type: text` → `educon_ii/features/logo.php:199` gibt `logo_text` **roh** aus
+(`<span class="logo"><a href="/">…</a></span>`), HTML ist also erlaubt:
+`logo_text = "Stadt, Land, <strong>Beides.</strong>"`.
+
+`logo_text_color` aus dem Preset wird von `educon_ii` **nicht verwendet** (0 Treffer im
+SCSS) — der Logo-Link erbt sonst `a { color: $link_color }` und wurde mit dem
+SoLaWi-Pink rot. Deshalb in `custom_css`:
+`#sp-header .logo a { color: #1b1b1b }` (auch Hover/Focus), `strong { font-weight: 700 }`.
+Die Schrift kommt weiterhin aus `custom_font` (EB Garamond 24 px, Selektor `logo`).
+
+Alternative, falls die Typografie exakt der Marke entsprechen soll: `logo_type: image`
+mit `public/SLB.gif` (400 × 44 px, 2,5 KB) als `logo_image` — dann muss die Datei in den
+Joomla-Media-Manager.
+
 ## Freche Akzente: `badge-frech`, `underline-sketch`
 
 Ebenfalls in `custom_css` (Farbe über `--link-color`, folgt dem Preset):

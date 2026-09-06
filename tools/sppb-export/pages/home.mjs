@@ -40,12 +40,6 @@ const SHAKE = 'headShake';
 // hängen an --link-color; hier nur das Markup. heading gibt den Titel roh aus.
 const sketch = (word) => `<span class="underline-sketch">${word}</span>`;
 const badge = (text) => `<span class="badge-frech">${text}</span>`;
-
-// Wortbildmarke im Hero: schwarz, "Beides." fett, ohne Welle (das ist die Marke,
-// kein Akzent). Farbe = --foreground des Prototyps.
-const BRAND_TITLE = 'Stadt, Land, <strong>Beides.</strong>';
-const BRAND_COLOR = '#1b1b1b';
-
 // Wellige Sektionsteiler (wave-top/wave-bottom im Prototyp) als SPPB-Shape-Divider.
 // 'wavy-opacity' = weicher Wellencharakter, Alternative 'rocky-mountain' = comic-artig.
 // Farbe = Hintergrund der angrenzenden Section, Inhalt wird nach vorn verschoben.
@@ -62,7 +56,7 @@ export function buildPage() {
           span: 7,
           addons: [
             textBlock({ text: badge('Solidarische Landwirtschaft'), alignment: 'left' }),
-            heading({ title: BRAND_TITLE, headingSelector: 'h1', alignment: 'left', color: BRAND_COLOR }),
+            heading({ title: `Stadt, Land, ${sketch('Beides.')}`, headingSelector: 'h1', alignment: 'left' }),
             textBlock({ text: '<p>Frische Produkte direkt vom Hof. Faire Preise für alle. Gemeinschaft, die schmeckt.</p>' }),
             button({ text: 'Jetzt dabei sein', url: '/so-funktionierts', size: 'lg', shape: 'square', alignment: 'left' }),
           ],
