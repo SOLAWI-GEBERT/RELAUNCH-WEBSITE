@@ -12,7 +12,7 @@ JSON-Export: Accordion-Inhalte verweisen per `id` auf eigenständige Sections mi
 | `sp_accordion_item` | repeatable (Attr: `title`, `visual_item_type`, `image`, `icon`, `content`) | Item-`title`: `"Accordion Title"`, `visual_item_type`: `"icon"`, `content` (builder): Lorem-Ipsum | – |
 | ↳ `image` | media | – | `visual_item_type = 'image'` |
 | ↳ `icon` | icon | – | `visual_item_type = 'icon'` |
-| `openitem` | select (`""`=erstes offen\|`show`=alle offen\|`hide`=alle zu) | `""` | – |
+| `openitem` | select (`""`=erstes offen\|`show`=alle offen\|`hide`=alle zu) | – | – |
 | `style` | select (`panel-modern`\|`panel-default`\|`panel-primary`\|`panel-success`\|`panel-info`\|`panel-warning`\|`panel-danger`\|`panel-faq`\|`panel-custom`) | `"panel-custom"` | – |
 | `item_bg` | color | `"#FFFFFF"` | `style = 'panel-custom'` |
 | `item_margin` | margin (responsive) | – | `style = 'panel-custom'` |
