@@ -110,6 +110,14 @@ SoLaWi-Pink rot. Deshalb in `custom_css`:
 `#sp-header .logo a { color: #1b1b1b }` (auch Hover/Focus), `strong { font-weight: 700 }`.
 Die Schrift kommt weiterhin aus `custom_font` (EB Garamond 24 px, Selektor `logo`).
 
+**Größen (2026-09-06, „zu klein zum Inhalt"):** `header_height` 80 → **96 px**
+(steuert `line-height` der Menüpunkte), Logo 24 → **36 px**, Menü 18 → **22 px**,
+Dropdown 18 px. Die Werte stehen in `custom_font.fontSize` / `navigation_font.fontSize`
+**und** als Override in `custom_css`, weil das Template `#sp-header .logo a{font-size:24px}`
+und `.sp-megamenu-parent>li>a{font-size:18px}` fest setzt. Im Prototyp ist das Menü mit
+`text-sm` (14 px) und die GIF-Marke mit `h-10` (40 px) übrigens kleiner — die
+Joomla-Überschriften (h2 64 px) verlangen ein anderes Verhältnis.
+
 Alternative, falls die Typografie exakt der Marke entsprechen soll: `logo_type: image`
 mit `public/SLB.gif` (400 × 44 px, 2,5 KB) als `logo_image` — dann muss die Datei in den
 Joomla-Media-Manager.
