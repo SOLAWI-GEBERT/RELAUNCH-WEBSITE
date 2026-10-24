@@ -92,7 +92,9 @@
       "Bash(file public/K*rbiswelt.png)",
       "Bash(xxd)",
       "Bash(cp *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Skill(opsx:propose)",
+      "Bash(magick slw.png -crop 1440x520+0+2375 -resize 70% slw-aub.png)"
     ]
   }
 }
