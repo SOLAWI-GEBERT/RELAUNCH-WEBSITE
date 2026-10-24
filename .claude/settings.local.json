@@ -36,7 +36,11 @@
       "Bash(grep -v '^\\\\-\\\\-$')",
       "Bash(git -C /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/export_origin rev-parse --show-toplevel)",
       "Bash(cd /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE && find . -path ./node_modules -prune -o -iname \"*Navigation*\" -print)",
-      "Bash(./node_modules/.bin/tsc --noEmit)"
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Read(//Users/linus/Documents/0_Development/Joomla4/**)",
+      "Read(//Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/**)",
+      "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
+      "Bash(rm /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/.claude/launch.json && echo removed)"
     ]
   }
 }
