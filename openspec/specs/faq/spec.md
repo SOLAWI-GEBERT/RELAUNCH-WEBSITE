@@ -40,11 +40,11 @@ Der Abschnitt "Grundlagen" SHALL fünf Fragen als Akkordeon enthalten: "Was ist 
 - **THEN** wird ihre Antwort ausgeblendet
 
 ### Requirement: Schnelle Fragen als Akkordeon
-Der Abschnitt "Schnelle Fragen" SHALL sechs Fragen als Akkordeon mit demselben Öffnungsverhalten enthalten: "Was macht der Solawi-Verein?", "Wer oder was ist der Solawi-Verein?", "Muss ich mich einbringen an einem Hof oder im Verein?", "Kann ich direkt zu den Landwirten Kontakt aufnehmen?", "Wie kann ich Ernteteiler werden?" und "Wie kann ich wieder aussteigen?".
+Der Abschnitt "Schnelle Fragen" SHALL acht Fragen als Akkordeon mit demselben Öffnungsverhalten enthalten: "Was macht der Solawi-Verein?", "Wer oder was ist der Solawi-Verein?", "Muss ich mich einbringen an einem Hof oder im Verein?", "Kann ich direkt zu den Landwirten Kontakt aufnehmen?", "Wie kann ich Ernteteiler werden?", "Wie kann ich wieder aussteigen?", "Gibt es einen Newsletter?" und "Wie erfahre ich von Terminen und Mitmachangeboten?".
 
-#### Scenario: Sechs Fragen
+#### Scenario: Acht Fragen
 - **WHEN** der Abschnitt geprüft wird
-- **THEN** sind sechs Fragen in der genannten Reihenfolge vorhanden
+- **THEN** sind acht Fragen in der genannten Reihenfolge vorhanden
 
 #### Scenario: Antwort einsehbar
 - **WHEN** "Wie kann ich wieder aussteigen?" angeklickt wird
@@ -72,6 +72,32 @@ Dieselbe Antwort SHALL die Arbeitsweise transparent machen: Alle arbeiten ehrena
 #### Scenario: Ehrenamt, Ticketsystem und Rhythmus
 - **WHEN** die Antwort geöffnet ist
 - **THEN** nennt der Text das Ehrenamt, das interne Ticketsystem mit Verteilung und die Bearbeitung mindestens einmal pro Woche
+
+### Requirement: Newsletter-Kanäle in den Schnellen Fragen
+Der Abschnitt "Schnelle Fragen" SHALL eine Frage "Gibt es einen Newsletter?" enthalten, deren Antwort einen externen, öffentlichen Newsletter von einem internen Newsletter für Mitglieder unterscheidet.
+
+#### Scenario: Zwei Newsletter unterschieden
+- **WHEN** "Gibt es einen Newsletter?" angeklickt wird
+- **THEN** nennt der Antworttext den externen Newsletter mit Kochevents und Infoveranstaltungen, abonnierbar ohne Mitgliedschaft
+- **AND** nennt er den internen Newsletter für Mitglieder mit Protokollen und internen Treffen wie der Jahreshauptversammlung
+
+#### Scenario: Link zum Anmeldeformular
+- **WHEN** die Antwort geöffnet ist
+- **THEN** führt ein Link zum Newsletter-Anmeldeformular im Footer derselben Seite (Anker `#newsletter`)
+
+### Requirement: Hinweis zur internen Newsletter-Eintragung
+Dieselbe Antwort SHALL darauf hinweisen, dass die automatische Eintragung in den internen Newsletter noch nicht steht, und bis dahin zu einer Mail an `Team.Koordination@stadt-land-beides.de` auffordern.
+
+#### Scenario: Hinweis zur internen Eintragung
+- **WHEN** die Antwort geöffnet ist
+- **THEN** fordert der Text dazu auf, Team.Koordination@stadt-land-beides.de zu schreiben, um den internen Newsletter nicht zu verpassen
+
+### Requirement: Weg zu Terminen und Mitmachangeboten
+Der Abschnitt "Schnelle Fragen" SHALL eine Frage "Wie erfahre ich von Terminen und Mitmachangeboten?" enthalten. Die Antwort SHALL drei Kanäle unterscheiden: Hofaktionen (automatisch per Hof-Post, sobald man bei diesem Hof Ernteteiler ist), vereinsweite Termine wie die Jahreshauptversammlung (interner Newsletter) und öffentliche Angebote wie Kochevents oder Infoveranstaltungen (externer Newsletter).
+
+#### Scenario: Drei Kanäle genannt
+- **WHEN** "Wie erfahre ich von Terminen und Mitmachangeboten?" angeklickt wird
+- **THEN** nennt der Antworttext Hof-Post für Hofaktionen, den internen Newsletter für vereinsweite Termine und den externen Newsletter für öffentliche Angebote
 
 ### Requirement: Antwort nicht dabei
 Der letzte Abschnitt "Antwort nicht dabei?" SHALL das Formular "Interesse oder Frage", den Mail-Link zur Koordination und die Ansprechpartner enthalten, wie in `registration-contact` beschrieben.

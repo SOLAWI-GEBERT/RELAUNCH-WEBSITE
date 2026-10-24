@@ -51,7 +51,11 @@
       "Skill(openspec-propose)",
       "Bash(git reset *)",
       "Bash(echo \"grep-exit=$?\")",
-      "Bash(lsof -iTCP -sTCP:LISTEN -P)"
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)",
+      "Skill(openspec-archive-change)",
+      "Skill(openspec-sync-specs)",
+      "WebFetch(domain:www.demeterhof-walz.de)",
+      "WebFetch(domain:tristans-biohof.de)"
     ]
   }
 }

@@ -4,10 +4,12 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <!-- Schriften wie im Helix-Template (SLB_init): Roboto (Body), Roboto Condensed (Navigation), EB Garamond (h1/h2/h4/h6), Cormorant Garamond (h3/h5, Badges) -->
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Roboto+Condensed:wght@400;700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+      <!-- Schriften wie im Helix-Template (SLB_init): Roboto (Body), Roboto Condensed (Navigation),
+           EB Garamond (h1/h2/h4/h6), Cormorant Garamond (h3/h5, Badges).
+           Lokal gehostet in src/styles/fonts.css + public/fonts/ — kein Abruf von Google-Servern,
+           damit keine IP-Adressen der Besucher an Google übertragen werden (DSGVO). -->
+      <link rel="preload" href="/fonts/roboto-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+      <link rel="preload" href="/fonts/eb-garamond-400-800-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
       <title>Stadt, Land, Beides.</title>
     </head>
 

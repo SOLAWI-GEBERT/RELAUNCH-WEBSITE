@@ -46,7 +46,7 @@ Die Startseite SHALL einen Abschnitt "Warum mitmachen?" mit vier Kacheln enthalt
 - **THEN** sind genau vier Kacheln mit den genannten Überschriften vorhanden
 
 ### Requirement: Abschnitt "Was bekomme ich?"
-Die Startseite SHALL einen Abschnitt mit `id="was-bekomme-ich"` und der Überschrift "Was bekomme ich?" enthalten. Er SHALL sechs verlinkte Kacheln zeigen, jeweils mit Produktname, Hof und Kurzbeschreibung, die auf die Ernteanteil-Detailseiten `/ernteanteile/tristan-gemuese`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/kirschgarten-beeren`, `/ernteanteile/walz-huhn`, `/ernteanteile/walz-getreide` und `/ernteanteile/walz-hack` führen.
+Die Startseite SHALL einen Abschnitt mit `id="was-bekomme-ich"` und der Überschrift "Was bekomme ich?" enthalten. Er SHALL sechs verlinkte Kacheln zeigen, jeweils mit Produktname, Hof und Kurzbeschreibung, die auf die Ernteanteil-Detailseiten `/ernteanteile/tristan-gemuese`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/kirschgarten-beeren`, `/ernteanteile/walz-huhn`, `/ernteanteile/walz-getreide` und `/ernteanteile/walz-hack` führen. Produktname, Hof und Kurzbeschreibung SHALL mit der entsprechenden Kachel der Ernteanteile-Übersicht übereinstimmen.
 
 #### Scenario: Sechs Kacheln mit Zielen
 - **WHEN** der Abschnitt geprüft wird
@@ -59,6 +59,18 @@ Die Startseite SHALL einen Abschnitt mit `id="was-bekomme-ich"` und der Übersch
 #### Scenario: Anker vorhanden
 - **WHEN** `/#was-bekomme-ich` geöffnet wird
 - **THEN** scrollt die Seite zu diesem Abschnitt
+
+#### Scenario: Gleiche Texte wie die Übersicht
+- **WHEN** die sechs Kacheln mit den Kacheln auf `/ernteanteile` verglichen werden
+- **THEN** sind Produktname, Hof und Kurzbeschreibung jeweils identisch
+
+#### Scenario: Produktnamen der TNV
+- **WHEN** die Kachel zu `/ernteanteile/walz-getreide` geprüft wird
+- **THEN** lautet der Produktname "More..Ur-Getreide"
+
+#### Scenario: Gemüse-Kachel nennt beide Saisons
+- **WHEN** die Kachel zu `/ernteanteile/tristan-gemuese` geprüft wird
+- **THEN** nennt die Kurzbeschreibung Winter- und Sommergemüse
 
 ### Requirement: Abschluss-CTA
 Die Startseite SHALL am Ende einen Abschnitt mit der Frage "Bereit für frische, regionale Lebensmittel?" und einem Button "Jetzt mitmachen" enthalten, der auf `/so-funktionierts` verlinkt.

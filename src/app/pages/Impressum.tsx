@@ -6,7 +6,7 @@ export function Impressum() {
           <h1 className="text-3xl font-bold text-gray-900 mb-8">Impressum</h1>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">
-            Herausgeber (nach §§ 5 I TMG, 55 I RStV)
+            Anbieter (nach § 5 DDG)
           </h2>
           <p>
             Solidarische Landwirtschaft Stadt, Land, Beides e.V.
@@ -27,7 +27,7 @@ export function Impressum() {
           </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">
-            Vertretungsberechtigt (i.S.d. § 55 I RStV / § 5 I TMG)
+            Vertretungsberechtigt (nach § 5 Abs. 1 Nr. 1 DDG)
           </h2>
           <p>
             Sebastian Lades, Vorstand des Vereins Solidarische Landwirtschaft
@@ -35,7 +35,7 @@ export function Impressum() {
           </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">
-            Inhaltliche Verantwortung (nach § 55 II RStV)
+            Inhaltlich verantwortlich (nach § 18 Abs. 2 MStV)
           </h2>
           <p>Andreas Gebert</p>
 

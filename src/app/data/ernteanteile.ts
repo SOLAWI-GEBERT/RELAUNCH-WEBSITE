@@ -6,14 +6,22 @@ import type { HofKey } from "./hoefe";
  * public/TNV_StadtLandBeides_V26_4.pdf — Seiten 1, 2, 5–11.
  * Die TNV ist die autoritative Quelle. Bei Abweichungen gilt sie, nicht der Code.
  *
- * Preise sind Monatsbeträge pro Anteil:
- *   paketpreis = Anteil der Bäuerin/des Bauern
- *   soli       = solidarischer Beitrag (Logistik, Depotmiete, Transport)
- *   gesamt     = paketpreis + soli, siehe gesamtbetrag()
+ * Preise stehen hier nur als Richtwert-Spanne (Euro pro Monat, inkl. solidarischem Beitrag),
+ * nicht als exakter Betrag. Regel für `richtwert`, ausgehend vom TNV-Gesamtbetrag (Paketpreis
+ * + Soli): Stufe 5 € ab 30 €, darunter 1 €; `von` = abgerundet auf die Stufe minus eine Stufe,
+ * `bis` = aufgerundet auf die Stufe plus eine Stufe. Kleine Preisänderungen in der TNV machen
+ * die Spanne dadurch nicht falsch; bei größeren Änderungen die Spannen neu ableiten.
  *
- * `bieterrunde: true` heißt: Der Paketpreis ist ein Richtpreis, der tatsächliche
- * Beitrag wird in der Bieterrunde bestimmt. Nie als Festpreis darstellen.
+ * `bieterrunde: true` heißt: Der Beitrag wird in der Bieterrunde bestimmt, die Spanne ist ein
+ * Richtwert für den Paketpreis. Nie als Festpreis darstellen.
  */
+
+/** Aktuelle Teilnahmevereinbarung, auf die jede Preisangabe verweist. */
+export const TNV = {
+  version: "26.4",
+  stand: "15.10.2026",
+  pdf: "/TNV_StadtLandBeides_V26_4.pdf",
+} as const;
 
 /** Risiko- und Netzwerkbeitrag, verpflichtend pro Ernteteiler:in (TNV S. 2, 13). */
 export const VEREINSBEITRAG = 1.5;
@@ -37,6 +45,17 @@ export const kategorieIcons: Record<Kategorie, LucideIcon> = {
   Fleisch: Beef,
 };
 
+/** Hintergrundfarbe des Kopfbands und der Hinweisflächen je Kategorie (Tailwind-Klassen). */
+export const kategorieFarben: Record<Kategorie, { band: string; flaeche: string }> = {
+  Gemüse: { band: "bg-solawi-green", flaeche: "bg-solawi-green/20" },
+  Pilze: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20" },
+  Obst: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20" },
+  Beeren: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20" },
+  Getreide: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20" },
+  Eier: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20" },
+  Fleisch: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20" },
+};
+
 /** Reihenfolge der Kategorien auf den Übersichtsseiten und in der Navigation. */
 export const kategorieReihenfolge: Kategorie[] = [
   "Gemüse",
@@ -56,6 +75,12 @@ export type Verfuegbarkeit =
   /** Existiert, aber aktuell sind keine neuen Anteile möglich. */
   | { status: "warteliste" };
 
+/** Richtwert-Spanne in Euro pro Monat, inkl. solidarischem Beitrag. */
+export interface Richtwert {
+  von: number;
+  bis: number;
+}
+
 export interface Variante {
   /** Kurzbezeichnung, z.B. "Normal" oder "600 g". */
   groesse: string;
@@ -63,12 +88,23 @@ export interface Variante {
   fuer?: string;
   zyklus: string;
   lieferphase: string;
-  paketpreis: number;
-  soli: number;
-  /** Paketpreis ist Richtpreis aus der Bieterrunde, kein Festpreis. */
+  richtwert: Richtwert;
+  /** Beitrag wird in der Bieterrunde bestimmt, die Spanne ist nur ein Richtwert. */
   bieterrunde?: boolean;
   /** Fußnote zur Variante, z.B. Laufzeit des Studierenden-Pakets. */
   hinweis?: string;
+}
+
+/** Karte "Was steckt drin": kurzer Titel plus Text. */
+export interface Karte {
+  titel: string;
+  text: string;
+}
+
+/** Eintrag im Abschnitt "Lieferung & Info"; `titel` ist optional. */
+export interface Info {
+  titel?: string;
+  text: string;
 }
 
 export interface Ernteanteil {
@@ -79,16 +115,24 @@ export interface Ernteanteil {
   kategorie: Kategorie;
   /** Ein Satz für Kacheln und Navigation. */
   kurz: string;
+  /** Beschreibung auf der Detailseite; fehlt sie, entfällt der Textabsatz. */
+  beschreibung?: string;
+  foto?: { src: string; alt: string };
+  /** Abschnitt "Was steckt drin", bis zu drei Karten. */
+  karten?: Karte[];
+  /** Abschnitt "Lieferung & Info". */
+  info?: Info[];
   verfuegbarkeit: Verfuegbarkeit;
   varianten: Variante[];
 }
 
-export const gesamtbetrag = (v: Variante) => v.paketpreis + v.soli;
-
 export const formatEuro = (betrag: number) =>
   betrag.toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
 
-/** Hat mindestens eine Variante einen Bieterrunden-Richtpreis? */
+/** Spanne für die Anzeige, z.B. "130–145 €". */
+export const formatSpanne = ({ von, bis }: Richtwert) => `${von}–${bis} €`;
+
+/** Hat mindestens eine Variante einen Bieterrunden-Richtwert? */
 export const hatBieterrunde = (anteil: Ernteanteil) =>
   anteil.varianten.some((v) => v.bieterrunde);
 
@@ -99,14 +143,22 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "tristan",
     kategorie: "Gemüse",
     kurz: "Lauch, Rosenkohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.",
+    karten: [
+      { titel: "Frisch aus den Folienhäusern", text: "Spinat, Salate, Kräuter" },
+      { titel: "Vom Feld", text: "Lauch, Rosenkohl, Palmkohl" },
+      {
+        titel: "Aus dem Lager",
+        text: "Karotten, Pastinaken, diverse Bete, Kraut, Zwiebeln, Kürbis, Kartoffeln",
+      },
+    ],
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 122.2, soli: 14.0, bieterrunde: true },
-      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 61.1, soli: 11.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 85.54, soli: 14.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 42.35, soli: 11.0, bieterrunde: true },
-      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 94.0, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
-      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 65.75, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
+      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", richtwert: { von: 130, bis: 145 }, bieterrunde: true },
+      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", richtwert: { von: 65, bis: 80 }, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", richtwert: { von: 90, bis: 105 }, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", richtwert: { von: 45, bis: 60 }, bieterrunde: true },
+      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", richtwert: { von: 100, bis: 115 }, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
+      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", richtwert: { von: 70, bis: 85 }, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
     ],
   },
   {
@@ -115,15 +167,21 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "tristan",
     kategorie: "Gemüse",
     kurz: "Frisches Feldgemüse, Salate und Kräuter — wöchentlich von April bis September.",
+    // Sortiment noch nicht hofseitig festgelegt — siehe design.md Open Questions der Gemüse-Zusammenführung
+    karten: [
+      { titel: "Frisch aus den Folienhäusern", text: "Spinat, Salate, Kräuter" },
+      { titel: "Vom Feld", text: "Gurken, Tomaten, Kürbis, Bohnen, Paprika" },
+      { titel: "Aus dem Lager", text: "Kartoffeln, Zwiebeln, Knoblauch" },
+    ],
     // TNV V26.4 S. 11: "Neu ab April 2027: Tristan liefert auch das Sommergemüse"
     verfuegbarkeit: { status: "geplant", ab: "April 2027" },
     varianten: [
-      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "April – September", paketpreis: 122.2, soli: 14.0, bieterrunde: true },
-      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "April – September", paketpreis: 61.1, soli: 11.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "April – September", paketpreis: 85.54, soli: 14.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "April – September", paketpreis: 42.35, soli: 11.0, bieterrunde: true },
-      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", paketpreis: 122.2, soli: 14.0, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
-      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", paketpreis: 85.54, soli: 14.0, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
+      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "April – September", richtwert: { von: 130, bis: 145 }, bieterrunde: true },
+      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "April – September", richtwert: { von: 65, bis: 80 }, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "April – September", richtwert: { von: 90, bis: 105 }, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "April – September", richtwert: { von: 45, bis: 60 }, bieterrunde: true },
+      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", richtwert: { von: 130, bis: 145 }, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
+      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", richtwert: { von: 90, bis: 105 }, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
     ],
   },
   {
@@ -132,12 +190,26 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "schweigerts",
     kategorie: "Pilze",
     kurz: "Limonen- und Kräuterseitlinge, Austernpilze und Shiitake — ganzjährig frisch aus der Pilzzucht.",
+    beschreibung:
+      "Limonen- und Kräuterseitlinge, Austernpilze und Shiitake — ganzjährig frisch aus der Pilzzucht.",
+    karten: [
+      {
+        titel: "Sortiment",
+        text: "Limonen- und Kräuterseitlinge, Austernpilze und Shiitake — in der Regel 1–3 Sorten pro Woche, je nach Erntereife.",
+      },
+    ],
+    info: [
+      {
+        titel: "Kommunikation",
+        text: "Welche Pilze es in welcher Woche und Menge gibt, erfährst du mit der wöchentlichen Kisteninfo über Tristans Biohof.",
+      },
+    ],
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "600 g", zyklus: "wöchentlich", lieferphase: "ganzjährig", paketpreis: 55.56, soli: 3.0 },
-      { groesse: "600 g", zyklus: "14-tägig", lieferphase: "ganzjährig", paketpreis: 27.78, soli: 2.0 },
-      { groesse: "300 g", zyklus: "wöchentlich", lieferphase: "ganzjährig", paketpreis: 27.78, soli: 3.0 },
-      { groesse: "300 g", zyklus: "14-tägig", lieferphase: "ganzjährig", paketpreis: 13.89, soli: 2.0 },
+      { groesse: "600 g", zyklus: "wöchentlich", lieferphase: "ganzjährig", richtwert: { von: 50, bis: 65 } },
+      { groesse: "600 g", zyklus: "14-tägig", lieferphase: "ganzjährig", richtwert: { von: 28, bis: 31 } },
+      { groesse: "300 g", zyklus: "wöchentlich", lieferphase: "ganzjährig", richtwert: { von: 25, bis: 40 } },
+      { groesse: "300 g", zyklus: "14-tägig", lieferphase: "ganzjährig", richtwert: { von: 14, bis: 17 } },
     ],
   },
   {
@@ -146,10 +218,12 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "kirschgarten",
     kategorie: "Obst",
     kurz: "Steinobst ab Juli, Kernobst überwiegend im Herbst — die Bäume im Kirschgarten wachsen noch.",
+    beschreibung:
+      "Zusätzlich zu den Beeren wachsen im Kirschgarten verschiedene Obstbäume, die nun erste Erträge bringen. Steinobst gibt es ab Juli, Kernobst überwiegend im Herbst. In der ersten Zeit sind keine neuen Ernteanteile möglich — sobald der Ertrag dafür ausreicht, wird darüber informiert.",
     // TNV V26.4 S. 9 und S. 11: ab Sommer 2027, anfangs keine neuen Ernteanteile möglich.
     verfuegbarkeit: { status: "warteliste" },
     varianten: [
-      { groesse: "Ein Anteil", zyklus: "unregelmäßig", lieferphase: "Juli – Dezember", paketpreis: 37.0, soli: 2.5, hinweis: "Je nach Erntezeitpunkt. Lieferungen werden per Mail angekündigt." },
+      { groesse: "Ein Anteil", zyklus: "unregelmäßig", lieferphase: "Juli – Dezember", richtwert: { von: 30, bis: 45 }, hinweis: "Je nach Erntezeitpunkt. Lieferungen werden per Mail angekündigt." },
     ],
   },
   {
@@ -158,9 +232,22 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "kirschgarten",
     kategorie: "Beeren",
     kurz: "Johannisbeeren, Himbeeren, Stachelbeeren u.v.m. — wöchentlich von Juli bis September.",
+    beschreibung:
+      "Johannisbeeren, Himbeeren, Stachelbeeren u.v.m. — wöchentlich von Juli bis September.",
+    karten: [
+      {
+        titel: "Sortiment",
+        text: "Johannisbeeren (rot, weiß, schwarz), Himbeeren (rot, schwarz, gelb), Stachelbeeren, Brombeeren, Himbeer-Brombeeren, Jostabeeren, Schwarze Honigbeeren, Japanische Weinbeeren, Aronia",
+      },
+    ],
+    info: [
+      { text: "Max. 30 Anteile verfügbar" },
+      { text: "Anmeldeschluss: 15. des Vormonats" },
+      { text: "Am besten schon zum 1. Juni anmelden!" },
+    ],
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "Ein Anteil", fuer: "200–400 g pro Lieferung", zyklus: "wöchentlich", lieferphase: "Juli – September", paketpreis: 35.0, soli: 3.0, hinweis: "Lieferzeitraum ca. Mitte Juni bis Mitte Oktober, Zahlzeitraum Juli bis September." },
+      { groesse: "Ein Anteil", fuer: "200–400 g pro Lieferung", zyklus: "wöchentlich", lieferphase: "Juli – September", richtwert: { von: 30, bis: 45 }, hinweis: "Lieferzeitraum ca. Mitte Juni bis Mitte Oktober, Zahlzeitraum Juli bis September." },
     ],
   },
   {
@@ -169,9 +256,22 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "walz",
     kategorie: "Getreide",
     kurz: "Alte Getreidesorten als Mehl, Körner oder Nudeln — 1 kg im Monat, selbst zusammengestellt.",
+    beschreibung:
+      "Alte Getreidesorten als Mehl, Körner oder Nudeln — 1 kg im Monat, selbst zusammengestellt.",
+    foto: { src: "/fotos/walz-getreide.jpg", alt: "Ur-Getreide vom Demeterhof Walz" },
+    karten: [
+      {
+        titel: "Sorten",
+        text: "Schwarzes Einkorn, Sommeremmer Spelta, Weißer Urdinkel, Blonder Nackthafer, Champagnerroggen, Bayernkönig Weizen, Bayerisches Liebesgras",
+      },
+      {
+        titel: "Produkte",
+        text: "Halbweißmehl, Vollkornmehl, Körner, Grieß, Getreidereis, Nudeln",
+      },
+    ],
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "1000 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", paketpreis: 6.0, soli: 0.9 },
+      { groesse: "1000 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 5, bis: 8 } },
     ],
   },
   {
@@ -180,9 +280,12 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "walz",
     kategorie: "Eier",
     kurz: "Alle Eier deiner Henne, dazu anteilig Bruderhahn und Suppenhenne — 2x im Monat.",
+    beschreibung:
+      "Alle Eier deiner Henne plus anteilmäßig Bruderhahn, Suppenhenne und Bolognese. Wer Eier bezieht, übernimmt ganzheitliche Verantwortung für Henne, Bruder und Ei.",
+    foto: { src: "/fotos/walz-hennen.jpg", alt: "Freilandhühner am Demeterhof Walz" },
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "Ein Anteil", zyklus: "2x pro Monat", lieferphase: "ganzjährig", paketpreis: 15.0, soli: 2.9 },
+      { groesse: "Ein Anteil", zyklus: "2x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 16, bis: 19 } },
     ],
   },
   {
@@ -191,9 +294,12 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "walz",
     kategorie: "Fleisch",
     kurz: "Freilandhuhn, artgerecht aufgezogen statt nach 30 Tagen geschlachtet.",
+    beschreibung:
+      "Freilandhaltung — nicht nach 30 Tagen geschlachtet, sondern artgerecht aufgezogen.",
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "Ein Anteil", zyklus: "1x pro 4 Monate", lieferphase: "ganzjährig", paketpreis: 8.0, soli: 1.0, hinweis: "Bei einem Probemonat sind immer 4 Anteile einzutragen." },
+      // TNV V26.4 (Preistabelle Demeterhof Walz): Gesamtbetrag 9,00 €/Monat je Anteil, geliefert wird 1 Gockerl alle 4 Monate (4 Anteile).
+      { groesse: "Ein Anteil", zyklus: "1x pro 4 Monate", lieferphase: "ganzjährig", richtwert: { von: 8, bis: 10 }, hinweis: "Bei einem Probemonat sind immer 4 Anteile einzutragen." },
     ],
   },
   {
@@ -202,9 +308,11 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "walz",
     kategorie: "Fleisch",
     kurz: "500 g Aberdeen-Angus-Hack im Monat, aus Weide- und Muttertierhaltung.",
+    beschreibung:
+      "500 g im Monat, Aberdeen Angus. Weidehaltung, Muttertierhaltung, nur Raufutter.",
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", paketpreis: 10.0, soli: 1.4 },
+      { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 10, bis: 13 } },
     ],
   },
   {
@@ -213,16 +321,17 @@ export const ernteanteile: Ernteanteil[] = [
     hof: "walz",
     kategorie: "Fleisch",
     kurz: "500 g Wurstwaren im Monat: Salami, Bratwurst, Wienerle u.v.m. — monatlich wechselnd.",
+    beschreibung:
+      "500 g im Monat: Salami, Rinderschinken, Wienerle, Bratwürste, Pfefferbeißer u.v.m.",
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
-      { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", paketpreis: 15.0, soli: 2.0 },
+      { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 16, bis: 18 } },
     ],
   },
 ];
 
 export const ernteanteilNach = (slug: string) => ernteanteile.find((a) => a.slug === slug);
 
-/** Ernteanteile gruppiert nach Kategorie, in `kategorieReihenfolge`. */
 /**
  * Wintergemüse und Sommergemüse teilen sich eine Seite (Biohof Tristan). Die Aufteilung ist
  * nur eine Erleichterung für Ernteteiler:innen mit eigenem Garten, daher gibt es für beide
@@ -231,7 +340,7 @@ export const ernteanteilNach = (slug: string) => ernteanteile.find((a) => a.slug
 export const GEMUESE_SLUG = "tristan-gemuese";
 const gemueseSlugs = ["tristan-winter", "tristan-sommer"];
 
-const gemueseKachel: Ernteanteil = {
+export const gemueseKachel: Ernteanteil = {
   slug: GEMUESE_SLUG,
   titel: "Gemüse",
   hof: "tristan",
@@ -249,6 +358,10 @@ export const kacheln = (kategorie: Kategorie): Ernteanteil[] => {
     !gemueseSlugs.includes(a.slug) ? [a] : i === ersterGemuese ? [gemueseKachel] : [],
   );
 };
+
+/** Kachel zu einem Slug der Detailseiten (inkl. `tristan-gemuese`). */
+export const kachelNach = (slug: string): Ernteanteil | undefined =>
+  slug === GEMUESE_SLUG ? gemueseKachel : ernteanteilNach(slug);
 
 export const nachKategorie = () =>
   kategorieReihenfolge

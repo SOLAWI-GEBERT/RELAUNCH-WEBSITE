@@ -18,4 +18,4 @@
 ## 4. Verifikation
 
 - [x] 4.1 `npm run build` ausführen und auf Fehler prüfen.
-- [ ] 4.2 Manuell im Browser prüfen: beide neuen FAQ-Antworten, der präzisierte Mitmachen-Satz samt Link, und dass `/kalender` keine Route mehr liefert.
+- [x] 4.2 Manuell im Browser prüfen: beide neuen FAQ-Antworten, der präzisierte Mitmachen-Satz samt Link, und dass `/kalender` keine Route mehr liefert.
