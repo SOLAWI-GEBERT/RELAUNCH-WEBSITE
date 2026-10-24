@@ -55,7 +55,21 @@
       "Skill(openspec-archive-change)",
       "Skill(openspec-sync-specs)",
       "WebFetch(domain:www.demeterhof-walz.de)",
-      "WebFetch(domain:tristans-biohof.de)"
+      "WebFetch(domain:tristans-biohof.de)",
+      "Bash(pdftotext -layout public/SatzungV4-01_2025.pdf -)",
+      "Bash(echo \"tsc exit: $?\")",
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(sed -i '/\\\\/\\\\/ TESTDATEN$/d' src/app/data/hoefe.ts src/app/data/ernteanteile.ts)",
+      "Bash(echo \"grep-exit:$?\")",
+      "Bash(echo \"grep-exit:$? \\(1 = nichts gefunden\\)\")",
+      "Bash(grep -roin \"instagram[^\\\\\"\\\\\\\\\\\\\\\\]\\\\{0,80\\\\}\" export_origin/)",
+      "Bash(grep -roin \"facebook\\\\.com[^\\\\\"\\\\\\\\\\\\\\\\]\\\\{0,60\\\\}\" export_origin/)",
+      "WebFetch(domain:www.stadt-land-beides.de)",
+      "Bash(curl *)",
+      "WebSearch",
+      "Bash(grep -i \"^sharp$\\\\|pngjs\\\\|jimp\")",
+      "Bash(T=/Users/linus/.claude/jobs/5ce1a28c/tmp && magick public/Holzkiste.png -alpha set -fuzz 14% -fill none -draw \"color 0,0 floodfill\" -draw \"color 1253,0 floodfill\" -draw \"color 0,1253 floodfill\" -draw \"color 1253,1253 floodfill\" -trim +repage -resize 720x720 -strip $T/kiste-frei.png && magick identify $T/kiste-frei.png && ls -la $T/kiste-frei.png && magick $T/kiste-frei.png -background '#c7afc7' -flatten $T/kiste-test-mauve.png && magick $T/kiste-frei.png -background '#f3aba2' -flatten $T/kiste-test-salmon.png && magick $T/kiste-test-mauve.png $T/kiste-test-salmon.png +append $T/kiste-test.png)",
+      "Bash(T=/Users/linus/.claude/jobs/5ce1a28c/tmp && magick $T/kiste-frei.png -resize 480x480 -colors 192 -define png:compression-level=9 -strip public/kiste-illustration.png && magick identify public/kiste-illustration.png && ls -la public/kiste-illustration.png && magick public/kiste-illustration.png -background '#c2ddb2' -flatten $T/kiste-final-green.png)"
     ]
   }
 }

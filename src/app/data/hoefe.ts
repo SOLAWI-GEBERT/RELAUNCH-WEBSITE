@@ -15,6 +15,18 @@ export interface Hof {
    */
   image?: string;
   imageAlt?: string;
+  /**
+   * Hoflogo als Bilddatei mit Alpha-Kanal (SVG oder PNG, transparent): HofLogo färbt es per
+   * Maske in der Textfarbe ein. Dateien mit Hintergrund nicht eintragen — sie ergäben einen
+   * Block statt eines Stempels. Fehlt das Feld, entfällt der Stempel ohne Platzhalter.
+   */
+  logo?: { src: string; alt: string };
+  /**
+   * Hofstimme als Brief (openspec specs/harvest-shares, "Hofstimme als Brief"). Nur eintragen,
+   * was vom Hof stammt oder von ihm bestätigt ist; Quelle als Kommentar am Eintrag. Anrede
+   * und Signatur im Du der Solawi. Fehlt das Feld, entfällt der Abschnitt.
+   */
+  zitat?: { anrede: string; text: string; signatur: string };
 }
 
 export const hoefe = {
@@ -26,6 +38,13 @@ export const hoefe = {
       "Die Hofstelle in Emskirchen/Gunzendorf wurde 2017 übernommen — seitdem wachsen auf 35 Hektar eine bunte Anbaupalette, Hühner picken und Schafe grasen. Vermarktet wird über SoLawi, Märkte und einen eigenen Hofladen, unterstützt von Angestellten, Azubis, Praktikant:innen und Freiwilligen. Zur Jahresversorgung gehören auch Kartoffeln und Gemüse aus dem eigenen Lager.",
     certLine: "Bioland-zertifiziert, Emskirchen/Gunzendorf",
     CertIcon: Sprout,
+    // Quelle: tristans-biohof.de, Startseite ("Mein Ziel ist es eine umweltverträgliche ökologische
+    // Landwirtschaft zu betreiben"); Komma ergänzt. Signatur laut Auftrag; Wortlaut vom Hof noch bestätigen.
+    zitat: {
+      anrede: "Liebe Ernteteiler:innen,",
+      text: "Mein Ziel ist es, eine umweltverträgliche ökologische Landwirtschaft zu betreiben.",
+      signatur: "Dein Tristan",
+    },
     image: "/fotos/vollandhof-feld.jpg",
     imageAlt: "Biohof Tristan — Feldarbeit",
   },
@@ -47,6 +66,13 @@ export const hoefe = {
       "Ein Familienbetrieb in Schäflohe bei Amberg, der den Kreislaufgedanken lebt. Bei Familie Walz gehören Tier, Pflanze und Boden untrennbar zusammen. „Wir möchten die Tiere in ihrer Ganzheit betrachten\" — das bedeutet: Wer Eier bezieht, übernimmt auch Verantwortung für die Henne und ihren Bruder.",
     certLine: "Demeter-zertifiziert, Schäflohe bei Amberg",
     CertIcon: Sprout,
+    // Quelle: Zitat der Familie Walz, bereits in der Hofbeschreibung oben. Signatur laut Auftrag;
+    // Wortlaut vom Hof noch bestätigen.
+    zitat: {
+      anrede: "Liebe Ernteteiler:innen,",
+      text: "Wir möchten die Tiere in ihrer Ganzheit betrachten.",
+      signatur: "Familie Walz",
+    },
     image: "/fotos/walz-kaelber.jpg",
     imageAlt: "Kälber am Demeterhof Walz",
   },

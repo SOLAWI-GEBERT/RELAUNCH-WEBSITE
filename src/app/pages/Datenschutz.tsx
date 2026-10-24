@@ -449,6 +449,13 @@ export function Datenschutz() {
             9. Eingesetzte Dienste und Drittanbieter
           </h2>
 
+          {/* ACHTUNG, vor dem Livegang zu erledigen: Der unten zugesagte
+              AV-Vertrag nach Art. 28 DSGVO mit ALL-INKL ist laut Stand
+              2026-10-24 noch nicht abgeschlossen — die AGB des Hosters
+              genügen dafür nicht. ALL-INKL stellt den AVV im Mitgliederbereich
+              (KAS) zum Abschluss bereit; die Bestätigung muss für die
+              Aufsichtsbehörde archiviert werden. Dasselbe gilt für Lexware
+              Office (Ziffer 9.3), dort im Konto unter den Einstellungen. */}
           <h3 className="text-lg font-semibold mt-6 mb-3">9.1 Hosting</h3>
           <p>
             Unsere Webseite wird gehostet bei ALL-INKL.COM — Neue Medien
@@ -527,7 +534,31 @@ export function Datenschutz() {
           </p>
 
           <h3 className="text-lg font-semibold mt-6 mb-3">
-            9.4 Keine Analyse- und Social-Media-Dienste
+            9.4 Newsletter
+          </h3>
+          <p>
+            Unseren Newsletter versenden wir mit der Software AcyMailing, die
+            auf unserem eigenen Server läuft. Deine E-Mail-Adresse verlässt
+            dafür also nicht unseren Server und wird an keinen externen
+            Newsletter-Anbieter übermittelt.
+          </p>
+          <p>
+            Die Anmeldung erfolgt im Double-Opt-in-Verfahren: Nach deiner
+            Eintragung schicken wir dir eine E-Mail mit einem Bestätigungslink.
+            Erst wenn du darauf klickst, nehmen wir dich in den Verteiler auf.
+            So stellen wir sicher, dass niemand Dritter dich ohne dein Wissen
+            anmelden kann. Zum Nachweis der Einwilligung protokollieren wir den
+            Zeitpunkt der Anmeldung und der Bestätigung.
+          </p>
+          <p>
+            Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO,
+            § 7 Abs. 2 Nr. 2 UWG). Du kannst sie jederzeit widerrufen — über
+            den Abmeldelink am Ende jedes Newsletters oder per E-Mail an uns.
+            Die Speicherdauer steht in Ziffer 6.4.
+          </p>
+
+          <h3 className="text-lg font-semibold mt-6 mb-3">
+            9.5 Keine Analyse- und Social-Media-Dienste
           </h3>
           <p>
             Wir setzen keine Webanalyse (etwa Google Analytics oder Matomo),

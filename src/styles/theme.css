@@ -409,6 +409,41 @@
     -webkit-mask-size: 100% 100%;
   }
 
+  /* Hof-Auftritt auf den Ernteanteil-Seiten (openspec specs/harvest-shares):
+     Der Hof erscheint als Absender, die Kategorie liefert die Farbe. --hof-rahmen wird am
+     Seitencontainer aus kategorieFarben gesetzt; die Farbwelt des Hoflogos wirkt nie auf Flächen. */
+
+  /* Hoffoto: gleiche Rundung und Versatzrahmen auf jedem Hof, ohne Weichzeichner */
+  .hof-foto {
+    border-radius: 0.875rem;
+    overflow: hidden;
+    box-shadow: 0.625rem 0.625rem 0 var(--hof-rahmen, var(--solawi-green));
+  }
+
+  /* Logo als Einfarb-Stempel: Alpha-Kanal der Datei als Maske, Farbe = Textfarbe */
+  .hof-stempel {
+    display: block;
+    background-color: currentColor;
+    mask-image: var(--hof-logo);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-image: var(--hof-logo);
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  }
+
+  /* Kistenetikett: Logo leicht schräg am Bildrand, eigene Fläche für Kontrast in beiden Modi */
+  .hof-etikett {
+    transform: rotate(-4deg);
+    background: white;
+    color: #222;
+    border: 2px solid #222;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0.25rem 0.25rem 0 var(--hof-rahmen, var(--solawi-green));
+  }
+
   /* Hover-Effekte mit Charakter */
   .hover-tilt {
     transition: transform 0.3s ease;

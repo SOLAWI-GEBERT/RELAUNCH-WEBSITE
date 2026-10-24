@@ -57,6 +57,23 @@ Verboten: `text-gray-*`, `text-[#…]`, `text-foreground/50…/90`, `text-xs`,
 
 Keine Inline-Buttons mehr aus `bg-cta hover:bg-cta-hover px-… font-…`.
 
+## Hof-Auftritt (Ernteanteil-Seiten)
+
+Der Hof tritt als Absender auf, wir liefern das Briefpapier. Spec: `openspec/specs/harvest-shares` ("Hof-Logo als Stempel", "Hofstimme als Brief").
+
+| Klasse / Bauteil | Zweck |
+|---|---|
+| `hof-foto` | Hoffoto: Rundung 14 px, Versatzrahmen 10 px ohne Weichzeichner in `--hof-rahmen` |
+| `hof-etikett` | Kistenetikett: Logo leicht schräg (−4°) unten rechts am Foto, eigene weiße Fläche |
+| `hof-stempel` / `<HofLogo>` | Logo als Einfarb-Stempel: Alpha-Kanal der Datei als Maske, Farbe = Textfarbe |
+| `<Hofstimme>` | Zitat als Brief auf `flaeche`-Karte der Kategorie, Logo als Absender-Stempel |
+
+- `--hof-rahmen` setzt `ErnteanteilSeite` am Container aus `kategorieFarben[...].rahmen`. **Die Farbwelt des Hoflogos wirkt nie auf Flächen**, die Kategorie bleibt führend.
+- Logodateien brauchen einen **transparenten Hintergrund** (SVG oder PNG mit Alpha). Dateien mit Hintergrund ergeben einen Block statt eines Stempels und werden nicht eingetragen.
+- Zertifikats-Signets (z. B. Demeter) bleiben unverändert und gehören in die Badge-Zeile, nicht ins Logo-Feld.
+- Alles Optionale (Logo, Zitat, Kiste, Küche) entfällt ohne Daten vollständig — kein Platzhaltertext, keine leere Karte, kein fremdes Bild.
+- Der Stempel im Kopfband ist auf Handybreite ausgeblendet (`hidden sm:block`).
+
 ## Layout
 
 - Container breit: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` — Raster, Karten, Tabellen, Hero.

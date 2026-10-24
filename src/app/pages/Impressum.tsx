@@ -37,13 +37,21 @@ export function Impressum() {
           <h2 className="text-xl font-semibold mt-8 mb-4">
             Inhaltlich verantwortlich (nach § 18 Abs. 2 MStV)
           </h2>
-          <p>Andreas Gebert</p>
+          <p>
+            Andreas Gebert
+            <br />
+            c/o Solidarische Landwirtschaft Stadt, Land, Beides e.V.
+            <br />
+            Findelwiesenstr. 25
+            <br />
+            90478 Nürnberg
+          </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">Registerdaten</h2>
           <p>
-            Registergericht Nürnberg: VR 202062
+            Vereinsregister des Amtsgerichts Nürnberg: VR 202062
             <br />
-            USt-IdNr.: DE419541492
+            USt-IdNr. nach § 27a UStG: DE419541492
           </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">Bankverbindung</h2>
@@ -60,10 +68,28 @@ export function Impressum() {
           </h2>
           <p>Stefan Schindhelm</p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4">Bildrechte</h2>
-          <p>Andreas Gebert · Depositphotos</p>
+          <h2 className="text-xl font-semibold mt-8 mb-4">Bildnachweis</h2>
+          <p>
+            Hof-, Depot- und Ernteaufnahmen: Andreas Gebert
+            <br />
+            {/* TODO vor dem Livegang: Urheber der Signature-Illustrationen
+                (ablauf-*, decision-*, features-*) klären und hier eintragen.
+                Bei Auftragsarbeit ist die Namensnennung nach § 13 UrhG
+                verpflichtend. Siehe docs/todo.md. */}
+            Illustrationen: [Urheber noch zu klären — vor dem Livegang
+            eintragen]
+            <br />
+            Weiteres Bildmaterial: Depositphotos
+            <br />
+            Wort-/Bildmarke „Stadt, Land, Beides.": Solidarische Landwirtschaft
+            Stadt, Land, Beides e.V.
+            <br />
+            Kartendarstellung: © OpenStreetMap-Mitwirkende, ODbL
+          </p>
 
-          <h2 className="text-xl font-semibold mt-8 mb-4">Haftungsausschluss</h2>
+          <h2 className="text-xl font-semibold mt-8 mb-4">
+            Werbe- und Spamwiderspruch
+          </h2>
           <p>
             Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten
             Kontaktdaten durch Dritte zur Übersendung von nicht ausdrücklich

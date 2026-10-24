@@ -17,7 +17,13 @@ export function Footer() {
               Solidarische Landwirtschaft für eine nachhaltige und regionale Ernährung.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-cta transition-colors" aria-label="Facebook">
+              <a
+                href="https://www.facebook.com/SoLaWi.Nbg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cta transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-cta transition-colors" aria-label="Instagram">

@@ -45,15 +45,18 @@ export const kategorieIcons: Record<Kategorie, LucideIcon> = {
   Fleisch: Beef,
 };
 
-/** Hintergrundfarbe des Kopfbands und der Hinweisflächen je Kategorie (Tailwind-Klassen). */
-export const kategorieFarben: Record<Kategorie, { band: string; flaeche: string }> = {
-  Gemüse: { band: "bg-solawi-green", flaeche: "bg-solawi-green/20" },
-  Pilze: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20" },
-  Obst: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20" },
-  Beeren: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20" },
-  Getreide: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20" },
-  Eier: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20" },
-  Fleisch: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20" },
+/**
+ * Hintergrundfarbe des Kopfbands und der Hinweisflächen je Kategorie (Tailwind-Klassen);
+ * `rahmen` ist dieselbe Farbe als CSS-Wert für Versatzrahmen von Hoffoto und Kistenetikett.
+ */
+export const kategorieFarben: Record<Kategorie, { band: string; flaeche: string; rahmen: string }> = {
+  Gemüse: { band: "bg-solawi-green", flaeche: "bg-solawi-green/20", rahmen: "var(--solawi-green)" },
+  Pilze: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20", rahmen: "var(--solawi-orange)" },
+  Obst: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20", rahmen: "var(--solawi-mauve)" },
+  Beeren: { band: "bg-solawi-mauve", flaeche: "bg-solawi-mauve/20", rahmen: "var(--solawi-mauve)" },
+  Getreide: { band: "bg-solawi-orange", flaeche: "bg-solawi-orange/20", rahmen: "var(--solawi-orange)" },
+  Eier: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20", rahmen: "var(--solawi-salmon)" },
+  Fleisch: { band: "bg-solawi-salmon", flaeche: "bg-solawi-salmon/20", rahmen: "var(--solawi-salmon)" },
 };
 
 /** Reihenfolge der Kategorien auf den Übersichtsseiten und in der Navigation. */
@@ -107,6 +110,32 @@ export interface Info {
   text: string;
 }
 
+/** Beispiel-Lieferung im Abschnitt "In der Kiste". */
+export interface KistenBeispiel {
+  titel: string;
+  /**
+   * Größe laut TNV (z. B. "Normal", "Klein", "600 g"), wenn die Karte zu einer bestimmten Größe
+   * gehört. Wird als Badge gezeigt; ein Foto je Größe ist möglich.
+   */
+  groesse?: string;
+  /** Foto der Beispiel-Lieferung (4:3), nur vom Hof; ohne Foto entfällt die Bildfläche. */
+  foto?: { src: string; alt: string };
+  /** Produktliste mit Menge je Zeile. Hat Vorrang vor `inhalt`. */
+  produkte?: { name: string; menge?: string }[];
+  /** Einfache Variante ohne Mengen: Was in der Kiste liegt, kommagetrennt. */
+  inhalt?: string;
+  /** Zeile "Was du damit kochst". */
+  kochidee?: string;
+}
+
+/** Karte im Abschnitt "Aus der Küche": Lagerung, Verwertung oder Rezeptidee. */
+export interface KuechenTipp {
+  titel: string;
+  text: string;
+  /** Rezeptidee mit Link: die Kurzzeile wird zum Link. */
+  link?: string;
+}
+
 export interface Ernteanteil {
   /** Letztes Segment der Route unter /ernteanteile/. */
   slug: string;
@@ -120,6 +149,14 @@ export interface Ernteanteil {
   foto?: { src: string; alt: string };
   /** Abschnitt "Was steckt drin", bis zu drei Karten. */
   karten?: Karte[];
+  /**
+   * Abschnitt "In der Kiste": Beispiel-Lieferungen und Mengen im Alltag. Nur Angaben, die der
+   * Hof geliefert oder bestätigt hat (openspec specs/harvest-shares, "Hofinhalte nur mit
+   * Quelle vom Hof") — keine erfundenen Beispiele. Fehlt das Feld, entfällt der Abschnitt.
+   */
+  kiste?: { beispiele?: KistenBeispiel[]; mengen?: string };
+  /** Abschnitt "Aus der Küche", höchstens drei Karten; gleiche Quellenregel wie `kiste`. */
+  kueche?: KuechenTipp[];
   /** Abschnitt "Lieferung & Info". */
   info?: Info[];
   verfuegbarkeit: Verfuegbarkeit;

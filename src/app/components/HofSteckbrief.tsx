@@ -1,4 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { HofLogo } from "./HofLogo";
 import type { Hof } from "../data/hoefe";
 
 const badgeColors = {
@@ -7,6 +8,10 @@ const badgeColors = {
   orange: "bg-solawi-orange text-foreground",
 };
 
+/**
+ * Hof-Steckbrief: Foto (einheitlich gerahmt) mit Logo als Kistenetikett am Bildrand und
+ * Hofbeschreibung. Die Rahmenfarbe kommt über `--hof-rahmen` vom Seitencontainer.
+ */
 export function HofSteckbrief({
   name,
   badgeLabel,
@@ -16,15 +21,23 @@ export function HofSteckbrief({
   CertIcon,
   image,
   imageAlt,
+  logo,
 }: Hof) {
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-      <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
-        {image ? (
-          <ImageWithFallback src={image} alt={imageAlt ?? name} className="w-full h-full object-cover" />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-secondary/20">
-            <CertIcon className="w-16 h-16 text-primary/40" />
+      <div className="relative">
+        <div className="hof-foto h-[400px]">
+          {image ? (
+            <ImageWithFallback src={image} alt={imageAlt ?? name} className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-secondary/20">
+              <CertIcon className="w-16 h-16 text-primary/40" />
+            </div>
+          )}
+        </div>
+        {logo && (
+          <div className="hof-etikett absolute -bottom-4 right-4 sm:-right-3">
+            <HofLogo logo={logo} className="h-10 w-28" />
           </div>
         )}
       </div>
