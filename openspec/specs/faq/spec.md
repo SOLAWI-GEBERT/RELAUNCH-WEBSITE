@@ -6,11 +6,30 @@ Beschreibt die Seite Fragen & Antworten /haeufige-fragen mit Grundlagen, Schnell
 ## Requirements
 
 ### Requirement: FAQ-Seite und Kopfbereich
-Die Route `/haeufige-fragen` SHALL eine Seite mit dem Label "Für Einsteiger*innen & Ernteteiler" und dem `h1` "Fragen & Antworten" zeigen.
+Die Route `/haeufige-fragen` SHALL eine Seite mit dem Label "Für Einsteiger*innen & Ernteteiler" und dem `h1` "Fragen & Antworten" zeigen. Der Kopfbereich SHALL als blaugraue Banderole gestaltet sein und rechts neben dem Titel die Illustration `kontakt.jpg` (Huhn am Laptop) mit nicht leerem Alternativtext tragen.
 
 #### Scenario: Kopfbereich
 - **WHEN** `/haeufige-fragen` geöffnet wird
 - **THEN** ist genau ein `h1` "Fragen & Antworten" vorhanden
+
+#### Scenario: Huhn in der Banderole
+- **WHEN** der Kopfbereich geprüft wird
+- **THEN** zeigt er `kontakt.jpg` auf blaugrauer Fläche, und der Bildhintergrund geht ohne sichtbare Kante in die Fläche über
+
+### Requirement: Farb- und Bildrhythmus der Abschnitte
+Die Abschnitte SHALL in der Reihenfolge Blaugrau (Kopfbereich), Weiß (Grundlagen), Lachs (Schnelle Fragen), Flieder (Vereinsgeschichte) und Grün (Antwort nicht dabei?) hinterlegt sein; keine Farbe SHALL direkt auf sich selbst folgen. Jede Illustration SHALL randlos auf einer Fläche in ihrer eigenen Hintergrundfarbe liegen: `kontakt.jpg` auf Blaugrau, `features-nachhaltigkeit.jpg` auf Lachs, `Geschichte_aubergine.png` auf dem Flieder `solawi-aubergine` (#bfa9c4, der eigene Ton dieser Grafik — nicht das Palette-Mauve #c7afc7) und `ablauf-kontakt.jpg` auf Grün. Die Position SHALL von Abschnitt zu Abschnitt wechseln: rechts (Kopfbereich), ohne Illustration (Grundlagen), links (Schnelle Fragen), mittig (Vereinsgeschichte), rechts (Antwort nicht dabei?).
+
+#### Scenario: Keine Farbe doppelt
+- **WHEN** die Hintergrundfarben von oben nach unten gelesen werden
+- **THEN** unterscheidet sich jede Farbe von der vorangehenden
+
+#### Scenario: Illustration und Fläche passen zusammen
+- **WHEN** eine Illustration der Seite geprüft wird
+- **THEN** stimmt die Farbe der Fläche hinter ihr mit ihrem eigenen Bildhintergrund überein
+
+#### Scenario: Abschnittsköpfe sind nicht gleich gesetzt
+- **WHEN** die vier `h2`-Köpfe verglichen werden
+- **THEN** sind sie nicht alle zentriert, sondern wechseln zwischen linksbündig, mit Illustration links, zentriert und mit Illustration rechts
 
 ### Requirement: Vier Abschnitte mit Menü-Ankern
 Die Seite SHALL vier Abschnitte in dieser Reihenfolge enthalten: `id="grundlagen"` ("Grundlagen"), `id="schnelle-fragen"` ("Schnelle Fragen", Untertitel "Für alle, die schon Ernteteiler sind"), `id="vereinsgeschichte"` ("Vereinsgeschichte") und `id="antwort-nicht-dabei"` ("Antwort nicht dabei?"). Jeder Abschnitt SHALL den Namen als `h2` tragen.
@@ -50,8 +69,15 @@ Der Abschnitt "Schnelle Fragen" SHALL acht Fragen als Akkordeon mit demselben Ö
 - **WHEN** "Wie kann ich wieder aussteigen?" angeklickt wird
 - **THEN** wird ein Antworttext sichtbar, der die Teilnahmevereinbarung erwähnt
 
+### Requirement: Lesbarkeit der Akkordeons
+Die Fragen beider Akkordeons SHALL in der h6-Stufe des Styleguides gesetzt sein (20 px, ab 1024 px 24 px), der Aufklapp-Pfeil SHALL mit 24 px dazu passen. Die Antworttexte SHALL mindestens die 16-px-Grundschrift verwenden, nicht die 14-px-Basisklasse der shadcn-Komponente.
+
+#### Scenario: Fragen und Antworten lesbar
+- **WHEN** ein Akkordeon geprüft wird
+- **THEN** sind die Fragen größer als der Fließtext und die Antworten mindestens 16 px groß
+
 ### Requirement: Vereinsgeschichte
-Der Abschnitt "Vereinsgeschichte" SHALL die Gründung des Vereins im Jahr 2016 in Nürnberg und die rein ehrenamtliche Arbeit als Fließtext darstellen, nicht als Akkordeon.
+Der Abschnitt "Vereinsgeschichte" SHALL die Gründung des Vereins im Jahr 2016 in Nürnberg und die rein ehrenamtliche Arbeit als Fließtext darstellen, nicht als Akkordeon. Über der Überschrift SHALL die Illustration `Geschichte_aubergine.png` (Gärtner mit Karotte und Erntekiste) mittig stehen.
 
 #### Scenario: Fließtext
 - **WHEN** der Abschnitt geprüft wird

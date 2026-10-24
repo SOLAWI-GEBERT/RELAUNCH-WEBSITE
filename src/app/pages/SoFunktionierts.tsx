@@ -6,12 +6,12 @@ export function SoFunktionierts() {
   return (
     <div className="bg-white">
       {/* Hero — Pastell + freie Illustration */}
-      <section className="relative min-h-[420px] flex items-center bg-solawi-green wave-bottom z-10">
+      <section className="relative min-h-[320px] flex items-center bg-solawi-green wave-bottom z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 items-center py-12 md:py-14">
             <div>
-              <span className="badge-frech mb-8 inline-block">Mitmachen</span>
-              <h1 className="mb-8">So funktioniert's</h1>
+              <span className="badge-frech mb-6 inline-block">Mitmachen</span>
+              <h1 className="h1-seite mb-6">So funktioniert's</h1>
               <p className="lead max-w-lg">
                 In vier einfachen Schritten zur Mitgliedschaft
               </p>
@@ -20,7 +20,7 @@ export function SoFunktionierts() {
               <img
                 src="/ablauf-kontakt.jpg"
                 alt="Hallo? — freundlicher Erstkontakt mit Gurke als Telefon"
-                className="h-[300px] md:h-[360px] object-contain"
+                className="h-[220px] md:h-[260px] object-contain"
               />
             </div>
           </div>

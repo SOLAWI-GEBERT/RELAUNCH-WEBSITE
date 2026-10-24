@@ -114,6 +114,49 @@ Legende: 🔴 vor dem Livegang zwingend · 🟠 vor dem Livegang empfohlen ·
       prüfen: Pflichtfeld-Kennzeichnung, Zweckbindung der erhobenen Felder,
       und ob § 9 um den eingesetzten Dienst ergänzt werden muss.
 
+## 3a. Hofseiten: Hof-Auftritt (Change `hofseiten-hofstimme-und-kiste`)
+
+Hintergrund: Logo, Hofstimme, „In der Kiste“ und „Aus der Küche“ sind gebaut
+und laufen derzeit mit **Platzhaltern** (`src/app/data/platzhalter.ts`,
+`public/platzhalter/`). Die Spec `harvest-shares` verlangt für den Livegang
+„Hofinhalte nur mit Quelle vom Hof“.
+
+- [ ] 🔴 **Platzhalter vor dem Livegang abschalten.** In
+      `src/app/data/platzhalter.ts` `PLATZHALTER_AKTIV = false` setzen oder die
+      Datei samt `public/platzhalter/` löschen und die Aufrufe in
+      `ErnteanteilSeite.tsx` und `Ernteanteile.tsx` entfernen. Prüfen:
+      `grep -rni "platzhalter" src public` findet keine Hofinhalte mehr, Seiten
+      ohne echte Daten zeigen die Abschnitte nicht.
+- [ ] 🔴 **Echte Logo-Dateien der Höfe einpflegen** (SVG oder PNG mit
+      transparentem Hintergrund) unter `public/` und in `hoefe.ts` verknüpfen.
+      Die Webseiten liefern nur Screenshot-Qualität, Tristans Logo gibt es bisher
+      nur Rot auf Lime. Kirschgarten hat keins und bleibt ohne Stempel. Das
+      Demeter-Signet bleibt unverändert in der Badge-Zeile.
+- [ ] 🟠 **Wortlaut der Zitate von den Höfen bestätigen lassen.** Eingetragen
+      sind Tristan („Mein Ziel ist es, eine umweltverträgliche ökologische
+      Landwirtschaft zu betreiben.“, Signatur „Dein Tristan“) und Walz („Wir
+      möchten die Tiere in ihrer Ganzheit betrachten.“, Signatur „Familie
+      Walz“), beide aus den Hof-Webseiten übernommen. Schweigerts und
+      Kirschgarten haben noch kein Zitat.
+- [ ] 🟠 **Kistenbeispiele, Mengen und Küchentipps von den Höfen holen.** Je
+      Ernteanteil Beispiel-Lieferungen mit Produktliste und Menge, dazu ein
+      Foto je TNV-Größe (Gemüse Normal/Klein, Pilze 600 g/300 g), außerdem
+      Lagerung, Verwertung und Rezeptideen. In `ernteanteile.ts` an `kiste` und
+      `kueche` eintragen.
+- [ ] 🟠 **Joomla-Export-Rezept für Ernteanteil-Seiten bauen**
+      (`tools/sppb-export/pages/`, Skill `sppb-export`). Bisher gibt es nur
+      eines für die Startseite. Neu abzubilden: Logo, gerahmtes Foto, Farbband
+      mit Holzkiste, Hofstimme als Brief, Kistenkarten, Kachelwand auf
+      `/ernteanteile`. Danach manueller Import-Test; Rahmungs- und Stempel-CSS
+      (`hof-foto`, `hof-etikett`, `hof-stempel`) gehört in den Helix-Style.
+- [ ] 🟡 **Fotos für Kirschgarten klären.** `lillinghof-obstbau.jpg`,
+      `-obstbauern.jpg` und `-saft.jpg` liegen in `public/fotos`; unklar, ob sie
+      zum Kirschgarten gehören. Obst und Beeren zeigen bisher beide dieselbe
+      Blüte.
+- [ ] 🟡 **Walz-Zitat steht doppelt**: in der Hofbeschreibung im Steckbrief und
+      als Hofstimme darunter. Entweder aus der Beschreibung streichen oder ein
+      anderes Zitat wählen.
+
 ## 4. Teilnahmevereinbarung (TNV)
 
 - [ ] 🟠 **Widerrufshinweis bei der Foto-Einwilligung ergänzen.** Die TNV

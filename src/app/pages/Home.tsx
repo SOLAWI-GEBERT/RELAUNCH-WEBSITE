@@ -144,9 +144,9 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             <ScrollReveal delay={0}>
-              <div className="bg-solawi-salmon p-8 hover-tilt h-full">
+              <div className="bg-solawi-salmon p-8 hover-tilt lg:mt-0">
                 <img src="/features-nachhaltigkeit.jpg" alt="" className="h-36 object-contain mb-6 mx-auto" />
                 <h3 className="mb-4">Nachhaltig & Regional</h3>
                 <p className="text-foreground">
@@ -157,7 +157,7 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <div className="bg-solawi-orange p-8 hover-tilt h-full">
+              <div className="bg-solawi-orange p-8 pb-14 hover-tilt lg:mt-12">
                 <img src="/features-gemeinschaft.jpg" alt="" className="h-36 object-contain mb-6 mx-auto" />
                 <h3 className="mb-4">Gemeinschaft</h3>
                 <p className="text-foreground">
@@ -168,7 +168,7 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <div className="bg-solawi-mauve p-8 hover-tilt h-full">
+              <div className="bg-solawi-mauve p-8 pb-5 hover-tilt lg:mt-4">
                 <img src="/features-lebensmittel.jpg" alt="" className="h-36 object-contain mb-6 mx-auto" />
                 <h3 className="mb-4">Vielfalt & Transparenz</h3>
                 <p className="text-foreground">
@@ -179,7 +179,7 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <div className="bg-solawi-green p-8 hover-tilt h-full">
+              <div className="bg-solawi-green p-8 pb-10 hover-tilt lg:mt-20">
                 <img src="/ablauf-depot.jpg" alt="" className="h-36 object-contain mb-6 mx-auto" />
                 <h3 className="mb-4">Depot in deiner Nähe</h3>
                 <p className="text-foreground mb-4">

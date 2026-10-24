@@ -31,12 +31,12 @@ export function ErnteanteilSeite({
       className="bg-white"
       style={{ "--hof-rahmen": kategorieFarben[anteil.kategorie].rahmen } as CSSProperties}
     >
-      <section className={`${kategorieFarben[anteil.kategorie].band} py-16 wave-bottom relative z-10`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-8">
+      <section className={`relative min-h-[320px] flex items-center ${kategorieFarben[anteil.kategorie].band} wave-bottom z-10`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-14 flex items-center justify-between gap-8">
           <div>
-            <span className="badge-frech mb-4 inline-block">Ernteanteil</span>
-            <h1 className="text-5xl mb-4 text-foreground">{anteil.titel}</h1>
-            <p className="text-xl text-foreground/80 flex items-center gap-3 flex-wrap">
+            <span className="badge-frech mb-6 inline-block">Ernteanteil</span>
+            <h1 className="h1-seite mb-6">{anteil.titel}</h1>
+            <p className="lead flex items-center gap-3 flex-wrap">
               {hof.name}
               <VerfuegbarkeitsBadge verfuegbarkeit={anteil.verfuegbarkeit} />
             </p>
@@ -106,9 +106,10 @@ export function ErnteanteilAbschnitt({
 
       {/* Farbband in der Kategoriefarbe: "Was steckt drin" und "In der Kiste" in einem Block, die
           Holzkiste steht links auf der oberen Kante. Karten im Band sind weiß, damit sie sich
-          abheben (und der Versatzrahmen der Kistenfotos sichtbar bleibt). */}
+          abheben (und der Versatzrahmen der Kistenfotos sichtbar bleibt). `mt-20` hält Platz für
+          die Kiste, die 3,5 rem über die Kante ragt: kleinerer Abstand überdeckt Text darüber. */}
       {(hatKarten || hatKiste) && (
-        <div className={`${kategorieFarben[anteil.kategorie].band} relative mt-8 rounded-lg px-6 pb-8 pt-10 sm:px-8 sm:pt-8 space-y-10`}>
+        <div className={`${kategorieFarben[anteil.kategorie].band} relative mt-20 rounded-lg px-6 pb-8 pt-10 sm:px-8 sm:pt-8 space-y-10`}>
           <img
             src="/kiste-illustration.png"
             alt=""

@@ -16,11 +16,11 @@ export function Newsletter() {
 
   return (
     <div className="bg-white">
-      <section className="bg-solawi-salmon-light py-16 wave-bottom relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="badge-frech mb-4 inline-block">Newsletter</span>
-          <h1 className="text-5xl mb-4 text-foreground">Newsletter verwalten</h1>
-          <p className="text-xl text-foreground/80">
+      <section className="relative min-h-[320px] flex items-center bg-solawi-salmon-light wave-bottom z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-14">
+          <span className="badge-frech mb-6 inline-block">Newsletter</span>
+          <h1 className="h1-seite mb-6">Newsletter verwalten</h1>
+          <p className="lead max-w-lg">
             Abmelden oder die E-Mail-Adresse ändern
           </p>
         </div>

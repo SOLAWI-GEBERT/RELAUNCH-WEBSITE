@@ -43,6 +43,8 @@ Verboten: `text-gray-*`, `text-[#…]`, `text-foreground/50…/90`, `text-xs`,
 - Icons: immer `text-cta` (Pink `#d10038`, entspricht `--link-color`/`icon_color` im Export). Kein `text-primary` auf Icons.
 - Zertifikat-/Kategorie-Badges: Pastell-Tokens (`bg-solawi-green|mauve|orange|salmon|blue` + `text-foreground`), keine Tailwind-Farben wie `amber-700`, `emerald-600`, `blue-600`.
 - Sektionshintergründe: Signatur-Regel aus `design_signature` — gleiche Farbe nie in zwei aufeinander folgenden Sektionen; Weiß als Trenner.
+- Illustration und Fläche: Eine Signature-Grafik liegt immer auf einer Fläche in **ihrer eigenen** Bildhintergrundfarbe, damit sie randlos einläuft. Kein Pastellfeld in der Bildfarbe auf einer Gegenfarbe — das liest sich als Kasten. Farbe vorher messen: `magick datei.jpg -format "%[pixel:p{3,3}]" info:`. Passt keine Palettenfarbe, bekommt die Grafik ein eigenes Token (so entstand `solawi-aubergine` #bfa9c4 für `Geschichte_aubergine.png`).
+- Bildposition wechselt von Sektion zu Sektion (rechts, links, mittig, neben dem Inhalt); eine Sektion ohne Bild dient als Atempause.
 - Hover auf Links: `hover:text-accent` (Lila) oder `hover:text-cta`.
 
 ## Bausteine
@@ -79,6 +81,7 @@ Der Hof tritt als Absender auf, wir liefern das Briefpapier. Spec: `openspec/spe
 - Container breit: `max-w-7xl mx-auto px-4 sm:px-6 lg:px-8` — Raster, Karten, Tabellen, Hero.
 - Container schmal: `max-w-4xl mx-auto px-4 sm:px-6 lg:px-8` — reine Textsektionen, FAQ, Formulare.
 - Sektions-Padding: immer `py-20`. Ausnahme Hero: `py-16 md:py-20`.
-- Unterseiten-Hero: `min-h-[420px] flex items-center`, zweispaltig `grid md:grid-cols-2 gap-8 items-center`, rechts eine Signature-Illustration (`/public/*.jpg|png`), Badge → h1 → `lead`.
+- Hero Startseite (Signature-Look): `min-h-[600px]`, h1 in voller Tag-Größe (106 px).
+- Unterseiten-Hero (jede Seite mit Banderole, auch ohne Bild): `min-h-[320px] flex items-center`, Innenabstand `py-12 md:py-14`, zweispaltig `grid md:grid-cols-2 gap-8 items-center`, rechts Signature-Illustration `h-[220px] md:h-[260px]`. Badge `mb-6` → `<h1 className="h1-seite mb-6">` (h2-Stufe: 38/50/64 px) → `lead max-w-lg`.
 - Karten: Pastellkarte `bg-solawi-* p-8` (Argumente) oder Weißkarte `bg-white p-6 shadow-md` (Daten). `rounded-*` weglassen (Radius ist 0).
 - Icons in Feature-Karten `w-12 h-12 text-cta`, in Daten-Karten `w-10 h-10 text-cta`.

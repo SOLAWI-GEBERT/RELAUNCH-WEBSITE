@@ -28,11 +28,15 @@ Die Route `/so-funktionierts` SHALL das Label "Mitmachen", das `h1` "So funktion
 - **THEN** ist die Zieladresse `Team.Koordination@stadt-land-beides.de` als Bild mit entsprechendem Alternativtext vorhanden
 
 ### Requirement: Download der Teilnahmevereinbarung
-Die Seite `/so-funktionierts` SHALL einen Download-Link "Teilnahmevereinbarung" enthalten, der auf `/TNV_StadtLandBeides_V9_3_2026.pdf` zeigt und ein PDF liefert.
+Die Seite `/so-funktionierts` SHALL einen Download-Link "Teilnahmevereinbarung" enthalten, der auf die jeweils aktuelle Fassung zeigt — derzeit `/TNV_StadtLandBeides_V26_4.pdf` — und ein PDF liefert. Überholte Fassungen SHALL NOT in `public/` liegen, damit über die direkte URL keine veraltete Vereinbarung abrufbar ist.
 
 #### Scenario: PDF-Download
 - **WHEN** der Download-Link angeklickt wird
-- **THEN** wird das PDF `TNV_StadtLandBeides_V9_3_2026.pdf` mit HTTP-Status 200 und Inhaltstyp `application/pdf` geliefert
+- **THEN** wird das PDF `TNV_StadtLandBeides_V26_4.pdf` mit HTTP-Status 200 und Inhaltstyp `application/pdf` geliefert
+
+#### Scenario: Keine überholte Fassung im Auslieferungsverzeichnis
+- **WHEN** `public/` geprüft wird
+- **THEN** liegt dort nur die aktuelle TNV, keine Vorgängerfassung
 
 ### Requirement: Vorschau der Teilnahmevereinbarung
 Die Seite `/so-funktionierts` SHALL zwei Vorschaubilder der Teilnahmevereinbarung (Ernteanteil-Auswahl, Depot-Auswahl) mit erklärendem Text und einen Link "Teilnahmebedingungen" auf `/mitmachen` (mit Anker) enthalten.
@@ -49,19 +53,11 @@ Die Seite `/so-funktionierts` SHALL von den Buttons "Jetzt dabei sein" und "Jetz
 - **THEN** öffnet sich `/so-funktionierts`
 
 ### Requirement: Solidarische Landwirtschaft – Kopf und Abschnitte
-Die Route `/solidarische-landwirtschaft` SHALL das Label "Über uns" und das `h1` "Solidarische Landwirtschaft" zeigen. Sie SHALL fünf Abschnitte in dieser Reihenfolge enthalten: `was-ist` ("Was ist Solidarische Landwirtschaft?"), `leitbild` ("Unser Leitbild"), `hoefe` ("Unsere Partnerhöfe"), `weltweit` ("SoLaWi weltweit") und `netzwerk` ("Netzwerk Solidarische Landwirtschaft").
+Die Route `/solidarische-landwirtschaft` SHALL das Label "Über uns" und das `h1` "Solidarische Landwirtschaft" zeigen. Sie SHALL vier Abschnitte in dieser Reihenfolge enthalten: `was-ist` ("Was ist Solidarische Landwirtschaft?"), `leitbild` ("Unser Leitbild"), `weltweit` ("SoLaWi weltweit") und `netzwerk` ("Netzwerk Solidarische Landwirtschaft").
 
-#### Scenario: Fünf Abschnitte
+#### Scenario: Vier Abschnitte
 - **WHEN** `/solidarische-landwirtschaft` geladen wird
-- **THEN** existieren fünf Abschnitte mit den genannten `id` und `h2` in der genannten Reihenfolge
-
-### Requirement: Partnerhöfe verlinken auf Ernteanteile
-Der Abschnitt "Unsere Partnerhöfe" SHALL vier verlinkte Kacheln zeigen, die auf `/ernteanteile/tristan-gemuese`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/walz-huhn` und `/ernteanteile/kirschgarten-beeren` führen.
-
-#### Scenario: Vier Hofkacheln
-- **WHEN** der Abschnitt geprüft wird
-- **THEN** gibt es vier Kacheln mit den genannten Zielen
-- **AND** jedes Ziel rendert eine Ernteanteil-Detailseite
+- **THEN** existieren vier Abschnitte mit den genannten `id` und `h2` in der genannten Reihenfolge
 
 ### Requirement: Netzwerk-Abschnitt mit externem Link
 Der Abschnitt "Netzwerk Solidarische Landwirtschaft" SHALL einen Link auf `https://www.solidarische-landwirtschaft.org` enthalten, der in einem neuen Tab mit `rel="noopener noreferrer"` öffnet.

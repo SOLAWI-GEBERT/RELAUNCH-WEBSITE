@@ -5,12 +5,12 @@ export function Mitmachen() {
   return (
     <div className="bg-white">
       {/* Hero — Pastell + freie Illustration */}
-      <section className="relative min-h-[420px] flex items-center bg-solawi-green wave-bottom z-10">
+      <section className="relative min-h-[320px] flex items-center bg-solawi-green wave-bottom z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 items-center py-12 md:py-14">
             <div>
-              <span className="badge-frech mb-8 inline-block">Dabei sein</span>
-              <h1 className="mb-8">
+              <span className="badge-frech mb-6 inline-block">Dabei sein</span>
+              <h1 className="h1-seite mb-6">
                 Wie kann ich mitmachen?
               </h1>
               <p className="lead max-w-lg">
@@ -18,7 +18,7 @@ export function Mitmachen() {
               </p>
             </div>
             <div className="flex justify-center">
-              <img src="/ablauf-mitmachen.jpg" alt="Mitmachen" className="h-[300px] md:h-[360px] object-contain" />
+              <img src="/ablauf-mitmachen.jpg" alt="Mitmachen" className="h-[220px] md:h-[260px] object-contain" />
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ export function Mitmachen() {
       </section>
 
       {/* SoLaWi in der Stadt */}
-      <section className="py-20 bg-solawi-blue">
+      <section className="py-20 bg-solawi-mauve">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="badge-frech mb-4 inline-block">Vom Hof in die Stadt</span>
@@ -234,6 +234,12 @@ export function Mitmachen() {
       {/* CTA */}
       <section id="teilnahme" className="py-20 bg-solawi-green">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          {/* Grafik-Hintergrund ist auf das Grün der Sektion umgefärbt — kein Rahmen nötig */}
+          <img
+            src="/decision-mitmachen-gruen.jpg"
+            alt="Ein grüner Arbeitshandschuh und eine Hand schlagen ein"
+            className="h-52 object-contain mx-auto mb-8 hover-wiggle"
+          />
           <h2 className="mb-6">
             Bereit mitzumachen?
           </h2>

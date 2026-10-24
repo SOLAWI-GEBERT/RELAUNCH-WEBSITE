@@ -29,7 +29,7 @@ Prüfung im Browser läuft über den bereits laufenden Dev-Server des Nutzers (`
 - [x] 4.5 `KistenBeispiel` um `groesse`, `foto` und `produkte { name, menge? }` erweitern (`inhalt` bleibt als einfache Variante) und `InDerKiste` auf Kistenkarte umbauen (4:3-Foto, Größen-Badge, Produktliste mit Menge); Prüfen: Karte rendert mit und ohne Foto, mit Liste und mit `inhalt`, mobil eine Spalte.
 - [x] 4.6 Platzhalter auf Kistenkarten umstellen: Bild-Platzhalter als Datei unter `public/platzhalter/`, eine Karte je TNV-Größe bei Ernteanteilen mit mehreren Größen (Gemüse Normal/Klein, Pilze 600 g/300 g), sonst drei allgemeine Karten; Prüfen: `tristan-gemuese` zeigt je Saison Karten für Normal und Klein, `walz-huhn` drei Karten ohne Größen-Badge.
 
-- [x] 4.7 Handgezeichnete Holzkiste (`public/Holzkiste.png`) freigestellt und auf 480 px verkleinert als `public/kiste-illustration.png` (58 KB) neben die Überschrift "In der Kiste" setzen, dekorativ mit leerem Alt-Text; Prüfen: Bild lädt, auf Seiten mit lachsfarbenem und grünem Kopfband ohne Randsaum, kein horizontaler Überlauf.
+- [x] 4.7 Handgezeichnete Holzkiste (`public/Holzkiste.png`) freigestellt und auf 480 px verkleinert als `public/kiste-illustration.png` (58 KB) einbauen, dekorativ mit leerem Alt-Text: "Was steckt drin" und "In der Kiste" liegen in einem Farbband in der Kategoriefarbe (Karten darin weiß), die Kiste steht links auf der oberen Kante des Bands; Prüfen: Bild lädt, ohne Randsaum auf orange, lachsfarbenem und grünem Band, die Kiste überdeckt auf allen neun Seiten (Desktop und Handybreite) keinen Text — dafür hält das Band 5 rem Abstand nach oben (`mt-20`), weil die Kiste 3,5 rem über die Kante ragt; kein horizontaler Überlauf.
 
 ## 5. Belegte Inhalte einpflegen
 
@@ -44,6 +44,12 @@ Prüfung im Browser läuft über den bereits laufenden Dev-Server des Nutzers (`
 - [x] 6.1 Alle neun Detailseiten im Browser durchgehen (Hell und Dunkel, Handybreite): Reihenfolge Kopfband → Steckbrief → Hofstimme → Beschreibung → Was steckt drin → In der Kiste → Aus der Küche → Das kostet → Lieferung & Info → Button, kein leerer Abschnitt, genau ein `h1`.
 - [ ] 6.2 Joomla-Export mit dem Skill `sppb-export` für eine Seite mit Logo, Zitat und Kistenbeispielen probeweise erzeugen; Prüfen: Logo, Foto, Zitat und Karten erscheinen als Standard-Addons, Abweichungen in `docs/sppb` notieren.
 - [x] 6.3 `docs/seiten-katalog.md` auf Aktualität prüfen (keine Routenänderung erwartet) und `npm run build` ausführen; Prüfen: Build ohne Fehler.
+
+## 7. Übersicht /ernteanteile als Kachelwand
+
+- [x] 7.1 `src/app/pages/Ernteanteile.tsx` auf eine mehrspaltige Kachelwand umbauen (ab `lg` drei, ab `sm` zwei Spalten, mobil eine; Kategoriereihenfolge, Kategorie als rosa Icon über dem Titel, Titel `h4`, Hofname `meta`, Kurztext `p` — Gestaltung wie die Produktkarten der Startseite; nur für Screenreader sichtbare `h2`); Prüfen: neun Kacheln in der Reihenfolge Gemüse bis Fleisch, genau ein `h1`, keine `h2` je Kategorie, Icon, Titel, Hofname und Text stimmen in Größe, Schrift und Farbe mit der Startseite überein.
+- [x] 7.2 Bild der Kachel aus dem ersten Kistenbeispiel mit Foto (bei Gemüse `tristan-winter`), sonst Hoffoto, sonst kein Bild; Hoflogo als Stempel neben dem Hofnamen; Prüfen: Kachel eines Ernteanteils mit Kistenfoto zeigt es, Ernteanteile ohne Kistenbeispiel zeigen ihr eigenes Produktfoto, sonst das Hoffoto, kein fremdes Hoffoto auf einer Kachel.
+- [x] 7.3 Übersicht im Browser auf Desktop und Handybreite prüfen und Deckungsgleichheit mit dem Untermenü bestätigen; Prüfen: Linkziele der neun Kacheln gleich den neun Blatt-Einträgen, kein horizontaler Überlauf, `npm run build` ohne Fehler.
 
 ## Workflow follow-up
 

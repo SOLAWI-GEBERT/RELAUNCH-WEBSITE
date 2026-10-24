@@ -87,9 +87,28 @@ Der Abschnitt "Lieferrhythmus" SHALL eine Tabelle mit den Spalten Hof, Produkt, 
 - **WHEN** die Phase je Produkt mit den Zeiträumen auf den Detailseiten unter `/ernteanteile/…` verglichen wird
 - **THEN** stimmen die Zeiträume für Wintergemüse, Sommergemüse, Bio..Edelpilze, Bio..Beeren und Stein- & Kernobst überein
 
-### Requirement: Newsletter-Hinweis am Seitenende
-Die Seite SHALL am Ende einen Abschnitt "Bleib auf dem Laufenden" mit einem Button "Zum Newsletter" zeigen.
+### Requirement: Farbrhythmus der Abschnitte
+Die Abschnitte SHALL in der Reihenfolge Grün (Kopfbereich), Weiß (Karte), Grün (Öffnungszeiten), Blaugrau (Lieferung & Abholung) und Mauve (Lieferrhythmus) hinterlegt sein. Jede Illustration SHALL randlos auf einer Fläche in ihrer eigenen Hintergrundfarbe liegen: `ablauf-depot.jpg` und `ablauf-ernteteiler.jpg` auf Grün, `features-landwirtschaft.jpg` auf Blaugrau, `features-lebensmittel.jpg` auf Mauve. Eine Illustration SHALL NOT in einem Farbfeld auf einer Gegenfarbe sitzen. Die Seite SHALL mit dem Lieferrhythmus enden; einen Newsletter-Abschnitt SHALL sie nicht enthalten.
 
-#### Scenario: Abschnitt vorhanden
+#### Scenario: Keine Farbe zweimal hintereinander
+- **WHEN** die Hintergrundfarben der Abschnitte von oben nach unten gelesen werden
+- **THEN** unterscheidet sich jede Farbe von der vorangehenden
+
+#### Scenario: Illustration und Fläche passen zusammen
+- **WHEN** eine Illustration der Seite geprüft wird
+- **THEN** stimmt die Farbe der Fläche hinter ihr mit ihrem eigenen Bildhintergrund überein
+
+### Requirement: Bildrhythmus der Abschnitte
+Die Illustrationen SHALL ihre Position von Abschnitt zu Abschnitt wechseln, damit die Seite nicht als eine Spalte rechtsbündiger Bilder liest: `ablauf-depot.jpg` rechts neben dem Seitentitel, `ablauf-ernteteiler.jpg` links vor der Überschrift "Depot-Öffnungszeiten", `features-landwirtschaft.jpg` mittig über der zentrierten Überschrift "Lieferung & Abholung" und `features-lebensmittel.jpg` rechts neben der Lieferrhythmus-Tabelle. Auf Handybreite SHALL jede Illustration über dem zugehörigen Text stehen.
+
+#### Scenario: Keine zwei gleich gesetzten Illustrationen hintereinander
+- **WHEN** die Illustrationen von oben nach unten gelesen werden
+- **THEN** unterscheidet sich die Position jeder Illustration (rechts, links, mittig, neben dem Inhalt) von der vorangehenden
+
+#### Scenario: Handybreite
+- **WHEN** die Seite mit 390 px Breite geöffnet wird
+- **THEN** stehen Illustration und Text untereinander und keine Illustration ragt über den Rand hinaus
+
+#### Scenario: Seitenende
 - **WHEN** das Seitenende geprüft wird
-- **THEN** sind die Überschrift und der Button "Zum Newsletter" sichtbar
+- **THEN** ist der letzte Abschnitt "Lieferrhythmus" und es gibt keinen Abschnitt "Bleib auf dem Laufenden" und keinen Button "Zum Newsletter"

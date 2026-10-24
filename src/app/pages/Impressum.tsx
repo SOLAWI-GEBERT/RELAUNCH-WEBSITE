@@ -53,6 +53,16 @@ export function Impressum() {
             <br />
             USt-IdNr. nach § 27a UStG: DE419541492
           </p>
+          <p>
+            <a
+              href="/SatzungV4-01_2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Vereinssatzung (PDF)
+            </a>
+          </p>
 
           <h2 className="text-xl font-semibold mt-8 mb-4">Bankverbindung</h2>
           <p>

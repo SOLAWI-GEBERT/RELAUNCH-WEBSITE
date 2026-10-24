@@ -333,6 +333,7 @@ export const ernteanteile: Ernteanteil[] = [
     kurz: "Freilandhuhn, artgerecht aufgezogen statt nach 30 Tagen geschlachtet.",
     beschreibung:
       "Freilandhaltung — nicht nach 30 Tagen geschlachtet, sondern artgerecht aufgezogen.",
+    foto: { src: "/fotos/walz-huehner.jpg", alt: "Freilandhühner im Sandbad am Demeterhof Walz" },
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
       // TNV V26.4 (Preistabelle Demeterhof Walz): Gesamtbetrag 9,00 €/Monat je Anteil, geliefert wird 1 Gockerl alle 4 Monate (4 Anteile).
@@ -347,6 +348,7 @@ export const ernteanteile: Ernteanteil[] = [
     kurz: "500 g Aberdeen-Angus-Hack im Monat, aus Weide- und Muttertierhaltung.",
     beschreibung:
       "500 g im Monat, Aberdeen Angus. Weidehaltung, Muttertierhaltung, nur Raufutter.",
+    foto: { src: "/fotos/walz-weide.jpg", alt: "Aberdeen-Angus-Rind auf der Weide des Demeterhofs Walz" },
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
       { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 10, bis: 13 } },
@@ -360,6 +362,7 @@ export const ernteanteile: Ernteanteil[] = [
     kurz: "500 g Wurstwaren im Monat: Salami, Bratwurst, Wienerle u.v.m. — monatlich wechselnd.",
     beschreibung:
       "500 g im Monat: Salami, Rinderschinken, Wienerle, Bratwürste, Pfefferbeißer u.v.m.",
+    foto: { src: "/fotos/walz-kuh.jpg", alt: "Neugierige Kuh leckt eine Hand am Demeterhof Walz" },
     verfuegbarkeit: { status: "verfuegbar" },
     varianten: [
       { groesse: "500 g / Monat", zyklus: "1x pro Monat", lieferphase: "ganzjährig", richtwert: { von: 16, bis: 18 } },

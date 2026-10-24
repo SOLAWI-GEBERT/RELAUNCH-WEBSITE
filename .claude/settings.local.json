@@ -69,7 +69,30 @@
       "WebSearch",
       "Bash(grep -i \"^sharp$\\\\|pngjs\\\\|jimp\")",
       "Bash(T=/Users/linus/.claude/jobs/5ce1a28c/tmp && magick public/Holzkiste.png -alpha set -fuzz 14% -fill none -draw \"color 0,0 floodfill\" -draw \"color 1253,0 floodfill\" -draw \"color 0,1253 floodfill\" -draw \"color 1253,1253 floodfill\" -trim +repage -resize 720x720 -strip $T/kiste-frei.png && magick identify $T/kiste-frei.png && ls -la $T/kiste-frei.png && magick $T/kiste-frei.png -background '#c7afc7' -flatten $T/kiste-test-mauve.png && magick $T/kiste-frei.png -background '#f3aba2' -flatten $T/kiste-test-salmon.png && magick $T/kiste-test-mauve.png $T/kiste-test-salmon.png +append $T/kiste-test.png)",
-      "Bash(T=/Users/linus/.claude/jobs/5ce1a28c/tmp && magick $T/kiste-frei.png -resize 480x480 -colors 192 -define png:compression-level=9 -strip public/kiste-illustration.png && magick identify public/kiste-illustration.png && ls -la public/kiste-illustration.png && magick public/kiste-illustration.png -background '#c2ddb2' -flatten $T/kiste-final-green.png)"
+      "Bash(T=/Users/linus/.claude/jobs/5ce1a28c/tmp && magick $T/kiste-frei.png -resize 480x480 -colors 192 -define png:compression-level=9 -strip public/kiste-illustration.png && magick identify public/kiste-illustration.png && ls -la public/kiste-illustration.png && magick public/kiste-illustration.png -background '#c2ddb2' -flatten $T/kiste-final-green.png)",
+      "Bash(magick depots.png -resize 50% depots-small.png)",
+      "Bash(cd *)",
+      "Bash(grep -n \"\\\\.meta\\\\b\\\\|^  h4\\\\|\\\\.h4\\\\|h3, \\\\|h3 {\" src/styles/theme.css)",
+      "Bash(magick depots2.png -crop 1440x400+0+1180 oz2.png)",
+      "Bash(magick depots3.png -crop 1440x340+0+1253 s-oz.png)",
+      "Bash(magick depots3.png -crop 1440x420+0+2053 s-lief.png)",
+      "Bash(magick depots3.png -crop 1440x520+0+2942 s-rhy.png)",
+      "Bash(magick depots-mobile.png -crop 390x420+0+1465 m-oz.png)",
+      "Bash(grep *)",
+      "Bash(magick faq-vorher.png -crop 1440x1200+0+0 -resize 60% v1.png)",
+      "Bash(magick faq-vorher.png -crop 1440x1300+0+2400 -resize 60% v2.png)",
+      "Bash(magick faq-mobile.png -crop 390x700+0+96 m1.png)",
+      "Bash(magick faq-mobile.png -crop 390x500+0+3346 m2.png)",
+      "Bash(magick faq-mobile2.png -crop 390x640+0+96 m1b.png)",
+      "Bash(magick faq-mobile3.png -crop 390x620+0+96 m1c.png)",
+      "Bash(magick faq-final.png -resize 25% faq-gesamt.png)",
+      "Bash(magick identify *)",
+      "Bash(magick faq-v2.png -crop 1440x620+0+2011 -resize 72% g1.png)",
+      "Bash(magick faq-v2.png -crop 1440x560+0+568 -resize 72% g2.png)",
+      "Bash(file public/K*rbiswelt.png)",
+      "Bash(xxd)",
+      "Bash(cp *)",
+      "Bash(npm run *)"
     ]
   }
 }

@@ -91,6 +91,45 @@ Zitate, Beispiel-Lieferungen, Mengenangaben, Küchentipps, Logos und Fotos SHALL
 
 ## MODIFIED Requirements
 
+### Requirement: Ernteanteile-Übersicht nach Kategorien
+Die Route `/ernteanteile` SHALL eine Seite mit dem `h1` "Ernteanteile" und dem Label "Unsere Höfe" zeigen. Sie SHALL die Ernteanteile als mehrspaltige Kachelwand in der Reihenfolge der Kategorien Gemüse, Pilze, Obst, Beeren, Getreide, Eier und Fleisch darstellen; jede Kachel trägt das Kategorie-Icon in der Gestaltung der Produktkarten der Startseite. Jede Kachel SHALL Bild, Titel (`h4`), Hof, Kurzbeschreibung und — sofern nicht sofort buchbar — ihren Verfügbarkeitshinweis zeigen.
+
+#### Scenario: Kategorienreihenfolge
+- **WHEN** `/ernteanteile` geöffnet wird
+- **THEN** erscheinen die Kacheln in der Reihenfolge Gemüse, Pilze, Obst, Beeren, Getreide, Eier, Fleisch
+
+#### Scenario: Kategorie als Icon
+- **WHEN** die Kacheln geprüft werden
+- **THEN** zeigt jede Kachel das Icon ihrer Kategorie in Pink (`text-cta`) über dem Titel, wie die Produktkarten der Startseite, die Kategorie steht für Screenreader als Text daneben, und es gibt keine eigene Überschrift je Kategorie
+
+#### Scenario: Gleiche Gestaltung wie Startseite
+- **WHEN** eine Kachel auf `/ernteanteile` mit der Produktkarte desselben Ernteanteils unter "Was bekomme ich?" auf der Startseite verglichen wird
+- **THEN** stimmen Icon, Titel, Hofname und Kurzbeschreibung in Größe, Schrift und Farbe überein
+
+#### Scenario: Kacheln je Kategorie
+- **WHEN** die Kategorien geprüft werden
+- **THEN** enthält Gemüse eine Kachel (Gemüse, Biohof Tristan; Winter- und Sommergemüse teilen sich eine Detailseite), Pilze eine (Bio..Edelpilze, Schweigerts Hof), Obst eine (Stein- & Kernobst, Kirschgarten), Beeren eine (Bio..Beeren, Kirschgarten), Getreide eine (More..Ur-Getreide, Demeterhof Walz), Eier eine (More..Huhn, Demeterhof Walz) und Fleisch drei (More..Bratgockerl, More..Hack, More..Wurst, je Demeterhof Walz)
+
+#### Scenario: Verfügbarkeitshinweis auf Kachel
+- **WHEN** die Kachel "Sommergemüse" (Tristan) oder "Stein- & Kernobst" (Kirschgarten) geprüft wird
+- **THEN** zeigt die Kachel einen Hinweis ("ab April 2027" bzw. "Warteliste")
+
+#### Scenario: Mehrspaltig
+- **WHEN** `/ernteanteile` in Desktopbreite geöffnet wird
+- **THEN** stehen mindestens drei Kacheln nebeneinander, und auf Handybreite steht eine Kachel pro Reihe
+
+#### Scenario: Bild der Kachel
+- **WHEN** der Ernteanteil eine Beispiel-Lieferung mit Foto hat
+- **THEN** zeigt die Kachel dieses Foto; hat er keines, zeigt sie sein eigenes Produktfoto, dann das Foto des Hofs, und hat auch der Hof keines, erscheint kein Bild eines anderen Hofs
+
+#### Scenario: Logo auf der Kachel
+- **WHEN** der Hof ein Logo hinterlegt hat
+- **THEN** zeigt die Kachel es einfarbig als kleinen Stempel neben dem Hofnamen
+
+#### Scenario: Überschriftenhierarchie der Übersicht
+- **WHEN** `/ernteanteile` geöffnet wird
+- **THEN** gibt es genau ein `h1`, die Kacheltitel sind `h4` wie auf der Startseite, und eine für Screenreader sichtbare `h2` leitet die Kachelwand ein
+
 ### Requirement: Hof-Steckbrief auf Detailseiten
 Jede Detailseite SHALL einen Hof-Steckbrief mit Hofname, Zertifizierungs-Badge, Beschreibung, Zertifizierungszeile und — sofern vorhanden — einem einheitlich gerahmten Bild mit nicht leerem Alternativtext enthalten. Hinterlegt der Hof ein Logo, SHALL es als Kistenetikett am Bild erscheinen. Fehlt eigenes Bildmaterial, SHALL statt eines fremden Hoffotos ein neutraler Platzhalter gezeigt werden. Produkte desselben Hofs SHALL denselben Steckbrief zeigen.
 

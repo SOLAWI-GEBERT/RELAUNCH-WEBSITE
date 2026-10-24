@@ -146,7 +146,9 @@ flowchart LR
 - **Veraltetes PDF:** Der Download-Button auf `/so-funktionierts` verlinkte noch auf
   `TNV_StadtLandBeides_V9_3_2026.pdf`, während die aktuelle Datengrundlage
   (`src/app/data/ernteanteile.ts`, Change `update-hoefe-tnv-v26-4`) bereits
-  `TNV_StadtLandBeides_V26_4.pdf` nutzt. Link korrigiert.
+  `TNV_StadtLandBeides_V26_4.pdf` nutzt. Link korrigiert. Nachtrag: Die alte Fassung lag
+  weiterhin in `public/` und war über die direkte URL abrufbar — sie ist jetzt entfernt
+  (im Git-Verlauf bei `4b3189d` erhalten).
 - **Sackgasse Ernteanteil-Detailseiten:** Die zehn Hof-Steckbriefseiten hatten keinen
   Link oder CTA. Jede Seite bekommt jetzt am Fuß einen Button "Jetzt Ernteanteil
   sichern" → `/so-funktionierts`.

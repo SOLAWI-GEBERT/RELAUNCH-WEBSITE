@@ -1,22 +1,25 @@
-import { Calendar, Truck, AlertCircle, MapPin, Clock } from "lucide-react";
+import { Calendar, Truck, AlertCircle, MapPin } from "lucide-react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-/* ── Marker-Icons (Signature-Illustrationen) ── */
-const depotIcon = new L.Icon({
-  iconUrl: "/inline-kuerbis.jpg",
-  iconSize: [36, 36],
-  iconAnchor: [18, 36],
-  popupAnchor: [0, -34],
-});
+/* ── Marker-Icons (Signature-Illustrationen) ──
+   Die drei PNGs sind als Kartennadel gezeichnet: weiße Tropfenform mit transparentem
+   Rand und Spitze unten. Deshalb sitzt `iconAnchor` auf der Spitze (x = halbe Breite,
+   y = volle Höhe). Keine JPGs verwenden — die haben einen Hintergrund und erscheinen
+   als Kachel statt als Nadel. */
+const markerIcon = (iconUrl: string, [w, h]: [number, number] = [40, 40]) =>
+  new L.Icon({
+    iconUrl,
+    iconSize: [w, h],
+    iconAnchor: [w / 2, h],
+    popupAnchor: [0, -h + 2],
+  });
 
-const hofIcon = new L.Icon({
-  iconUrl: "/inline-hof.jpg",
-  iconSize: [36, 36],
-  iconAnchor: [18, 36],
-  popupAnchor: [0, -34],
-});
+const depotIcon = markerIcon("/depot.png");
+const hofIcon = markerIcon("/hof.png");
+// 50 × 48 px im Original — Höhe angepasst, damit die Nadel nicht verzerrt
+const wartelisteIcon = markerIcon("/Gemusestand_klein.png", [40, 38]);
 
 /* ── Standort-Daten ── */
 // exportiert, damit das Interesse-Formular dieselbe Depot-Liste verwendet (TNV V26.4 S. 3)
@@ -44,31 +47,34 @@ export function Depots() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero — Pastell + freie Illustration */}
-      <section className="bg-solawi-salmon py-16 wave-bottom relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+      {/* Grün (#c2ddb2), weil `ablauf-depot.jpg` genau diesen Hintergrund hat (#c4ddb3):
+          die Illustration sitzt randlos in der Fläche statt als Kachel darauf. */}
+      <section className="relative min-h-[320px] flex items-center bg-solawi-green wave-bottom z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid md:grid-cols-2 gap-8 items-center py-12 md:py-14">
             <div>
-              <span className="badge-frech mb-4 inline-block">Abholung & Termine</span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+              <span className="badge-frech mb-6 inline-block">Abholung & Termine</span>
+              <h1 className="h1-seite mb-6">
                 Depots
               </h1>
-              <p className="text-xl text-foreground/90 max-w-3xl">
+              <p className="lead max-w-lg">
                 Hier findest du die Höfe auf dem Land und die Depots zur
                 Abholung in deiner Umgebung
               </p>
             </div>
             <div className="flex justify-center">
-              <img src="/ablauf-depot.jpg" alt="Depot in der Stadt" className="h-[220px] object-contain" />
+              <img src="/ablauf-depot.jpg" alt="Depot in der Stadt" className="h-[220px] md:h-[260px] object-contain" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Karte */}
-      <section id="karte" className="py-16 bg-solawi-salmon-light">
+      {/* Karte — Weiß als neutraler Trenner im Farbrhythmus: die OSM-Kacheln und die
+          Marker-Illustrationen bringen eigene Farbe mit und brauchen eine ruhige Fläche. */}
+      <section id="karte" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-4">
-            <MapPin className="w-8 h-8 text-primary" />
+            <MapPin className="w-8 h-8 text-cta" />
             <h2 className="text-3xl font-bold text-gray-900">Höfe & Depots</h2>
           </div>
           <p className="text-gray-700 mb-8 max-w-3xl">
@@ -89,7 +95,11 @@ export function Depots() {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
               {depots.map((d) => (
-                <Marker key={d.name} position={[d.lat, d.lng]} icon={depotIcon}>
+                <Marker
+                  key={d.name}
+                  position={[d.lat, d.lng]}
+                  icon={d.name.includes("Warteliste") ? wartelisteIcon : depotIcon}
+                >
                   <Popup>
                     <strong>{d.name}</strong>
                     <br />
@@ -111,28 +121,42 @@ export function Depots() {
             </MapContainer>
           </div>
 
-          <div className="flex gap-6 text-sm text-gray-600">
+          <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
             <span className="flex items-center gap-2">
-              <img src="/inline-kuerbis.jpg" alt="Kürbis" className="w-6 h-6" /> Depots
+              <img src="/depot.png" alt="" className="w-7 h-7" /> Depots
             </span>
             <span className="flex items-center gap-2">
-              <img src="/inline-hof.jpg" alt="Hof" className="w-6 h-6" /> Höfe
+              <img src="/Gemusestand_klein.png" alt="" className="w-7 h-7" /> Depot mit Warteliste
+            </span>
+            <span className="flex items-center gap-2">
+              <img src="/hof.png" alt="" className="w-7 h-7" /> Höfe
             </span>
           </div>
         </div>
       </section>
 
-      {/* Depot-Öffnungszeiten */}
-      <section id="depots" className="py-16 bg-white">
+      {/* Depot-Öffnungszeiten — Grün, weil `ablauf-ernteteiler.jpg` exakt diesen Hintergrund
+          hat (#c2ddb2): die Uhr läuft randlos in die Fläche, statt als grünes Feld auf einer
+          Gegenfarbe zu sitzen. Grün kommt dadurch zweimal auf der Seite vor, getrennt durch
+          die weiße Kartensektion. */}
+      <section id="depots" className="py-16 bg-solawi-green">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <Clock className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold text-gray-900">Depot-Öffnungszeiten</h2>
+          {/* Die Uhr-Illustration tritt hier an die Stelle des lucide-Icons: gleiche Funktion
+              als Sektionsmarke, aber sie zeigt das Abholzeitfenster, um das es darunter geht.
+              Sie steht links vor dem Titel — der Bildrhythmus der Seite wechselt die Seite
+              von Sektion zu Sektion (Hero rechts, hier links, Lieferung mittig). */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+            <img
+              src="/ablauf-ernteteiler.jpg"
+              alt="Uhr mit einer Karotte als Stundenzeiger und einer Heugabel als Minutenzeiger"
+              className="h-[160px] md:h-[200px] object-contain hover-wiggle"
+            />
+            <h2 className="text-3xl font-bold text-foreground">Depot-Öffnungszeiten</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {depots.map((d) => (
-              <div key={d.name} className="bg-solawi-mauve p-5 rounded-lg">
+              <div key={d.name} className="bg-white p-5 rounded-lg shadow-sm">
                 <h3 className="font-semibold text-foreground mb-1">{d.name}</h3>
                 <p className="text-sm text-gray-700">{d.hours}</p>
               </div>
@@ -141,12 +165,22 @@ export function Depots() {
         </div>
       </section>
 
-      {/* Lieferung & Abholung */}
-      <section id="lieferung" className="py-16 bg-solawi-gray">
+      {/* Lieferung & Abholung — Blaugrau ist die Signatur-Farbe für Landwirtschaft/Logistik
+          und zugleich der Hintergrund von `features-landwirtschaft.jpg` (#96b0c7),
+          die Grafik läuft also randlos in die Fläche. */}
+      <section id="lieferung" className="py-16 bg-solawi-blue">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <Truck className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold text-gray-900">Lieferung & Abholung</h2>
+          {/* Mittig gesetzt: die dritte Position im Bildrhythmus der Seite. */}
+          <div className="text-center mb-10">
+            <img
+              src="/features-landwirtschaft.jpg"
+              alt="Hände planen auf einer Feldkarte, wo Erdbeere, Tomate und Kartoffel wachsen"
+              className="h-[180px] md:h-[220px] object-contain mx-auto mb-4"
+            />
+            <div className="flex items-center justify-center gap-3">
+              <Truck className="w-8 h-8 text-cta" />
+              <h2 className="text-3xl font-bold text-foreground">Lieferung & Abholung</h2>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -198,81 +232,80 @@ export function Depots() {
         </div>
       </section>
 
-      {/* Lieferrhythmus */}
-      <section id="anlieferung" className="py-16 bg-white">
+      {/* Lieferrhythmus — Mauve ist die Signatur-Farbe für Lebensmittel/Produkte und der
+          Hintergrund von `features-lebensmittel.jpg` (#c7afc7); die Tabelle liegt weiß darauf. */}
+      <section id="anlieferung" className="py-16 bg-solawi-mauve">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
-            <Calendar className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl font-bold text-gray-900">Lieferrhythmus</h2>
+            <Calendar className="w-8 h-8 text-cta" />
+            <h2 className="text-3xl font-bold text-foreground">Lieferrhythmus</h2>
           </div>
 
-          <div className="bg-solawi-mauve rounded-lg p-8">
-            <table className="w-full text-sm text-left text-gray-700">
-              <thead>
-                <tr className="border-b border-gray-300">
-                  <th className="py-2 pr-4 font-semibold">Hof</th>
-                  <th className="py-2 pr-4 font-semibold">Produkt</th>
-                  <th className="py-2 pr-4 font-semibold">Zyklus</th>
-                  <th className="py-2 font-semibold">Phase</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Tristan</td>
-                  <td className="py-2 pr-4">Wintergemüse</td>
-                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
-                  <td className="py-2">Okt–Mrz</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Tristan</td>
-                  <td className="py-2 pr-4">Sommergemüse</td>
-                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
-                  <td className="py-2">Apr–Sept (ab 2027)</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Schweigerts</td>
-                  <td className="py-2 pr-4">Bio..Edelpilze</td>
-                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
-                  <td className="py-2">ganzjährig</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Walz</td>
-                  <td className="py-2 pr-4">Fleisch, Eier, Getreide</td>
-                  <td className="py-2 pr-4">1–2x/Monat</td>
-                  <td className="py-2">ganzjährig</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Kirschgarten</td>
-                  <td className="py-2 pr-4">Bio..Beeren</td>
-                  <td className="py-2 pr-4">wöchentlich</td>
-                  <td className="py-2">Jul–Sept</td>
-                </tr>
-                <tr>
-                  <td className="py-2 pr-4">Kirschgarten</td>
-                  <td className="py-2 pr-4">Stein- & Kernobst</td>
-                  <td className="py-2 pr-4">unregelmäßig</td>
-                  <td className="py-2">Jul–Dez (Warteliste)</td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Das Füllhorn steht hier nicht in der Titelzeile, sondern neben der Tabelle —
+              größer und als Teil des Inhalts statt als Sektionsmarke. */}
+          <div className="grid lg:grid-cols-4 gap-8 items-center">
+            {/* overflow-x-auto: die vier Spalten brauchen rund 390 px — ohne den eigenen
+                Scrollrahmen schiebt die Tabelle die ganze Seite auf Handybreite nach rechts. */}
+            <div className="bg-white rounded-lg p-4 sm:p-8 shadow-sm lg:col-span-3 overflow-x-auto">
+              <table className="w-full text-sm text-left text-gray-700">
+                <thead>
+                  <tr className="border-b border-gray-300">
+                    <th className="py-2 pr-4 font-semibold">Hof</th>
+                    <th className="py-2 pr-4 font-semibold">Produkt</th>
+                    <th className="py-2 pr-4 font-semibold">Zyklus</th>
+                    <th className="py-2 font-semibold">Phase</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Tristan</td>
+                    <td className="py-2 pr-4">Wintergemüse</td>
+                    <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                    <td className="py-2">Okt–Mrz</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Tristan</td>
+                    <td className="py-2 pr-4">Sommergemüse</td>
+                    <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                    <td className="py-2">Apr–Sept (ab 2027)</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Schweigerts</td>
+                    <td className="py-2 pr-4">Bio..Edelpilze</td>
+                    <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                    <td className="py-2">ganzjährig</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Walz</td>
+                    <td className="py-2 pr-4">Fleisch, Eier, Getreide</td>
+                    <td className="py-2 pr-4">1–2x/Monat</td>
+                    <td className="py-2">ganzjährig</td>
+                  </tr>
+                  <tr className="border-b border-gray-200">
+                    <td className="py-2 pr-4">Kirschgarten</td>
+                    <td className="py-2 pr-4">Bio..Beeren</td>
+                    <td className="py-2 pr-4">wöchentlich</td>
+                    <td className="py-2">Jul–Sept</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 pr-4">Kirschgarten</td>
+                    <td className="py-2 pr-4">Stein- & Kernobst</td>
+                    <td className="py-2 pr-4">unregelmäßig</td>
+                    <td className="py-2">Jul–Dez (Warteliste)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <img
+              src="/features-lebensmittel.jpg"
+              alt="Füllhorn aus Kürbis, Lauch, Getreide, Trauben, Käse, Pilzen und Tomaten"
+              className="h-[200px] lg:h-[280px] object-contain mx-auto"
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-solawi-green py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4 text-foreground">
-            Bleib auf dem Laufenden
-          </h2>
-          <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
-            Melde dich für unseren Newsletter an, um keine Termine zu verpassen
-          </p>
-          <button className="bg-cta text-white px-8 py-3 font-semibold hover:bg-cta-hover transition-colors font-accent">
-            Zum Newsletter
-          </button>
-        </div>
-      </section>
     </div>
   );
 }

@@ -31,6 +31,7 @@
   --solawi-orange: #ffa673; /* Gemeinschaft/Standort-Sektionen */
   --solawi-green: #c2ddb2; /* Mitmachen/Anmeldung-Sektionen */
   --solawi-mauve: #c7afc7; /* Lebensmittel/Produkte-Sektionen */
+  --solawi-aubergine: #bfa9c4; /* Flieder von Geschichte_aubergine.png — Fläche hinter dieser Grafik */
 
   /* Neutrale Farben */
   --muted: #f0f0f0;
@@ -135,6 +136,7 @@
   --color-solawi-orange: var(--solawi-orange);
   --color-solawi-green: var(--solawi-green);
   --color-solawi-mauve: var(--solawi-mauve);
+  --color-solawi-aubergine: var(--solawi-aubergine);
   --color-cta: var(--cta);
   --color-cta-foreground: var(--cta-foreground);
   --color-cta-hover: var(--cta-hover);
@@ -277,6 +279,18 @@
   .lead {
     font-size: 1.25rem;
     line-height: 1.4;
+  }
+
+  /* Seitentitel der Unterseiten: h2-Stufe der Helix-Skala. Nur die Startseite
+     behält die volle h1-Größe als Signature-Look. */
+  .h1-seite {
+    font-size: 38px;
+  }
+  @media (min-width: 768px) {
+    .h1-seite { font-size: 50px; }
+  }
+  @media (min-width: 1024px) {
+    .h1-seite { font-size: 64px; }
   }
 
   /* Meta: Hofname, Datum, Fußnote — die einzige erlaubte Stufe unter 16 px */
