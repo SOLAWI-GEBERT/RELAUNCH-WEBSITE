@@ -94,6 +94,22 @@ export const hatBieterrunde = (anteil: Ernteanteil) =>
 
 export const ernteanteile: Ernteanteil[] = [
   {
+    slug: "tristan-winter",
+    titel: "Wintergemüse",
+    hof: "tristan",
+    kategorie: "Gemüse",
+    kurz: "Lauch, Rosenkohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.",
+    verfuegbarkeit: { status: "verfuegbar" },
+    varianten: [
+      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 122.2, soli: 14.0, bieterrunde: true },
+      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 61.1, soli: 11.0, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 85.54, soli: 14.0, bieterrunde: true },
+      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 42.35, soli: 11.0, bieterrunde: true },
+      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 94.0, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
+      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 65.75, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
+    ],
+  },
+  {
     slug: "tristan-sommer",
     titel: "Sommergemüse",
     hof: "tristan",
@@ -108,22 +124,6 @@ export const ernteanteile: Ernteanteil[] = [
       { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "April – September", paketpreis: 42.35, soli: 11.0, bieterrunde: true },
       { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", paketpreis: 122.2, soli: 14.0, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
       { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "April, Mai, Juni", paketpreis: 85.54, soli: 14.0, hinweis: "Läuft über 3 Monate. Kein Probemonat möglich." },
-    ],
-  },
-  {
-    slug: "tristan-winter",
-    titel: "Wintergemüse",
-    hof: "tristan",
-    kategorie: "Gemüse",
-    kurz: "Lauch, Rosenkohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.",
-    verfuegbarkeit: { status: "verfuegbar" },
-    varianten: [
-      { groesse: "Normal", fuer: "2–4 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 122.2, soli: 14.0, bieterrunde: true },
-      { groesse: "Normal", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 61.1, soli: 11.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "wöchentlich", lieferphase: "Oktober – März", paketpreis: 85.54, soli: 14.0, bieterrunde: true },
-      { groesse: "Klein", fuer: "1–2 Personen", zyklus: "14-tägig", lieferphase: "Oktober – März", paketpreis: 42.35, soli: 11.0, bieterrunde: true },
-      { groesse: "Normal — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 94.0, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
-      { groesse: "Klein — Studierende", zyklus: "wöchentlich", lieferphase: "November, Dezember, Januar", paketpreis: 65.75, soli: 14.0, hinweis: "Läuft über 3 Monate, vom 23.12. bis 07.01. keine Lieferung. Kein Probemonat möglich." },
     ],
   },
   {
@@ -223,11 +223,38 @@ export const ernteanteile: Ernteanteil[] = [
 export const ernteanteilNach = (slug: string) => ernteanteile.find((a) => a.slug === slug);
 
 /** Ernteanteile gruppiert nach Kategorie, in `kategorieReihenfolge`. */
+/**
+ * Wintergemüse und Sommergemüse teilen sich eine Seite (Biohof Tristan). Die Aufteilung ist
+ * nur eine Erleichterung für Ernteteiler:innen mit eigenem Garten, daher gibt es für beide
+ * nur eine Kachel bzw. einen Navigationseintrag.
+ */
+export const GEMUESE_SLUG = "tristan-gemuese";
+const gemueseSlugs = ["tristan-winter", "tristan-sommer"];
+
+const gemueseKachel: Ernteanteil = {
+  slug: GEMUESE_SLUG,
+  titel: "Gemüse",
+  hof: "tristan",
+  kategorie: "Gemüse",
+  kurz: "Winter- und Sommergemüse vom Biohof Tristan — einzeln oder im Wechsel buchbar.",
+  verfuegbarkeit: { status: "verfuegbar" },
+  varianten: [],
+};
+
+/** Ernteanteile in der Reihenfolge der Kacheln; Winter- und Sommergemüse sind zu einem Eintrag zusammengefasst. */
+export const kacheln = (kategorie: Kategorie): Ernteanteil[] => {
+  const items = ernteanteile.filter((a) => a.kategorie === kategorie);
+  const ersterGemuese = items.findIndex((a) => gemueseSlugs.includes(a.slug));
+  return items.flatMap((a, i) =>
+    !gemueseSlugs.includes(a.slug) ? [a] : i === ersterGemuese ? [gemueseKachel] : [],
+  );
+};
+
 export const nachKategorie = () =>
   kategorieReihenfolge
     .map((kategorie) => ({
       kategorie,
       Icon: kategorieIcons[kategorie],
-      items: ernteanteile.filter((a) => a.kategorie === kategorie),
+      items: kacheln(kategorie),
     }))
     .filter((gruppe) => gruppe.items.length > 0);

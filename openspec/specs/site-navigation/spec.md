@@ -40,7 +40,7 @@ Der Eintrag "Ernteanteile" SHALL ein Untermenü mit den Kategorien Gemüse, Pilz
 
 #### Scenario: Kategorien und Blätter
 - **WHEN** das Untermenü "Ernteanteile" geöffnet wird
-- **THEN** enthält Gemüse die Einträge "Wintergemüse (Biohof Tristan)" → `/ernteanteile/tristan-winter` und "Sommergemüse (Biohof Tristan)" → `/ernteanteile/tristan-sommer`
+- **THEN** enthält Gemüse den einen Eintrag "Gemüse (Biohof Tristan)" → `/ernteanteile/tristan-gemuese`
 - **AND** Pilze enthält "Bio..Edelpilze (Schweigerts Hof)" → `/ernteanteile/schweigerts-edelpilze`
 - **AND** Obst enthält "Stein- & Kernobst (Kirschgarten)" → `/ernteanteile/kirschgarten-obst`
 - **AND** Beeren enthält "Bio..Beeren (Kirschgarten)" → `/ernteanteile/kirschgarten-beeren`
@@ -93,7 +93,7 @@ Unterhalb von 1024 px SHALL das Menü hinter einem Hamburger-Button erreichbar s
 #### Scenario: Untermenü mit Kategorien
 - **WHEN** im Panel "Ernteanteile" aufgeklappt wird
 - **THEN** sind sieben Kategorieköpfe (Gemüse, Pilze, Obst, Beeren, Getreide, Eier, Fleisch) als nicht klickbare Überschriften sichtbar
-- **AND** darunter stehen alle zehn Produktlinks, unter "Fleisch" die drei Fleisch-Produkte
+- **AND** darunter stehen alle neun Produktlinks, unter "Fleisch" die drei Fleisch-Produkte
 
 #### Scenario: Link schließt Panel
 - **WHEN** im geöffneten Panel ein Ziellink angeklickt wird

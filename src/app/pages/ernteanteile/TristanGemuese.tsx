@@ -1,0 +1,112 @@
+import { Link } from "react-router";
+import { ArrowRight, Mail, Sun, Snowflake, Sprout } from "lucide-react";
+import { HofSteckbrief } from "../../components/HofSteckbrief";
+import { PreisTabelle } from "../../components/PreisTabelle";
+import { VerfuegbarkeitsBadge } from "../../components/VerfuegbarkeitsBadge";
+import { hoefe } from "../../data/hoefe";
+import { ernteanteilNach } from "../../data/ernteanteile";
+
+const winter = ernteanteilNach("tristan-winter")!;
+const sommer = ernteanteilNach("tristan-sommer")!;
+
+export function TristanGemuese() {
+  return (
+    <div className="bg-white">
+      <section className="bg-solawi-green py-16 wave-bottom relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span className="badge-frech mb-4 inline-block">Ernteanteil</span>
+          <h1 className="text-5xl mb-4 text-foreground">Gemüse</h1>
+          <p className="text-xl text-foreground/80">Biohof Tristan</p>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <HofSteckbrief {...hoefe.tristan} />
+
+          <div className="flex gap-3 text-sm text-gray-600 bg-solawi-green/20 p-4 rounded-lg mb-8">
+            <Sprout className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+            <p>
+              <strong>Winter oder Sommer — oder beides:</strong> Wir haben das Gemüse in zwei
+              Ernteanteile aufgeteilt. Das ist vor allem eine Erleichterung für alle mit eigenem
+              Garten: Du kannst nur die Jahreszeit buchen, in der dein Garten wenig hergibt.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <div id="winter" className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 scroll-mt-24">
+              <div className="flex items-center gap-3 mb-6 flex-wrap">
+                <Snowflake className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl text-foreground">Wintergemüse</h2>
+                <span className="text-sm text-gray-500">Oktober – März</span>
+                <VerfuegbarkeitsBadge verfuegbarkeit={winter.verfuegbarkeit} />
+              </div>
+
+              <PreisTabelle anteil={winter} />
+
+              <div className="grid md:grid-cols-3 gap-6 mt-6">
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Frisch aus den Folienhäusern</p>
+                  <p className="text-gray-700 text-sm">Spinat, Salate, Kräuter</p>
+                </div>
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Vom Feld</p>
+                  <p className="text-gray-700 text-sm">Lauch, Rosenkohl, Palmkohl</p>
+                </div>
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Aus dem Lager</p>
+                  <p className="text-gray-700 text-sm">
+                    Karotten, Pastinaken, diverse Bete, Kraut, Zwiebeln, Kürbis, Kartoffeln
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="sommer" className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 scroll-mt-24">
+              <div className="flex items-center gap-3 mb-6 flex-wrap">
+                <Sun className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl text-foreground">Sommergemüse</h2>
+                <span className="text-sm text-gray-500">April – September</span>
+                <VerfuegbarkeitsBadge verfuegbarkeit={sommer.verfuegbarkeit} />
+              </div>
+
+              <PreisTabelle anteil={sommer} />
+
+              {/* Sortiment noch nicht hofseitig festgelegt — siehe design.md Open Questions */}
+              <div className="grid md:grid-cols-3 gap-6 mt-6">
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Frisch aus den Folienhäusern</p>
+                  <p className="text-gray-700 text-sm">Spinat, Salate, Kräuter</p>
+                </div>
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Vom Feld</p>
+                  <p className="text-gray-700 text-sm">Gurken, Tomaten, Kürbis, Bohnen, Paprika</p>
+                </div>
+                <div className="bg-solawi-green/20 p-4 rounded-lg">
+                  <p className="font-semibold text-foreground mb-2">Aus dem Lager</p>
+                  <p className="text-gray-700 text-sm">Kartoffeln, Zwiebeln, Knoblauch</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex gap-3 text-sm text-gray-600 bg-solawi-blue/10 p-4 rounded-lg">
+              <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+              <p>
+                <strong>So bleibst du informiert:</strong> 2 Tage vor Abholung erhältst du eine
+                Mail mit dem Kisteninhalt und Neuigkeiten vom Hof. Am Abholtag kommt per
+                WhatsApp oder Signal eine Nachricht mit den genauen Mengen.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/so-funktionierts" className="btn-cta">
+              Jetzt Ernteanteil sichern
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

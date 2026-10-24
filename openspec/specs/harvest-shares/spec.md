@@ -1,7 +1,7 @@
 # harvest-shares Specification
 
 ## Purpose
-Beschreibt die Ernteanteile-Übersicht nach Kategorien und die zehn Ernteanteil-Detailseiten mit Hof-Steckbrief und Konditionen.
+Beschreibt die Ernteanteile-Übersicht nach Kategorien und die neun Ernteanteil-Detailseiten mit Hof-Steckbrief und Konditionen.
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Die Route `/ernteanteile` SHALL eine Seite mit dem `h1` "Ernteanteile" und dem L
 
 #### Scenario: Kacheln je Kategorie
 - **WHEN** die Kategorien geprüft werden
-- **THEN** enthält Gemüse zwei Kacheln (Wintergemüse, Sommergemüse — beide Biohof Tristan), Pilze eine (Bio..Edelpilze, Schweigerts Hof), Obst eine (Stein- & Kernobst, Kirschgarten), Beeren eine (Bio..Beeren, Kirschgarten), Getreide eine (More..Ur-Getreide, Demeterhof Walz), Eier eine (More..Huhn, Demeterhof Walz) und Fleisch drei (More..Bratgockerl, More..Hack, More..Wurst, je Demeterhof Walz)
+- **THEN** enthält Gemüse eine Kachel (Gemüse, Biohof Tristan; Winter- und Sommergemüse teilen sich eine Detailseite), Pilze eine (Bio..Edelpilze, Schweigerts Hof), Obst eine (Stein- & Kernobst, Kirschgarten), Beeren eine (Bio..Beeren, Kirschgarten), Getreide eine (More..Ur-Getreide, Demeterhof Walz), Eier eine (More..Huhn, Demeterhof Walz) und Fleisch drei (More..Bratgockerl, More..Hack, More..Wurst, je Demeterhof Walz)
 
 #### Scenario: Verfügbarkeitshinweis auf Kachel
 - **WHEN** die Kachel "Sommergemüse" (Tristan) oder "Stein- & Kernobst" (Kirschgarten) geprüft wird
@@ -24,23 +24,23 @@ Die Route `/ernteanteile` SHALL eine Seite mit dem `h1` "Ernteanteile" und dem L
 Jede Kachel der Ernteanteile-Übersicht SHALL auf dieselbe Route führen wie der entsprechende Blatt-Eintrag im Untermenü "Ernteanteile", und umgekehrt SHALL es für jeden Blatt-Eintrag eine Kachel geben.
 
 #### Scenario: Abgleich Menü gegen Übersicht
-- **WHEN** die Linkziele der zehn Kacheln mit den zehn Blatt-Einträgen des Untermenüs verglichen werden
+- **WHEN** die Linkziele der neun Kacheln mit den neun Blatt-Einträgen des Untermenüs verglichen werden
 - **THEN** sind beide Mengen identisch
 
-### Requirement: Zehn Ernteanteil-Detailseiten
-Das System SHALL unter `/ernteanteile/<slug>` zehn Detailseiten bereitstellen. Jede Detailseite SHALL das Label "Ernteanteil", den Produktnamen als `h1` und den Hofnamen als Untertitel zeigen.
+### Requirement: Neun Ernteanteil-Detailseiten
+Das System SHALL unter `/ernteanteile/<slug>` neun Detailseiten bereitstellen. Jede Detailseite SHALL das Label "Ernteanteil", den Produktnamen als `h1` und den Hofnamen als Untertitel zeigen.
 
 #### Scenario: Routen, Produktnamen und Höfe
-- **WHEN** die zehn Routen geöffnet werden
-- **THEN** lautet das `h1` bzw. der Untertitel für `tristan-winter` "Wintergemüse" / "Biohof Tristan"
-- **AND** für `tristan-sommer` "Sommergemüse" / "Biohof Tristan"
+- **WHEN** die neun Routen geöffnet werden
+- **THEN** lautet das `h1` bzw. der Untertitel für `tristan-gemuese` "Gemüse" / "Biohof Tristan"
+- **AND** zeigt die Seite die Abschnitte "Wintergemüse" (`#winter`) und "Sommergemüse" (`#sommer`) mit je eigener Preistabelle
 - **AND** für `schweigerts-edelpilze` "Bio..Edelpilze" / "Schweigerts Hof"
 - **AND** für `kirschgarten-beeren` "Bio..Beeren" / "Kirschgarten"
 - **AND** für `kirschgarten-obst` "Stein- & Kernobst" / "Kirschgarten"
 - **AND** für `walz-getreide`, `walz-huhn`, `walz-bratgockerl`, `walz-hack` und `walz-wurst` "More..Ur-Getreide", "More..Huhn", "More..Bratgockerl", "More..Hack" bzw. "More..Wurst" / jeweils "Demeterhof Walz"
 
 #### Scenario: Kopf jeder Detailseite
-- **WHEN** eine der zehn Routen geöffnet wird
+- **WHEN** eine der neun Routen geöffnet wird
 - **THEN** zeigt sie das Label "Ernteanteil", das `h1` mit dem Produktnamen und darunter den Hofnamen
 
 #### Scenario: Produktnamen mit zwei Punkten
@@ -70,11 +70,11 @@ Jede Detailseite SHALL für jede Variante des Ernteanteils Größe, Lieferzyklus
 - **THEN** enthält sie mindestens eine Zahl mit Euro-Zeichen je Variante
 
 #### Scenario: Saisonale Anteile
-- **WHEN** `/ernteanteile/tristan-winter` geöffnet wird
-- **THEN** ist die Lieferphase "Oktober – März" sichtbar
+- **WHEN** `/ernteanteile/tristan-gemuese` geöffnet wird
+- **THEN** ist im Abschnitt Wintergemüse die Lieferphase "Oktober – März" sichtbar
 
 #### Scenario: Weitere saisonale Anteile
-- **WHEN** `/ernteanteile/tristan-sommer`, `/ernteanteile/kirschgarten-beeren` und `/ernteanteile/kirschgarten-obst` geöffnet werden
+- **WHEN** `/ernteanteile/tristan-gemuese` (Abschnitt Sommergemüse), `/ernteanteile/kirschgarten-beeren` und `/ernteanteile/kirschgarten-obst` geöffnet werden
 - **THEN** zeigen sie die Lieferphasen "April – September", "Juli – September" bzw. "Juli – Dezember"
 
 #### Scenario: Ganzjahresanteile
@@ -82,26 +82,26 @@ Jede Detailseite SHALL für jede Variante des Ernteanteils Größe, Lieferzyklus
 - **THEN** zeigen sie den Rhythmus "2x pro Monat, ganzjährig" bzw. "1x pro Monat, ganzjährig"
 
 ### Requirement: Bieterrunden-Hinweis bei Tristan
-Die Detailseiten `tristan-winter` und `tristan-sommer` SHALL einen Hinweisblock zur Bieterrunde enthalten, sobald mindestens eine ihrer Varianten einen Bieterrunden-Richtpreis hat.
+Die Detailseite `tristan-gemuese` SHALL einen Hinweisblock zur Bieterrunde enthalten, sobald mindestens eine ihrer Varianten einen Bieterrunden-Richtpreis hat.
 
 #### Scenario: Hinweisblock
-- **WHEN** `/ernteanteile/tristan-winter` oder `/ernteanteile/tristan-sommer` geöffnet wird
+- **WHEN** `/ernteanteile/tristan-gemuese` geöffnet wird
 - **THEN** ist der Hinweisblock "Was ist die Bieterrunde?" sichtbar
 - **AND** die betroffenen Preiszeilen tragen den Zusatz "Richtpreis"
 
 ### Requirement: Unbekannte Ernteanteil-Route
-Eine Route unter `/ernteanteile/`, die keiner der zehn Detailseiten entspricht, SHALL keine Detailseite rendern.
+Eine Route unter `/ernteanteile/`, die keiner der neun Detailseiten entspricht, SHALL keine Detailseite rendern.
 
 #### Scenario: Unbekannter Slug
 - **WHEN** `/ernteanteile/gibt-es-nicht` geöffnet wird
-- **THEN** wird keine der zehn Detailseiten angezeigt
+- **THEN** wird keine der neun Detailseiten angezeigt
 
 ### Requirement: Verfügbarkeitszustand eines Ernteanteils
 Ein Ernteanteil SHALL einen von drei Zuständen tragen: sofort buchbar (kein Hinweis), zu einem späteren Zeitpunkt startend (Hinweis mit Zeitpunkt) oder Warteliste (Hinweis "Warteliste"). Der Zustand SHALL sowohl auf der Übersichtskachel als auch auf der Detailseite erkennbar sein.
 
 #### Scenario: Künftig startender Anteil
-- **WHEN** `/ernteanteile/tristan-sommer` geöffnet wird
-- **THEN** zeigen Kachel und Detailseite den Hinweis "ab April 2027"
+- **WHEN** `/ernteanteile/tristan-gemuese` geöffnet wird
+- **THEN** trägt der Abschnitt Sommergemüse den Hinweis "ab April 2027"
 
 #### Scenario: Warteliste
 - **WHEN** `/ernteanteile/kirschgarten-obst` geöffnet wird

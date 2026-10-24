@@ -168,7 +168,7 @@ export function SolidarischeLandwirtschaft() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Link
-              to="/ernteanteile/tristan-winter"
+              to="/ernteanteile/tristan-gemuese"
               className="bg-solawi-green p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-green-700 px-2 py-0.5 rounded">

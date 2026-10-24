@@ -8,7 +8,7 @@ Die Beschreibung der Seiten (Menü, Abschnitte, Anker, Pflichtinhalte) steht in 
 | `/ernteanteile` | `harvest-shares` |
 | `/ernteanteile/hederer-sommer` | `harvest-shares` |
 | `/ernteanteile/hederer-obst` | `harvest-shares` |
-| `/ernteanteile/tristans-winter` | `harvest-shares` |
+| `/ernteanteile/tristan-gemuese` | `harvest-shares` |
 | `/ernteanteile/kirschgarten-beeren` | `harvest-shares` |
 | `/ernteanteile/walz-getreide` | `harvest-shares` |
 | `/ernteanteile/walz-huhn` | `harvest-shares` |

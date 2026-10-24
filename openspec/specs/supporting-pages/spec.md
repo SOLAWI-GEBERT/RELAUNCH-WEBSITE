@@ -56,7 +56,7 @@ Die Route `/solidarische-landwirtschaft` SHALL das Label "Über uns" und das `h1
 - **THEN** existieren fünf Abschnitte mit den genannten `id` und `h2` in der genannten Reihenfolge
 
 ### Requirement: Partnerhöfe verlinken auf Ernteanteile
-Der Abschnitt "Unsere Partnerhöfe" SHALL vier verlinkte Kacheln zeigen, die auf `/ernteanteile/tristan-winter`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/walz-huhn` und `/ernteanteile/kirschgarten-beeren` führen.
+Der Abschnitt "Unsere Partnerhöfe" SHALL vier verlinkte Kacheln zeigen, die auf `/ernteanteile/tristan-gemuese`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/walz-huhn` und `/ernteanteile/kirschgarten-beeren` führen.
 
 #### Scenario: Vier Hofkacheln
 - **WHEN** der Abschnitt geprüft wird

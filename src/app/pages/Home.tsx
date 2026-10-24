@@ -203,7 +203,7 @@ export function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal delay={0}>
-              <Link to="/ernteanteile/tristan-winter" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+              <Link to="/ernteanteile/tristan-gemuese" className="block bg-white p-6 shadow-md hover-tilt h-full group">
                 <Carrot className="w-10 h-10 text-cta mb-4" />
                 <h4 className="mb-1 group-hover:text-cta transition-colors">Gemüse</h4>
                 <p className="meta mb-3">Biohof Tristan</p>

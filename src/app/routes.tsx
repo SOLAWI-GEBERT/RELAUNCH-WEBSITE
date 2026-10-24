@@ -1,9 +1,8 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import { Home } from "./pages/Home";
 import { SolidarischeLandwirtschaft } from "./pages/SolidarischeLandwirtschaft";
 import { Ernteanteile } from "./pages/Ernteanteile";
-import { TristansWintergemuese } from "./pages/ernteanteile/TristansWintergemuese";
-import { TristanSommergemuese } from "./pages/ernteanteile/TristanSommergemuese";
+import { TristanGemuese } from "./pages/ernteanteile/TristanGemuese";
 import { WalzHuhn } from "./pages/ernteanteile/WalzHuhn";
 import { WalzBratgockerl } from "./pages/ernteanteile/WalzBratgockerl";
 import { WalzHack } from "./pages/ernteanteile/WalzHack";
@@ -30,8 +29,9 @@ export const router = createBrowserRouter([
       { index: true, Component: Home },
       { path: "solidarische-landwirtschaft", Component: SolidarischeLandwirtschaft },
       { path: "ernteanteile", Component: Ernteanteile },
-      { path: "ernteanteile/tristan-winter", Component: TristansWintergemuese },
-      { path: "ernteanteile/tristan-sommer", Component: TristanSommergemuese },
+      { path: "ernteanteile/tristan-gemuese", Component: TristanGemuese },
+      { path: "ernteanteile/tristan-winter", loader: () => redirect("/ernteanteile/tristan-gemuese#winter") },
+      { path: "ernteanteile/tristan-sommer", loader: () => redirect("/ernteanteile/tristan-gemuese#sommer") },
       { path: "ernteanteile/walz-huhn", Component: WalzHuhn },
       { path: "ernteanteile/walz-bratgockerl", Component: WalzBratgockerl },
       { path: "ernteanteile/walz-hack", Component: WalzHack },
