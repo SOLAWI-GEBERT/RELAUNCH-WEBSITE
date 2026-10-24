@@ -24,7 +24,6 @@ flowchart TD
     FAQ["/haeufige-fragen · Fragen & Antworten"]
     SoFunktionierts["/so-funktionierts · So funktioniert's"]
     SolidarischeLW["/solidarische-landwirtschaft · Was ist SoLaWi?"]
-    Kalender["/kalender · Kalender (verwaist, derzeit nicht verlinkt)"]
     NewsletterVerwalten["/newsletter · Newsletter verwalten"]
     Impressum["/impressum"]
     Datenschutz["/datenschutz"]
@@ -59,8 +58,7 @@ Getreide, Eier, Fleisch) · Mitmachen (SoLaWi in Aktion / SoLaWi in der Stadt) �
 
 **Nicht im Hauptmenü, aber erreichbar:** `/so-funktionierts`, `/solidarische-landwirtschaft`,
 `/depots` (nur über `/mitmachen` bzw. Footer), `/newsletter` (nur über das Footer-Formular),
-`/impressum`, `/datenschutz` (nur Footer). `/kalender` existiert als Route, hat aber aktuell
-keinen eingehenden Link.
+`/impressum`, `/datenschutz` (nur Footer).
 
 ## Personas und ihre Wege
 
@@ -135,14 +133,16 @@ flowchart LR
 
 ## Beobachtungen
 
-- `/kalender` ist als Route vorhanden, wird aber derzeit von keiner Seite aus verlinkt
-  (toter Einstieg, kein Besucher erreicht ihn über die UI).
 - Es gibt keinen eigenständigen `/anmeldung`- oder `/kontakt-anmeldung`-Pfad mehr (siehe
   `openspec/changes/kontakt-newsletter-neu-ordnen/`): Der reale Anmeldeweg führt immer über
   TNV-Download auf `/so-funktionierts` und eine E-Mail, nicht über ein Webformular.
 
 ### Behoben (2026-10-24)
 
+- **Dublette entfernt:** `/kalender` war als Route vorhanden, aber von keiner Seite aus
+  verlinkt und wiederholte nur Inhalte von `/depots` (Lieferrhythmus) und `/mitmachen`
+  (Termine, Engagement). Route und Seite entfernt (Change `newsletter-kanaele-klaeren`);
+  die FAQ erklärt jetzt die Newsletter-Kanäle, `/mitmachen#events` den Weg zu Terminen.
 - **Veraltetes PDF:** Der Download-Button auf `/so-funktionierts` verlinkte noch auf
   `TNV_StadtLandBeides_V9_3_2026.pdf`, während die aktuelle Datengrundlage
   (`src/app/data/ernteanteile.ts`, Change `update-hoefe-tnv-v26-4`) bereits

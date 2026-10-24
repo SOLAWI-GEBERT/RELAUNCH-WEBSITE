@@ -215,6 +215,43 @@ export function FragenAntworten() {
                   Wirtschaftsjahres und bei besonderen Fällen (z.B. Umzug o.ä.) möglich.
                 </AccordionContent>
               </AccordionItem>
+
+              <AccordionItem value="newsletter">
+                <AccordionTrigger className="text-base font-semibold">
+                  Gibt es einen Newsletter?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-700 leading-relaxed">
+                  Es gibt zwei: einen externen, öffentlichen Newsletter mit Kochevents und
+                  Infoveranstaltungen — den kannst du schon{" "}
+                  <a href="#newsletter" className="underline">
+                    im Footer dieser Seite abonnieren
+                  </a>
+                  , auch wenn du noch nicht Ernteteiler*in bist. Und einen internen Newsletter für Mitglieder mit
+                  Protokollen und internen Treffen wie der Jahreshauptversammlung. Wir
+                  arbeiten daran, dich dafür automatisch einzutragen, sobald du
+                  Ernteteiler*in wirst — bis das steht, schreib uns am besten kurz an{" "}
+                  <a
+                    href="mailto:Team.Koordination@stadt-land-beides.de"
+                    className="underline"
+                  >
+                    Team.Koordination@stadt-land-beides.de
+                  </a>
+                  , damit du ihn nicht verpasst.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="termine">
+                <AccordionTrigger className="text-base font-semibold">
+                  Wie erfahre ich von Terminen und Mitmachangeboten?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-700 leading-relaxed">
+                  Aktionen auf deinem Hof (Pflanzaktion, Ernten, Erntedankfest) bekommst du
+                  automatisch per Hof-Post, sobald du dort Ernteteiler*in bist. Vereinsweite
+                  Termine wie die Jahreshauptversammlung stehen im internen Newsletter (siehe
+                  oben). Öffentliche Angebote wie Kochevents oder Infoveranstaltungen findest
+                  du im externen Newsletter.
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </ScrollReveal>
         </div>

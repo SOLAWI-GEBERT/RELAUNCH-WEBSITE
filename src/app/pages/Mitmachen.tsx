@@ -60,7 +60,12 @@ export function Mitmachen() {
             </div>
             <div className="mt-6 bg-white/70 p-4 text-center">
               <p className="meta">
-                Alle Termine erfährst du über die Hof-Post per E-Mail und unseren Newsletter.
+                Hofaktionen bekommst du automatisch per Hof-Post. Vereinsweite Termine wie die
+                Jahreshauptversammlung stehen im internen Newsletter — mehr dazu in den{" "}
+                <Link to="/haeufige-fragen#schnelle-fragen" className="underline">
+                  Häufigen Fragen
+                </Link>
+                .
               </p>
             </div>
           </div>

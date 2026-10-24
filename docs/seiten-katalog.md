@@ -21,7 +21,6 @@ Die Beschreibung der Seiten (Menü, Abschnitte, Anker, Pflichtinhalte) steht in 
 | `/newsletter` | `newsletter` |
 | `/so-funktionierts` | `supporting-pages` |
 | `/solidarische-landwirtschaft` | `supporting-pages` |
-| `/kalender` | `supporting-pages` |
 | `/impressum` | `legal-pages` |
 | `/datenschutz` | `legal-pages` |
 

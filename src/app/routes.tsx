@@ -14,7 +14,6 @@ import { SchweigertsEdelpilze } from "./pages/ernteanteile/SchweigertsEdelpilze"
 import { Mitmachen } from "./pages/Mitmachen";
 import { SoFunktionierts } from "./pages/SoFunktionierts";
 import { FragenAntworten } from "./pages/FragenAntworten";
-import { Kalender } from "./pages/Kalender";
 import { Depots } from "./pages/Depots";
 import { Newsletter } from "./pages/Newsletter";
 import { Impressum } from "./pages/Impressum";
@@ -43,7 +42,6 @@ export const router = createBrowserRouter([
       { path: "mitmachen", Component: Mitmachen },
       { path: "so-funktionierts", Component: SoFunktionierts },
       { path: "haeufige-fragen", Component: FragenAntworten },
-      { path: "kalender", Component: Kalender },
       { path: "depots", Component: Depots },
       { path: "newsletter", Component: Newsletter },
       { path: "impressum", Component: Impressum },

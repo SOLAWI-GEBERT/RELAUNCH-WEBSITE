@@ -24,7 +24,7 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
-            <div className="mt-8">
+            <div id="newsletter" className="mt-8">
               <NewsletterAnmeldung />
             </div>
           </div>
