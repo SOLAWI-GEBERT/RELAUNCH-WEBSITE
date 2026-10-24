@@ -36,20 +36,21 @@ Der Eintrag "Start" SHALL ein Untermenü mit den Einträgen "SoLaWi in 60 Sekund
 - **THEN** öffnet sich `/` und der Abschnitt mit `id="solawi-60-sekunden"` ist der Sprungziel-Anker
 
 ### Requirement: Untermenü Ernteanteile
-Der Eintrag "Ernteanteile" SHALL ein Untermenü mit den Kategorien Gemüse, Obst, Beeren, Getreide, Eier und Fleisch in dieser Reihenfolge haben. Jede Kategorie SHALL die ihr zugeordneten Ernteanteil-Seiten als dritte Ebene enthalten. Die Kategorieköpfe SHALL keine eigene Seite als Ziel haben (sie dienen nur der Gruppierung).
+Der Eintrag "Ernteanteile" SHALL ein Untermenü mit den Kategorien Gemüse, Pilze, Obst, Beeren, Getreide, Eier und Fleisch in dieser Reihenfolge haben, wobei eine Kategorie nur erscheint, solange sie mindestens einen Ernteanteil enthält. Jede Kategorie SHALL die ihr zugeordneten Ernteanteil-Seiten als dritte Ebene enthalten. Die Kategorieköpfe SHALL keine eigene Seite als Ziel haben (sie dienen nur der Gruppierung).
 
 #### Scenario: Kategorien und Blätter
 - **WHEN** das Untermenü "Ernteanteile" geöffnet wird
-- **THEN** enthält Gemüse die Einträge "Sommergemüse (Demeterhof Hederer)" → `/ernteanteile/hederer-sommer` und "Wintergemüse (Biohof Tristan)" → `/ernteanteile/tristans-winter`
-- **AND** Obst enthält "Obst & Säfte (Demeterhof Hederer)" → `/ernteanteile/hederer-obst`
+- **THEN** enthält Gemüse die Einträge "Wintergemüse (Biohof Tristan)" → `/ernteanteile/tristan-winter` und "Sommergemüse (Biohof Tristan)" → `/ernteanteile/tristan-sommer`
+- **AND** Pilze enthält "Bio..Edelpilze (Schweigerts Hof)" → `/ernteanteile/schweigerts-edelpilze`
+- **AND** Obst enthält "Stein- & Kernobst (Kirschgarten)" → `/ernteanteile/kirschgarten-obst`
 - **AND** Beeren enthält "Bio..Beeren (Kirschgarten)" → `/ernteanteile/kirschgarten-beeren`
 - **AND** Getreide enthält "More..Ur-Getreide (Demeterhof Walz)" → `/ernteanteile/walz-getreide`
 - **AND** Eier enthält "More..Huhn (Demeterhof Walz)" → `/ernteanteile/walz-huhn`
 - **AND** Fleisch enthält "More..Bratgockerl", "More..Hack", "More..Wurst" (je Demeterhof Walz) → `/ernteanteile/walz-bratgockerl`, `/ernteanteile/walz-hack`, `/ernteanteile/walz-wurst`
 
 #### Scenario: Produktnamen unverändert
-- **WHEN** Menüeinträge der Produkte aus Hof Walz und Kirschgarten angezeigt werden
-- **THEN** werden die Namen mit zwei Punkten geschrieben ("More..Huhn", "Bio..Beeren"), nicht mit einem
+- **WHEN** Menüeinträge der Produkte aus Hof Walz, Kirschgarten und Schweigerts angezeigt werden
+- **THEN** werden die Namen mit zwei Punkten geschrieben ("More..Huhn", "Bio..Beeren", "Bio..Edelpilze"), nicht mit einem
 
 ### Requirement: Untermenü Mitmachen
 Der Eintrag "Mitmachen" SHALL ein Untermenü mit den Gruppen "SoLaWi in Aktion" und "SoLaWi in der Stadt" haben. Die Gruppe "SoLaWi in Aktion" SHALL "Zukünftige Events" (`/mitmachen#events`), "Highlights" (`/mitmachen#highlights`) und "Engagement im Verein" (`/mitmachen#engagement`) enthalten. Die Gruppe "SoLaWi in der Stadt" SHALL "Die Depots" (`/mitmachen#depots`), "Unsere Logistik" (`/mitmachen#logistik`) und "Adressen, Zeiten & Karte" (`/depots`) enthalten.
@@ -63,19 +64,19 @@ Der Eintrag "Mitmachen" SHALL ein Untermenü mit den Gruppen "SoLaWi in Aktion" 
 - **THEN** existiert auf `/mitmachen` ein Element mit der entsprechenden `id` (`events`, `highlights`, `engagement`, `depots`, `logistik`)
 
 ### Requirement: Untermenü Fragen & Antworten
-Der Eintrag "Fragen & Antworten" SHALL ein Untermenü mit "Grundlagen" (`/haeufige-fragen#grundlagen`), "Schnelle Fragen" (`/haeufige-fragen#schnelle-fragen`), "Vereinsgeschichte" (`/haeufige-fragen#vereinsgeschichte`) und "Kontaktformular" (`/kontakt-anmeldung#kontakt`) haben.
+Der Eintrag "Fragen & Antworten" SHALL ein Untermenü mit "Grundlagen" (`/haeufige-fragen#grundlagen`), "Schnelle Fragen" (`/haeufige-fragen#schnelle-fragen`), "Vereinsgeschichte" (`/haeufige-fragen#vereinsgeschichte`) und "Antwort nicht dabei?" (`/haeufige-fragen#antwort-nicht-dabei`) haben.
 
 #### Scenario: Einträge und Ziele
 - **WHEN** das Untermenü "Fragen & Antworten" geöffnet wird
 - **THEN** sind vier Einträge in dieser Reihenfolge vorhanden
-- **AND** die ersten drei führen zu Ankern auf `/haeufige-fragen`, der vierte zum Anker `kontakt` auf `/kontakt-anmeldung`
+- **AND** alle führen zu Ankern auf `/haeufige-fragen`
 
 ### Requirement: Desktop-Verhalten
 Ab Viewport-Breite 1024 px SHALL das Menü waagerecht dargestellt werden, und Untermenüs SHALL sich beim Überfahren des Haupteintrags öffnen. Der Hamburger-Button SHALL in diesem Layout nicht sichtbar sein.
 
 #### Scenario: Hover öffnet Untermenü
 - **WHEN** bei 1280 px Breite die Maus über "Ernteanteile" bewegt wird
-- **THEN** wird das Untermenü mit den sechs Kategorien sichtbar
+- **THEN** wird das Untermenü mit den sieben Kategorien sichtbar
 
 #### Scenario: Kein Hamburger auf Desktop
 - **WHEN** die Seite bei 1280 px Breite geladen wird
@@ -91,8 +92,8 @@ Unterhalb von 1024 px SHALL das Menü hinter einem Hamburger-Button erreichbar s
 
 #### Scenario: Untermenü mit Kategorien
 - **WHEN** im Panel "Ernteanteile" aufgeklappt wird
-- **THEN** sind sechs Kategorieköpfe (Gemüse, Obst, Beeren, Getreide, Eier, Fleisch) als nicht klickbare Überschriften sichtbar
-- **AND** darunter stehen alle neun Produktlinks, unter "Fleisch" die drei Fleisch-Produkte
+- **THEN** sind sieben Kategorieköpfe (Gemüse, Pilze, Obst, Beeren, Getreide, Eier, Fleisch) als nicht klickbare Überschriften sichtbar
+- **AND** darunter stehen alle zehn Produktlinks, unter "Fleisch" die drei Fleisch-Produkte
 
 #### Scenario: Link schließt Panel
 - **WHEN** im geöffneten Panel ein Ziellink angeklickt wird
@@ -121,11 +122,11 @@ Der Fußbereich SHALL auf jeder Seite einen Block "Schnellzugriff" mit sechs Lin
 
 #### Scenario: Schnellzugriff-Links
 - **WHEN** der Fußbereich auf beliebiger Seite geprüft wird
-- **THEN** führen "Über uns" auf `/solidarische-landwirtschaft`, "Ernteanteile" auf `/ernteanteile`, "Mitmachen" auf `/mitmachen`, "Depots" auf `/depots`, "Termine & Aktionen" auf `/mitmachen#events` und "Kontakt" auf `/kontakt-anmeldung`
+- **THEN** führen "Über uns" auf `/solidarische-landwirtschaft`, "Ernteanteile" auf `/ernteanteile`, "Mitmachen" auf `/mitmachen`, "Depots" auf `/depots`, "Termine & Aktionen" auf `/mitmachen#events` und "Kontakt" auf `/haeufige-fragen#antwort-nicht-dabei`
 
 #### Scenario: Rechtliche Links und Kontakt
 - **WHEN** der Fußbereich auf beliebiger Seite geprüft wird
-- **THEN** führen "Impressum" auf `/impressum`, "Datenschutzerklärung" auf `/datenschutz` und der zweite Link "Kontakt" auf `/kontakt-anmeldung#kontakt`
+- **THEN** führen "Impressum" auf `/impressum`, "Datenschutzerklärung" auf `/datenschutz` und der zweite Link "Kontakt" auf `/haeufige-fragen#antwort-nicht-dabei`
 
 ### Requirement: Fußbereich – Vereins- und Kontaktangaben
 Der Fußbereich SHALL die Vereinsdaten (Registergericht Nürnberg, VR 202062, USt-IdNr.), die Kontaktadresse (E-Mail und Postanschrift) und einen Copyright-Hinweis zeigen.

@@ -1,6 +1,11 @@
-import { Euro } from "lucide-react";
+import { Link } from "react-router";
+import { ArrowRight } from "lucide-react";
 import { HofSteckbrief } from "../../components/HofSteckbrief";
+import { PreisTabelle } from "../../components/PreisTabelle";
 import { hoefe } from "../../data/hoefe";
+import { ernteanteilNach } from "../../data/ernteanteile";
+
+const anteil = ernteanteilNach("walz-wurst")!;
 
 export function WalzWurst() {
   return (
@@ -17,16 +22,20 @@ export function WalzWurst() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <HofSteckbrief {...hoefe.walz} />
 
-          <div className="bg-solawi-salmon/10 p-8 rounded-lg max-w-xl">
-            <h3 className="text-2xl mb-3 text-foreground">More..Wurst</h3>
-            <div className="space-y-2 text-gray-700">
-              <p>500g/Monat: Salami, Rinderschinken, Wienerle, Bratwürste, Pfefferbeißer u.v.m.</p>
-              <div className="flex items-center gap-2 mt-3">
-                <Euro className="w-4 h-4 text-primary" />
-                <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
-              </div>
-              <p className="text-gray-500">monatlich</p>
-            </div>
+          <div className="bg-solawi-salmon/10 p-8 rounded-lg">
+            <h3 className="text-2xl mb-4 text-foreground">More..Wurst</h3>
+            <p className="text-gray-700 mb-6">
+              500g/Monat: Salami, Rinderschinken, Wienerle, Bratwürste, Pfefferbeißer u.v.m.
+            </p>
+
+            <PreisTabelle anteil={anteil} />
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/so-funktionierts" className="btn-cta">
+              Jetzt Ernteanteil sichern
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

@@ -91,8 +91,8 @@ Der Abschnitt "Unsere Logistik" SHALL drei Kennzahlen (4 Partnerhöfe im Umland,
 - **THEN** öffnet sich `/depots` mit Anker `anlieferung`
 
 ### Requirement: Abschluss-CTA zur Anmeldung
-Der letzte Abschnitt SHALL einen Button "Zur Anmeldung" enthalten, der auf `/anmeldung` führt.
+Der letzte Abschnitt SHALL einen Button "Zur Anmeldung" enthalten, der auf `/so-funktionierts` führt.
 
 #### Scenario: Button
 - **WHEN** "Zur Anmeldung" angeklickt wird
-- **THEN** öffnet sich `/anmeldung`
+- **THEN** öffnet sich `/so-funktionierts`

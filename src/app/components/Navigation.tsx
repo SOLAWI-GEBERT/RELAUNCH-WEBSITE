@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { nachKategorie } from "../data/ernteanteile";
+import { hoefe } from "../data/hoefe";
 
 interface SubItem {
   title: string;
@@ -34,59 +36,15 @@ export function Navigation() {
     {
       title: "Ernteanteile",
       path: "/ernteanteile",
-      subItems: [
-        {
-          title: "Gemüse",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Sommergemüse (Demeterhof Hederer)", path: "/ernteanteile/hederer-sommer" },
-            { title: "Wintergemüse (Biohof Tristan)", path: "/ernteanteile/tristans-winter" },
-          ]
-        },
-        {
-          title: "Obst",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Obst & Säfte (Demeterhof Hederer)", path: "/ernteanteile/hederer-obst" },
-          ]
-        },
-        {
-          title: "Beeren",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "Bio..Beeren (Kirschgarten)", path: "/ernteanteile/kirschgarten-beeren" },
-          ]
-        },
-        {
-          title: "Getreide",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "More..Ur-Getreide (Demeterhof Walz)", path: "/ernteanteile/walz-getreide" },
-          ]
-        },
-        {
-          title: "Eier",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "More..Huhn (Demeterhof Walz)", path: "/ernteanteile/walz-huhn" },
-          ]
-        },
-        {
-          title: "Fleisch",
-          path: "#",
-          isCategory: true,
-          subItems: [
-            { title: "More..Bratgockerl (Demeterhof Walz)", path: "/ernteanteile/walz-bratgockerl" },
-            { title: "More..Hack (Demeterhof Walz)", path: "/ernteanteile/walz-hack" },
-            { title: "More..Wurst (Demeterhof Walz)", path: "/ernteanteile/walz-wurst" },
-          ]
-        },
-      ],
+      subItems: nachKategorie().map(({ kategorie, items }) => ({
+        title: kategorie,
+        path: "#",
+        isCategory: true,
+        subItems: items.map((item) => ({
+          title: `${item.titel} (${hoefe[item.hof].name})`,
+          path: `/ernteanteile/${item.slug}`,
+        })),
+      })),
     },
     {
       title: "Mitmachen",
@@ -121,7 +79,7 @@ export function Navigation() {
         { title: "Grundlagen", path: "/haeufige-fragen#grundlagen" },
         { title: "Schnelle Fragen", path: "/haeufige-fragen#schnelle-fragen" },
         { title: "Vereinsgeschichte", path: "/haeufige-fragen#vereinsgeschichte" },
-        { title: "Kontaktformular", path: "/kontakt-anmeldung#kontakt" },
+        { title: "Antwort nicht dabei?", path: "/haeufige-fragen#antwort-nicht-dabei" },
       ],
     },
   ];

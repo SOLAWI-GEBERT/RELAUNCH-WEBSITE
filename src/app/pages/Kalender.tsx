@@ -121,15 +121,15 @@ export function Kalender() {
                   <div className="flex items-start gap-3">
                     <Calendar className="w-5 h-5 text-cta flex-shrink-0 mt-1" />
                     <div>
-                      <p className="meta font-medium text-foreground">Sommergemüse — Demeterhof Hederer</p>
-                      <p>wöchentlich, April bis September</p>
+                      <p className="meta font-medium text-foreground">Wintergemüse — Biohof Tristan</p>
+                      <p>wöchentlich oder 14-tägig, Oktober bis März</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <Calendar className="w-5 h-5 text-cta flex-shrink-0 mt-1" />
                     <div>
-                      <p className="meta font-medium text-foreground">Wintergemüse — Biohof Tristan</p>
-                      <p>wöchentlich oder 14-tägig, Oktober bis März</p>
+                      <p className="meta font-medium text-foreground">Bio..Edelpilze — Schweigerts Hof</p>
+                      <p>wöchentlich oder 14-tägig, ganzjährig</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -157,8 +157,9 @@ export function Kalender() {
                   </div>
                   <div className="bg-secondary/20 p-4 mt-4">
                     <p className="meta">
-                      Obst &amp; Säfte und Bio..Beeren haben eigene Lieferphasen. Die vollständige
-                      Tabelle mit allen Höfen und Zyklen findest du beim Lieferrhythmus.
+                      Sommergemüse (ab 2027), Bio..Beeren und Stein- &amp; Kernobst haben eigene
+                      Lieferphasen. Die vollständige Tabelle mit allen Höfen und Zyklen findest du
+                      beim Lieferrhythmus.
                     </p>
                   </div>
                 </div>

@@ -1,6 +1,11 @@
-import { Cherry, Package, Clock, CalendarDays, Euro } from "lucide-react";
+import { Link } from "react-router";
+import { ArrowRight, Cherry } from "lucide-react";
 import { HofSteckbrief } from "../../components/HofSteckbrief";
+import { PreisTabelle } from "../../components/PreisTabelle";
 import { hoefe } from "../../data/hoefe";
+import { ernteanteilNach } from "../../data/ernteanteile";
+
+const anteil = ernteanteilNach("kirschgarten-beeren")!;
 
 export function KirschgartenBeeren() {
   return (
@@ -18,48 +23,35 @@ export function KirschgartenBeeren() {
           <HofSteckbrief {...hoefe.kirschgarten} />
 
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <Cherry className="w-6 h-6 text-primary" />
               <h3 className="text-2xl text-foreground">Bio..Beeren</h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Package className="w-5 h-5 text-primary" />
-                  <span>200–400 g pro Lieferung, wöchentlich</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Clock className="w-5 h-5 text-primary" />
-                  <span>Juli – September (3 Monate Zahlung)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <CalendarDays className="w-5 h-5 text-primary" />
-                  <span>Einstieg: 01.07., 01.08., 01.09.</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-700">
-                  <Euro className="w-5 h-5 text-primary" />
-                  <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
-                </div>
+            <PreisTabelle anteil={anteil} />
 
-                <div className="mt-4 space-y-1 text-sm text-gray-600">
-                  <p>Max. 30 Anteile verfügbar</p>
-                  <p>Anmeldeschluss: 15. des Vormonats</p>
-                  <p className="font-semibold text-foreground">
-                    Am besten schon zum 1. Juni anmelden!
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <p className="font-semibold text-foreground mb-2">Sortiment</p>
-                <p className="text-gray-700">
-                  Johannisbeeren (rot, weiß, schwarz), Himbeeren (rot, schwarz, gelb),
-                  Stachelbeeren, Brombeeren, Himbeer-Brombeeren, Jostabeeren, Schwarze
-                  Honigbeeren, Japanische Weinbeeren, Aronia
+            <div className="mt-6">
+              <p className="font-semibold text-foreground mb-2">Sortiment</p>
+              <p className="text-gray-700">
+                Johannisbeeren (rot, weiß, schwarz), Himbeeren (rot, schwarz, gelb),
+                Stachelbeeren, Brombeeren, Himbeer-Brombeeren, Jostabeeren, Schwarze
+                Honigbeeren, Japanische Weinbeeren, Aronia
+              </p>
+              <div className="mt-4 space-y-1 text-sm text-gray-600">
+                <p>Max. 30 Anteile verfügbar</p>
+                <p>Anmeldeschluss: 15. des Vormonats</p>
+                <p className="font-semibold text-foreground">
+                  Am besten schon zum 1. Juni anmelden!
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/so-funktionierts" className="btn-cta">
+              Jetzt Ernteanteil sichern
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

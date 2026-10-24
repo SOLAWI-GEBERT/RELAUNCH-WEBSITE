@@ -168,23 +168,7 @@ export function SolidarischeLandwirtschaft() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Link
-              to="/ernteanteile/hederer-sommer"
-              className="bg-solawi-salmon-light p-6 rounded-lg hover:shadow-lg transition-shadow group"
-            >
-              <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
-                demeter
-              </span>
-              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
-                Demeterhof Hederer
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Sommergemüse & Obst aus Uffenheim. Seit 2001 nach
-                Demeter-Richtlinien bewirtschaftet.
-              </p>
-            </Link>
-
-            <Link
-              to="/ernteanteile/tristans-winter"
+              to="/ernteanteile/tristan-winter"
               className="bg-solawi-green p-6 rounded-lg hover:shadow-lg transition-shadow group"
             >
               <span className="text-xs font-semibold text-white bg-green-700 px-2 py-0.5 rounded">
@@ -194,8 +178,24 @@ export function SolidarischeLandwirtschaft() {
                 Biohof Tristan
               </h3>
               <p className="text-gray-600 text-sm">
-                Wintergemüse aus Emskirchen. 35 ha bunte Anbaupalette mit
-                Hühnern und Schafen.
+                Wintergemüse aus Emskirchen, Sommergemüse ab April 2027. 35 ha bunte
+                Anbaupalette mit Hühnern und Schafen.
+              </p>
+            </Link>
+
+            <Link
+              to="/ernteanteile/schweigerts-edelpilze"
+              className="bg-solawi-salmon-light p-6 rounded-lg hover:shadow-lg transition-shadow group"
+            >
+              <span className="text-xs font-semibold text-white bg-amber-700 px-2 py-0.5 rounded">
+                Pilzzucht
+              </span>
+              <h3 className="text-xl mt-2 mb-2 text-foreground group-hover:text-cta transition-colors">
+                Schweigerts Hof
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Bio-Edelpilze aus Rockenbach. Seit Oktober 2026 dabei, in einer modernen
+                Pilzzuchtanlage.
               </p>
             </Link>
 

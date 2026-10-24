@@ -18,8 +18,7 @@ Die Beschreibung der Seiten (Menü, Abschnitte, Anker, Pflichtinhalte) steht in 
 | `/mitmachen` | `participation` |
 | `/haeufige-fragen` | `faq` |
 | `/depots` | `depots` |
-| `/anmeldung` | `registration-contact` |
-| `/kontakt-anmeldung` | `registration-contact` |
+| `/newsletter` | `newsletter` |
 | `/so-funktionierts` | `supporting-pages` |
 | `/solidarische-landwirtschaft` | `supporting-pages` |
 | `/kalender` | `supporting-pages` |

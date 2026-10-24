@@ -10,5 +10,8 @@
     "skill-creator@claude-plugins-official": true,
     "plannotator@plannotator": true,
     "superdesign@claude-plugins-official": true
+  },
+  "worktree": {
+    "bgIsolation": "none"
   }
 }

@@ -1,6 +1,12 @@
-import { Sprout, Euro, Mail } from "lucide-react";
+import { Link } from "react-router";
+import { ArrowRight, Sprout, Mail } from "lucide-react";
 import { HofSteckbrief } from "../../components/HofSteckbrief";
+import { PreisTabelle } from "../../components/PreisTabelle";
+import { VerfuegbarkeitsBadge } from "../../components/VerfuegbarkeitsBadge";
 import { hoefe } from "../../data/hoefe";
+import { ernteanteilNach } from "../../data/ernteanteile";
+
+const anteil = ernteanteilNach("tristan-winter")!;
 
 export function TristansWintergemuese() {
   return (
@@ -18,52 +24,17 @@ export function TristansWintergemuese() {
           <HofSteckbrief {...hoefe.tristan} />
 
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3 mb-6 flex-wrap">
               <Sprout className="w-6 h-6 text-primary" />
               <h3 className="text-2xl text-foreground">Wintergemüse</h3>
               <span className="text-sm text-gray-500">Oktober – März</span>
+              <VerfuegbarkeitsBadge verfuegbarkeit={anteil.verfuegbarkeit} />
             </div>
 
-            {/* Varianten-Tabelle */}
-            <div className="overflow-x-auto mb-6">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b-2 border-gray-200">
-                    <th className="py-3 pr-4 text-foreground">Variante</th>
-                    <th className="py-3 pr-4 text-foreground">Für</th>
-                    <th className="py-3 text-foreground">Zyklus</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 pr-4 font-semibold">Ganzer Anteil</td>
-                    <td className="py-3 pr-4">2–4 Pers.</td>
-                    <td className="py-3">wöchentlich</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 pr-4 font-semibold">Halber Anteil</td>
-                    <td className="py-3 pr-4">1–2 Pers.</td>
-                    <td className="py-3">14-tägig</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 pr-4 font-semibold">Kleiner Anteil</td>
-                    <td className="py-3 pr-4">1–2 Pers.</td>
-                    <td className="py-3">wöchentlich</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div className="flex items-center gap-2 text-gray-700 mb-2">
-              <Euro className="w-5 h-5 text-primary" />
-              <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
-            </div>
-            <p className="text-sm text-gray-600 mb-6">
-              Probemonat: jeden Monat zum 1. möglich.
-            </p>
+            <PreisTabelle anteil={anteil} />
 
             {/* Kisteninhalte */}
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
+            <div className="grid md:grid-cols-3 gap-6 mt-6 mb-6">
               <div className="bg-solawi-green/20 p-4 rounded-lg">
                 <p className="font-semibold text-foreground mb-2">Frisch aus den Folienhäusern</p>
                 <p className="text-gray-700 text-sm">Spinat, Salate, Kräuter</p>
@@ -89,6 +60,13 @@ export function TristansWintergemuese() {
                 WhatsApp oder Signal eine Nachricht mit den genauen Mengen.
               </p>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/so-funktionierts" className="btn-cta">
+              Jetzt Ernteanteil sichern
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

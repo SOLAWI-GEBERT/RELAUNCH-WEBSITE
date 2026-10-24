@@ -40,7 +40,18 @@
       "Read(//Users/linus/Documents/0_Development/Joomla4/**)",
       "Read(//Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/**)",
       "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
-      "Bash(rm /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/.claude/launch.json && echo removed)"
+      "Bash(rm /Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/.claude/launch.json && echo removed)",
+      "Write(//Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/**)",
+      "Edit(//Users/linus/Documents/0_Development/RELAUNCH-WEBSITE/**)",
+      "Bash(openspec:*)",
+      "Bash(git merge *)",
+      "Skill(openspec-apply-change)",
+      "Read(//tmp/**)",
+      "Bash(plannotator annotate *)",
+      "Skill(openspec-propose)",
+      "Bash(git reset *)",
+      "Bash(echo \"grep-exit=$?\")",
+      "Bash(lsof -iTCP -sTCP:LISTEN -P)"
     ]
   }
 }

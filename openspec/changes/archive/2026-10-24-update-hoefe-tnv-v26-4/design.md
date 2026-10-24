@@ -137,9 +137,11 @@ Seitenzahl im Dateikopf; die Ablöse-Doku `docs/anmeldung-daten-tnv-v26-4.md` h�
 Abgleich fest.
 
 **Verwaiste Referenzen nach dem Löschen** → eigener Verifikationsschritt mit `grep` auf
-`Hederer`, `hederer-sommer`, `hederer-obst` und `tristans-winter`, danach
-`tsc --noEmit` und `npm run build`. Das Projekt hat keinen Testrunner; der Typecheck ist
-das stärkste verfügbare Netz.
+`Hederer`, `hederer-sommer`, `hederer-obst` und `tristans-winter`, danach `npm run build`.
+Das Projekt hat weder Testrunner noch `tsconfig.json`; `tsc --noEmit` liefe ohne Projekt-
+konfiguration gegen Default-Optionen (kein JSX, kein `@`-Alias) und wäre aussagelos. Vite
+build (esbuild) ist das stärkste verfügbare Netz — es erkennt kaputte Importe, JSX- und
+Syntaxfehler, aber keine Typfehler ohne Build-Bruch.
 
 **Schweigerts ohne eigenes Bildmaterial** → Die Spec verlangt, die Lücke als offenen Punkt
 festzuhalten, statt fremdes Material als das des Hofes auszugeben. Platzhalter wird als

@@ -20,7 +20,13 @@ export function HofSteckbrief({
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
       <div className="h-[400px] rounded-lg overflow-hidden shadow-xl">
-        <ImageWithFallback src={image} alt={imageAlt} className="w-full h-full object-cover" />
+        {image ? (
+          <ImageWithFallback src={image} alt={imageAlt ?? name} className="w-full h-full object-cover" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-secondary/20">
+            <CertIcon className="w-16 h-16 text-primary/40" />
+          </div>
+        )}
       </div>
       <div>
         <div className="flex items-center gap-3 mb-4">

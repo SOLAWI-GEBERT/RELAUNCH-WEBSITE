@@ -38,18 +38,29 @@ wichtigste Frage beantwortet zu bekommen.
 
 ### New Capabilities
 
-- `ernteanteile`: Der Katalog der Ernteanteile — welche Anteile es gibt, zu welchem Hof
-  sie gehören, ihre Varianten mit Lieferzyklus und Lieferphase, ihre Preise samt
-  solidarischem Beitrag, ihr Verfügbarkeitszustand und ihre Einordnung in Kategorien.
-  Umfasst auch, wo der Katalog auftaucht: Übersichtsseite, Navigation, Detailseiten,
-  Startseiten-Teaser und die Paketauswahl der Anmeldung.
-- `hoefe`: Die Partnerhöfe als eigenständige Einheiten — Name, Zertifizierung, Beschreibung,
-  Standort und Bildmaterial, ihre Darstellung im Hof-Steckbrief und ihre Verortung auf der
-  Depot- und Höfe-Karte.
+Keine. Zum Zeitpunkt des ursprünglichen Proposals gab es noch keine Main-Specs
+(`openspec list --specs` meldete „No specs found"), weshalb hier zunächst eigene
+Capabilities `ernteanteile` und `hoefe` entworfen wurden. Parallel wurde über einen
+zweiten Change (`document-site-structure`, archiviert) eine seitenbezogene
+Capability-Struktur für das gesamte Projekt angelegt. Die Inhalte dieses Changes wurden
+daraufhin in diese bestehende Struktur eingeordnet, siehe Modified Capabilities.
 
 ### Modified Capabilities
 
-Keine. Das Projekt hat bisher keine Specs (`openspec list --specs` meldet „No specs found").
+- `harvest-shares`: Kategorien (neu: Pilze), Detailseiten (zehn statt neun, neue Slugs),
+  Hof-Steckbriefe (Schweigerts-Badge, Platzhalter ohne Foto), Konditionen (jetzt mit
+  Euro-Beträgen statt Preisverweis), Bieterrunden-Hinweis (Tristan statt Hederer),
+  Verfügbarkeitszustand und Vereinsbeitrag als neue Requirements.
+- `depots`: Lieferrhythmus-Tabelle (sechs statt fünf Zeilen, neuer Hof-Marker Schweigerts).
+- `site-navigation`: Untermenü Ernteanteile (sieben Kategorien, zehn Blatt-Einträge).
+- `start-page`: Abschnitt „Was bekomme ich?" (neue Kachelauswahl und -ziele).
+- `supporting-pages`: Partnerhöfe-Kacheln auf `/solidarische-landwirtschaft`,
+  Lieferrhythmus-Verweis auf `/kalender`.
+- `registration-contact`: neue Anforderung, dass nicht buchbare Ernteanteile im
+  Anmeldeformular deaktiviert erscheinen.
+
+Nicht betroffen: `faq`, `legal-pages`, `participation` — ihre Seiten (`/haeufige-fragen`,
+`/impressum`, `/datenschutz`, `/mitmachen`) wurden von diesem Change nicht geändert.
 
 ## Impact
 

@@ -1,5 +1,14 @@
-import { HelpCircle, MessageCircleQuestion, Landmark } from "lucide-react";
+import { Link } from "react-router";
+import {
+  HelpCircle,
+  MessageCircleQuestion,
+  Landmark,
+  MessageSquare,
+  User,
+  Mail,
+} from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
+import { InteresseFormular } from "../components/InteresseFormular";
 import {
   Accordion,
   AccordionContent,
@@ -174,10 +183,24 @@ export function FragenAntworten() {
                   Wie kann ich Ernteteiler werden?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-700 leading-relaxed">
-                  Im Download-Bereich unserer Homepage findest du die aktuelle
-                  Teilnahmevereinbarung. Bei manchen Landwirten stehen noch freie Ernteanteile
-                  zur Verfügung. Kreuze das an, was dir zusagt. Du erhältst anschließend eine
-                  Bestätigung, was verfügbar ist.
+                  Lade auf{" "}
+                  <Link to="/so-funktionierts" className="underline">
+                    „So funktioniert's"
+                  </Link>{" "}
+                  die aktuelle Teilnahmevereinbarung herunter, kreuze an, was dir zusagt, und
+                  schick sie per Mail an die Koordination. Bei manchen Landwirten stehen noch
+                  freie Ernteanteile zur Verfügung — du erhältst von uns eine Bestätigung,
+                  was verfügbar ist. Möchtest du vorher etwas klären oder dich beraten lassen?
+                  Dann nutze das{" "}
+                  <a href="#antwort-nicht-dabei" className="underline">
+                    Formular weiter unten
+                  </a>
+                  : Das Team meldet sich mit einer kurzen Beratung, die ausgefüllte
+                  Vereinbarung schickst du uns danach per Mail. So arbeiten wir: Bei Stadt,
+                  Land, Beides. sind alle ehrenamtlich aktiv. Deine Nachricht landet in
+                  unserem internen Ticketsystem und wird von dort an die passende Person
+                  verteilt. Wir bearbeiten das System mindestens einmal pro Woche — eine
+                  Antwort kann deshalb etwas dauern.
                 </AccordionContent>
               </AccordionItem>
 
@@ -231,6 +254,54 @@ export function FragenAntworten() {
                 Ernterisiko gemeinsam mit dem Landwirt — und bekommt dafür Lebensmittel, deren
                 Herkunft er kennt.
               </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Antwort nicht dabei? */}
+      <section id="antwort-nicht-dabei" className="py-16 bg-solawi-gray">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <MessageSquare className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h2 className="text-3xl font-bold text-gray-900">Antwort nicht dabei?</h2>
+              <p className="text-gray-700 mt-2 max-w-2xl mx-auto">
+                So geht's: Teilnahmevereinbarung herunterladen, ausfüllen und per Mail an die
+                Koordination schicken (
+                <Link to="/so-funktionierts" className="underline">
+                  mehr dazu
+                </Link>
+                ). Wenn du vorher etwas wissen möchtest, schreib uns hier — wir melden uns
+                mit einer kurzen Beratung.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <InteresseFormular />
+          </ScrollReveal>
+
+          <ScrollReveal>
+            <div className="bg-white rounded-lg shadow-sm p-8 text-center mt-8">
+              <User className="w-8 h-8 text-primary mx-auto mb-3" />
+              <h3 className="mb-2">Direkter Ansprechpartner</h3>
+              <p className="text-lg font-semibold text-gray-900 mb-2">
+                Sebastian Lades (Vorstand), Andreas Gebert (Kassenwart)
+              </p>
+              <p className="text-gray-700 mb-4">
+                Vorstand und Kassenwart des Vereins „Solidarische Landwirtschaft Stadt, Land,
+                Beides e.V."
+              </p>
+              <div className="flex items-center justify-center gap-3 text-gray-700">
+                <Mail className="w-5 h-5 text-primary" />
+                <a
+                  href="mailto:Team.Koordination@stadt-land-beides.de"
+                  className="hover:text-primary transition-colors"
+                >
+                  Team.Koordination@stadt-land-beides.de
+                </a>
+              </div>
             </div>
           </ScrollReveal>
         </div>

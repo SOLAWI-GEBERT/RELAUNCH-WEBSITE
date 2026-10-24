@@ -42,7 +42,7 @@ export function SoFunktionierts() {
           <div className="max-w-md mx-auto">
             <ScrollReveal delay={0}>
               <a
-                href="/TNV_StadtLandBeides_V9_3_2026.pdf"
+                href="/TNV_StadtLandBeides_V26_4.pdf"
                 download
                 className="flex items-center gap-4 bg-white p-6 shadow-md hover-tilt group"
               >

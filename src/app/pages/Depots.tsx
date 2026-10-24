@@ -19,7 +19,8 @@ const hofIcon = new L.Icon({
 });
 
 /* ── Standort-Daten ── */
-const depots = [
+// exportiert, damit das Interesse-Formular dieselbe Depot-Liste verwendet (TNV V26.4 S. 3)
+export const depots = [
   { name: "Depot St. Peter", lat: 49.443805, lng: 11.0911991, address: "Findelwiesenstr. 25, Nürnberg", hours: "Mittwoch 14 Uhr bis Donnerstag 18 Uhr" },
   { name: "Depot Stadtpark", lat: 49.46355594773305, lng: 11.096376207324228, address: "Gemeindehaus der Reformations-Gedächtniskirche, Berliner Platz 20, 90489 Nürnberg", hours: "Mittwoch bis Samstag" },
   { name: "Depot Die Wiese", lat: 49.440983418981595, lng: 11.070236436909584, address: "Wiesenstraße 19, 90443 Nürnberg", hours: "Mittwoch 14 bis 20 Uhr" },
@@ -32,10 +33,11 @@ const depots = [
 ];
 
 const hoefe = [
-  { name: "Biohof Tristan", lat: 49.5683, lng: 10.6283, address: "Emskirchen/Gunzendorf (Bioland) — Wintergemüse" },
-  { name: "Demeterhof Heribert Hederer", lat: 49.54871497973974, lng: 10.238286376189608, address: "Uffenheim (demeter) — Sommergemüse & Obst" },
+  { name: "Biohof Tristan", lat: 49.5683, lng: 10.6283, address: "Emskirchen/Gunzendorf (Bioland) — Winter- und ab April 2027 Sommergemüse" },
   { name: "Demeterhof Andreas Walz", lat: 49.46267898029151, lng: 11.8103789802915, address: "In der Schäflohe 4, 92224 Amberg (demeter) — Huhn, Hack, Wurst, Ur-Getreide" },
-  { name: "Bio..Beeren Kirschgarten", lat: 49.6267, lng: 11.2283, address: "Bei Igensdorf (EU-Bio) — Beeren-Vielfalt" },
+  { name: "Bio..Beeren Kirschgarten", lat: 49.6267, lng: 11.2283, address: "Bei Igensdorf (EU-Bio) — Beeren, ab Sommer 2027 Stein- & Kernobst" },
+  // Rockenbach (Scheinfeld, Lkr. NEA), ca. 15 km von Gunzendorf — Koordinate genähert, TNV V26.4 S. 10
+  { name: "Schweigerts Hof", lat: 49.6894, lng: 10.4954, address: "Rockenbach — Bio-Edelpilze" },
 ];
 
 export function Depots() {
@@ -216,22 +218,22 @@ export function Depots() {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Hederer</td>
-                  <td className="py-2 pr-4">Sommergemüse</td>
-                  <td className="py-2 pr-4">wöchentlich</td>
-                  <td className="py-2">Apr–Sept</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-2 pr-4">Hederer</td>
-                  <td className="py-2 pr-4">Obst</td>
-                  <td className="py-2 pr-4">nach Bedarf</td>
-                  <td className="py-2">Jul–Dez</td>
-                </tr>
-                <tr className="border-b border-gray-200">
                   <td className="py-2 pr-4">Tristan</td>
                   <td className="py-2 pr-4">Wintergemüse</td>
                   <td className="py-2 pr-4">wöchentl./14-tägig</td>
                   <td className="py-2">Okt–Mrz</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Tristan</td>
+                  <td className="py-2 pr-4">Sommergemüse</td>
+                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                  <td className="py-2">Apr–Sept (ab 2027)</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4">Schweigerts</td>
+                  <td className="py-2 pr-4">Bio..Edelpilze</td>
+                  <td className="py-2 pr-4">wöchentl./14-tägig</td>
+                  <td className="py-2">ganzjährig</td>
                 </tr>
                 <tr className="border-b border-gray-200">
                   <td className="py-2 pr-4">Walz</td>
@@ -239,11 +241,17 @@ export function Depots() {
                   <td className="py-2 pr-4">1–2x/Monat</td>
                   <td className="py-2">ganzjährig</td>
                 </tr>
-                <tr>
+                <tr className="border-b border-gray-200">
                   <td className="py-2 pr-4">Kirschgarten</td>
                   <td className="py-2 pr-4">Bio..Beeren</td>
                   <td className="py-2 pr-4">wöchentlich</td>
                   <td className="py-2">Jul–Sept</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4">Kirschgarten</td>
+                  <td className="py-2 pr-4">Stein- & Kernobst</td>
+                  <td className="py-2 pr-4">unregelmäßig</td>
+                  <td className="py-2">Jul–Dez (Warteliste)</td>
                 </tr>
               </tbody>
             </table>

@@ -1,7 +1,12 @@
-import { Wheat, Clock, Package, Euro } from "lucide-react";
+import { Link } from "react-router";
+import { ArrowRight, Wheat } from "lucide-react";
 import { HofSteckbrief } from "../../components/HofSteckbrief";
+import { PreisTabelle } from "../../components/PreisTabelle";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 import { hoefe } from "../../data/hoefe";
+import { ernteanteilNach } from "../../data/ernteanteile";
+
+const anteil = ernteanteilNach("walz-getreide")!;
 
 export function WalzGetreide() {
   return (
@@ -19,49 +24,41 @@ export function WalzGetreide() {
           <HofSteckbrief {...hoefe.walz} />
 
           <div className="bg-solawi-orange/20 p-8 rounded-lg">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <Wheat className="w-6 h-6 text-primary" />
               <h3 className="text-2xl text-foreground">More..Ur-Getreide</h3>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-primary" />
-                    <span>1x pro Monat, ganzjährig</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Package className="w-4 h-4 text-primary" />
-                    <span>1 kg individuell zusammenstellbar</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Euro className="w-4 h-4 text-primary" />
-                    <span>Richtpreis & Logistikkosten: siehe Teilnahmevereinbarung</span>
-                  </div>
-                </div>
-              </div>
+            <PreisTabelle anteil={anteil} />
 
+            <div className="grid md:grid-cols-2 gap-8 mt-6">
               <div>
                 <p className="font-semibold text-foreground mb-2">Sorten</p>
-                <p className="text-gray-700 text-sm mb-4">
+                <p className="text-gray-700 text-sm">
                   Schwarzes Einkorn, Sommeremmer Spelta, Weißer Urdinkel, Blonder
                   Nackthafer, Champagnerroggen, Bayernkönig Weizen, Bayerisches
                   Liebesgras
                 </p>
-                <p className="font-semibold text-foreground mb-2">Produkte</p>
+                <p className="font-semibold text-foreground mb-2 mt-4">Produkte</p>
                 <p className="text-gray-700 text-sm">
                   Halbweißmehl, Vollkornmehl, Körner, Grieß, Getreidereis, Nudeln
                 </p>
-                <div className="mt-4">
-                  <ImageWithFallback
-                    src="/fotos/walz-getreide.jpg"
-                    alt="Ur-Getreide vom Demeterhof Walz"
-                    className="w-full h-32 object-cover rounded-lg"
-                  />
-                </div>
+              </div>
+              <div>
+                <ImageWithFallback
+                  src="/fotos/walz-getreide.jpg"
+                  alt="Ur-Getreide vom Demeterhof Walz"
+                  className="w-full h-32 object-cover rounded-lg"
+                />
               </div>
             </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link to="/so-funktionierts" className="btn-cta">
+              Jetzt Ernteanteil sichern
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </div>
       </section>

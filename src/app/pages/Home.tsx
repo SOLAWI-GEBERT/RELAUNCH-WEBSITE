@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ArrowRight, MapPin, Leaf, Apple, Wheat, Cherry, Egg, Carrot, HandCoins, Users, Truck } from "lucide-react";
+import { ArrowRight, MapPin, Wheat, Cherry, Egg, Carrot, Beef, Soup, HandCoins, Users, Truck } from "lucide-react";
 import { ScrollReveal } from "../components/ScrollReveal";
 
 /**
@@ -203,39 +203,38 @@ export function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal delay={0}>
-              <Link to="/ernteanteile/hederer-sommer" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+              <Link to="/ernteanteile/tristan-winter" className="block bg-white p-6 shadow-md hover-tilt h-full group">
                 <Carrot className="w-10 h-10 text-cta mb-4" />
-                <h4 className="mb-1 group-hover:text-cta transition-colors">Sommergemüse</h4>
-                <p className="meta mb-3">Demeterhof Hederer</p>
-                <p>Tomaten, Zucchini, Paprika und mehr — frisch vom Feld.</p>
+                <h4 className="mb-1 group-hover:text-cta transition-colors">Gemüse</h4>
+                <p className="meta mb-3">Biohof Tristan</p>
+                <p>Lauch, Rosenkohl, Wurzelgemüse und Lagerware vom Hof.</p>
               </Link>
             </ScrollReveal>
 
             <ScrollReveal delay={0.05}>
-              <Link to="/ernteanteile/tristans-winter" className="block bg-white p-6 shadow-md hover-tilt h-full group">
-                <Leaf className="w-10 h-10 text-cta mb-4" />
-                <h4 className="mb-1 group-hover:text-cta transition-colors">Wintergemüse</h4>
-                <p className="meta mb-3">Biohof Tristan</p>
-                {/* TODO Inhalt: Sortiment Wintergemüse mit dem Hof abstimmen */}
-                <p>Kohl, Wurzelgemüse und Lagerware für die kalte Jahreszeit.</p>
+              <Link to="/ernteanteile/schweigerts-edelpilze" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Soup className="w-10 h-10 text-cta mb-4" />
+                <h4 className="mb-1 group-hover:text-cta transition-colors">Bio..Edelpilze</h4>
+                <p className="meta mb-3">Schweigerts Hof</p>
+                <p>Limonen- und Kräuterseitlinge, Austernpilze und Shiitake — ganzjährig frisch.</p>
               </Link>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <Link to="/ernteanteile/hederer-obst" className="block bg-white p-6 shadow-md hover-tilt h-full group">
-                <Apple className="w-10 h-10 text-cta mb-4" />
-                <h4 className="mb-1 group-hover:text-cta transition-colors">Obst & Säfte</h4>
-                <p className="meta mb-3">Demeterhof Hederer</p>
-                <p>Äpfel, Birnen, Zwetschgen und hausgemachte Säfte.</p>
+              <Link to="/ernteanteile/kirschgarten-beeren" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Cherry className="w-10 h-10 text-cta mb-4" />
+                <h4 className="mb-1 group-hover:text-cta transition-colors">Bio..Beeren</h4>
+                <p className="meta mb-3">Kirschgarten</p>
+                <p>Johannisbeeren, Himbeeren, Stachelbeeren u.v.m. — wöchentlich im Sommer.</p>
               </Link>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
               <Link to="/ernteanteile/walz-huhn" className="block bg-white p-6 shadow-md hover-tilt h-full group">
                 <Egg className="w-10 h-10 text-cta mb-4" />
-                <h4 className="mb-1 group-hover:text-cta transition-colors">Fleisch & Eier</h4>
+                <h4 className="mb-1 group-hover:text-cta transition-colors">More..Huhn</h4>
                 <p className="meta mb-3">Demeterhof Walz</p>
-                <p>Weiderind, Hähnchen und frische Eier aus artgerechter Haltung.</p>
+                <p>Alle Eier deiner Henne, 2x im Monat, ganzjährig.</p>
               </Link>
             </ScrollReveal>
 
@@ -249,11 +248,11 @@ export function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.25}>
-              <Link to="/ernteanteile/kirschgarten-beeren" className="block bg-white p-6 shadow-md hover-tilt h-full group">
-                <Cherry className="w-10 h-10 text-cta mb-4" />
-                <h4 className="mb-1 group-hover:text-cta transition-colors">Bio-Beeren</h4>
-                <p className="meta mb-3">Kirschgarten</p>
-                <p>Erdbeeren, Himbeeren und Johannisbeeren in EU-Bio-Qualität.</p>
+              <Link to="/ernteanteile/walz-hack" className="block bg-white p-6 shadow-md hover-tilt h-full group">
+                <Beef className="w-10 h-10 text-cta mb-4" />
+                <h4 className="mb-1 group-hover:text-cta transition-colors">More..Hack</h4>
+                <p className="meta mb-3">Demeterhof Walz</p>
+                <p>Weiderind aus Weide- und Muttertierhaltung, 500 g im Monat.</p>
               </Link>
             </ScrollReveal>
           </div>

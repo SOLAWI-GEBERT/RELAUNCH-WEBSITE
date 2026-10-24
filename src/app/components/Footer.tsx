@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Facebook, Instagram, Mail, MapPin } from "lucide-react";
+import { NewsletterAnmeldung } from "./NewsletterAnmeldung";
 
 const linkClass = "hover:text-accent transition-colors hover-underline-pink inline-block";
 
@@ -23,6 +24,9 @@ export function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
+            <div className="mt-8">
+              <NewsletterAnmeldung />
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -34,7 +38,7 @@ export function Footer() {
               <li><Link to="/mitmachen" className={linkClass}>Mitmachen</Link></li>
               <li><Link to="/depots" className={linkClass}>Depots</Link></li>
               <li><Link to="/mitmachen#events" className={linkClass}>Termine & Aktionen</Link></li>
-              <li><Link to="/kontakt-anmeldung" className={linkClass}>Kontakt</Link></li>
+              <li><Link to="/haeufige-fragen#antwort-nicht-dabei" className={linkClass}>Kontakt</Link></li>
             </ul>
           </div>
 
@@ -44,7 +48,6 @@ export function Footer() {
             <ul className="space-y-2">
               <li><Link to="/impressum" className={linkClass}>Impressum</Link></li>
               <li><Link to="/datenschutz" className={linkClass}>Datenschutzerklärung</Link></li>
-              <li><Link to="/kontakt-anmeldung#kontakt" className={linkClass}>Kontakt</Link></li>
             </ul>
 
             <h6 className="mb-4 mt-8">Verein</h6>

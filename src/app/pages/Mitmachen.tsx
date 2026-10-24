@@ -227,15 +227,15 @@ export function Mitmachen() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-solawi-green">
+      <section id="teilnahme" className="py-20 bg-solawi-green">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="mb-6">
             Bereit mitzumachen?
           </h2>
           <p className="lead text-foreground mb-8">
-            Fülle jetzt das Anmeldeformular aus und werde Teil unserer Gemeinschaft!
+            Lade die Teilnahmevereinbarung herunter, fülle sie aus und schick sie uns per Mail — und werde Teil unserer Gemeinschaft!
           </p>
-          <Link to="/anmeldung" className="btn-cta btn-cta-lg">
+          <Link to="/so-funktionierts" className="btn-cta btn-cta-lg">
             Zur Anmeldung
             <ArrowRight className="w-5 h-5" />
           </Link>

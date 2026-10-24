@@ -7,32 +7,37 @@ export interface Hof {
   description: string;
   certLine: string;
   CertIcon: LucideIcon;
-  image: string;
-  imageAlt: string;
+  /**
+   * Eigenes Bildmaterial des Hofes. Fehlt es (noch), bleibt das Feld unbesetzt —
+   * niemals ein Foto eines anderen Betriebs als Platzhalter verwenden
+   * (siehe openspec specs/hoefe: "Bildmaterial ist dem Hof zuzuordnen").
+   * HofSteckbrief zeigt dann einen neutralen Platzhalter mit CertIcon.
+   */
+  image?: string;
+  imageAlt?: string;
 }
 
 export const hoefe = {
-  hederer: {
-    name: "Demeterhof Hederer",
-    badgeLabel: "demeter",
-    badgeColor: "purple",
-    description:
-      "Heribert Hederer bewirtschaftet seinen Hof in Uffenheim seit 2001 nach Demeter-Richtlinien. Vier Gewächshäuser und über 20 Jahre Erfahrung stecken in seinen natürlichen Anbaumethoden. Was bei Heribert wächst, wächst mit Überzeugung — und das schmeckst du.",
-    certLine: "Seit 2001 demeter-zertifiziert, Uffenheim",
-    CertIcon: Sprout,
-    image: "/fotos/lillinghof-obstbau.jpg",
-    imageAlt: "Demeterhof Hederer — Gewächshäuser und Obstbäume",
-  },
   tristan: {
     name: "Biohof Tristan",
     badgeLabel: "Bioland",
     badgeColor: "green",
     description:
-      "Die Hofstelle in Emskirchen/Gunzendorf wurde 2017 übernommen — seitdem wachsen auf 35 Hektar eine bunte Anbaupalette, Hühner picken und Schafe grasen. Aktuell versorgt der Hof 40 Ernteteiler direkt und 10 weitere über das UKAMA-Depot. SoLawi am Hof seit 2021.",
+      "Die Hofstelle in Emskirchen/Gunzendorf wurde 2017 übernommen — seitdem wachsen auf 35 Hektar eine bunte Anbaupalette, Hühner picken und Schafe grasen. Vermarktet wird über SoLawi, Märkte und einen eigenen Hofladen, unterstützt von Angestellten, Azubis, Praktikant:innen und Freiwilligen. Zur Jahresversorgung gehören auch Kartoffeln und Gemüse aus dem eigenen Lager.",
     certLine: "Bioland-zertifiziert, Emskirchen/Gunzendorf",
     CertIcon: Sprout,
     image: "/fotos/vollandhof-feld.jpg",
     imageAlt: "Biohof Tristan — Feldarbeit",
+  },
+  schweigerts: {
+    name: "Schweigerts Hof",
+    badgeLabel: "Pilzzucht",
+    badgeColor: "orange",
+    description:
+      "Annabelle und Thomas Schweigert haben den Familienbetrieb in Rockenbach übernommen und in einem Gebäudeteil eine moderne Pilzzuchtanlage eingebaut. Dort wachsen Bio-Edelpilze mit geringem Wasser- und Strombedarf — aktuell Limonen- und Kräuterseitlinge, Austernpilze und Shiitake, in der Regel 1–3 Sorten pro Woche.",
+    certLine: "Bio-Edelpilze seit Oktober 2026, Rockenbach",
+    CertIcon: Sprout,
+    // Noch kein eigenes Bildmaterial vorhanden — siehe docs/anforderung-tnv-v26-4.md, Offene Punkte.
   },
   walz: {
     name: "Demeterhof Walz",
@@ -57,3 +62,5 @@ export const hoefe = {
     imageAlt: "Blühende Obstbäume im Kirschgarten",
   },
 } as const satisfies Record<string, Hof>;
+
+export type HofKey = keyof typeof hoefe;

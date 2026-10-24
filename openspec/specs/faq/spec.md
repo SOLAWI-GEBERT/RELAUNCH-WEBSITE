@@ -12,12 +12,12 @@ Die Route `/haeufige-fragen` SHALL eine Seite mit dem Label "Für Einsteiger*inn
 - **WHEN** `/haeufige-fragen` geöffnet wird
 - **THEN** ist genau ein `h1` "Fragen & Antworten" vorhanden
 
-### Requirement: Drei Abschnitte mit Menü-Ankern
-Die Seite SHALL drei Abschnitte in dieser Reihenfolge enthalten: `id="grundlagen"` ("Grundlagen"), `id="schnelle-fragen"` ("Schnelle Fragen", Untertitel "Für alle, die schon Ernteteiler sind") und `id="vereinsgeschichte"` ("Vereinsgeschichte"). Jeder Abschnitt SHALL den Namen als `h2` tragen.
+### Requirement: Vier Abschnitte mit Menü-Ankern
+Die Seite SHALL vier Abschnitte in dieser Reihenfolge enthalten: `id="grundlagen"` ("Grundlagen"), `id="schnelle-fragen"` ("Schnelle Fragen", Untertitel "Für alle, die schon Ernteteiler sind"), `id="vereinsgeschichte"` ("Vereinsgeschichte") und `id="antwort-nicht-dabei"` ("Antwort nicht dabei?"). Jeder Abschnitt SHALL den Namen als `h2` tragen.
 
 #### Scenario: Anker und Reihenfolge
 - **WHEN** die Seite geladen wird
-- **THEN** existieren die drei Abschnitte mit den genannten `id`-Werten in der Reihenfolge grundlagen, schnelle-fragen, vereinsgeschichte
+- **THEN** existieren die vier Abschnitte mit den genannten `id`-Werten in der Reihenfolge grundlagen, schnelle-fragen, vereinsgeschichte, antwort-nicht-dabei
 
 #### Scenario: Menü-Sprung
 - **WHEN** `/haeufige-fragen#schnelle-fragen` geöffnet wird
@@ -57,9 +57,25 @@ Der Abschnitt "Vereinsgeschichte" SHALL die Gründung des Vereins im Jahr 2016 i
 - **WHEN** der Abschnitt geprüft wird
 - **THEN** ist der Text ohne Klick sichtbar und nennt "2016" und "Nürnberg"
 
-### Requirement: Kontaktformular über das Menü erreichbar
-Der Menüpunkt "Kontaktformular" unter "Fragen & Antworten" SHALL zum Kontaktformular auf `/kontakt-anmeldung#kontakt` führen.
+### Requirement: Anmeldeweg in den Schnellen Fragen
+Die Antwort auf "Wie kann ich Ernteteiler werden?" SHALL den Weg schlicht erklären: Teilnahmevereinbarung herunterladen, ankreuzen, per Mail an die Koordination schicken. Sie SHALL auf `/so-funktionierts` verlinken, die Bestätigung durch das Team nennen und auf das Formular im Abschnitt "Antwort nicht dabei?" für Rückfragen und eine kurze Beratung hinweisen.
 
-#### Scenario: Weg zum Kontaktformular
-- **WHEN** im Untermenü "Fragen & Antworten" der Eintrag "Kontaktformular" angeklickt wird
-- **THEN** öffnet sich `/kontakt-anmeldung` und der Abschnitt `kontakt` ist das Sprungziel
+#### Scenario: Weg und Links
+- **WHEN** "Wie kann ich Ernteteiler werden?" angeklickt wird
+- **THEN** nennt der Antworttext die Teilnahmevereinbarung und die Mail an die Koordination
+- **AND** ein Link führt auf `/so-funktionierts`
+- **AND** ein Link führt auf `#antwort-nicht-dabei`
+
+### Requirement: Arbeitsweise offenlegen
+Dieselbe Antwort SHALL die Arbeitsweise transparent machen: Alle arbeiten ehrenamtlich, Anfragen landen in einem internen Ticketsystem und werden an die zuständige Person verteilt, das System wird mindestens einmal pro Woche bearbeitet.
+
+#### Scenario: Ehrenamt, Ticketsystem und Rhythmus
+- **WHEN** die Antwort geöffnet ist
+- **THEN** nennt der Text das Ehrenamt, das interne Ticketsystem mit Verteilung und die Bearbeitung mindestens einmal pro Woche
+
+### Requirement: Antwort nicht dabei
+Der letzte Abschnitt "Antwort nicht dabei?" SHALL das Formular "Interesse oder Frage", den Mail-Link zur Koordination und die Ansprechpartner enthalten, wie in `registration-contact` beschrieben.
+
+#### Scenario: Inhalte vorhanden
+- **WHEN** der Abschnitt geprüft wird
+- **THEN** sind ein Formular, ein Link auf `mailto:Team.Koordination@stadt-land-beides.de` und die Ansprechpartner vorhanden

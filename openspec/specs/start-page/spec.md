@@ -46,7 +46,7 @@ Die Startseite SHALL einen Abschnitt "Warum mitmachen?" mit vier Kacheln enthalt
 - **THEN** sind genau vier Kacheln mit den genannten Überschriften vorhanden
 
 ### Requirement: Abschnitt "Was bekomme ich?"
-Die Startseite SHALL einen Abschnitt mit `id="was-bekomme-ich"` und der Überschrift "Was bekomme ich?" enthalten. Er SHALL sechs verlinkte Kacheln zeigen, jeweils mit Produktname, Hof und Kurzbeschreibung, die auf die Ernteanteil-Detailseiten `/ernteanteile/hederer-sommer`, `/ernteanteile/tristans-winter`, `/ernteanteile/hederer-obst`, `/ernteanteile/walz-huhn`, `/ernteanteile/walz-getreide` und `/ernteanteile/kirschgarten-beeren` führen.
+Die Startseite SHALL einen Abschnitt mit `id="was-bekomme-ich"` und der Überschrift "Was bekomme ich?" enthalten. Er SHALL sechs verlinkte Kacheln zeigen, jeweils mit Produktname, Hof und Kurzbeschreibung, die auf die Ernteanteil-Detailseiten `/ernteanteile/tristan-winter`, `/ernteanteile/schweigerts-edelpilze`, `/ernteanteile/kirschgarten-beeren`, `/ernteanteile/walz-huhn`, `/ernteanteile/walz-getreide` und `/ernteanteile/walz-hack` führen.
 
 #### Scenario: Sechs Kacheln mit Zielen
 - **WHEN** der Abschnitt geprüft wird

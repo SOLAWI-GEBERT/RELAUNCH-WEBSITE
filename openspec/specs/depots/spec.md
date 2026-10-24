@@ -38,6 +38,10 @@ Der Abschnitt "Höfe & Depots" SHALL eine interaktive Karte mit je einem Marker 
 - **WHEN** auf den Marker "Demeterhof Andreas Walz" geklickt wird
 - **THEN** zeigt das Popup den Namen und die Adresse, aber keine Öffnungszeiten
 
+#### Scenario: Popup des neuen Hofs
+- **WHEN** auf den Marker "Schweigerts Hof" geklickt wird
+- **THEN** zeigt das Popup den Namen und die Adresse "Rockenbach", aber keine Öffnungszeiten
+
 #### Scenario: Scrollen über der Karte
 - **WHEN** das Mausrad über der Karte gedreht wird
 - **THEN** scrollt die Seite und die Karte ändert ihren Zoom nicht
@@ -73,15 +77,15 @@ Der Abschnitt "Lieferung & Abholung" SHALL vier Blöcke enthalten: "Wann wird ge
 - **THEN** besteht die Liste aus fünf Punkten und nennt "Foodsharing"
 
 ### Requirement: Lieferrhythmus-Tabelle
-Der Abschnitt "Lieferrhythmus" SHALL eine Tabelle mit den Spalten Hof, Produkt, Zyklus und Phase und fünf Zeilen zeigen: Hederer Sommergemüse (wöchentlich, Apr–Sept), Hederer Obst (nach Bedarf, Jul–Dez), Tristan Wintergemüse (wöchentl./14-tägig, Okt–Mrz), Walz Fleisch, Eier, Getreide (1–2x/Monat, ganzjährig) und Kirschgarten Bio..Beeren (wöchentlich, Jul–Sept).
+Der Abschnitt "Lieferrhythmus" SHALL eine Tabelle mit den Spalten Hof, Produkt, Zyklus und Phase und sechs Zeilen zeigen: Tristan Wintergemüse (wöchentl./14-tägig, Okt–Mrz), Tristan Sommergemüse (wöchentl./14-tägig, Apr–Sept (ab 2027)), Schweigerts Bio..Edelpilze (wöchentl./14-tägig, ganzjährig), Walz Fleisch, Eier, Getreide (1–2x/Monat, ganzjährig), Kirschgarten Bio..Beeren (wöchentlich, Jul–Sept) und Kirschgarten Stein- & Kernobst (unregelmäßig, Jul–Dez (Warteliste)).
 
 #### Scenario: Tabellenstruktur
 - **WHEN** die Tabelle geprüft wird
-- **THEN** hat sie vier Spaltenköpfe und fünf Datenzeilen mit den genannten Werten
+- **THEN** hat sie vier Spaltenköpfe und sechs Datenzeilen mit den genannten Werten
 
 #### Scenario: Konsistenz mit Detailseiten
 - **WHEN** die Phase je Produkt mit den Zeiträumen auf den Detailseiten unter `/ernteanteile/…` verglichen wird
-- **THEN** stimmen die Zeiträume für Sommergemüse, Obst, Wintergemüse und Bio..Beeren überein
+- **THEN** stimmen die Zeiträume für Wintergemüse, Sommergemüse, Bio..Edelpilze, Bio..Beeren und Stein- & Kernobst überein
 
 ### Requirement: Newsletter-Hinweis am Seitenende
 Die Seite SHALL am Ende einen Abschnitt "Bleib auf dem Laufenden" mit einem Button "Zum Newsletter" zeigen.
