@@ -35,7 +35,7 @@ const hoefe = [
   { name: "Biohof Tristan", lat: 49.5683, lng: 10.6283, address: "Emskirchen/Gunzendorf (Bioland) — Wintergemüse" },
   { name: "Demeterhof Heribert Hederer", lat: 49.54871497973974, lng: 10.238286376189608, address: "Uffenheim (demeter) — Sommergemüse & Obst" },
   { name: "Demeterhof Andreas Walz", lat: 49.46267898029151, lng: 11.8103789802915, address: "In der Schäflohe 4, 92224 Amberg (demeter) — Huhn, Hack, Wurst, Ur-Getreide" },
-  { name: "Bio...Beeren Kirschgarten", lat: 49.6267, lng: 11.2283, address: "Bei Igensdorf (EU-Bio) — Beeren-Vielfalt" },
+  { name: "Bio..Beeren Kirschgarten", lat: 49.6267, lng: 11.2283, address: "Bei Igensdorf (EU-Bio) — Beeren-Vielfalt" },
 ];
 
 export function Depots() {
@@ -241,7 +241,7 @@ export function Depots() {
                 </tr>
                 <tr>
                   <td className="py-2 pr-4">Kirschgarten</td>
-                  <td className="py-2 pr-4">Bio-Beeren</td>
+                  <td className="py-2 pr-4">Bio..Beeren</td>
                   <td className="py-2 pr-4">wöchentlich</td>
                   <td className="py-2">Jul–Sept</td>
                 </tr>
