@@ -50,6 +50,7 @@ Die Website SHALL keine Analyse- oder Tracking-Dienste laden. Dies entspricht de
 #### Scenario: Kein Tracking-Skript
 - **WHEN** eine beliebige Seite geladen wird und die Netzwerkanfragen geprüft werden
 - **THEN** gibt es keine Anfrage an Google Analytics, Google Tag Manager oder vergleichbare Analyse-Domains
+- **AND** Schrift- und Kartendienste (Google Fonts, OpenStreetMap-Tiles) zählen nicht als Analysedienste
 
 ### Requirement: Datenschutz – Ansprache
 Die Datenschutzerklärung SHALL die Betroffenen konsequent duzen.

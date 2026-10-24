@@ -77,16 +77,17 @@ Ab Viewport-Breite 1024 px SHALL das Menü waagerecht dargestellt werden, und Un
 - **THEN** ist der Button mit `aria-label="Toggle menu"` nicht sichtbar
 
 ### Requirement: Mobiles Menü
-Unterhalb von 1024 px SHALL das Menü hinter einem Hamburger-Button erreichbar sein und als seitliches Panel mit Abdunklung öffnen. Haupteinträge mit Untermenü SHALL ein auf- und zuklappbares Untermenü besitzen, Kategorien der dritten Ebene ebenfalls. Nach Auswahl eines Links SHALL sich das Panel schließen. Am Ende des Panels SHALL ein Button "Veranstaltungen" auf `/mitmachen#events` verlinken.
+Unterhalb von 1024 px SHALL das Menü hinter einem Hamburger-Button erreichbar sein und als seitliches Panel mit Abdunklung öffnen. Haupteinträge mit Untermenü SHALL ein auf- und zuklappbares Untermenü besitzen. Kategorieköpfe im Untermenü SHALL als nicht klickbare Überschriften mit ihren Einträgen darunter dargestellt werden. Nach Auswahl eines Links SHALL sich das Panel schließen. Am Ende des Panels SHALL ein Button "Veranstaltungen" auf `/mitmachen#events` verlinken.
 
 #### Scenario: Öffnen und Schließen
 - **WHEN** bei 390 px Breite der Hamburger-Button angeklickt wird
 - **THEN** erscheint das seitliche Panel mit den vier Haupteinträgen
 - **AND** ein Klick auf die Abdunklung schließt es wieder
 
-#### Scenario: Verschachteltes Aufklappen
-- **WHEN** im Panel "Ernteanteile" und danach die Kategorie "Fleisch" aufgeklappt wird
-- **THEN** sind die drei Fleisch-Produkte sichtbar
+#### Scenario: Untermenü mit Kategorien
+- **WHEN** im Panel "Ernteanteile" aufgeklappt wird
+- **THEN** sind sechs Kategorieköpfe (Gemüse, Obst, Beeren, Getreide, Eier, Fleisch) als nicht klickbare Überschriften sichtbar
+- **AND** darunter stehen alle neun Produktlinks, unter "Fleisch" die drei Fleisch-Produkte
 
 #### Scenario: Link schließt Panel
 - **WHEN** im geöffneten Panel ein Ziellink angeklickt wird

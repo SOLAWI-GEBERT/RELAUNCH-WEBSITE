@@ -54,7 +54,7 @@ Beim Ableiten der Specs aus dem Code aufgefallen und bewusst **nicht** als Soll 
 - `/kalender` ist von nirgends verlinkt (weder Menü noch Footer noch andere Seite).
 - `/anmeldung` ist nur über den Button "Zur Anmeldung" auf `/mitmachen` erreichbar, nicht aus dem Menü. Die eigentliche Teilnahme läuft laut `/so-funktionierts` über das Versenden des TNV-PDFs per E-Mail. Es gibt also zwei konkurrierende Anmeldewege (Formular vs. PDF), und `/kontakt-anmeldung#anmeldung` ist ein dritter Einstieg.
 - Der Link "Teilnahmebedingungen" auf `/so-funktionierts` zeigt auf `/mitmachen#teilnahme`. Diesen Anker gibt es auf `/mitmachen` nicht (vorhanden: `events`, `highlights`, `engagement`, `depots`, `logistik`).
-- Die Kategorieköpfe im Ernteanteile-Untermenü (Gemüse, Obst, …) sind auf Desktop Links mit Ziel `#`. Ein Klick springt nach oben statt nichts zu tun.
+- Unbekannte Routen (z. B. `/ernteanteile/gibt-es-nicht`) zeigen die React-Router-Standardfehlerseite ("Unexpected Application Error! 404"), es gibt keine eigene 404-Seite.
 - `docs/seiten-katalog.md` nennt `/hoefe-und-ernteanteile` und `/lieferung-kalender`, die nicht mehr existieren.
 
 **Formulare und tote Bedienelemente**
@@ -65,6 +65,9 @@ Beim Ableiten der Specs aus dem Code aufgefallen und bewusst **nicht** als Soll 
 - `/kontakt-anmeldung`: Der Button "Jetzt anmelden" hat weder Link noch Handler. Das Kontaktformular hat keinen Submit-Handler; ein Absenden löst einen nativen Seiten-Reload aus und sendet nichts. Namen im Abschnitt "Direkter Ansprechpartner" sind echt (Vorstand, Kassenwart), die Ansprechpartner auf `/anmeldung` nicht.
 - `/depots`: Der Button "Zum Newsletter" hat keine Funktion.
 - Footer: Die Social-Links (Facebook, Instagram) haben `href="#"`.
+
+**Datenschutz**
+- `index.html` lädt Schriften von Google Fonts (`fonts.googleapis.com`, `fonts.gstatic.com`). Das ist ein Drittanbieter-Request mit IP-Übertragung, den die Datenschutzerklärung nicht nennt; Abschnitt 7 sagt zudem, Cookies von Drittanbietern würden nicht geladen. Kandidat: Schriften lokal einbinden oder Abschnitt 9 ergänzen.
 
 **Inhalte, die an mehreren Stellen gepflegt werden** (Quelle des Konsistenz-Risikos)
 - Depotliste: `Depots.tsx` (Marker und Öffnungszeiten), `Mitmachen.tsx` (Liste und Kennzahl "9") und `Anmeldung.tsx` (Dropdown, abweichend).

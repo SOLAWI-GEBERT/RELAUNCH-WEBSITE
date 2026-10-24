@@ -39,7 +39,7 @@ src/
 │   │   ├── Footer.tsx
 │   │   ├── figma/              # Figma-generated helpers (ImageWithFallback)
 │   │   └── ui/                 # ~49 shadcn/ui components
-│   └── pages/                  # Route page components (8 pages)
+│   └── pages/                  # Route page components (Seitenstruktur: openspec/specs/, Route→Capability: docs/seiten-katalog.md)
 ├── styles/
 │   ├── index.css               # Main import file
 │   ├── tailwind.css            # Tailwind v4 @source directive
